@@ -1,0 +1,18 @@
+{
+  "homepage": "https://github.com/yuk7/AlpineWSL",
+  "description": "Install AlpineLinux as a WSL Instance",
+  "hash": "6462E3B8BAA095B896F4D647FFEAFFA88F5C7F4D5F5DB79CF53B761122758709",
+  "version": "18100800",
+  "bin": "Alpine.exe",
+  "license": "MIT",
+  "url": "https://github.com/yuk7/AlpineWSL/releases/download/18100800/Alpine.zip",
+  "checkver": {
+    "url": "https://api.github.com/repos/yuk7/AlpineWSL/releases/latest",
+    "jp": "$.tag_name"
+  },
+  "autoupdate": {
+    "url": "https://github.com/yuk7/AlpineWSL/releases/download/$version/Alpine.zip"
+  },
+  "shortcuts": [["Alpine.exe", "Alpine Linux"]],
+  "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)"
+}
