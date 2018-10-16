@@ -1,0 +1,20 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[user]
+	name = zeruel11
+[user]
+	email = the.zero0110@gmail.com
+[core]
+	autocrlf = false
+	excludesfile = C:\\Users\\zeruel\\Documents\\gitignore_global.txt
+[credential]
+[gui]
+	recentrepo = D:/Git/siplah
+[credential]
+	helper = wincred
+[color]
+	ui = true
+[push]
+	default = simple
