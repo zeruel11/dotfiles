@@ -1,0 +1,37 @@
+7zip (v:18.05)
+ack (v:2.24)
+advancedrenamer (v:3.84) [extras]
+aegisub (v:3.2.2) [dorado]
+alpinewsl (v:18100800) [C:\Users\zeruel11\alpinewsl.json]
+archwsl (v:18100800) [extras]
+audacity (v:2.3.0) [extras]
+cpu-z (v:1.86) [extras]
+dbeaver (v:5.2.2) [extras]
+doxygen (v:1.8.14)
+exiftool (v:11.13)
+ffmpeg (v:4.0.2)
+filezilla (v:3.37.4) [extras]
+fnproject (v:0.5.15)
+fzf (v:0.17.5)
+ghostscript (v:9.25)
+gifsicle (v:1.89)
+gpu-z (v:2.11.0) [extras]
+graphicsmagick-q8 (v:1.3.30)
+httrack (v:3.49.2) [extras]
+imgburn (v:2.5.8.0) [extras]
+innounp (v:0.47)
+mediainfo (v:18.08.1)
+mediainfo-gui (v:18.08.1) [extras]
+mkvtoolnix (v:27.0.0) [extras]
+mpv-git (v:20181007) [extras]
+openssl (v:1.1.1_6)
+openvpn (v:2.4.6-I602) [extras]
+pandoc (v:2.3.1) [extras]
+perl (v:5.28.0.1)
+phantomjs (v:2.1.1)
+rapidee (v:937) [extras]
+wavebox (v:4.3.0) [extras]
+windirstat (v:1.1.2) [extras]
+winmerge (v:2.14.0) [extras]
+wkhtmltopdf (v:0.12.5-1)
+youtube-dl (v:2018.10.05)
