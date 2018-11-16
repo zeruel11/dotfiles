@@ -211,6 +211,11 @@ compinit
 
 unsetopt BG_NICE
 
+# setup linuxbrew
+export PATH="/home/zeruel/.linuxbrew/bin:$PATH"
+export MANPATH="/home/zeruel/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="/home/zeruel/.linuxbrew/share/info:$INFOPATH"
+
 # setup nodenv
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
@@ -236,6 +241,12 @@ export PATH="/home/zeruel/.local/bin:$PATH"
 eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# setup linuxbrew
+umask 022
+export PATH="/home/zeruel/.linuxbrew/bin:$PATH"
+export MANPATH="/home/zeruel/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="/home/zeruel/.linuxbrew/share/info:$INFOPATH"
 
 # setup display
 export DISPLAY=:0.0
