@@ -1,8 +1,10 @@
 7zip (v:18.05)
 ack (v:2.24)
+adb (v:28.0.1)
 advancedrenamer (v:3.84) [extras]
 aegisub (v:3.2.2) [dorado]
 alpinewsl (v:18100800) [C:\Users\zeruel11\alpinewsl.json]
+android-sdk (v:4333796) [extras]
 archwsl (v:18102700) [extras]
 aria2 (v:1.34.0-1)
 atomicparsley (v:0.9.0)
@@ -12,6 +14,8 @@ calibre-normal (v:3.34.0) [extras]
 ccextractor (v:v0.87) [C:\Users\zeruel11\ccextractor.json]
 CentOSwsl (v:v0.0.1) [C:\Users\zeruel11\CentOSwsl.json]
 cpu-z (v:1.87) [extras]
+crystaldiskinfo (v:8.0.0) [extras]
+crystaldiskmark (v:6.0.2) [extras]
 cuetools (v:2.1.6) [extras]
 dbeaver (v:5.2.5) [extras]
 doxygen (v:1.8.14)
@@ -40,7 +44,8 @@ mediainfo (v:18.08.1)
 mediainfo-gui (v:18.08.1) [extras]
 minio-client (v:2018-11-06T01-12-20Z)
 mkvtoolnix (v:28.2.0) [extras]
-mpv-git (v:20181118) [extras]
+mpv-git (v:20181125) [extras]
+netcat (v:1.12)
 nexusfont (v:2.6.2.1870) [extras]
 openssl (v:1.1.1_8)
 openvpn (v:2.4.6-I602) [extras]
@@ -56,7 +61,7 @@ tesseract (v:4.0.0.20181030)
 vcxsrv (v:1.20.1.4) [extras]
 wavebox (v:4.4.0) [extras]
 windirstat (v:1.1.2) [extras]
-winmerge (v:2.14.0) [extras]
+winmerge (v:2.16.0) [extras]
 wkhtmltopdf (v:0.12.5-1)
-wyam (v:1.7.4)
+wyam (v:1.7.4) [C:\Users\zeruel11\.scoopy\workspace\wyam.json]
 youtube-dl (v:2018.11.23)
