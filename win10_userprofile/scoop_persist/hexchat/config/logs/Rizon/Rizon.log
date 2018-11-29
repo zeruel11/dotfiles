@@ -1,0 +1,163 @@
+**** BEGIN LOGGING AT Fri Nov  9 16:32:02 2018
+
+Nov 09 16:32:02 *	*** Looking up your hostname...
+Nov 09 16:32:02 *	*** Checking Ident
+Nov 09 16:32:02 *	*** Couldn't look up your hostname
+Nov 09 16:32:03 *	*** No Ident response
+Nov 09 16:32:03 *	Capabilities supported: away-notify chghost invite-notify multi-prefix sasl userhost-in-names
+Nov 09 16:32:03 *	Capabilities requested: away-notify chghost multi-prefix userhost-in-names 
+Nov 09 16:32:03 *	Capabilities acknowledged: away-notify chghost multi-prefix userhost-in-names
+Nov 09 16:32:03 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+Nov 09 16:32:03 *	*** Your host is masked (89F3E195.A248CB85.39EE6454.IP)
+**** ENDING LOGGING AT Fri Nov  9 16:32:03 2018
+
+**** BEGIN LOGGING AT Fri Nov  9 16:32:03 2018
+
+Nov 09 16:32:03 *	Welcome to the Rizon Internet Relay Chat Network zeruel11
+Nov 09 16:32:03 *	Your host is irc.losslessone.com, running version plexus-4(hybrid-8.1.20)
+Nov 09 16:32:03 *	This server was created Sep 14 2017 at 19:49:00
+Nov 09 16:32:03 *	irc.losslessone.com plexus-4(hybrid-8.1.20) CDGNRSUWagilopqrswxyz BCIMNORSabcehiklmnopqstvz Iabehkloqv
+Nov 09 16:32:03 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ EXCEPTS=e INVEX=I NICKLEN=30 NETWORK=Rizon MAXLIST=beI:250 MAXTARGETS=4 :are supported by this server
+Nov 09 16:32:03 *	CHANTYPES=# CHANLIMIT=#:250 CHANNELLEN=50 TOPICLEN=390 CHANMODES=beI,k,l,BCMNORScimnpstz NAMESX UHNAMES KNOCK WATCH=60 AWAYLEN=180 ELIST=CMNTU SAFELIST :are supported by this server
+Nov 09 16:32:03 *	There are 21 users and 13441 invisible on 20 servers
+Nov 09 16:32:03 *	62 :IRC Operators online
+Nov 09 16:32:03 *	2 :unknown connection(s)
+Nov 09 16:32:03 *	11225 :channels formed
+Nov 09 16:32:03 *	I have 13462 clients and 20 servers
+Nov 09 16:32:03 *	Current local users: 13462  Max: 19744
+Nov 09 16:32:03 *	Current global users: 13462  Max: 19744
+Nov 09 16:32:03 *	- irc.losslessone.com Message of the Day - 
+Nov 09 16:32:03 *	-          oo                            
+Nov 09 16:32:03 *	- 
+Nov 09 16:32:03 *	- 88d888b. dP d888888b .d8888b. 88d888b. 
+Nov 09 16:32:03 *	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+Nov 09 16:32:03 *	- 88       88  .Y8P    88.  .88 88    88 
+Nov 09 16:32:03 *	- dP       dP d888888P `88888P' dP    dP
+Nov 09 16:32:03 *	- 
+Nov 09 16:32:03 *	- Rizon Chat Network -- http://rizon.net
+Nov 09 16:32:03 *	- 
+Nov 09 16:32:03 *	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+Nov 09 16:32:03 *	- 
+Nov 09 16:32:03 *	- Rules:
+Nov 09 16:32:03 *	- o No spamming or flooding
+Nov 09 16:32:03 *	- o No clones or malicious bots
+Nov 09 16:32:03 *	- o No takeovers
+Nov 09 16:32:03 *	- o No distribution of child pornography
+Nov 09 16:32:03 *	- o Clients must respond to VERSION requests
+Nov 09 16:32:03 *	- o Rizon staff may disconnect clients for any or no reason
+Nov 09 16:32:03 *	- 
+Nov 09 16:32:03 *	- First steps:
+Nov 09 16:32:03 *	- o To register your nick: /msg NickServ HELP
+Nov 09 16:32:03 *	- o To register your channel: /msg ChanServ HELP
+Nov 09 16:32:03 *	- o To get a vHost: /msg HostServ HELP REQUEST
+Nov 09 16:32:03 *	- o For other help with Rizon: /join #help
+Nov 09 16:32:03 *	- 
+Nov 09 16:32:03 *	- Usage of this network is a privilege, not a right. Rizon is a
+Nov 09 16:32:03 *	- transit provider, therefore no person or entity involved with
+Nov 09 16:32:03 *	- *.rizon.net or irc.losslessone.com takes any responsibility for
+Nov 09 16:32:03 *	- users' actions. Absolutely no warranty is expressed or implied.
+Nov 09 16:32:03 *	End of /MOTD command.
+Nov 09 16:32:03 *	zeruel11 sets mode +S on zeruel11
+Nov 09 16:32:03 *	zeruel11 sets mode +i on zeruel11
+Nov 09 16:32:03 *	zeruel11 sets mode +x on zeruel11
+Nov 09 16:32:03 -Global-	[Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+Nov 09 16:32:03 -Global-	[Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+Nov 09 16:32:03 -Global-	[Random News - May 07 2013] Looking for a quotes, trivia, or other extra bots? /msg funserv help
+**** BEGIN LOGGING AT Thu Nov 29 17:22:33 2018
+
+Nov 29 17:22:33 *	Welcome to the Rizon Internet Relay Chat Network zeruel11
+Nov 29 17:22:33 *	Your host is irc.rizon.rocks, running version plexus-4(hybrid-8.1.20)
+Nov 29 17:22:33 *	This server was created Sep 14 2017 at 19:51:05
+Nov 29 17:22:33 *	irc.rizon.rocks plexus-4(hybrid-8.1.20) CDGNRSUWagilopqrswxyz BCIMNORSabcehiklmnopqstvz Iabehkloqv
+Nov 29 17:22:34 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ EXCEPTS=e INVEX=I NICKLEN=30 NETWORK=Rizon MAXLIST=beI:250 MAXTARGETS=4 :are supported by this server
+Nov 29 17:22:34 *	CHANTYPES=# CHANLIMIT=#:250 CHANNELLEN=50 TOPICLEN=390 CHANMODES=beI,k,l,BCMNORScimnpstz KNOCK NAMESX UHNAMES WATCH=60 AWAYLEN=180 ELIST=CMNTU SAFELIST :are supported by this server
+Nov 29 17:22:34 *	There are 25 users and 13924 invisible on 20 servers
+Nov 29 17:22:34 *	64 :IRC Operators online
+Nov 29 17:22:34 *	11202 :channels formed
+Nov 29 17:22:34 *	I have 13949 clients and 20 servers
+Nov 29 17:22:34 *	Current local users: 13949  Max: 15564
+Nov 29 17:22:34 *	Current global users: 13949  Max: 15564
+Nov 29 17:22:34 *	- irc.rizon.rocks Message of the Day - 
+Nov 29 17:22:34 *	- Welcome to irc.rizon.rocks
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-         Now it's time for **UPDATED** conversational spanish with grimlock
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    Las ardillas. Me persiguen. Quieren mis nueces pero no pueden tenerlas.
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    no habla? the squirrels. they chase me. they want my nuts but they
+Nov 29 17:22:34 *	-    can not have them.
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    El gato en mis pantalones, quiere mi burrito. Pero el no puede
+Nov 29 17:22:34 *	-    tenerlo. No compartire con el.
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    Still no habla? the cat in my pants, he wants my burrito. But he can
+Nov 29 17:22:34 *	-    not have it. I will not share with him.
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    Por que el perro que lame mis bolas? Debo de haber banado en mantequilla
+Nov 29 17:22:34 *	-    de mani de nuevo ...
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    Really!?!? No habla?! You really need to work on your spanglish skills..
+Nov 29 17:22:34 *	-    Why is the dog licking my balls? I must have bathed in peanut butter
+Nov 29 17:22:34 *	-    again...
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    Cuando salgo de la peluqueria despues de tener mi espalda afeitado, me
+Nov 29 17:22:34 *	-    doy cuenta de que seria mucho mas barato tener un rebano de cabras.
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    You really need to sign up for my formal spanish lessons.  I can teach
+Nov 29 17:22:34 *	-    many more useful phrases!  When I leave the barber after having
+Nov 29 17:22:34 *	-    my back shaved, I realize it would be much cheaper to own a herd of goats.
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    Usted dice que el tomate, digo que me gusta la leche con chocolate y
+Nov 29 17:22:34 *	-    panecillos. Has visto a mi cepillo de dientes?
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-    My lesson rates are very reasonable!  I can teach you to splanglish like
+Nov 29 17:22:34 *	-    I do!  You say tomato, I say I like chocolate milk and bagels.  Have you
+Nov 29 17:22:34 *	-    seen my toothbrush?
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-         This has been conversational spanish with grimlock, time for
+Nov 29 17:22:34 *	-         something more serious.
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	-          oo                            
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	- 88d888b. dP d888888b .d8888b. 88d888b. 
+Nov 29 17:22:34 *	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+Nov 29 17:22:34 *	- 88       88  .Y8P    88.  .88 88    88 
+Nov 29 17:22:34 *	- dP       dP d888888P `88888P' dP    dP
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	- Rizon Chat Network -- http://rizon.net
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	- Rules:
+Nov 29 17:22:34 *	- o No spamming or flooding
+Nov 29 17:22:34 *	- o No clones or malicious bots
+Nov 29 17:22:34 *	- o No takeovers
+Nov 29 17:22:34 *	- o No distribution of child pornography
+Nov 29 17:22:34 *	- o Clients must respond to VERSION requests
+Nov 29 17:22:34 *	- o Rizon staff may disconnect clients for any or no reason
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	- First steps:
+Nov 29 17:22:34 *	- o To register your nick: /msg NickServ HELP
+Nov 29 17:22:34 *	- o To register your channel: /msg ChanServ HELP
+Nov 29 17:22:34 *	- o To get a vHost: /msg HostServ HELP REQUEST
+Nov 29 17:22:34 *	- o For other help with Rizon: /join #help
+Nov 29 17:22:34 *	- 
+Nov 29 17:22:34 *	- Usage of this network is a privilege, not a right. Rizon is a
+Nov 29 17:22:34 *	- transit provider, therefore no person or entity involved with
+Nov 29 17:22:34 *	- *.rizon.net or irc.rizon.rocks takes any responsibility for
+Nov 29 17:22:34 *	- users' actions. Absolutely no warranty is expressed or implied.
+Nov 29 17:22:34 *	End of /MOTD command.
+Nov 29 17:22:34 *	zeruel11 sets mode +S on zeruel11
+Nov 29 17:22:34 *	zeruel11 sets mode +i on zeruel11
+Nov 29 17:22:34 *	zeruel11 sets mode +x on zeruel11
+Nov 29 17:22:34 -Global-	[Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+Nov 29 17:22:34 -Global-	[Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+Nov 29 17:22:34 -Global-	[Random News - May 07 2013] Looking for a quotes, trivia, or other extra bots? /msg funserv help
+Nov 29 17:22:34 *	Received a CTCP VERSION from py-ctcp
+Nov 29 21:12:21 *	#vivid :You need to login to services to join or speak in that channel.
+Nov 29 21:12:24 *	#vivid :You need to login to services to join or speak in that channel.
+Nov 29 21:21:34 *	#shinsen-radio :You need to login to services to join or speak in that channel.
+Nov 29 21:21:38 *	#shinsen-radio :You need to login to services to join or speak in that channel.
+Nov 29 21:23:33 *	#nyaa-dev :You need to login to services to join or speak in that channel.
+Nov 29 21:23:35 *	#nyaa-dev :You need to login to services to join or speak in that channel.

@@ -1,0 +1,1506 @@
+{
+   ".header" : {
+      "creator" : "Keypirinha v2.23 (2ee355d)",
+      "creator_url" : "http://keypirinha.com/",
+      "format" : 102,
+      "modified" : "2018-11-29T15:32:31+0000",
+      "type" : "history"
+   },
+   "history" : [
+      {
+         "action" : null,
+         "item" : 15027871035820703668,
+         "label" : "Everything -> profile.d",
+         "time" : "2018-10-16T08:48:08+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10770622922750158272,
+         "label" : "Everything",
+         "time" : "2018-10-16T08:48:34+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10770622922750158272,
+         "label" : "Everything",
+         "time" : "2018-10-16T08:48:47+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-10-16T08:50:49+0000"
+      },
+      {
+         "action" : null,
+         "item" : 16275816703103513862,
+         "label" : "Everything: Search",
+         "time" : "2018-10-16T08:50:49+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-10-16T10:43:41+0000"
+      },
+      {
+         "action" : null,
+         "item" : 2879038905889345689,
+         "label" : "Keypirinha: Configure Package: FileZilla",
+         "time" : "2018-10-16T11:18:26+0000"
+      },
+      {
+         "action" : null,
+         "item" : 451968715980213237,
+         "label" : "FileZilla",
+         "time" : "2018-10-16T11:20:43+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17251777531410795286,
+         "label" : "FileZilla -> asdf",
+         "time" : "2018-10-16T11:22:41+0000"
+      },
+      {
+         "action" : null,
+         "item" : 2808991503458084078,
+         "label" : "WinMerge",
+         "time" : "2018-10-17T05:47:19+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-10-17T10:09:45+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17267454400072703707,
+         "label" : "Task Manager",
+         "time" : "2018-10-18T06:16:00+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3071173063976957508,
+         "label" : "WebSearch Git -> awesome scoop",
+         "time" : "2018-10-18T06:17:26+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15815644509135059795,
+         "label" : "WebSearch PHP -> spreadsheet",
+         "time" : "2018-10-18T06:17:57+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1447155230486068724,
+         "label" : "Wikipedia",
+         "time" : "2018-10-18T06:18:55+0000"
+      },
+      {
+         "action" : null,
+         "item" : 18168495158365668489,
+         "label" : "Keypirinha: Console",
+         "time" : "2018-10-18T06:21:38+0000"
+      },
+      {
+         "action" : null,
+         "item" : 13903072334099508694,
+         "label" : "PackageControl: Install Package",
+         "time" : "2018-10-18T06:22:50+0000"
+      },
+      {
+         "action" : null,
+         "item" : 18168495158365668489,
+         "label" : "Keypirinha: Console",
+         "time" : "2018-10-18T06:22:59+0000"
+      },
+      {
+         "action" : null,
+         "item" : 13903072334099508694,
+         "label" : "PackageControl: Install Package",
+         "time" : "2018-10-18T06:23:27+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-10-18T06:28:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17652512588618074037,
+         "label" : "URL Shortener",
+         "time" : "2018-10-18T06:37:48+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2018-10-18T06:45:49+0000"
+      },
+      {
+         "action" : null,
+         "item" : 12078476694989161836,
+         "label" : "MKVCleaver_x64_v0800.exe",
+         "time" : "2018-10-18T09:13:58+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7715148561619026502,
+         "label" : "MKVToolNix GUI",
+         "time" : "2018-10-18T09:15:14+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7715148561619026502,
+         "label" : "MKVToolNix GUI",
+         "time" : "2018-10-18T09:20:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-10-18T09:23:36+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-10-18T09:40:15+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7715148561619026502,
+         "label" : "MKVToolNix GUI",
+         "time" : "2018-10-18T10:05:55+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-10-18T10:35:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 13903072334099508694,
+         "label" : "PackageControl: Install Package",
+         "time" : "2018-10-18T11:09:04+0000"
+      },
+      {
+         "action" : null,
+         "item" : 13903072334099508694,
+         "label" : "PackageControl: Install Package",
+         "time" : "2018-10-18T11:09:53+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-10-20T13:02:21+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-10-22T10:02:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-10-22T10:16:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-10-23T03:22:35+0000"
+      },
+      {
+         "action" : null,
+         "item" : 12078476694989161836,
+         "label" : "MKVCleaver_x64_v0800.exe",
+         "time" : "2018-10-23T03:23:55+0000"
+      },
+      {
+         "action" : null,
+         "item" : 9000506924426403832,
+         "label" : "RapidEE",
+         "time" : "2018-10-23T09:42:09+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-10-24T07:59:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11377851740045468617,
+         "label" : "Visual Studio Code",
+         "time" : "2018-10-24T08:01:00+0000"
+      },
+      {
+         "action" : null,
+         "item" : 9000506924426403832,
+         "label" : "RapidEE",
+         "time" : "2018-10-24T08:18:03+0000"
+      },
+      {
+         "action" : null,
+         "item" : 9000506924426403832,
+         "label" : "RapidEE",
+         "time" : "2018-10-24T08:21:11+0000"
+      },
+      {
+         "action" : null,
+         "item" : 12660856405529633258,
+         "label" : "OptionalFeatures.exe",
+         "time" : "2018-10-24T08:30:22+0000"
+      },
+      {
+         "action" : null,
+         "item" : 12660856405529633258,
+         "label" : "OptionalFeatures.exe",
+         "time" : "2018-10-24T08:32:59+0000"
+      },
+      {
+         "action" : null,
+         "item" : 9000506924426403832,
+         "label" : "RapidEE",
+         "time" : "2018-10-24T08:35:37+0000"
+      },
+      {
+         "action" : null,
+         "item" : 9000506924426403832,
+         "label" : "RapidEE",
+         "time" : "2018-10-24T08:37:22+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11377851740045468617,
+         "label" : "Visual Studio Code",
+         "time" : "2018-10-24T08:39:48+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-10-24T08:59:05+0000"
+      },
+      {
+         "action" : null,
+         "item" : 12660856405529633258,
+         "label" : "OptionalFeatures.exe",
+         "time" : "2018-10-24T09:17:03+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6961791192799984339,
+         "label" : "Docker for Windows",
+         "time" : "2018-10-24T09:18:04+0000"
+      },
+      {
+         "action" : null,
+         "item" : 12660856405529633258,
+         "label" : "OptionalFeatures.exe",
+         "time" : "2018-10-24T12:15:39+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11377851740045468617,
+         "label" : "Visual Studio Code",
+         "time" : "2018-10-24T12:17:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-10-26T02:44:20+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2018-10-26T03:14:26+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-10-26T08:56:21+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7735064057658499230,
+         "label" : "services",
+         "time" : "2018-10-26T08:56:38+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-10-26T08:57:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-10-26T12:51:57+0000"
+      },
+      {
+         "action" : 11933390219418939760,
+         "item" : 18213167749437112382,
+         "label" : "main.dart -> Edit",
+         "time" : "2018-10-26T12:58:26+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6509817653817298023,
+         "label" : "CPU-Z",
+         "time" : "2018-10-26T13:22:22+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11377851740045468617,
+         "label" : "Visual Studio Code",
+         "time" : "2018-10-26T13:50:30+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1062582269474146431,
+         "label" : "NexusFont - Font Manager",
+         "time" : "2018-10-27T16:05:22+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1062582269474146431,
+         "label" : "NexusFont - Font Manager",
+         "time" : "2018-10-27T16:26:01+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2018-10-29T09:31:08+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7095231884105470210,
+         "label" : "Steam",
+         "time" : "2018-10-29T09:31:18+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-10-29T12:58:48+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-10-29T13:20:54+0000"
+      },
+      {
+         "action" : null,
+         "item" : 18023809010260764282,
+         "label" : "C:\\Users\\zeruel11",
+         "time" : "2018-10-30T12:43:50+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17442566580740932941,
+         "label" : ".scoop",
+         "time" : "2018-10-30T12:44:04+0000"
+      },
+      {
+         "action" : null,
+         "item" : 16886864595155269361,
+         "label" : ".",
+         "time" : "2018-10-30T12:44:20+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7095231884105470210,
+         "label" : "Steam",
+         "time" : "2018-10-31T05:46:08+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-10-31T05:47:56+0000"
+      },
+      {
+         "action" : null,
+         "item" : 9000506924426403832,
+         "label" : "RapidEE",
+         "time" : "2018-10-31T05:56:30+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-11-02T07:48:19+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11377851740045468617,
+         "label" : "Visual Studio Code",
+         "time" : "2018-11-02T08:09:18+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6961791192799984339,
+         "label" : "Docker for Windows",
+         "time" : "2018-11-02T08:30:45+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-11-02T11:36:56+0000"
+      },
+      {
+         "action" : null,
+         "item" : 12078476694989161836,
+         "label" : "MKVCleaver_x64_v0800.exe",
+         "time" : "2018-11-02T11:41:56+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11728950491370231188,
+         "label" : "Aegisub x64",
+         "time" : "2018-11-02T11:43:47+0000"
+      },
+      {
+         "action" : null,
+         "item" : 8458762706263972561,
+         "label" : "YUMI-2.0.5.9.exe",
+         "time" : "2018-11-15T15:28:42+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-11-16T10:08:43+0000"
+      },
+      {
+         "action" : null,
+         "item" : 13406764293697130190,
+         "label" : "Free Download Manager",
+         "time" : "2018-11-16T15:15:12+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7095231884105470210,
+         "label" : "Steam",
+         "time" : "2018-11-16T17:10:08+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-11-16T17:11:46+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-11-16T17:16:49+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-11-18T10:03:35+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-11-18T10:04:41+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14279600564758846595,
+         "label" : "EaseUS Partition Master 12.10",
+         "time" : "2018-11-18T13:18:47+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14279600564758846595,
+         "label" : "EaseUS Partition Master 12.10",
+         "time" : "2018-11-18T13:49:17+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-11-18T16:48:04+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14279600564758846595,
+         "label" : "EaseUS Partition Master 12.10",
+         "time" : "2018-11-19T09:25:36+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1591576190742436889,
+         "label" : "Scrivener.exe",
+         "time" : "2018-11-21T02:37:55+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-11-21T03:16:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-11-23T08:48:53+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-11-23T17:59:03+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15342696453505675022,
+         "label" : "balenaEtcher",
+         "time" : "2018-11-24T10:18:05+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6989029097428676322,
+         "label" : "DiskMark",
+         "time" : "2018-11-24T11:36:13+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15342696453505675022,
+         "label" : "balenaEtcher",
+         "time" : "2018-11-24T11:40:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 18268940125398700226,
+         "label" : "NirLauncher.exe",
+         "time" : "2018-11-24T13:31:15+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15342696453505675022,
+         "label" : "balenaEtcher",
+         "time" : "2018-11-24T18:23:58+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1591576190742436889,
+         "label" : "Scrivener.exe",
+         "time" : "2018-11-25T09:23:11+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14279600564758846595,
+         "label" : "EaseUS Partition Master 12.10",
+         "time" : "2018-11-25T13:21:48+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17366974177897161278,
+         "label" : "ShareX",
+         "time" : "2018-11-26T11:47:09+0000"
+      },
+      {
+         "action" : null,
+         "item" : 18268940125398700226,
+         "label" : "NirLauncher.exe",
+         "time" : "2018-11-26T14:12:17+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14279600564758846595,
+         "label" : "EaseUS Partition Master 12.10",
+         "time" : "2018-11-26T16:12:50+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-11-27T05:57:31+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-11-28T08:25:55+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-11-28T09:29:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-11-29T10:17:00+0000"
+      },
+      {
+         "action" : null,
+         "item" : 370028054294366767,
+         "label" : "HexChat",
+         "time" : "2018-11-29T10:22:11+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-11-29T10:42:13+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-11-29T10:51:52+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1283077964835698977,
+         "label" : "DBeaver",
+         "time" : "2018-11-29T10:52:49+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1283077964835698977,
+         "label" : "DBeaver",
+         "time" : "2018-11-29T10:53:51+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1283077964835698977,
+         "label" : "DBeaver",
+         "time" : "2018-11-29T13:32:42+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-11-29T13:45:14+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1283077964835698977,
+         "label" : "DBeaver",
+         "time" : "2018-11-29T14:36:09+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-11-29T14:45:49+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-11-29T15:32:31+0000"
+      }
+   ],
+   "sets" : {
+      "actions" : [
+         {
+            "id" : 11933390219418939760,
+            "label" : "Edit",
+            "name" : "edit",
+            "plugin" : "App",
+            "short_desc" : "Edit file using the editor setting or system's default"
+         }
+      ],
+      "items" : [
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 16886864595155269361,
+            "label" : ".",
+            "loop_on_suggest" : true,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\Users\\zeruel11\\.scoopy"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 17442566580740932941,
+            "label" : ".scoop",
+            "loop_on_suggest" : false,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\Users\\zeruel11\\.scoop"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 10800565414785061761,
+            "label" : "Advanced Renamer",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Advanced Renamer.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 11728950491370231188,
+            "label" : "Aegisub x64",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Aegisub x64.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 156440928632390755,
+            "label" : "AIMP",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\AIMP",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\AIMP\\AIMP.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 14979514382530832765,
+            "label" : "AriaNg-0.5.0.exe",
+            "loop_on_suggest" : true,
+            "plugin" : "Everything.Everything",
+            "short_desc" : "",
+            "target" : "C:\\untied\\AriaNg-0.5.0.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 15342696453505675022,
+            "label" : "balenaEtcher",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\balenaEtcher.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 18023809010260764282,
+            "label" : "C:\\Users\\zeruel11",
+            "loop_on_suggest" : true,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\Users\\zeruel11"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 6509817653817298023,
+            "label" : "CPU-Z",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\CPU-Z.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 1283077964835698977,
+            "label" : "DBeaver",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\DBeaver.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 6989029097428676322,
+            "label" : "DiskMark",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\DiskMark.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 6961791192799984339,
+            "label" : "Docker for Windows",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Start Menu",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Docker for Windows.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 14279600564758846595,
+            "label" : "EaseUS Partition Master 12.10",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\EaseUS Partition Master 12.10",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\EaseUS Partition Master 12.10\\EaseUS Partition Master 12.10.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 10770622922750158272,
+            "label" : "Everything",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Everything.lnk"
+         },
+         {
+            "args" : "profile.d",
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 15027871035820703668,
+            "label" : "Everything",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Everything.lnk"
+         },
+         {
+            "args_hint" : "required",
+            "category" : "reference",
+            "hit_hint" : "noargs",
+            "id" : 16275816703103513862,
+            "label" : "Everything: Search",
+            "loop_on_suggest" : false,
+            "plugin" : "Everything.Everything",
+            "short_desc" : "Search a file/folder with Everything",
+            "target" : "search"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 451968715980213237,
+            "label" : "FileZilla",
+            "loop_on_suggest" : false,
+            "plugin" : "FileZilla.FileZilla",
+            "short_desc" : "",
+            "target" : "C:\\Users\\zeruel11\\.scoopy\\apps\\filezilla\\current\\filezilla.exe"
+         },
+         {
+            "args" : "asdf",
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 17251777531410795286,
+            "label" : "FileZilla",
+            "loop_on_suggest" : false,
+            "plugin" : "FileZilla.FileZilla",
+            "short_desc" : "",
+            "target" : "C:\\Users\\zeruel11\\.scoopy\\apps\\filezilla\\current\\filezilla.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 3799679699273239444,
+            "label" : "fmd.exe",
+            "loop_on_suggest" : false,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\untied\\FMD\\fmd.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 13406764293697130190,
+            "label" : "Free Download Manager",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Free Download Manager",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Free Download Manager\\Free Download Manager.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 370028054294366767,
+            "label" : "HexChat",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\HexChat.lnk"
+         },
+         {
+            "args_hint" : "forbidden",
+            "category" : "reference",
+            "hit_hint" : "noargs",
+            "id" : 2879038905889345689,
+            "label" : "Keypirinha: Configure Package: FileZilla",
+            "loop_on_suggest" : false,
+            "plugin" : "Internal.About",
+            "short_desc" : "Configure Package \"FileZilla\"",
+            "target" : "pack_config FileZilla"
+         },
+         {
+            "args_hint" : "forbidden",
+            "category" : "keyword",
+            "hit_hint" : "noargs",
+            "id" : 18168495158365668489,
+            "label" : "Keypirinha: Console",
+            "loop_on_suggest" : false,
+            "plugin" : "Internal.About",
+            "short_desc" : "Show Keypirinha's console window",
+            "target" : "console"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 15151594305129490480,
+            "label" : "LogMeIn Hamachi",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\LogMeIn Hamachi",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\LogMeIn Hamachi\\LogMeIn Hamachi.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 18213167749437112382,
+            "label" : "main.dart",
+            "loop_on_suggest" : false,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "D:\\_iseng\\recipe_app\\lib\\main.dart"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 12078476694989161836,
+            "label" : "MKVCleaver_x64_v0800.exe",
+            "loop_on_suggest" : false,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\untied\\mkvcleaver\\MKVCleaver_x64_v0800.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 7715148561619026502,
+            "label" : "MKVToolNix GUI",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\MKVToolNix GUI.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 1062582269474146431,
+            "label" : "NexusFont - Font Manager",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\NexusFont - Font Manager.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 18268940125398700226,
+            "label" : "NirLauncher.exe",
+            "loop_on_suggest" : false,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\untied\\NirLauncher.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 12660856405529633258,
+            "label" : "OptionalFeatures.exe",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.EnvPath",
+            "short_desc" : "",
+            "target" : "C:\\WINDOWS\\system32\\OptionalFeatures.exe"
+         },
+         {
+            "args_hint" : "required",
+            "category" : "#1001",
+            "hit_hint" : "noargs",
+            "id" : 13903072334099508694,
+            "label" : "PackageControl: Install Package",
+            "loop_on_suggest" : false,
+            "plugin" : "PackageControl.PackageControl",
+            "short_desc" : "Installs a new packages from the repositiory",
+            "target" : "install"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 9000506924426403832,
+            "label" : "RapidEE",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\RapidEE.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 1591576190742436889,
+            "label" : "Scrivener.exe",
+            "loop_on_suggest" : true,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\untied\\scrivener\\Scrivener.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 7735064057658499230,
+            "label" : "services",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Administrative Tools",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\services.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 17366974177897161278,
+            "label" : "ShareX",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\ShareX.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 6851979443633462483,
+            "label" : "SoftEther VPN Client Manager",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\SoftEther VPN Client",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\SoftEther VPN Client\\SoftEther VPN Client Manager.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 7095231884105470210,
+            "label" : "Steam",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Steam",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\\Steam.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 17267454400072703707,
+            "label" : "Task Manager",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\System Tools",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Task Manager.lnk"
+         },
+         {
+            "args_hint" : "required",
+            "category" : "keyword",
+            "hit_hint" : "noargs",
+            "id" : 17652512588618074037,
+            "label" : "URL Shortener",
+            "loop_on_suggest" : false,
+            "plugin" : "URLShortener.URLShortener",
+            "short_desc" : "Shorten an URL and copy the result",
+            "target" : "urlshortener"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 11377851740045468617,
+            "label" : "Visual Studio Code",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Visual Studio Code",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 17624016876626646827,
+            "label" : "Wavebox",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Wavebox.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "reference",
+            "hit_hint" : "keepall",
+            "id" : 1546633669466540342,
+            "label" : "WebSearch Git",
+            "loop_on_suggest" : false,
+            "plugin" : "WebSearch.WebSearch",
+            "short_desc" : "Search Git",
+            "target" : "site=%27git%27"
+         },
+         {
+            "args" : "awesome scoop",
+            "args_hint" : "accepted",
+            "category" : "reference",
+            "hit_hint" : "keepall",
+            "id" : 3071173063976957508,
+            "label" : "WebSearch Git",
+            "loop_on_suggest" : false,
+            "plugin" : "WebSearch.WebSearch",
+            "short_desc" : "Search Git",
+            "target" : "site=%27git%27"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "reference",
+            "hit_hint" : "keepall",
+            "id" : 9645544997310584910,
+            "label" : "WebSearch PHP",
+            "loop_on_suggest" : false,
+            "plugin" : "WebSearch.WebSearch",
+            "short_desc" : "Search PHP",
+            "target" : "site=%27php%27"
+         },
+         {
+            "args" : "spreadsheet",
+            "args_hint" : "accepted",
+            "category" : "reference",
+            "hit_hint" : "keepall",
+            "id" : 15815644509135059795,
+            "label" : "WebSearch PHP",
+            "loop_on_suggest" : false,
+            "plugin" : "WebSearch.WebSearch",
+            "short_desc" : "Search PHP",
+            "target" : "site=%27php%27"
+         },
+         {
+            "args_hint" : "required",
+            "category" : "#1001",
+            "hit_hint" : "noargs",
+            "id" : 1447155230486068724,
+            "label" : "Wikipedia",
+            "loop_on_suggest" : false,
+            "plugin" : "WebSuggest.WebSuggest",
+            "short_desc" : "Suggest via Wikipedia (default action: browse)",
+            "target" : "profile=%27wikipedia%27"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 2808991503458084078,
+            "label" : "WinMerge",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\WinMerge.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 8458762706263972561,
+            "label" : "YUMI-2.0.5.9.exe",
+            "loop_on_suggest" : false,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\Users\\zeruel11\\Downloads\\YUMI-2.0.5.9.exe"
+         }
+      ],
+      "terms" : [
+         {
+            "items" : [ 18023809010260764282 ],
+            "search" : "%userprofile%"
+         },
+         {
+            "items" : [ 17442566580740932941 ],
+            "search" : "%userprofile%/sc"
+         },
+         {
+            "items" : [ 16886864595155269361 ],
+            "search" : "%userprofile%\\.scoo"
+         },
+         {
+            "items" : [ 10800565414785061761 ],
+            "search" : "adv"
+         },
+         {
+            "items" : [ 10800565414785061761 ],
+            "search" : "adva"
+         },
+         {
+            "items" : [ 10800565414785061761 ],
+            "search" : "advan"
+         },
+         {
+            "items" : [ 10800565414785061761 ],
+            "search" : "advr"
+         },
+         {
+            "items" : [ 11728950491370231188 ],
+            "search" : "aegis"
+         },
+         {
+            "items" : [ 156440928632390755 ],
+            "search" : "aimp"
+         },
+         {
+            "items" : [ 14979514382530832765 ],
+            "search" : "aria"
+         },
+         {
+            "items" : [ 14979514382530832765 ],
+            "search" : "ariang"
+         },
+         {
+            "items" : [ 18023809010260764282 ],
+            "search" : "C:/use"
+         },
+         {
+            "items" : [ 11377851740045468617 ],
+            "search" : "code"
+         },
+         {
+            "items" : [ 6509817653817298023 ],
+            "search" : "cpuz"
+         },
+         {
+            "items" : [ 1283077964835698977 ],
+            "search" : "dbea"
+         },
+         {
+            "items" : [ 1283077964835698977 ],
+            "search" : "dbeav"
+         },
+         {
+            "items" : [ 1283077964835698977 ],
+            "search" : "dbeaver"
+         },
+         {
+            "items" : [ 6989029097428676322 ],
+            "search" : "disk"
+         },
+         {
+            "items" : [ 6961791192799984339 ],
+            "search" : "docker"
+         },
+         {
+            "items" : [ 14279600564758846595 ],
+            "search" : "ease"
+         },
+         {
+            "items" : [ 14279600564758846595 ],
+            "search" : "easeus"
+         },
+         {
+            "items" : [ 15342696453505675022 ],
+            "search" : "etcher"
+         },
+         {
+            "items" : [ 16275816703103513862, 10770622922750158272 ],
+            "search" : "ever"
+         },
+         {
+            "items" : [ 16275816703103513862 ],
+            "search" : "everything:"
+         },
+         {
+            "items" : [ 12660856405529633258 ],
+            "search" : "feature"
+         },
+         {
+            "items" : [ 451968715980213237, 2879038905889345689 ],
+            "search" : "filezilla"
+         },
+         {
+            "items" : [ 3799679699273239444 ],
+            "search" : "fmd"
+         },
+         {
+            "items" : [ 13406764293697130190 ],
+            "search" : "free"
+         },
+         {
+            "items" : [ 1546633669466540342 ],
+            "search" : "git"
+         },
+         {
+            "items" : [ 15151594305129490480 ],
+            "search" : "hama"
+         },
+         {
+            "items" : [ 15151594305129490480 ],
+            "search" : "hamac"
+         },
+         {
+            "items" : [ 370028054294366767 ],
+            "search" : "hex"
+         },
+         {
+            "items" : [ 18168495158365668489 ],
+            "search" : "key cons"
+         },
+         {
+            "items" : [ 18168495158365668489 ],
+            "search" : "keycon"
+         },
+         {
+            "items" : [ 12078476694989161836 ],
+            "search" : "mkvc"
+         },
+         {
+            "items" : [ 12078476694989161836 ],
+            "search" : "mkvcl"
+         },
+         {
+            "items" : [ 7715148561619026502 ],
+            "search" : "mkvtool"
+         },
+         {
+            "items" : [ 7715148561619026502 ],
+            "search" : "mkvtooln"
+         },
+         {
+            "items" : [ 7715148561619026502 ],
+            "search" : "mkvtoolnix"
+         },
+         {
+            "items" : [ 1062582269474146431 ],
+            "search" : "nexus"
+         },
+         {
+            "items" : [ 18268940125398700226 ],
+            "search" : "nir"
+         },
+         {
+            "items" : [ 12660856405529633258 ],
+            "search" : "option"
+         },
+         {
+            "items" : [ 9645544997310584910 ],
+            "search" : "php"
+         },
+         {
+            "items" : [ 9000506924426403832 ],
+            "search" : "rapi"
+         },
+         {
+            "items" : [ 9000506924426403832 ],
+            "search" : "rapid"
+         },
+         {
+            "items" : [ 9000506924426403832 ],
+            "search" : "rapide"
+         },
+         {
+            "items" : [ 9000506924426403832 ],
+            "search" : "rapidee"
+         },
+         {
+            "items" : [ 1591576190742436889 ],
+            "search" : "scri"
+         },
+         {
+            "items" : [ 7735064057658499230 ],
+            "search" : "servi"
+         },
+         {
+            "items" : [ 17366974177897161278 ],
+            "search" : "sharex"
+         },
+         {
+            "items" : [ 6851979443633462483 ],
+            "search" : "soft"
+         },
+         {
+            "items" : [ 7095231884105470210 ],
+            "search" : "stea"
+         },
+         {
+            "items" : [ 7095231884105470210 ],
+            "search" : "steam"
+         },
+         {
+            "items" : [ 17267454400072703707 ],
+            "search" : "task"
+         },
+         {
+            "items" : [ 17652512588618074037 ],
+            "search" : "urls"
+         },
+         {
+            "items" : [ 11377851740045468617 ],
+            "search" : "vscode"
+         },
+         {
+            "items" : [ 17624016876626646827 ],
+            "search" : "wave"
+         },
+         {
+            "items" : [ 17624016876626646827 ],
+            "search" : "waveb"
+         },
+         {
+            "items" : [ 1447155230486068724 ],
+            "search" : "wikip"
+         },
+         {
+            "items" : [ 2808991503458084078 ],
+            "search" : "winmer"
+         }
+      ]
+   }
+}

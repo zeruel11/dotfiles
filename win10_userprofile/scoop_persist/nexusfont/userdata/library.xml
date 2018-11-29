@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <groups>
+    <group name="recipe_app" expanded="true">
+      <folder>D:\_iseng\recipe_app\fonts</folder>
+    </group>
+  </groups>
+  <sets>
+    <set name="GoogleFonts-WebDesign">
+      <font>D:\~fontCollection-Google\Merriweather-Black.ttf</font>
+      <font>D:\~fontCollection-Google\Merriweather-BlackItalic.ttf</font>
+      <font>D:\~fontCollection-Google\Merriweather-Bold.ttf</font>
+      <font>D:\~fontCollection-Google\Merriweather-BoldItalic.ttf</font>
+      <font>D:\~fontCollection-Google\Merriweather-Italic.ttf</font>
+      <font>D:\~fontCollection-Google\Merriweather-Light.ttf</font>
+      <font>D:\~fontCollection-Google\Merriweather-LightItalic.ttf</font>
+      <font>D:\~fontCollection-Google\Merriweather-Regular.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-Black.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-BlackItalic.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-Bold.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-BoldItalic.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-Italic.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-Light.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-LightItalic.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-Medium.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-MediumItalic.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-Regular.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-Thin.ttf</font>
+      <font>D:\~fontCollection-Google\Roboto-ThinItalic.ttf</font>
+    </set>
+  </sets>
+</library>

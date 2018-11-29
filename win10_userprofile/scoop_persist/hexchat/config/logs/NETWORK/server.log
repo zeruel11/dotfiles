@@ -1,0 +1,38 @@
+**** BEGIN LOGGING AT Fri Nov  9 16:31:59 2018
+
+Nov 09 16:31:59 Lua version 1.3/5.1 loaded.
+Nov 09 16:31:59 Update Checker plugin loaded
+**** BEGIN LOGGING AT Thu Nov 29 17:22:30 2018
+
+Nov 29 17:22:30 Lua version 1.3/5.1 loaded.
+Nov 29 17:22:30 Update Checker plugin loaded
+Nov 29 17:22:31 *	Looking up irc.rizon.net
+Nov 29 17:22:32 *	Connecting to bsqhe2r55lzfu55qm5jglncfzjwklxqp73ydsbmndm.map.rizon.net (104.199.196.3:6697)
+Nov 29 17:22:33 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 29 17:22:33 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 29 17:22:33 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 29 17:22:33 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 29 17:22:33 *	* Subject: /CN=irc.rizon.net
+Nov 29 17:22:33 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 29 17:22:33 *	* Certification info:
+Nov 29 17:22:33 *	  Subject:
+Nov 29 17:22:33 *	    CN=irc.rizon.net
+Nov 29 17:22:33 *	  Issuer:
+Nov 29 17:22:33 *	    C=US
+Nov 29 17:22:33 *	    O=Let's Encrypt
+Nov 29 17:22:33 *	    CN=Let's Encrypt Authority X3
+Nov 29 17:22:33 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 29 17:22:33 *	  Sign algorithm sha256WithRSAEncryption
+Nov 29 17:22:33 *	  Valid since Oct 22 20:03:06 2018 GM to Jan 20 20:03:06 2019 GM
+Nov 29 17:22:33 *	* Cipher info:
+Nov 29 17:22:33 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 29 17:22:33 *	Connected. Now logging in.
+Nov 29 17:22:33 *	*** Looking up your hostname...
+Nov 29 17:22:33 *	*** Couldn't look up your hostname
+Nov 29 17:22:33 *	Capabilities supported: away-notify chghost invite-notify multi-prefix sasl userhost-in-names
+Nov 29 17:22:33 *	Capabilities requested: away-notify chghost multi-prefix userhost-in-names 
+Nov 29 17:22:33 *	Capabilities acknowledged: away-notify chghost multi-prefix userhost-in-names
+Nov 29 17:22:33 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+Nov 29 17:22:33 *	*** Your host is masked (7CF97D89.5314D4F0.4A2F84BB.IP)
+**** ENDING LOGGING AT Thu Nov 29 17:22:33 2018
+

@@ -1,0 +1,870 @@
+2018-10-16 15:37:35.565 [i] Init done in 2.8683s, including 1.9155s (67%) for the Python interpreter.
+2018-10-16 15:37:35.566 [i] Plugin loaded: Internal.About
+2018-10-16 15:37:36.321 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-10-16 15:37:36.321 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-10-16 15:37:36.321 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-10-16 15:37:36.321 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-10-16 15:37:36.321 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-10-16 15:37:36.460 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-10-16 15:37:36.482 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-10-16 15:37:36.487 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-10-16 15:37:36.492 [i] Plugin loaded: Env.Env (instance #1)
+2018-10-16 15:37:36.502 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-10-16 15:37:36.511 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-10-16 15:37:36.596 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-10-16 15:37:36.735 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-10-16 15:37:36.744 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-10-16 15:37:36.752 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-10-16 15:37:36.761 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-10-16 15:37:36.775 [i] Plugin loaded: String.String (instance #1)
+2018-10-16 15:37:36.782 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-10-16 15:37:36.788 [i] Plugin loaded: URL.URL (instance #1)
+2018-10-16 15:37:36.795 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-10-16 15:37:36.807 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-10-16 15:37:36.816 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-10-16 15:37:36.822 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-10-16 15:37:37.057 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-10-16 15:37:37.141 [i] Apps.StartMenu: Cataloged 178 items in 0.2 seconds
+2018-10-16 15:37:37.297 [i] Apps.EnvPath: Cataloged 1014 items in 0.4 seconds
+2018-10-16 15:37:39.485 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-10-16 15:37:41.372 [i] Bookmarks.Bookmarks: Referenced 222 bookmarks
+2018-10-16 15:41:02.554 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Alt+Space'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:41:09.661 [i] Shutting down with code 0.
+
+
+2018-10-16 15:41:13.936 [i] Loaded 1576 items from catalog file.
+2018-10-16 15:41:13.988 [i] Init done in 0.5519s, including 0.3556s (64%) for the Python interpreter.
+2018-10-16 15:41:13.989 [i] Plugin loaded: Internal.About
+2018-10-16 15:41:14.126 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-10-16 15:41:14.126 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-10-16 15:41:14.126 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-10-16 15:41:14.126 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-10-16 15:41:14.126 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-10-16 15:41:14.150 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-10-16 15:41:14.170 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-10-16 15:41:14.174 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-10-16 15:41:14.178 [i] Plugin loaded: Env.Env (instance #1)
+2018-10-16 15:41:14.188 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-10-16 15:41:14.195 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-10-16 15:41:14.218 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-10-16 15:41:14.235 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-10-16 15:41:14.243 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-10-16 15:41:14.248 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-10-16 15:41:14.256 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-10-16 15:41:14.267 [i] Plugin loaded: String.String (instance #1)
+2018-10-16 15:41:14.274 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-10-16 15:41:14.280 [i] Plugin loaded: URL.URL (instance #1)
+2018-10-16 15:41:14.284 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-10-16 15:41:14.294 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-10-16 15:41:14.299 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-10-16 15:41:14.305 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-10-16 15:41:14.481 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-10-16 15:41:14.520 [i] Apps.StartMenu: Cataloged 178 items in 0.1 seconds
+2018-10-16 15:41:14.843 [i] Apps.EnvPath: Cataloged 1014 items in 0.5 seconds
+2018-10-16 15:41:14.858 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-10-16 15:41:15.806 [i] Bookmarks.Bookmarks: Referenced 222 bookmarks
+2018-10-16 15:41:57.477 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Alt+Space'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:42:12.961 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Alt+Space'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:42:23.195 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Alt+Space'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:43:24.437 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Win+Alt+Space'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:43:43.378 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Win+Space'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:44:20.961 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Win+Space\r\n'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:44:45.284 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Win+Space\r\n'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:44:57.965 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Shift+Alt+Return\r\n'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:46:02.761 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Shift+Alt+Return'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:46:51.310 [i] Shutting down with code 0.
+
+
+2018-10-16 15:47:04.719 [i] Loaded 1576 items from catalog file.
+2018-10-16 15:47:04.802 [i] Init done in 0.7077s, including 0.4362s (62%) for the Python interpreter.
+2018-10-16 15:47:04.803 [i] Plugin loaded: Internal.About
+2018-10-16 15:47:04.991 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-10-16 15:47:04.991 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-10-16 15:47:04.991 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-10-16 15:47:04.991 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-10-16 15:47:04.991 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-10-16 15:47:05.027 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-10-16 15:47:05.051 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-10-16 15:47:05.056 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-10-16 15:47:05.061 [i] Plugin loaded: Env.Env (instance #1)
+2018-10-16 15:47:05.077 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-10-16 15:47:05.084 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-10-16 15:47:05.113 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-10-16 15:47:05.135 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-10-16 15:47:05.148 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-10-16 15:47:05.155 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-10-16 15:47:05.165 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-10-16 15:47:05.177 [i] Plugin loaded: String.String (instance #1)
+2018-10-16 15:47:05.185 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-10-16 15:47:05.191 [i] Plugin loaded: URL.URL (instance #1)
+2018-10-16 15:47:05.199 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-10-16 15:47:05.209 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-10-16 15:47:05.218 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-10-16 15:47:05.226 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-10-16 15:47:05.436 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-10-16 15:47:05.555 [i] Apps.StartMenu: Cataloged 178 items in 0.1 seconds
+2018-10-16 15:47:05.981 [i] Apps.EnvPath: Cataloged 1014 items in 0.6 seconds
+2018-10-16 15:47:06.003 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-10-16 15:47:07.073 [i] Bookmarks.Bookmarks: Referenced 222 bookmarks
+2018-10-16 15:49:46.946 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = Alt+Space'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:49:49.920 [W] Error while parsing config file C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\User\Keypirinha.ini: <class 'configparser.MissingSectionHeaderError'>: File contains no section headers.
+file: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Profile\\User\\Keypirinha.ini', line: 1
+'hotkey_run = "Alt+Space"'
+Traceback (most recent call last):
+  File "lib\configparser.py", line 723, in read_string
+  File "lib\configparser.py", line 718, in read_file
+  File "lib\configparser.py", line 1080, in _read
+
+2018-10-16 15:50:24.736 [i] Application configuration has changed
+2018-10-16 18:22:04.652 [i] FileZilla.FileZilla: Configuration changed, rebuilding catalog...
+2018-10-16 19:36:48.176 [i] Apps.StartMenu: Cataloged 178 items in 0.2 seconds
+2018-10-17 12:47:20.018 [i] Python: Failed to execute C:\Users\zeruel11\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps\WinMerge.lnk (action None). Error: [WinError 14001] The application has failed to start because its side-by-side configuration is incorrect. Please see the application event log or use the command-line sxstrace.exe tool for more detail.
+2018-10-17 12:52:09.499 [i] Apps.StartMenu: Cataloged 178 items in 0.0 seconds
+2018-10-17 12:52:41.931 [i] Apps.StartMenu: Cataloged 177 items in 0.0 seconds
+2018-10-17 12:52:43.945 [i] Apps.StartMenu: Cataloged 177 items in 0.0 seconds
+2018-10-17 12:54:37.467 [i] Apps.StartMenu: Cataloged 178 items in 0.0 seconds
+2018-10-17 12:54:39.513 [i] Apps.StartMenu: Cataloged 178 items in 0.1 seconds
+2018-10-17 12:59:01.183 [i] Apps.StartMenu: Cataloged 180 items in 0.0 seconds
+2018-10-17 12:59:03.192 [i] Apps.StartMenu: Cataloged 180 items in 0.0 seconds
+2018-10-17 13:09:45.121 [i] Apps.StartMenu: Cataloged 181 items in 0.0 seconds
+2018-10-17 13:09:47.141 [i] Apps.StartMenu: Cataloged 181 items in 0.0 seconds
+2018-10-17 13:31:16.294 [i] Environment changed.
+2018-10-17 13:31:16.438 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-10-17 13:31:16.816 [i] Apps.EnvPath: Cataloged 1483 items in 0.4 seconds
+2018-10-17 14:25:57.220 [i] Apps.StartMenu: Cataloged 183 items in 0.0 seconds
+2018-10-17 14:25:59.237 [i] Apps.StartMenu: Cataloged 183 items in 0.0 seconds
+2018-10-17 17:07:23.546 [i] Apps.StartMenu: Cataloged 181 items in 0.0 seconds
+2018-10-17 17:11:14.464 [i] Apps.StartMenu: Cataloged 182 items in 0.0 seconds
+2018-10-17 17:11:16.476 [i] Apps.StartMenu: Cataloged 182 items in 0.0 seconds
+2018-10-17 19:41:14.777 [i] Apps.StartMenu: Cataloged 182 items in 0.1 seconds
+2018-10-18 13:21:48.631 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-10-18 13:21:52.112 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (26 packages)
+2018-10-18 13:22:52.445 [i] PackageControl.PackageControl: Installed package 'keypirinha-currency'
+2018-10-18 13:22:53.994 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-10-18 13:22:54.022 [i] Currency.Currency: loading from url...
+2018-10-18 13:23:30.254 [i] PackageControl.PackageControl: Installed package 'keypirinha-url-shortener'
+2018-10-18 13:23:31.774 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-10-18 13:37:46.458 [E] Error from URLShortener.URLShortener.on_suggest: <class 'FileNotFoundError'>: [Errno 2] No such file or directory: 'C:\\Users\\zeruel11\\.scoopy\\apps\\keypirinha\\current\\portable\\Local\\Packages\\URLShortener\\history.json'
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\URLShortener.keypirinha-package\urlshortener.py", line 137, in on_suggest
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\URLShortener.keypirinha-package\history.py", line 16, in add
+
+2018-10-18 17:00:47.288 [i] Python: Traceback (most recent call last):
+2018-10-18 17:00:47.288 [i] Python:   File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\default\Packages\GoogleTranslate.keypirinha-package\googletranslate.py", line 122, in on_suggest
+2018-10-18 17:00:47.288 [i] Python:   File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\default\Packages\GoogleTranslate.keypirinha-package\googletranslate.py", line 306, in _parse_api_response
+2018-10-18 17:00:47.288 [i] Python: IndexError: list index out of range
+2018-10-18 17:00:52.742 [i] Python: Traceback (most recent call last):
+2018-10-18 17:00:52.743 [i] Python:   File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\default\Packages\GoogleTranslate.keypirinha-package\googletranslate.py", line 122, in on_suggest
+2018-10-18 17:00:52.743 [i] Python:   File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\default\Packages\GoogleTranslate.keypirinha-package\googletranslate.py", line 306, in _parse_api_response
+2018-10-18 17:00:52.743 [i] Python: IndexError: list index out of range
+2018-10-18 17:00:58.943 [i] Python: Traceback (most recent call last):
+2018-10-18 17:00:58.943 [i] Python:   File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\default\Packages\GoogleTranslate.keypirinha-package\googletranslate.py", line 122, in on_suggest
+2018-10-18 17:00:58.943 [i] Python:   File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\default\Packages\GoogleTranslate.keypirinha-package\googletranslate.py", line 306, in _parse_api_response
+2018-10-18 17:00:58.943 [i] Python: IndexError: list index out of range
+2018-10-18 18:09:07.402 [i] PackageControl.PackageControl: Installed package 'Keypirinha-Units'
+2018-10-18 18:09:08.963 [i] Plugin loaded: Units.Units (instance #1)
+2018-10-18 18:10:04.484 [i] PackageControl.PackageControl: Installed package 'keypirinha-moviedb'
+2018-10-18 18:10:06.835 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-10-18 18:10:07.061 [i] Plugin loaded: MovieDB.Moviedb (instance #4)
+2018-10-18 18:13:49.368 [i] Apps.StartMenu: Cataloged 183 items in 0.2 seconds
+2018-10-18 18:26:34.934 [i] Application configuration has changed
+2018-10-18 18:26:43.389 [i] Application configuration has changed
+2018-10-18 18:26:57.868 [i] Application configuration has changed
+2018-10-18 18:27:11.194 [i] Application configuration has changed
+2018-10-18 18:32:12.911 [i] Application configuration has changed
+2018-10-18 18:32:38.154 [i] Application configuration has changed
+2018-10-18 18:32:55.518 [i] Application configuration has changed
+2018-10-18 18:33:41.030 [i] Application configuration has changed
+2018-10-18 18:34:07.309 [i] Application configuration has changed
+2018-10-18 18:34:20.652 [i] Application configuration has changed
+2018-10-19 16:10:43.796 [i] Received TaskbarCreated system message
+2018-10-23 11:25:37.322 [i] Apps.StartMenu: Cataloged 184 items in 4.4 seconds
+2018-10-23 18:55:31.303 [i] Apps.StartMenu: Cataloged 184 items in 0.4 seconds
+2018-10-23 18:55:33.139 [i] Apps.StartMenu: Cataloged 184 items in 0.1 seconds
+2018-10-24 11:19:15.921 [i] Apps.StartMenu: Cataloged 184 items in 2.5 seconds
+2018-10-24 11:40:47.942 [i] Currency.Currency: loading from url...
+2018-10-24 11:40:56.493 [i] Currency.Currency: loading from url...
+2018-10-24 15:21:48.538 [i] Environment changed.
+2018-10-24 15:35:58.434 [i] Environment changed.
+2018-10-24 15:40:51.681 [i] Received end-of-session message
+
+
+2018-10-24 15:57:06.137 [i] Loaded 46 items from history file.
+2018-10-24 15:57:06.200 [i] Loaded 2072 items from catalog file.
+2018-10-24 15:57:06.512 [i] Init done in 6.0963s, including 1.6385s (27%) for the Python interpreter.
+2018-10-24 15:57:06.528 [i] Plugin loaded: Internal.About
+2018-10-24 15:57:07.294 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-10-24 15:57:07.294 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-10-24 15:57:07.294 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-10-24 15:57:07.294 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-10-24 15:57:07.294 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-10-24 15:57:07.325 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-10-24 15:57:07.356 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-10-24 15:57:07.356 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-10-24 15:57:07.528 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-10-24 15:57:07.544 [i] Plugin loaded: Env.Env (instance #1)
+2018-10-24 15:57:07.559 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-10-24 15:57:07.575 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-10-24 15:57:07.684 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-10-24 15:57:07.715 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-10-24 15:57:07.731 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-10-24 15:57:08.637 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-10-24 15:57:08.856 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-10-24 15:57:08.887 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-10-24 15:57:08.887 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-10-24 15:57:08.903 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-10-24 15:57:08.919 [i] Plugin loaded: String.String (instance #1)
+2018-10-24 15:57:08.934 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-10-24 15:57:08.934 [i] Plugin loaded: Units.Units (instance #1)
+2018-10-24 15:57:08.950 [i] Plugin loaded: URL.URL (instance #1)
+2018-10-24 15:57:08.965 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-10-24 15:57:08.965 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-10-24 15:57:08.981 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-10-24 15:57:08.981 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-10-24 15:57:08.981 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-10-24 15:57:18.211 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-10-24 15:57:18.380 [i] Apps.StartMenu: Cataloged 184 items in 2.3 seconds
+2018-10-24 15:57:18.565 [i] Apps.EnvPath: Cataloged 1492 items in 2.5 seconds
+2018-10-24 15:57:22.763 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (26 packages)
+2018-10-24 15:57:24.748 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-10-24 15:57:30.008 [i] Bookmarks.Bookmarks: Referenced 126 bookmarks
+2018-10-24 15:59:43.959 [i] Apps.StartMenu: Cataloged 184 items in 0.1 seconds
+2018-10-24 17:02:50.528 [i] Apps.StartMenu: Cataloged 186 items in 0.3 seconds
+2018-10-24 17:03:08.676 [i] Apps.StartMenu: Cataloged 186 items in 0.1 seconds
+
+
+2018-10-24 19:15:31.039 [i] Loaded 49 items from history file.
+2018-10-24 19:15:31.086 [i] Loaded 1987 items from catalog file.
+2018-10-24 19:15:31.164 [i] Init done in 2.1508s, including 0.5172s (24%) for the Python interpreter.
+2018-10-24 19:15:31.164 [i] Plugin loaded: Internal.About
+2018-10-24 19:15:31.726 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-10-24 19:15:31.726 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-10-24 19:15:31.726 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-10-24 19:15:31.726 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-10-24 19:15:31.726 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-10-24 19:15:31.758 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-10-24 19:15:31.773 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-10-24 19:15:31.773 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-10-24 19:15:31.836 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-10-24 19:15:31.851 [i] Plugin loaded: Env.Env (instance #1)
+2018-10-24 19:15:31.851 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-10-24 19:15:31.867 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-10-24 19:15:31.898 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-10-24 19:15:31.914 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-10-24 19:15:31.929 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-10-24 19:15:32.179 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-10-24 19:15:32.304 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-10-24 19:15:32.320 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-10-24 19:15:32.336 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-10-24 19:15:32.336 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-10-24 19:15:32.351 [i] Plugin loaded: String.String (instance #1)
+2018-10-24 19:15:32.351 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-10-24 19:15:32.351 [i] Plugin loaded: Units.Units (instance #1)
+2018-10-24 19:15:32.367 [i] Plugin loaded: URL.URL (instance #1)
+2018-10-24 19:15:32.367 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-10-24 19:15:32.367 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-10-24 19:15:32.383 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-10-24 19:15:32.383 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-10-24 19:15:32.398 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-10-24 19:15:32.976 [i] Apps.Desktop: Cataloged 2 items in 0.2 seconds
+2018-10-24 19:15:33.008 [i] Apps.StartMenu: Cataloged 186 items in 0.4 seconds
+2018-10-24 19:15:33.023 [i] PackageControl.PackageControl: Package list loaded from file cache 'ueffel's Package Repository' (26 packages)
+2018-10-24 19:15:33.133 [i] Apps.EnvPath: Cataloged 1492 items in 0.5 seconds
+2018-10-24 19:15:35.504 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-10-24 19:15:39.114 [i] Bookmarks.Bookmarks: Referenced 126 bookmarks
+2018-10-26 19:46:21.262 [i] Apps.StartMenu: Cataloged 186 items in 0.4 seconds
+2018-10-26 19:49:01.450 [i] Apps.StartMenu: Cataloged 186 items in 0.0 seconds
+2018-10-26 19:49:12.951 [i] Apps.StartMenu: Cataloged 186 items in 0.0 seconds
+2018-10-26 19:49:22.950 [i] Environment changed.
+2018-10-26 19:49:24.217 [i] Apps.StartMenu: Cataloged 186 items in 0.0 seconds
+2018-10-26 19:49:30.950 [i] Environment changed.
+2018-10-26 19:49:31.012 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-10-26 19:49:31.200 [i] Environment changed.
+2018-10-26 19:49:51.981 [i] Apps.StartMenu: Cataloged 186 items in 0.0 seconds
+2018-10-26 19:57:28.617 [i] Application configuration has changed
+2018-10-26 19:57:28.713 [i] Currency.Currency: loading from url...
+2018-10-26 19:58:03.819 [W] Everything.Everything: Everything instance not found
+2018-10-26 19:58:04.388 [W] Everything.Everything: Everything instance not found
+2018-10-26 21:00:59.757 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-10-26 21:01:13.991 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-10-26 21:09:17.409 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-10-27 23:05:17.607 [i] Apps.StartMenu: Cataloged 187 items in 0.5 seconds
+2018-10-29 13:43:12.599 [i] Received TaskbarCreated system message
+2018-10-29 21:17:22.196 [i] Received TaskbarCreated system message
+2018-10-30 15:33:52.155 [i] Apps.StartMenu: Cataloged 187 items in 0.1 seconds
+2018-10-30 15:36:13.461 [i] Environment changed.
+2018-10-30 15:36:14.914 [i] Apps.StartMenu: Cataloged 187 items in 0.0 seconds
+2018-10-30 15:36:22.718 [i] Environment changed.
+2018-10-30 19:42:39.062 [i] Apps.StartMenu: Cataloged 186 items in 0.0 seconds
+2018-10-30 19:42:41.078 [i] Apps.StartMenu: Cataloged 186 items in 0.0 seconds
+2018-10-30 19:58:11.434 [i] Apps.StartMenu: Cataloged 187 items in 0.0 seconds
+2018-10-30 19:58:13.462 [i] Apps.StartMenu: Cataloged 187 items in 0.0 seconds
+
+
+2018-11-02 15:21:06.199 [i] Loaded 74 items from history file.
+2018-11-02 15:21:06.301 [i] Loaded 1988 items from catalog file.
+2018-11-02 15:21:06.438 [i] Init done in 1.8308s, including 1.2289s (67%) for the Python interpreter.
+2018-11-02 15:21:06.438 [i] Plugin loaded: Internal.About
+2018-11-02 15:21:06.860 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-11-02 15:21:06.860 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-11-02 15:21:06.860 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-11-02 15:21:06.860 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-11-02 15:21:06.861 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-11-02 15:21:06.951 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-11-02 15:21:06.975 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-11-02 15:21:06.980 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-11-02 15:21:07.005 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-11-02 15:21:07.011 [i] Plugin loaded: Env.Env (instance #1)
+2018-11-02 15:21:07.025 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-11-02 15:21:07.033 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-11-02 15:21:07.076 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-11-02 15:21:07.183 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-11-02 15:21:07.191 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-11-02 15:21:07.614 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-11-02 15:21:07.742 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-11-02 15:21:07.759 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-11-02 15:21:07.763 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-11-02 15:21:07.769 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-11-02 15:21:07.777 [i] Plugin loaded: String.String (instance #1)
+2018-11-02 15:21:07.781 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-11-02 15:21:07.787 [i] Plugin loaded: Units.Units (instance #1)
+2018-11-02 15:21:07.793 [i] Plugin loaded: URL.URL (instance #1)
+2018-11-02 15:21:07.803 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-11-02 15:21:07.810 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-11-02 15:21:07.820 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-11-02 15:21:07.828 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-11-02 15:21:07.834 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-11-02 15:21:08.035 [i] Currency.Currency: loading from url...
+2018-11-02 15:21:08.076 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-11-02 15:21:08.539 [i] Apps.StartMenu: Cataloged 187 items in 0.6 seconds
+2018-11-02 15:21:09.057 [i] Apps.EnvPath: Cataloged 1496 items in 1.1 seconds
+2018-11-02 15:21:10.814 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-11-02 15:21:11.953 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (28 packages)
+2018-11-02 15:21:22.416 [i] Bookmarks.Bookmarks: Referenced 127 bookmarks
+2018-11-02 19:18:37.961 [i] Apps.StartMenu: Cataloged 188 items in 0.1 seconds
+2018-11-02 19:18:39.955 [i] Apps.StartMenu: Cataloged 188 items in 0.0 seconds
+2018-11-03 22:37:54.275 [i] Shutting down with code 0.
+
+
+2018-11-15 22:25:44.520 [i] Loaded 78 items from history file.
+2018-11-15 22:25:44.599 [i] Loaded 2019 items from catalog file.
+2018-11-15 22:25:44.912 [i] Init done in 3.5429s, including 2.4232s (68%) for the Python interpreter.
+2018-11-15 22:25:44.915 [i] Plugin loaded: Internal.About
+2018-11-15 22:25:46.278 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-11-15 22:25:46.278 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-11-15 22:25:46.278 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-11-15 22:25:46.279 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-11-15 22:25:46.279 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-11-15 22:25:46.376 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-11-15 22:25:46.406 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-11-15 22:25:46.412 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-11-15 22:25:46.441 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-11-15 22:25:46.453 [i] Plugin loaded: Env.Env (instance #1)
+2018-11-15 22:25:46.473 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-11-15 22:25:46.483 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-11-15 22:25:46.532 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-11-15 22:25:46.609 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-11-15 22:25:46.619 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-11-15 22:25:47.055 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-11-15 22:25:47.373 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-11-15 22:25:47.405 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-11-15 22:25:47.414 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-11-15 22:25:47.426 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-11-15 22:25:47.438 [i] Plugin loaded: String.String (instance #1)
+2018-11-15 22:25:47.451 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-11-15 22:25:47.459 [i] Plugin loaded: Units.Units (instance #1)
+2018-11-15 22:25:47.469 [i] Plugin loaded: URL.URL (instance #1)
+2018-11-15 22:25:47.488 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-11-15 22:25:47.499 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-11-15 22:25:47.521 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-11-15 22:25:47.535 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-11-15 22:25:47.543 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-11-15 22:25:47.860 [i] Currency.Currency: loading from url...
+2018-11-15 22:25:50.139 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-11-15 22:25:50.187 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-11-15 22:25:50.435 [i] Apps.StartMenu: Cataloged 204 items in 0.4 seconds
+2018-11-15 22:25:51.021 [i] Apps.EnvPath: Cataloged 1514 items in 0.9 seconds
+2018-11-15 22:25:52.350 [i] Bookmarks.Bookmarks: Referenced 128 bookmarks
+2018-11-15 22:25:52.786 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (29 packages)
+2018-11-15 22:25:52.898 [i] PackageControl.PackageControl: 1 package(s) are out of date: ['keypirinha-currency']
+2018-11-15 22:25:54.645 [i] PackageControl.PackageControl: Updated package: keypirinha-currency
+2018-11-15 22:25:56.187 [i] Plugin loaded: Currency.Currency (instance #2)
+2018-11-15 22:25:56.197 [i] Python: Traceback (most recent call last):
+2018-11-15 22:25:56.198 [i] Python:   File "keypirinha_private.py", line 354, in reload_module
+2018-11-15 22:25:56.198 [i] Python:   File "lib\importlib\__init__.py", line 166, in reload
+2018-11-15 22:25:56.198 [i] Python:   File "<frozen importlib._bootstrap>", line 616, in _exec
+2018-11-15 22:25:56.198 [i] Python:   File "keypirinha_private.py", line 246, in load_module
+2018-11-15 22:25:56.198 [i] Python:   File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\Currency.keypirinha-package\exchange.py", line 3, in <module>
+2018-11-15 22:25:56.198 [i] Python: ImportError: cannot import name 'PrivateDomain'
+2018-11-16 22:14:46.974 [i] Received TaskbarCreated system message
+2018-11-18 00:06:58.572 [i] Apps.StartMenu: Cataloged 204 items in 0.2 seconds
+2018-11-18 00:14:24.970 [i] Received end-of-session message
+
+
+2018-11-18 17:00:16.791 [i] Loaded 84 items from history file.
+2018-11-18 17:00:16.941 [i] Loaded 2054 items from catalog file.
+2018-11-18 17:00:17.339 [i] Init done in 9.5311s, including 7.8100s (82%) for the Python interpreter.
+2018-11-18 17:00:17.420 [i] Plugin loaded: Internal.About
+2018-11-18 17:00:19.271 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-11-18 17:00:19.282 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-11-18 17:00:19.282 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-11-18 17:00:19.282 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-11-18 17:00:19.282 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-11-18 17:00:19.515 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-11-18 17:00:19.555 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-11-18 17:00:19.564 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-11-18 17:00:19.596 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-11-18 17:00:19.614 [i] Plugin loaded: Env.Env (instance #1)
+2018-11-18 17:00:19.626 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-11-18 17:00:19.645 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-11-18 17:00:19.748 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-11-18 17:00:20.022 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-11-18 17:00:20.040 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-11-18 17:00:20.631 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-11-18 17:00:20.926 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-11-18 17:00:20.936 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-11-18 17:00:20.946 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-11-18 17:00:20.956 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-11-18 17:00:20.966 [i] Plugin loaded: String.String (instance #1)
+2018-11-18 17:00:20.974 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-11-18 17:00:20.976 [i] Plugin loaded: Units.Units (instance #1)
+2018-11-18 17:00:20.987 [i] Plugin loaded: URL.URL (instance #1)
+2018-11-18 17:00:21.007 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-11-18 17:00:21.017 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-11-18 17:00:21.027 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-11-18 17:00:21.045 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-11-18 17:00:21.056 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-11-18 17:00:21.502 [i] Currency.Currency: loading from cache server...
+2018-11-18 17:00:21.830 [i] Apps.Desktop: Cataloged 2 items in 0.4 seconds
+2018-11-18 17:00:22.537 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-11-18 17:00:22.656 [i] Apps.StartMenu: Cataloged 204 items in 1.0 seconds
+2018-11-18 17:00:22.982 [i] Apps.EnvPath: Cataloged 1515 items in 1.4 seconds
+2018-11-18 17:00:25.777 [i] Bookmarks.Bookmarks: Referenced 128 bookmarks
+2018-11-18 17:00:27.552 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (30 packages)
+2018-11-18 17:01:39.990 [i] Application configuration has changed
+2018-11-18 17:05:21.091 [i] Environment changed.
+2018-11-19 15:07:16.992 [i] Apps.StartMenu: Cataloged 204 items in 0.4 seconds
+2018-11-19 15:34:17.115 [i] Apps.StartMenu: Cataloged 205 items in 0.1 seconds
+2018-11-19 15:43:10.302 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-11-19 15:43:12.334 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-11-19 15:44:59.242 [i] Apps.StartMenu: Cataloged 206 items in 0.4 seconds
+2018-11-19 16:49:39.332 [i] Apps.StartMenu: Cataloged 206 items in 0.2 seconds
+2018-11-19 16:54:15.467 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-11-20 02:13:32.161 [i] Received end-of-session message
+
+
+2018-11-20 02:15:11.380 [i] Loaded 90 items from history file.
+2018-11-20 02:15:11.411 [i] Loaded 2057 items from catalog file.
+2018-11-20 02:15:11.614 [i] Init done in 27.7362s, including 25.7801s (93%) for the Python interpreter.
+2018-11-20 02:15:11.630 [i] Plugin loaded: Internal.About
+2018-11-20 02:15:15.734 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-11-20 02:15:15.734 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-11-20 02:15:15.734 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-11-20 02:15:15.734 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-11-20 02:15:15.734 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-11-20 02:15:16.330 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-11-20 02:15:16.362 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-11-20 02:15:16.377 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-11-20 02:15:16.408 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-11-20 02:15:16.424 [i] Plugin loaded: Env.Env (instance #1)
+2018-11-20 02:15:16.440 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-11-20 02:15:16.476 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-11-20 02:15:16.935 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-11-20 02:15:17.957 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-11-20 02:15:17.972 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-11-20 02:15:18.638 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-11-20 02:15:19.070 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-11-20 02:15:19.111 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-11-20 02:15:19.120 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-11-20 02:15:19.134 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-11-20 02:15:19.175 [i] Plugin loaded: String.String (instance #1)
+2018-11-20 02:15:19.189 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-11-20 02:15:19.202 [i] Plugin loaded: Units.Units (instance #1)
+2018-11-20 02:15:19.211 [i] Plugin loaded: URL.URL (instance #1)
+2018-11-20 02:15:19.247 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-11-20 02:15:19.263 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-11-20 02:15:19.294 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-11-20 02:15:19.310 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-11-20 02:15:19.326 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-11-20 02:15:19.954 [i] Currency.Currency: loading from cache server...
+2018-11-20 02:15:21.990 [i] Python: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:847)>
+2018-11-20 02:15:22.311 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1400, in connect
+  File "lib\ssl.py", line 407, in wrap_socket
+  File "lib\ssl.py", line 817, in __init__
+  File "lib\ssl.py", line 1077, in do_handshake
+  File "lib\ssl.py", line 689, in do_handshake
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 383, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+
+2018-11-20 02:15:22.681 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 69, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 299, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 333, in _get_package
+
+2018-11-20 02:15:23.787 [i] Apps.Desktop: Cataloged 2 items in 0.8 seconds
+2018-11-20 02:15:23.958 [i] Apps.StartMenu: Cataloged 206 items in 0.2 seconds
+2018-11-20 02:15:24.339 [i] Apps.EnvPath: Cataloged 1516 items in 0.5 seconds
+2018-11-20 02:15:27.055 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-11-20 02:16:35.663 [i] Bookmarks.Bookmarks: Referenced 131 bookmarks
+2018-11-21 09:01:20.170 [i] Environment changed.
+2018-11-21 09:35:38.862 [i] Environment changed.
+2018-11-21 09:35:38.963 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-21 09:35:39.420 [i] Apps.EnvPath: Cataloged 1516 items in 0.4 seconds
+2018-11-21 09:35:39.569 [i] Environment changed.
+2018-11-21 09:35:39.639 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-21 09:35:40.029 [i] Apps.EnvPath: Cataloged 1515 items in 0.4 seconds
+2018-11-21 09:35:49.163 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-11-23 15:57:42.140 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-11-24 16:22:20.083 [i] Apps.StartMenu: Cataloged 206 items in 0.2 seconds
+2018-11-24 17:15:23.905 [i] Apps.StartMenu: Cataloged 207 items in 0.1 seconds
+2018-11-24 17:15:25.871 [i] Apps.StartMenu: Cataloged 207 items in 0.1 seconds
+2018-11-24 18:17:19.879 [i] Apps.StartMenu: Cataloged 208 items in 0.1 seconds
+2018-11-24 18:17:21.884 [i] Apps.StartMenu: Cataloged 208 items in 0.1 seconds
+2018-11-24 18:26:43.613 [i] Apps.StartMenu: Cataloged 209 items in 0.1 seconds
+2018-11-24 18:26:45.648 [i] Apps.StartMenu: Cataloged 209 items in 0.1 seconds
+2018-11-24 18:37:31.380 [i] Apps.Desktop: Cataloged 3 items in 0.0 seconds
+2018-11-24 18:37:33.442 [i] Apps.StartMenu: Cataloged 211 items in 0.1 seconds
+2018-11-24 18:39:25.892 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-11-25 14:45:31.150 [i] Apps.StartMenu: Cataloged 209 items in 2.2 seconds
+2018-11-25 14:45:33.084 [i] Apps.StartMenu: Cataloged 209 items in 0.1 seconds
+2018-11-25 14:46:55.438 [i] Environment changed.
+2018-11-25 14:46:58.498 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-25 14:46:59.348 [i] Apps.EnvPath: Cataloged 1522 items in 0.8 seconds
+2018-11-25 14:47:00.974 [i] Apps.StartMenu: Cataloged 204 items in 0.1 seconds
+2018-11-25 14:47:03.036 [i] Apps.StartMenu: Cataloged 204 items in 0.1 seconds
+2018-11-25 14:47:54.657 [i] Environment changed.
+2018-11-25 14:47:54.803 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-25 14:47:55.285 [i] Apps.EnvPath: Cataloged 1520 items in 0.5 seconds
+2018-11-25 14:48:43.038 [i] Apps.StartMenu: Cataloged 202 items in 0.1 seconds
+2018-11-25 14:49:44.090 [i] Apps.StartMenu: Cataloged 201 items in 0.1 seconds
+2018-11-25 14:52:27.251 [i] Apps.StartMenu: Cataloged 200 items in 0.1 seconds
+2018-11-25 15:01:00.847 [i] Environment changed.
+2018-11-25 15:01:01.032 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-25 15:01:01.784 [i] Apps.EnvPath: Cataloged 1519 items in 0.7 seconds
+2018-11-25 15:01:02.297 [i] Environment changed.
+2018-11-25 15:01:02.597 [i] Environment changed.
+2018-11-25 16:23:10.442 [i] Currency.Currency: loading from cache server...
+2018-11-25 20:32:56.696 [i] Apps.StartMenu: Cataloged 200 items in 0.1 seconds
+2018-11-25 20:59:03.476 [i] Apps.StartMenu: Cataloged 200 items in 0.2 seconds
+2018-11-26 21:31:49.062 [i] Environment changed.
+2018-11-26 21:31:50.123 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-26 21:31:52.637 [i] Apps.EnvPath: Cataloged 1523 items in 2.5 seconds
+2018-11-26 21:33:10.856 [i] Environment changed.
+2018-11-26 21:33:10.981 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-26 21:33:11.378 [i] Apps.EnvPath: Cataloged 1519 items in 0.4 seconds
+2018-11-26 21:33:12.388 [i] Environment changed.
+2018-11-26 21:33:12.529 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-26 21:33:12.895 [i] Apps.EnvPath: Cataloged 1524 items in 0.4 seconds
+2018-11-26 21:33:14.552 [i] Apps.StartMenu: Cataloged 201 items in 0.4 seconds
+2018-11-26 21:33:16.333 [i] Apps.StartMenu: Cataloged 201 items in 0.0 seconds
+2018-11-27 12:03:17.329 [i] Apps.StartMenu: Cataloged 201 items in 0.1 seconds
+2018-11-27 12:03:19.870 [i] Apps.StartMenu: Cataloged 202 items in 0.1 seconds
+2018-11-27 19:27:56.632 [i] Environment changed.
+2018-11-27 19:28:06.519 [i] Environment changed.
+2018-11-27 19:28:06.628 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-27 19:28:07.195 [i] Environment changed.
+2018-11-27 19:28:07.243 [i] Apps.EnvPath: Cataloged 1531 items in 0.6 seconds
+2018-11-27 21:06:02.318 [i] Apps.Desktop: Cataloged 3 items in 0.0 seconds
+2018-11-27 21:06:03.677 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-11-27 21:06:32.855 [i] Environment changed.
+2018-11-27 21:08:10.192 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-11-27 21:09:34.842 [i] Apps.StartMenu: Cataloged 207 items in 0.1 seconds
+2018-11-27 21:09:36.858 [i] Apps.StartMenu: Cataloged 207 items in 0.1 seconds
+2018-11-27 21:21:10.372 [i] Received end-of-session message
+
+
+2018-11-28 14:45:53.050 [i] Loaded 105 items from history file.
+2018-11-28 14:45:53.144 [i] Loaded 2077 items from catalog file.
+2018-11-28 14:45:53.831 [i] Init done in 104.4711s, including 99.0660s (95%) for the Python interpreter.
+2018-11-28 14:45:53.847 [i] Plugin loaded: Internal.About
+2018-11-28 14:46:04.446 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-11-28 14:46:04.446 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-11-28 14:46:04.446 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-11-28 14:46:04.446 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-11-28 14:46:04.446 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-11-28 14:46:06.122 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-11-28 14:46:06.154 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-11-28 14:46:06.169 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-11-28 14:46:06.216 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-11-28 14:46:06.216 [i] Plugin loaded: Env.Env (instance #1)
+2018-11-28 14:46:06.247 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-11-28 14:46:06.263 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-11-28 14:46:06.872 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-11-28 14:46:07.723 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-11-28 14:46:07.738 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-11-28 14:46:08.316 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-11-28 14:46:08.781 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-11-28 14:46:08.890 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-11-28 14:46:08.890 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-11-28 14:46:08.968 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-11-28 14:46:08.984 [i] Plugin loaded: String.String (instance #1)
+2018-11-28 14:46:08.999 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-11-28 14:46:09.015 [i] Plugin loaded: Units.Units (instance #1)
+2018-11-28 14:46:09.031 [i] Plugin loaded: URL.URL (instance #1)
+2018-11-28 14:46:09.187 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-11-28 14:46:09.203 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-11-28 14:46:09.218 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-11-28 14:46:09.234 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-11-28 14:46:09.234 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-11-28 14:46:09.578 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-11-28 14:46:09.781 [i] Apps.StartMenu: Cataloged 207 items in 0.3 seconds
+2018-11-28 14:46:11.100 [i] Currency.Currency: loading from cache server...
+2018-11-28 14:46:16.458 [i] Apps.EnvPath: Cataloged 1534 items in 6.8 seconds
+2018-11-28 14:46:19.345 [i] Python: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:847)>
+2018-11-28 14:46:21.026 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1392, in connect
+  File "lib\http\client.py", line 936, in connect
+  File "lib\socket.py", line 724, in create_connection
+  File "lib\socket.py", line 713, in create_connection
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 383, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error timed out>
+
+2018-11-28 14:46:21.102 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 69, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 299, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 333, in _get_package
+
+2018-11-28 14:46:43.020 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-11-28 14:47:48.417 [i] Bookmarks.Bookmarks: Referenced 131 bookmarks
+2018-11-28 14:51:12.221 [i] Received end-of-session message
+
+
+2018-11-28 14:59:10.584 [i] Loaded 105 items from history file.
+2018-11-28 14:59:10.969 [i] Loaded 2079 items from catalog file.
+2018-11-28 14:59:12.191 [i] Init done in 95.8057s, including 84.8224s (89%) for the Python interpreter.
+2018-11-28 14:59:12.219 [i] Plugin loaded: Internal.About
+2018-11-28 14:59:17.966 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-11-28 14:59:17.966 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-11-28 14:59:17.966 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-11-28 14:59:17.966 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-11-28 14:59:17.966 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-11-28 14:59:20.037 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-11-28 14:59:20.068 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-11-28 14:59:20.084 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-11-28 14:59:20.115 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-11-28 14:59:20.130 [i] Plugin loaded: Env.Env (instance #1)
+2018-11-28 14:59:20.146 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-11-28 14:59:20.162 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-11-28 14:59:21.385 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-11-28 14:59:22.331 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-11-28 14:59:22.347 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-11-28 14:59:22.751 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-11-28 14:59:23.225 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-11-28 14:59:23.256 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-11-28 14:59:23.291 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-11-28 14:59:23.303 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-11-28 14:59:23.315 [i] Plugin loaded: String.String (instance #1)
+2018-11-28 14:59:23.339 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-11-28 14:59:23.363 [i] Plugin loaded: Units.Units (instance #1)
+2018-11-28 14:59:23.375 [i] Plugin loaded: URL.URL (instance #1)
+2018-11-28 14:59:23.423 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-11-28 14:59:23.431 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-11-28 14:59:23.443 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-11-28 14:59:23.463 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-11-28 14:59:23.471 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-11-28 14:59:24.155 [i] Currency.Currency: loading from cache server...
+2018-11-28 14:59:24.211 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-11-28 14:59:24.267 [i] Apps.StartMenu: Cataloged 207 items in 0.2 seconds
+2018-11-28 14:59:25.071 [i] Apps.EnvPath: Cataloged 1534 items in 1.0 seconds
+2018-11-28 14:59:29.771 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (30 packages)
+2018-11-28 14:59:54.359 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-11-28 15:00:28.340 [i] Bookmarks.Bookmarks: Referenced 131 bookmarks
+2018-11-28 23:05:10.873 [i] Received end-of-session message
+
+
+2018-11-29 15:46:40.798 [i] Loaded 107 items from history file.
+2018-11-29 15:46:41.280 [i] Loaded 2079 items from catalog file.
+2018-11-29 15:46:41.739 [i] Init done in 100.5066s, including 85.5365s (85%) for the Python interpreter.
+2018-11-29 15:46:41.743 [i] Plugin loaded: Internal.About
+2018-11-29 15:46:49.246 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-11-29 15:46:49.246 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-11-29 15:46:49.246 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-11-29 15:46:49.246 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-11-29 15:46:49.246 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-11-29 15:46:49.820 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-11-29 15:46:49.920 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-11-29 15:46:49.940 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-11-29 15:46:50.016 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-11-29 15:46:50.064 [i] Plugin loaded: Env.Env (instance #1)
+2018-11-29 15:46:50.096 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-11-29 15:46:50.152 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-11-29 15:46:50.655 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-11-29 15:46:51.613 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-11-29 15:46:51.625 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-11-29 15:46:53.072 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-11-29 15:46:53.552 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-11-29 15:46:53.576 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-11-29 15:46:53.591 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-11-29 15:46:53.607 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-11-29 15:46:53.638 [i] Plugin loaded: String.String (instance #1)
+2018-11-29 15:46:53.654 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-11-29 15:46:53.654 [i] Plugin loaded: Units.Units (instance #1)
+2018-11-29 15:46:53.669 [i] Plugin loaded: URL.URL (instance #1)
+2018-11-29 15:46:53.732 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-11-29 15:46:53.747 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-11-29 15:46:53.763 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-11-29 15:46:53.763 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-11-29 15:46:53.779 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-11-29 15:46:54.076 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-11-29 15:46:54.919 [i] Currency.Currency: loading from cache server...
+2018-11-29 15:46:57.175 [i] Apps.StartMenu: Cataloged 207 items in 3.1 seconds
+2018-11-29 15:47:08.687 [i] Python: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:847)>
+2018-11-29 15:47:08.695 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-11-29 15:47:13.137 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1392, in connect
+  File "lib\http\client.py", line 936, in connect
+  File "lib\socket.py", line 724, in create_connection
+  File "lib\socket.py", line 713, in create_connection
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 383, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error timed out>
+
+2018-11-29 15:47:13.137 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 69, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 299, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 333, in _get_package
+
+2018-11-29 15:47:59.586 [i] Bookmarks.Bookmarks: Referenced 131 bookmarks
+2018-11-29 15:48:05.489 [i] Apps.EnvPath: Cataloged 1534 items in 68.9 seconds
+2018-11-29 16:54:30.917 [i] Environment changed.
+2018-11-29 20:31:53.159 [i] Environment changed.
+2018-11-29 20:31:53.636 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-11-29 20:31:54.306 [i] Apps.EnvPath: Cataloged 1585 items in 0.5 seconds
+2018-11-29 20:31:56.642 [i] Environment changed.

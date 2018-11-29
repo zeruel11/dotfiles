@@ -1,0 +1,22 @@
+**** BEGIN LOGGING AT Fri Nov  9 16:32:01 2018
+
+Nov 09 16:32:01 *	Connecting to z4odjxjr572vrffejlw2ihddqxycxuo3niejlf5zba.map.rizon.net (52.193.79.145:6697)
+Nov 09 16:32:01 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 09 16:32:01 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 09 16:32:01 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 09 16:32:01 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 09 16:32:01 *	* Subject: /CN=irc.rizon.net
+Nov 09 16:32:01 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 09 16:32:02 *	* Certification info:
+Nov 09 16:32:02 *	  Subject:
+Nov 09 16:32:02 *	    CN=irc.rizon.net
+Nov 09 16:32:02 *	  Issuer:
+Nov 09 16:32:02 *	    C=US
+Nov 09 16:32:02 *	    O=Let's Encrypt
+Nov 09 16:32:02 *	    CN=Let's Encrypt Authority X3
+Nov 09 16:32:02 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 09 16:32:02 *	  Sign algorithm sha256WithRSAEncryption
+Nov 09 16:32:02 *	  Valid since Oct 22 20:08:38 2018 GM to Jan 20 20:08:38 2019 GM
+Nov 09 16:32:02 *	* Cipher info:
+Nov 09 16:32:02 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 09 16:32:02 *	Connected. Now logging in.
