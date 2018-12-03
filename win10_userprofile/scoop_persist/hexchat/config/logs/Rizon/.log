@@ -20,3 +20,15 @@ Nov 09 16:32:02 *	  Valid since Oct 22 20:08:38 2018 GM to Jan 20 20:08:38 2019 
 Nov 09 16:32:02 *	* Cipher info:
 Nov 09 16:32:02 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
 Nov 09 16:32:02 *	Connected. Now logging in.
+**** BEGIN LOGGING AT Sun Dec  2 03:43:19 2018
+
+Dec 02 03:43:19 *	zeruel11 is already in use. Retrying with zeruel11_...
+Dec 02 03:43:20 *	zeruel11_ sets mode +S on zeruel11_
+Dec 02 03:43:20 *	zeruel11_ sets mode +i on zeruel11_
+Dec 02 03:43:20 *	zeruel11_ sets mode +x on zeruel11_
+Dec 02 03:43:20 -Global-	[Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+Dec 02 03:43:20 -Global-	[Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+Dec 02 03:43:20 -Global-	[Random News - May 07 2013] Looking for a quotes, trivia, or other extra bots? /msg funserv help
+Dec 02 03:43:20 *	Received a CTCP VERSION from py-ctcp
+**** ENDING LOGGING AT Sun Dec  2 03:43:24 2018
+

@@ -3,7 +3,7 @@
       "creator" : "Keypirinha v2.23 (2ee355d)",
       "creator_url" : "http://keypirinha.com/",
       "format" : 102,
-      "modified" : "2018-11-29T15:32:31+0000",
+      "modified" : "2018-12-03T05:50:53+0000",
       "type" : "history"
    },
    "history" : [
@@ -714,6 +714,90 @@
          "item" : 3799679699273239444,
          "label" : "fmd.exe",
          "time" : "2018-11-29T15:32:31+0000"
+      },
+      {
+         "action" : null,
+         "item" : 370028054294366767,
+         "label" : "HexChat",
+         "time" : "2018-11-29T16:31:27+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-11-29T16:35:13+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-11-29T16:36:23+0000"
+      },
+      {
+         "action" : null,
+         "item" : 370028054294366767,
+         "label" : "HexChat",
+         "time" : "2018-11-30T09:08:40+0000"
+      },
+      {
+         "action" : null,
+         "item" : 2175515381200507301,
+         "label" : "7-Zip",
+         "time" : "2018-12-01T09:09:20+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-12-01T10:20:39+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1283077964835698977,
+         "label" : "DBeaver",
+         "time" : "2018-12-01T12:03:41+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-01T12:15:59+0000"
+      },
+      {
+         "action" : null,
+         "item" : 370028054294366767,
+         "label" : "HexChat",
+         "time" : "2018-12-01T12:19:47+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11377851740045468617,
+         "label" : "Visual Studio Code",
+         "time" : "2018-12-02T09:01:56+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-02T10:51:17+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-12-03T04:20:13+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7715148561619026502,
+         "label" : "MKVToolNix GUI",
+         "time" : "2018-12-03T04:41:16+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-12-03T05:50:53+0000"
       }
    ],
    "sets" : {
@@ -748,6 +832,17 @@
             "plugin" : "FileBrowser.FileBrowser",
             "short_desc" : "",
             "target" : "C:\\Users\\zeruel11\\.scoop"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 2175515381200507301,
+            "label" : "7-Zip",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\7-Zip.lnk"
          },
          {
             "args_hint" : "accepted",
@@ -1274,6 +1369,10 @@
             "search" : "%userprofile%\\.scoo"
          },
          {
+            "items" : [ 2175515381200507301 ],
+            "search" : "7zip"
+         },
+         {
             "items" : [ 10800565414785061761 ],
             "search" : "adv"
          },
@@ -1388,6 +1487,10 @@
          {
             "items" : [ 370028054294366767 ],
             "search" : "hex"
+         },
+         {
+            "items" : [ 370028054294366767 ],
+            "search" : "hexc"
          },
          {
             "items" : [ 18168495158365668489 ],
