@@ -233,7 +233,6 @@ libavahi-glib1:amd64				install
 libbabeltrace1:amd64				install
 libbind9-160:amd64				install
 libbinutils:amd64				install
-libblas3:amd64					install
 libblkid1:amd64					install
 libblockdev-crypto2:amd64			install
 libblockdev-fs2:amd64				install
@@ -472,7 +471,6 @@ libksba8:amd64					install
 liblcms2-2:amd64				install
 libldap-2.4-2:amd64				install
 libldap-common					install
-liblinear3:amd64				install
 libllvm6.0:amd64				install
 liblocale-gettext-perl				install
 liblqr-1-0:amd64				install
@@ -480,7 +478,6 @@ liblsan0:amd64					install
 libltdl-dev:amd64				install
 libltdl7:amd64					install
 liblua5.2-0:amd64				install
-liblua5.3-0:amd64				install
 liblvm2app2.2:amd64				install
 liblvm2cmd2.02:amd64				install
 liblwp-mediatypes-perl				install
@@ -813,7 +810,6 @@ netcat-openbsd					install
 netpbm						install
 netplan.io					install
 networkd-dispatcher				install
-nmap						install
 notification-daemon				install
 nplan						install
 ntfs-3g						install
