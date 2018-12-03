@@ -11,28 +11,30 @@ atomicparsley (v:0.9.0)
 audacity (v:2.3.0) [extras]
 blender (v:2.79b) [extras]
 calibre-normal (v:3.34.0) [extras]
-ccextractor (v:v0.87) [C:\Users\zeruel11\ccextractor.json]
 CentOSwsl (v:v0.0.1) [C:\Users\zeruel11\CentOSwsl.json]
 cpu-z (v:1.87) [extras]
 crystaldiskinfo (v:8.0.0) [extras]
 crystaldiskmark (v:6.0.2) [extras]
 cuetools (v:2.1.6) [extras]
 dbeaver (v:5.2.5) [extras]
+docker (v:18.09.0)
+docker-compose (v:1.23.2)
+docker-machine (v:0.16.0)
 doxygen (v:1.8.14)
 emacs (v:26.1) [extras]
 etcher (v:1.4.8) [extras]
 etcher-cli (v:1.4.8) [extras]
 exiftool (v:11.20)
 ffmpeg (v:4.1)
-filezilla (v:3.38.1) [extras]
+filezilla (v:3.39.0) [extras]
 fzf (v:0.17.5)
 geekuninstaller (v:1.4.5.132) [extras]
 ghostscript (v:9.26)
 gifsicle (v:1.89)
-gitignore (v:0.2015.08.26)
+gitignore (v:0.2018.08.04)
 gpu-z (v:2.15.0) [extras]
 graphicsmagick-q8 (v:1.3.31)
-hashcat (v:5.0.0)
+hashcat (v:5.1.0)
 hexchat (v:2.14.2) [extras]
 hostsman (v:4.7.105) [extras]
 httrack (v:3.49.2) [extras]
@@ -42,26 +44,28 @@ keypirinha (v:2.23) [extras]
 latex (v:2.9.6753)
 mediainfo (v:18.08.1)
 mediainfo-gui (v:18.08.1) [extras]
-minio-client (v:2018-11-06T01-12-20Z)
-mkvtoolnix (v:28.2.0) [extras]
-mpv-git (v:20181125) [extras]
+minio-client (v:2018-11-30T01-52-08Z)
+mkvtoolnix (v:29.0.0) [extras]
+mpv-git (v:20181202) [extras]
 netcat (v:1.12)
 nexusfont (v:2.6.2.1870) [extras]
-openssl (v:1.1.1_8)
+nmap (v:7.70)
+openssl (v:1.1.1a_1)
 openvpn (v:2.4.6-I602) [extras]
-pandoc (v:2.4) [extras]
+oraclejdk8 (v:8u191-b12) [java]
+pandoc (v:2.5) [extras]
 perl (v:5.28.0.1)
 phantomjs (v:2.1.1)
 picard (v:2.0.4) [extras]
 rapidee (v:937) [extras]
 screenfetch (v:2015-12-23) [maman]
 sharex (v:12.3.1) [extras]
-simplewall (v:2.3.9) [extras]
 tesseract (v:4.0.0.20181030)
 vcxsrv (v:1.20.1.4) [extras]
+virtualbox-np (v:5.2.22) [nonportable]
 wavebox (v:4.4.0) [extras]
 windirstat (v:1.1.2) [extras]
 winmerge (v:2.16.0) [extras]
 wkhtmltopdf (v:0.12.5-1)
 wyam (v:1.7.4) [C:\Users\zeruel11\.scoopy\workspace\wyam.json]
-youtube-dl (v:2018.11.23)
+youtube-dl (v:2018.12.03)
