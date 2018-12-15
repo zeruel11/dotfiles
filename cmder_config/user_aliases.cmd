@@ -20,9 +20,9 @@ cmderr=cd /d "%CMDER_ROOT%"
 
 gf=git fetch
 gc=git checkout $1
-gm=git commit -am $1
+gm=git commit -am $*
 gl=git log --oneline --all --graph --decorate  $*
-g1=git log -1 $*
+g1=git log -1
 gs=git status -uno
 
 ikti.srv=ssh bambang_ebis@10.126.12.212 -i %home%\.ssh\iktisrv_id

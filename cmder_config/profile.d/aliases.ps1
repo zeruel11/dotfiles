@@ -33,4 +33,8 @@ function ikti.srv {
 #     Remove-Variable s
 # }
 
+function mag2tor {
+    aria2c --bt-metadata-only=true --bt-save-metadata=true --listen-port=6881 $args[0]
+}
+
 Set-Alias -Name "pwsh" -Value "pwsh-preview"

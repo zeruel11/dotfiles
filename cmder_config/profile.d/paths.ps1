@@ -23,17 +23,3 @@ Set-Alias -Name cd -value cddash -Option AllScope
 if (Test-Path "$env:LOCALAPPDATA\MEGAcmd") {
     $env:PATH += ";$env:LOCALAPPDATA\MEGAcmd"
 }
-
-$sdkmandir="C:\_SDK\.sdkman\candidates"
-if (Test-Path "$sdkmandir\grails\") {
-    $env:Path += ";$sdkmandir\grails\current\bin"
-}
-if (Test-Path "$sdkmandir\maven\") {
-    $env:Path += ";$sdkmandir\maven\current\bin"
-}
-if (Test-Path "$sdkmandir\springboot\") {
-    $env:Path += ";$sdkmandir\springboot\current\bin"
-}
-if (Test-Path "$sdkmandir\gradle\") {
-    $env:Path += ";$sdkmandir\gradle\current\bin"
-}

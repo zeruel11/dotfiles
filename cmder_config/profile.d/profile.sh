@@ -1,8 +1,3 @@
-# use this file to run your own startup commands for msys2 bash'
-
-# To add a new vendor to the path, do something like:
-# export PATH=${CMDER_ROOT}/vendor/whatever:${PATH}
-
 #!/usr/bin/bash 
 # portabledevops.sh
 # customized setting for msys2/cygwin64/mobaxterm
@@ -65,9 +60,23 @@ if [ -d $PORTABLEPATH/nginx ]; then
 fi
 
 # setup msys ssh-agent
-eval $(ssh-agent)
-ssh-add
-ssh-add /c/Users/zeruel11/.ssh/iktisrv_id
+if ps -p $SSH_AGENT_PID > /dev/null;then
+    echo "ssh-agent is already running"
+    # Do something knowing the pid exists, i.e. the process with $PID is running
+else
+    eval `ssh-agent -s`
+fi
+
+# if ssh-add -l | grep "SHA256:MXHtgmmVu2R86ETctjMynhamGFzwk5hJBXD+Px/iht4";then
+#     echo "private key exist"
+# else
+#     ssh-add
+# fi
+if ssh-add -l | grep "SHA256:OrziisUbHqke9uXNTKVPQyS9eTSootRp/q0vq9tSwwo";then
+    echo "server key exist"
+else
+    ssh-add /c/Users/zeruel11/.ssh/iktisrv_id
+fi
 
 # welcome 
 echo
