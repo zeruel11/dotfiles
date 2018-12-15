@@ -1,0 +1,12 @@
+#!/bin/bash
+#cmder config sync
+
+if [ "$1" == 'push' ]
+then
+	rsync -Cuazv --rsh=ssh --exclude-from exclude-cmder.txt /c/cmder/config/ /c/Users/zeruel11/dotfiles/cmder_config/
+elif [ "$1" == 'pull' ]
+then
+	rsync -Cuazv /c/Users/zeruel11/dotfiles/cmder_config/ /c/cmder/config/
+else
+	echo 'you have to specify up or down'
+fi
