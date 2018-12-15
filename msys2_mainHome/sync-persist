@@ -1,0 +1,12 @@
+#!/bin/bash
+#sync scoop persistence
+
+if [ "$1" == 'push' ]
+then
+	rsync -Cuazv --exclude-from=exclude-persist.txt /c/Users/zeruel11/.scoopy/persist/ /c/Users/zeruel11/dotfiles/win10_userprofile/scoop_persist/
+elif [ "$1" == 'pull' ]
+then
+	rsync -Cuazv /c/Users/zeruel11/dotfiles/win10_userprofile/scoop_persist/ /c/Users/zeruel11/.scoopy/persist/
+else
+	echo 'you have to specify up or down'
+fi

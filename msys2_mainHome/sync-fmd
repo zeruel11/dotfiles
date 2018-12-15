@@ -1,0 +1,12 @@
+#!/bin/bash
+#fmd db sync
+
+if [ "$1" == 'push' ]
+then
+	rsync -Cuazv --rsh=ssh --exclude='*.db-journal' /c/untied/FMD/works/ /d/_gitClone/\[encoder\]/manDB/works/
+elif [ "$1" == 'pull' ]
+then
+	rsync -Cuazv --rsh=ssh --exclude='*.db-journal' /d/_gitClone/\[encoder\]/manDB/works/ /c/untied/FMD/works/
+else
+	echo 'you have to specify up or down'
+fi

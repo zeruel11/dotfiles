@@ -1,0 +1,20 @@
+#!/bin/bash
+#calibre sync
+
+if [ "$1" == 'pull' ]
+then
+	rsync -Cuazv ikti@10.126.12.75::calibre-sync /d/KataLoGue/
+elif [ "$1" == 'export' ]
+then
+	if [ "$2" != '' ]
+	then
+		rsync -Cuazv /d/KataLoGue/ "$2"
+	else
+		rsync -Cuazv /d/KataLoGue/ /f/\[calibre\]/KataLoGue/
+	fi
+elif [ "$1" == 'push' ]
+then
+	rsync -Cuazv /d/KataLoGue/ ikti@10.126.12.75::calibre-sync
+else
+	echo 'you have to specify pull or push, or export to fd'
+fi

@@ -1,0 +1,3 @@
+archwsl
+alpinewsl
+centoswsl
