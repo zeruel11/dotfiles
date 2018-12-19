@@ -1,0 +1,12 @@
+#!/bin/bash
+#calibre sync
+
+if [ "$1" == 'pull' ]
+then
+	rsync -Cuazv '/d/_gitClone/[encoder]/(Vivaldi_Sessions)/' '/c/Users/zeruel11/AppData/Local/Vivaldi/User Data/Default/Sessions/'
+elif [ "$1" == 'push' ]
+then
+	rsync -Cuazv '/c/Users/zeruel11/AppData/Local/Vivaldi/User Data/Default/Sessions/' '/d/_gitClone/[encoder]/(Vivaldi_Sessions)/' 
+else
+	echo 'you have to specify pull or push, or export to fd'
+fi
