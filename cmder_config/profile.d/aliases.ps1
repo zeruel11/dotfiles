@@ -8,11 +8,36 @@ Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
 Set-Alias -name "vim" -value "C:\Program Files\Git\usr\bin\vim.exe"
 
 function gdg {
-    git difftool -g $args[0] $args[1]
+    git difftool -g --dir-diff $args[0] $args[1]
 }
 
 function gd {
     git difftool $args[0] $args[1]
+}
+
+function gf {
+    git fetch
+}
+
+function gs {
+    git status -uno
+}
+
+function g1 {
+    git log -1
+}
+
+function glog {
+    git log --oneline --all --graph --decorate $args
+}
+
+function gc {
+    git checkout $args[0]
+}
+
+function gmt {
+    param([string]$msg="placeholder")
+    git commit -am $msg
 }
 
 function ikti.sql {
