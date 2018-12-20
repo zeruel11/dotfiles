@@ -3,12 +3,12 @@
     "url": "https://ue.spdns.de/packagecontrol/packages.json",
     "packages": [
         {
-            "download_url": "https://github.com/ueffel/Keypirinha-Plugin-Kill/releases/download/2.5.4/Kill.keypirinha-package",
+            "download_url": "https://github.com/ueffel/Keypirinha-Plugin-Kill/releases/download/2.6/Kill.keypirinha-package",
             "name": "Keypirinha-Plugin-Kill",
             "filename": "Kill.keypirinha-package",
-            "date": "2018-10-12T23:04:42+0000",
+            "date": "2018-12-08T12:38:59+0000",
             "description": "Provides a command to kill a running processes.",
-            "version": "2.5.4"
+            "version": "2.6"
         },
         {
             "download_url": "https://raw.githubusercontent.com/EhsanKia/keypirinha-plugins/a2fa70541090946eceb42d7dc323e4ed99531143/keypirinha-steam/build/Steam.keypirinha-package",
@@ -123,12 +123,12 @@
             "version": "1.0.1"
         },
         {
-            "download_url": "https://github.com/ueffel/Keypirinha-WindowsApps/releases/download/0.3/WindowsApps.keypirinha-package",
+            "download_url": "https://github.com/ueffel/Keypirinha-WindowsApps/releases/download/0.4/WindowsApps.keypirinha-package",
             "name": "Keypirinha-WindowsApps",
             "filename": "WindowsApps.keypirinha-package",
-            "date": "2018-10-12T18:19:37+0000",
+            "date": "2018-12-08T12:34:40+0000",
             "description": "Lists Universal Windows Apps (formerly Metro Apps) in Keypirinha for launching",
-            "version": "0.3"
+            "version": "0.4"
         },
         {
             "download_url": "https://github.com/Fuhrmann/keypirinha-gitmoji/releases/download/1.0.1/Gitmoji.keypirinha-package",
@@ -241,6 +241,22 @@
             "date": "2018-10-16T19:19:33+0000",
             "description": "Convert a epoch timestamp to various human readable formats",
             "version": "1.0.0"
+        },
+        {
+            "download_url": "https://github.com/DrorHarari/keypirinha-ppl/releases/download/v0.4.1/Ppl.keypirinha-package",
+            "name": "keypirinha-ppl",
+            "filename": "Ppl.keypirinha-package",
+            "date": "2018-12-02T05:51:35+0000",
+            "description": "Call and email people easily",
+            "version": "v0.4.1"
+        },
+        {
+            "download_url": "https://github.com/mawiseman/keypirinha-asky/releases/download/1.0/Asky.keypirinha-package",
+            "name": "keypirinha-asky",
+            "filename": "Asky.keypirinha-package",
+            "date": "2018-12-11T07:18:33+0000",
+            "description": "Search for aski art from aski.io and copy them to your clipboard",
+            "version": "1.0"
         }
     ]
 }

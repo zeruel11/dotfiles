@@ -140,3 +140,143 @@ Dec 01 19:19:52 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384
 Dec 01 19:19:52 *	*** Your host is masked (89F3E195.A248CB85.39EE6454.IP)
 **** ENDING LOGGING AT Sat Dec  1 19:19:52 2018
 
+**** BEGIN LOGGING AT Mon Dec  3 13:26:09 2018
+
+Dec 03 13:26:09 Lua version 1.3/5.1 loaded.
+Dec 03 13:26:09 Update Checker plugin loaded
+Dec 03 13:26:10 *	Looking up irc.rizon.net
+Dec 03 13:26:11 *	Connecting to zqnomlsds2n2jkn4jisu6pkcg24pg6xpbndzizecky.map.rizon.net (104.199.196.3:6697)
+Dec 03 13:26:12 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 03 13:26:12 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 03 13:26:12 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 03 13:26:12 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 03 13:26:12 *	* Subject: /CN=irc.rizon.net
+Dec 03 13:26:12 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 03 13:26:12 *	* Certification info:
+Dec 03 13:26:12 *	  Subject:
+Dec 03 13:26:12 *	    CN=irc.rizon.net
+Dec 03 13:26:12 *	  Issuer:
+Dec 03 13:26:12 *	    C=US
+Dec 03 13:26:12 *	    O=Let's Encrypt
+Dec 03 13:26:12 *	    CN=Let's Encrypt Authority X3
+Dec 03 13:26:12 *	  Public key algorithm: rsaEncryption (4096 bits)
+Dec 03 13:26:12 *	  Sign algorithm sha256WithRSAEncryption
+Dec 03 13:26:12 *	  Valid since Oct 22 20:03:06 2018 GM to Jan 20 20:03:06 2019 GM
+Dec 03 13:26:12 *	* Cipher info:
+Dec 03 13:26:12 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Dec 03 13:26:12 *	Connected. Now logging in.
+Dec 03 13:26:12 *	*** Looking up your hostname...
+Dec 03 13:26:12 *	*** Couldn't look up your hostname
+Dec 03 13:26:12 *	Capabilities supported: away-notify chghost invite-notify multi-prefix sasl userhost-in-names
+Dec 03 13:26:12 *	Capabilities requested: away-notify chghost multi-prefix userhost-in-names 
+Dec 03 13:26:12 *	Capabilities acknowledged: away-notify chghost multi-prefix userhost-in-names
+Dec 03 13:26:12 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+Dec 03 13:26:12 *	*** Your host is masked (89F3E195.A248CB85.39EE6454.IP)
+**** ENDING LOGGING AT Mon Dec  3 13:26:12 2018
+
+**** BEGIN LOGGING AT Mon Dec 10 13:03:20 2018
+
+Dec 10 13:03:20 Lua version 1.3/5.1 loaded.
+Dec 10 13:03:21 Update Checker plugin loaded
+Dec 10 13:03:22 *	Looking up irc.rizon.net
+Dec 10 13:03:22 *	Connecting to dgdx7kcaa7c7srlrbfr3jx6guc2ttrsqik7yr7vjby.map.rizon.net (52.193.79.145:6697)
+Dec 10 13:03:23 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 10 13:03:23 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 10 13:03:23 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 10 13:03:23 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 10 13:03:23 *	* Subject: /CN=irc.rizon.net
+Dec 10 13:03:23 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 10 13:03:23 *	* Certification info:
+Dec 10 13:03:23 *	  Subject:
+Dec 10 13:03:23 *	    CN=irc.rizon.net
+Dec 10 13:03:23 *	  Issuer:
+Dec 10 13:03:23 *	    C=US
+Dec 10 13:03:23 *	    O=Let's Encrypt
+Dec 10 13:03:23 *	    CN=Let's Encrypt Authority X3
+Dec 10 13:03:23 *	  Public key algorithm: rsaEncryption (4096 bits)
+Dec 10 13:03:23 *	  Sign algorithm sha256WithRSAEncryption
+Dec 10 13:03:23 *	  Valid since Oct 22 20:08:38 2018 GM to Jan 20 20:08:38 2019 GM
+Dec 10 13:03:23 *	* Cipher info:
+Dec 10 13:03:24 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Dec 10 13:03:24 *	Connected. Now logging in.
+Dec 10 13:03:24 *	*** Looking up your hostname...
+Dec 10 13:03:24 *	*** Checking Ident
+Dec 10 13:03:24 *	*** No Ident response
+Dec 10 13:03:24 *	*** Couldn't look up your hostname
+Dec 10 13:03:24 *	Capabilities supported: away-notify chghost invite-notify multi-prefix sasl userhost-in-names
+Dec 10 13:03:24 *	Capabilities requested: away-notify chghost multi-prefix userhost-in-names 
+Dec 10 13:03:24 *	Capabilities acknowledged: away-notify chghost multi-prefix userhost-in-names
+Dec 10 13:03:24 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+Dec 10 13:03:24 *	*** Your host is masked (587D7F25.A248CB85.39EE6454.IP)
+**** ENDING LOGGING AT Mon Dec 10 13:03:24 2018
+
+**** BEGIN LOGGING AT Tue Dec 11 13:12:52 2018
+
+Dec 11 13:12:52 Lua version 1.3/5.1 loaded.
+Dec 11 13:12:52 Update Checker plugin loaded
+Dec 11 13:12:54 *	Looking up irc.rizon.net
+Dec 11 13:12:55 *	Connecting to rag4v3psydqzqfxbh6pup5pb5njexhxe7howmxav4a.map.rizon.net (104.199.196.3:6697)
+Dec 11 13:12:55 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 11 13:12:55 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 11 13:12:55 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 11 13:12:55 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 11 13:12:55 *	* Subject: /CN=irc.rizon.net
+Dec 11 13:12:55 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 11 13:12:56 *	* Certification info:
+Dec 11 13:12:56 *	  Subject:
+Dec 11 13:12:56 *	    CN=irc.rizon.net
+Dec 11 13:12:56 *	  Issuer:
+Dec 11 13:12:56 *	    C=US
+Dec 11 13:12:56 *	    O=Let's Encrypt
+Dec 11 13:12:56 *	    CN=Let's Encrypt Authority X3
+Dec 11 13:12:56 *	  Public key algorithm: rsaEncryption (4096 bits)
+Dec 11 13:12:56 *	  Sign algorithm sha256WithRSAEncryption
+Dec 11 13:12:56 *	  Valid since Oct 22 20:03:06 2018 GM to Jan 20 20:03:06 2019 GM
+Dec 11 13:12:56 *	* Cipher info:
+Dec 11 13:12:56 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Dec 11 13:12:56 *	Connected. Now logging in.
+Dec 11 13:12:56 *	*** Looking up your hostname...
+Dec 11 13:12:56 *	*** Couldn't look up your hostname
+Dec 11 13:12:56 *	Capabilities supported: away-notify chghost invite-notify multi-prefix sasl userhost-in-names
+Dec 11 13:12:56 *	Capabilities requested: away-notify chghost multi-prefix userhost-in-names 
+Dec 11 13:12:56 *	Capabilities acknowledged: away-notify chghost multi-prefix userhost-in-names
+Dec 11 13:12:56 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+Dec 11 13:12:56 *	*** Your host is masked (8049501D.A248CB85.39EE6454.IP)
+**** ENDING LOGGING AT Tue Dec 11 13:12:56 2018
+
+**** BEGIN LOGGING AT Wed Dec 19 21:16:58 2018
+
+Dec 19 21:16:58 Lua version 1.3/5.1 loaded.
+Dec 19 21:16:58 Update Checker plugin loaded
+Dec 19 21:16:59 *	Looking up irc.rizon.net
+Dec 19 21:16:59 *	Connecting to soprmzlx27xmsb7gqsx6o4tb3tobrwxxrn4d3rnwbe.map.rizon.net (52.193.79.145:6697)
+Dec 19 21:17:00 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 19 21:17:00 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 19 21:17:00 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 19 21:17:00 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 19 21:17:00 *	* Subject: /CN=irc.rizon.net
+Dec 19 21:17:00 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 19 21:17:01 *	* Certification info:
+Dec 19 21:17:01 *	  Subject:
+Dec 19 21:17:01 *	    CN=irc.rizon.net
+Dec 19 21:17:01 *	  Issuer:
+Dec 19 21:17:01 *	    C=US
+Dec 19 21:17:01 *	    O=Let's Encrypt
+Dec 19 21:17:01 *	    CN=Let's Encrypt Authority X3
+Dec 19 21:17:01 *	  Public key algorithm: rsaEncryption (4096 bits)
+Dec 19 21:17:01 *	  Sign algorithm sha256WithRSAEncryption
+Dec 19 21:17:01 *	  Valid since Oct 22 20:08:38 2018 GM to Jan 20 20:08:38 2019 GM
+Dec 19 21:17:01 *	* Cipher info:
+Dec 19 21:17:01 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Dec 19 21:17:01 *	Connected. Now logging in.
+Dec 19 21:17:01 *	*** Looking up your hostname...
+Dec 19 21:17:01 *	*** Checking Ident
+Dec 19 21:17:01 *	*** No Ident response
+Dec 19 21:17:01 *	*** Couldn't look up your hostname
+Dec 19 21:17:01 *	Capabilities supported: away-notify chghost invite-notify multi-prefix sasl userhost-in-names
+Dec 19 21:17:01 *	Capabilities requested: away-notify chghost multi-prefix userhost-in-names 
+Dec 19 21:17:01 *	Capabilities acknowledged: away-notify chghost multi-prefix userhost-in-names
+Dec 19 21:17:01 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+Dec 19 21:17:01 *	*** Your host is masked (7CF97D89.5314D4F0.4A2F84BB.IP)
+**** ENDING LOGGING AT Wed Dec 19 21:17:01 2018
+

@@ -485,3 +485,307 @@ Dec 02 03:43:20 *	End of /MOTD command.
 Dec 02 07:52:36 Update Checker plugin unloaded
 **** ENDING LOGGING AT Sun Dec  2 07:52:37 2018
 
+**** BEGIN LOGGING AT Mon Dec  3 13:26:12 2018
+
+Dec 03 13:26:13 *	Welcome to the Rizon Internet Relay Chat Network zeruel11
+Dec 03 13:26:13 *	Your host is irc.rizon.rocks, running version plexus-4(hybrid-8.1.20)
+Dec 03 13:26:13 *	This server was created Sep 14 2017 at 19:51:05
+Dec 03 13:26:13 *	irc.rizon.rocks plexus-4(hybrid-8.1.20) CDGNRSUWagilopqrswxyz BCIMNORSabcehiklmnopqstvz Iabehkloqv
+Dec 03 13:26:13 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ EXCEPTS=e INVEX=I NICKLEN=30 NETWORK=Rizon MAXLIST=beI:250 MAXTARGETS=4 :are supported by this server
+Dec 03 13:26:13 *	CHANTYPES=# CHANLIMIT=#:250 CHANNELLEN=50 TOPICLEN=390 CHANMODES=beI,k,l,BCMNORScimnpstz KNOCK NAMESX UHNAMES WATCH=60 AWAYLEN=180 ELIST=CMNTU SAFELIST :are supported by this server
+Dec 03 13:26:13 *	There are 24 users and 14182 invisible on 20 servers
+Dec 03 13:26:13 *	63 :IRC Operators online
+Dec 03 13:26:13 *	1 :unknown connection(s)
+Dec 03 13:26:13 *	11113 :channels formed
+Dec 03 13:26:13 *	I have 14206 clients and 20 servers
+Dec 03 13:26:13 *	Current local users: 14206  Max: 15564
+Dec 03 13:26:13 *	Current global users: 14206  Max: 15564
+Dec 03 13:26:13 *	- irc.rizon.rocks Message of the Day - 
+Dec 03 13:26:13 *	- Welcome to irc.rizon.rocks
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-         Now it's time for **UPDATED** conversational spanish with grimlock
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    Las ardillas. Me persiguen. Quieren mis nueces pero no pueden tenerlas.
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    no habla? the squirrels. they chase me. they want my nuts but they
+Dec 03 13:26:13 *	-    can not have them.
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    El gato en mis pantalones, quiere mi burrito. Pero el no puede
+Dec 03 13:26:13 *	-    tenerlo. No compartire con el.
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    Still no habla? the cat in my pants, he wants my burrito. But he can
+Dec 03 13:26:13 *	-    not have it. I will not share with him.
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    Por que el perro que lame mis bolas? Debo de haber banado en mantequilla
+Dec 03 13:26:13 *	-    de mani de nuevo ...
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    Really!?!? No habla?! You really need to work on your spanglish skills..
+Dec 03 13:26:13 *	-    Why is the dog licking my balls? I must have bathed in peanut butter
+Dec 03 13:26:13 *	-    again...
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    Cuando salgo de la peluqueria despues de tener mi espalda afeitado, me
+Dec 03 13:26:13 *	-    doy cuenta de que seria mucho mas barato tener un rebano de cabras.
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    You really need to sign up for my formal spanish lessons.  I can teach
+Dec 03 13:26:13 *	-    many more useful phrases!  When I leave the barber after having
+Dec 03 13:26:13 *	-    my back shaved, I realize it would be much cheaper to own a herd of goats.
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    Usted dice que el tomate, digo que me gusta la leche con chocolate y
+Dec 03 13:26:13 *	-    panecillos. Has visto a mi cepillo de dientes?
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-    My lesson rates are very reasonable!  I can teach you to splanglish like
+Dec 03 13:26:13 *	-    I do!  You say tomato, I say I like chocolate milk and bagels.  Have you
+Dec 03 13:26:13 *	-    seen my toothbrush?
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-         This has been conversational spanish with grimlock, time for
+Dec 03 13:26:13 *	-         something more serious.
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	-          oo                            
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	- 88d888b. dP d888888b .d8888b. 88d888b. 
+Dec 03 13:26:13 *	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+Dec 03 13:26:13 *	- 88       88  .Y8P    88.  .88 88    88 
+Dec 03 13:26:13 *	- dP       dP d888888P `88888P' dP    dP
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	- Rizon Chat Network -- http://rizon.net
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	- Rules:
+Dec 03 13:26:13 *	- o No spamming or flooding
+Dec 03 13:26:13 *	- o No clones or malicious bots
+Dec 03 13:26:13 *	- o No takeovers
+Dec 03 13:26:13 *	- o No distribution of child pornography
+Dec 03 13:26:13 *	- o Clients must respond to VERSION requests
+Dec 03 13:26:13 *	- o Rizon staff may disconnect clients for any or no reason
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	- First steps:
+Dec 03 13:26:13 *	- o To register your nick: /msg NickServ HELP
+Dec 03 13:26:13 *	- o To register your channel: /msg ChanServ HELP
+Dec 03 13:26:13 *	- o To get a vHost: /msg HostServ HELP REQUEST
+Dec 03 13:26:13 *	- o For other help with Rizon: /join #help
+Dec 03 13:26:13 *	- 
+Dec 03 13:26:13 *	- Usage of this network is a privilege, not a right. Rizon is a
+Dec 03 13:26:13 *	- transit provider, therefore no person or entity involved with
+Dec 03 13:26:13 *	- *.rizon.net or irc.rizon.rocks takes any responsibility for
+Dec 03 13:26:13 *	- users' actions. Absolutely no warranty is expressed or implied.
+Dec 03 13:26:13 *	End of /MOTD command.
+Dec 03 13:26:13 *	zeruel11 sets mode +S on zeruel11
+Dec 03 13:26:13 *	zeruel11 sets mode +i on zeruel11
+Dec 03 13:26:13 *	zeruel11 sets mode +x on zeruel11
+Dec 03 13:26:13 -Global-	[Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+Dec 03 13:26:13 -Global-	[Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+Dec 03 13:26:13 -Global-	[Random News - Nov 29 2013] Want to make your vhost shiny by adding colors to it? Try your luck in #VIzon
+Dec 03 13:26:13 *	Received a CTCP VERSION from py-ctcp
+Dec 03 22:02:37 Update Checker plugin unloaded
+**** ENDING LOGGING AT Mon Dec  3 22:02:38 2018
+
+**** BEGIN LOGGING AT Mon Dec 10 13:03:24 2018
+
+Dec 10 13:03:24 *	Welcome to the Rizon Internet Relay Chat Network zeruel11
+Dec 10 13:03:24 *	Your host is irc.losslessone.com, running version plexus-4(hybrid-8.1.20)
+Dec 10 13:03:24 *	This server was created Sep 14 2017 at 19:49:00
+Dec 10 13:03:24 *	irc.losslessone.com plexus-4(hybrid-8.1.20) CDGNRSUWagilopqrswxyz BCIMNORSabcehiklmnopqstvz Iabehkloqv
+Dec 10 13:03:24 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ EXCEPTS=e INVEX=I NICKLEN=30 NETWORK=Rizon MAXLIST=beI:250 MAXTARGETS=4 :are supported by this server
+Dec 10 13:03:24 *	CHANTYPES=# CHANLIMIT=#:250 CHANNELLEN=50 TOPICLEN=390 CHANMODES=beI,k,l,BCMNORScimnpstz NAMESX UHNAMES KNOCK WATCH=60 AWAYLEN=180 ELIST=CMNTU SAFELIST :are supported by this server
+Dec 10 13:03:24 *	There are 23 users and 14188 invisible on 20 servers
+Dec 10 13:03:24 *	64 :IRC Operators online
+Dec 10 13:03:24 *	1 :unknown connection(s)
+Dec 10 13:03:24 *	11222 :channels formed
+Dec 10 13:03:24 *	I have 14211 clients and 20 servers
+Dec 10 13:03:24 *	Current local users: 14211  Max: 19744
+Dec 10 13:03:24 *	Current global users: 14211  Max: 19744
+Dec 10 13:03:24 *	- irc.losslessone.com Message of the Day - 
+Dec 10 13:03:24 *	-          oo                            
+Dec 10 13:03:24 *	- 
+Dec 10 13:03:24 *	- 88d888b. dP d888888b .d8888b. 88d888b. 
+Dec 10 13:03:24 *	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+Dec 10 13:03:24 *	- 88       88  .Y8P    88.  .88 88    88 
+Dec 10 13:03:24 *	- dP       dP d888888P `88888P' dP    dP
+Dec 10 13:03:24 *	- 
+Dec 10 13:03:24 *	- Rizon Chat Network -- http://rizon.net
+Dec 10 13:03:24 *	- 
+Dec 10 13:03:24 *	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+Dec 10 13:03:24 *	- 
+Dec 10 13:03:24 *	- Rules:
+Dec 10 13:03:24 *	- o No spamming or flooding
+Dec 10 13:03:24 *	- o No clones or malicious bots
+Dec 10 13:03:24 *	- o No takeovers
+Dec 10 13:03:24 *	- o No distribution of child pornography
+Dec 10 13:03:24 *	- o Clients must respond to VERSION requests
+Dec 10 13:03:24 *	- o Rizon staff may disconnect clients for any or no reason
+Dec 10 13:03:24 *	- 
+Dec 10 13:03:24 *	- First steps:
+Dec 10 13:03:24 *	- o To register your nick: /msg NickServ HELP
+Dec 10 13:03:24 *	- o To register your channel: /msg ChanServ HELP
+Dec 10 13:03:24 *	- o To get a vHost: /msg HostServ HELP REQUEST
+Dec 10 13:03:24 *	- o For other help with Rizon: /join #help
+Dec 10 13:03:24 *	- 
+Dec 10 13:03:24 *	- Usage of this network is a privilege, not a right. Rizon is a
+Dec 10 13:03:24 *	- transit provider, therefore no person or entity involved with
+Dec 10 13:03:24 *	- *.rizon.net or irc.losslessone.com takes any responsibility for
+Dec 10 13:03:24 *	- users' actions. Absolutely no warranty is expressed or implied.
+Dec 10 13:03:24 *	End of /MOTD command.
+Dec 10 13:03:24 *	zeruel11 sets mode +S on zeruel11
+Dec 10 13:03:24 *	zeruel11 sets mode +i on zeruel11
+Dec 10 13:03:24 *	zeruel11 sets mode +x on zeruel11
+Dec 10 13:03:25 -Global-	[Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+Dec 10 13:03:25 -Global-	[Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+Dec 10 13:03:25 -Global-	[Random News - Nov 29 2013] Want to make your vhost shiny by adding colors to it? Try your luck in #VIzon
+Dec 10 13:03:25 *	Received a CTCP VERSION from py-ctcp
+Dec 10 20:44:46 Update Checker plugin unloaded
+**** ENDING LOGGING AT Mon Dec 10 20:44:46 2018
+
+**** BEGIN LOGGING AT Tue Dec 11 13:12:56 2018
+
+Dec 11 13:12:56 *	Welcome to the Rizon Internet Relay Chat Network zeruel11
+Dec 11 13:12:56 *	Your host is irc.rizon.rocks, running version plexus-4(hybrid-8.1.20)
+Dec 11 13:12:56 *	This server was created Sep 14 2017 at 19:51:05
+Dec 11 13:12:56 *	irc.rizon.rocks plexus-4(hybrid-8.1.20) CDGNRSUWagilopqrswxyz BCIMNORSabcehiklmnopqstvz Iabehkloqv
+Dec 11 13:12:56 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ EXCEPTS=e INVEX=I NICKLEN=30 NETWORK=Rizon MAXLIST=beI:250 MAXTARGETS=4 :are supported by this server
+Dec 11 13:12:56 *	CHANTYPES=# CHANLIMIT=#:250 CHANNELLEN=50 TOPICLEN=390 CHANMODES=beI,k,l,BCMNORScimnpstz KNOCK NAMESX UHNAMES WATCH=60 AWAYLEN=180 ELIST=CMNTU SAFELIST :are supported by this server
+Dec 11 13:12:56 *	There are 24 users and 14186 invisible on 20 servers
+Dec 11 13:12:56 *	65 :IRC Operators online
+Dec 11 13:12:56 *	1 :unknown connection(s)
+Dec 11 13:12:56 *	10970 :channels formed
+Dec 11 13:12:56 *	I have 14210 clients and 20 servers
+Dec 11 13:12:56 *	Current local users: 14210  Max: 15564
+Dec 11 13:12:56 *	Current global users: 14210  Max: 15564
+Dec 11 13:12:56 *	- irc.rizon.rocks Message of the Day - 
+Dec 11 13:12:56 *	- Welcome to irc.rizon.rocks
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-         Now it's time for **UPDATED** conversational spanish with grimlock
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    Las ardillas. Me persiguen. Quieren mis nueces pero no pueden tenerlas.
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    no habla? the squirrels. they chase me. they want my nuts but they
+Dec 11 13:12:56 *	-    can not have them.
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    El gato en mis pantalones, quiere mi burrito. Pero el no puede
+Dec 11 13:12:56 *	-    tenerlo. No compartire con el.
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    Still no habla? the cat in my pants, he wants my burrito. But he can
+Dec 11 13:12:56 *	-    not have it. I will not share with him.
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    Por que el perro que lame mis bolas? Debo de haber banado en mantequilla
+Dec 11 13:12:56 *	-    de mani de nuevo ...
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    Really!?!? No habla?! You really need to work on your spanglish skills..
+Dec 11 13:12:56 *	-    Why is the dog licking my balls? I must have bathed in peanut butter
+Dec 11 13:12:56 *	-    again...
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    Cuando salgo de la peluqueria despues de tener mi espalda afeitado, me
+Dec 11 13:12:56 *	-    doy cuenta de que seria mucho mas barato tener un rebano de cabras.
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    You really need to sign up for my formal spanish lessons.  I can teach
+Dec 11 13:12:56 *	-    many more useful phrases!  When I leave the barber after having
+Dec 11 13:12:56 *	-    my back shaved, I realize it would be much cheaper to own a herd of goats.
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    Usted dice que el tomate, digo que me gusta la leche con chocolate y
+Dec 11 13:12:56 *	-    panecillos. Has visto a mi cepillo de dientes?
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-    My lesson rates are very reasonable!  I can teach you to splanglish like
+Dec 11 13:12:56 *	-    I do!  You say tomato, I say I like chocolate milk and bagels.  Have you
+Dec 11 13:12:56 *	-    seen my toothbrush?
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-         This has been conversational spanish with grimlock, time for
+Dec 11 13:12:56 *	-         something more serious.
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	-          oo                            
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	- 88d888b. dP d888888b .d8888b. 88d888b. 
+Dec 11 13:12:56 *	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+Dec 11 13:12:56 *	- 88       88  .Y8P    88.  .88 88    88 
+Dec 11 13:12:56 *	- dP       dP d888888P `88888P' dP    dP
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	- Rizon Chat Network -- http://rizon.net
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	- Rules:
+Dec 11 13:12:56 *	- o No spamming or flooding
+Dec 11 13:12:56 *	- o No clones or malicious bots
+Dec 11 13:12:56 *	- o No takeovers
+Dec 11 13:12:56 *	- o No distribution of child pornography
+Dec 11 13:12:56 *	- o Clients must respond to VERSION requests
+Dec 11 13:12:56 *	- o Rizon staff may disconnect clients for any or no reason
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	- First steps:
+Dec 11 13:12:56 *	- o To register your nick: /msg NickServ HELP
+Dec 11 13:12:56 *	- o To register your channel: /msg ChanServ HELP
+Dec 11 13:12:56 *	- o To get a vHost: /msg HostServ HELP REQUEST
+Dec 11 13:12:56 *	- o For other help with Rizon: /join #help
+Dec 11 13:12:56 *	- 
+Dec 11 13:12:56 *	- Usage of this network is a privilege, not a right. Rizon is a
+Dec 11 13:12:56 *	- transit provider, therefore no person or entity involved with
+Dec 11 13:12:56 *	- *.rizon.net or irc.rizon.rocks takes any responsibility for
+Dec 11 13:12:56 *	- users' actions. Absolutely no warranty is expressed or implied.
+Dec 11 13:12:56 *	End of /MOTD command.
+Dec 11 13:12:56 *	zeruel11 sets mode +S on zeruel11
+Dec 11 13:12:56 *	zeruel11 sets mode +i on zeruel11
+Dec 11 13:12:56 *	zeruel11 sets mode +x on zeruel11
+Dec 11 13:12:57 -Global-	[Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+Dec 11 13:12:57 -Global-	[Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+Dec 11 13:12:57 -Global-	[Random News - Mar 20 2009] Idle on Rizon a lot? Why not play our idlerpg game, you can check it out at #RizonIRPG for more information visit the website http://idlerpg.rizon.net -Rizon Staff
+Dec 11 13:12:57 *	Received a CTCP VERSION from py-ctcp
+Dec 11 20:47:59 Update Checker plugin unloaded
+**** ENDING LOGGING AT Tue Dec 11 20:47:59 2018
+
+**** BEGIN LOGGING AT Wed Dec 19 21:17:01 2018
+
+Dec 19 21:17:01 *	Welcome to the Rizon Internet Relay Chat Network zeruel11
+Dec 19 21:17:01 *	Your host is irc.losslessone.com, running version plexus-4(hybrid-8.1.20)
+Dec 19 21:17:01 *	This server was created Dec 17 2018 at 23:48:00
+Dec 19 21:17:01 *	irc.losslessone.com plexus-4(hybrid-8.1.20) CDGNRSUWagilopqrswxyz BCIMNORSabcehiklmnopqstvz Iabehkloqv
+Dec 19 21:17:01 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=180 MODES=4 PREFIX=(qaohv)~&@%+ STATUSMSG=~&@%+ EXCEPTS=e INVEX=I NICKLEN=30 NETWORK=Rizon MAXLIST=beI:250 MAXTARGETS=4 :are supported by this server
+Dec 19 21:17:01 *	CHANTYPES=# CHANLIMIT=#:250 CHANNELLEN=50 TOPICLEN=390 CHANMODES=beI,k,l,BCMNORScimnpstz NAMESX UHNAMES KNOCK WATCH=60 AWAYLEN=180 ELIST=CMNTU SAFELIST :are supported by this server
+Dec 19 21:17:01 *	There are 23 users and 13955 invisible on 19 servers
+Dec 19 21:17:01 *	65 :IRC Operators online
+Dec 19 21:17:01 *	1 :unknown connection(s)
+Dec 19 21:17:01 *	10841 :channels formed
+Dec 19 21:17:01 *	I have 13978 clients and 19 servers
+Dec 19 21:17:01 *	Current local users: 13978  Max: 19744
+Dec 19 21:17:01 *	Current global users: 13978  Max: 19744
+Dec 19 21:17:01 *	- irc.losslessone.com Message of the Day - 
+Dec 19 21:17:01 *	-          oo                            
+Dec 19 21:17:01 *	- 
+Dec 19 21:17:01 *	- 88d888b. dP d888888b .d8888b. 88d888b. 
+Dec 19 21:17:01 *	- 88'  `88 88    .d8P' 88'  `88 88'  `88 
+Dec 19 21:17:01 *	- 88       88  .Y8P    88.  .88 88    88 
+Dec 19 21:17:01 *	- dP       dP d888888P `88888P' dP    dP
+Dec 19 21:17:01 *	- 
+Dec 19 21:17:01 *	- Rizon Chat Network -- http://rizon.net
+Dec 19 21:17:01 *	- 
+Dec 19 21:17:01 *	- Listening on ports: 6660 - 6669, 7000. SSL: 6697, 9999
+Dec 19 21:17:01 *	- 
+Dec 19 21:17:01 *	- Rules:
+Dec 19 21:17:01 *	- o No spamming or flooding
+Dec 19 21:17:01 *	- o No clones or malicious bots
+Dec 19 21:17:01 *	- o No takeovers
+Dec 19 21:17:01 *	- o No distribution of child pornography
+Dec 19 21:17:01 *	- o Clients must respond to VERSION requests
+Dec 19 21:17:01 *	- o Rizon staff may disconnect clients for any or no reason
+Dec 19 21:17:01 *	- 
+Dec 19 21:17:01 *	- First steps:
+Dec 19 21:17:01 *	- o To register your nick: /msg NickServ HELP
+Dec 19 21:17:01 *	- o To register your channel: /msg ChanServ HELP
+Dec 19 21:17:01 *	- o To get a vHost: /msg HostServ HELP REQUEST
+Dec 19 21:17:01 *	- o For other help with Rizon: /join #help
+Dec 19 21:17:01 *	- 
+Dec 19 21:17:01 *	- Usage of this network is a privilege, not a right. Rizon is a
+Dec 19 21:17:01 *	- transit provider, therefore no person or entity involved with
+Dec 19 21:17:01 *	- *.rizon.net or irc.losslessone.com takes any responsibility for
+Dec 19 21:17:01 *	- users' actions. Absolutely no warranty is expressed or implied.
+Dec 19 21:17:01 *	End of /MOTD command.
+Dec 19 21:17:01 *	zeruel11 sets mode +S on zeruel11
+Dec 19 21:17:01 *	zeruel11 sets mode +i on zeruel11
+Dec 19 21:17:01 *	zeruel11 sets mode +x on zeruel11
+Dec 19 21:17:01 -Global-	[Logon News - May 21 2011] First time on Rizon? Be sure to read the FAQ! http://s.rizon.net/FAQ
+Dec 19 21:17:01 -Global-	[Logon News - Dec 16 2013] Own a large/active channel or plan to get one going? Please read http://s.rizon.net/authline
+Dec 19 21:17:01 -Global-	[Random News - May 07 2013] Looking for a quotes, trivia, or other extra bots? /msg funserv help
+Dec 19 21:17:02 *	Received a CTCP VERSION from py-ctcp
+Dec 19 21:23:03 Update Checker plugin unloaded
+**** ENDING LOGGING AT Wed Dec 19 21:23:03 2018
+

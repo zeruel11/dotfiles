@@ -3,7 +3,7 @@
       "creator" : "Keypirinha v2.23 (2ee355d)",
       "creator_url" : "http://keypirinha.com/",
       "format" : 102,
-      "modified" : "2018-12-03T05:50:53+0000",
+      "modified" : "2018-12-20T10:51:02+0000",
       "type" : "history"
    },
    "history" : [
@@ -798,6 +798,282 @@
          "item" : 10800565414785061761,
          "label" : "Advanced Renamer",
          "time" : "2018-12-03T05:50:53+0000"
+      },
+      {
+         "action" : null,
+         "item" : 370028054294366767,
+         "label" : "HexChat",
+         "time" : "2018-12-03T06:26:06+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-03T06:35:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-03T08:43:31+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17069137683128336437,
+         "label" : "Calibre",
+         "time" : "2018-12-03T10:27:22+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-04T08:29:49+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-12-04T11:38:52+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7715148561619026502,
+         "label" : "MKVToolNix GUI",
+         "time" : "2018-12-05T04:27:08+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-05T04:46:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-05T13:00:04+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-06T02:17:43+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-12-06T03:10:00+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11728950491370231188,
+         "label" : "Aegisub x64",
+         "time" : "2018-12-06T08:02:12+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-07T12:42:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-09T13:08:18+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-12-09T13:57:38+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-09T14:43:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-09T15:16:01+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-12-10T05:54:45+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-12-10T05:55:13+0000"
+      },
+      {
+         "action" : null,
+         "item" : 370028054294366767,
+         "label" : "HexChat",
+         "time" : "2018-12-10T06:03:18+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-10T09:23:10+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-12-10T13:45:15+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-11T06:06:57+0000"
+      },
+      {
+         "action" : null,
+         "item" : 370028054294366767,
+         "label" : "HexChat",
+         "time" : "2018-12-11T06:12:50+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-12-11T06:16:12+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-11T06:34:11+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-12-11T07:04:02+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-12T12:49:27+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-13T05:33:18+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-14T06:53:20+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-12-14T08:47:40+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17069137683128336437,
+         "label" : "Calibre",
+         "time" : "2018-12-14T12:14:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-16T11:13:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2018-12-16T14:00:59+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-17T08:56:12+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-18T09:30:51+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11390006803330432584,
+         "label" : "mpv",
+         "time" : "2018-12-18T09:50:04+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-19T04:47:58+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-19T10:07:26+0000"
+      },
+      {
+         "action" : null,
+         "item" : 370028054294366767,
+         "label" : "HexChat",
+         "time" : "2018-12-19T14:16:55+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-12-19T14:18:20+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-20T06:58:51+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-12-20T07:17:57+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-20T08:32:51+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2018-12-20T10:50:28+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7715148561619026502,
+         "label" : "MKVToolNix GUI",
+         "time" : "2018-12-20T10:51:02+0000"
       }
    ],
    "sets" : {
@@ -909,6 +1185,17 @@
             "plugin" : "FileBrowser.FileBrowser",
             "short_desc" : "",
             "target" : "C:\\Users\\zeruel11"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 17069137683128336437,
+            "label" : "Calibre",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Calibre.lnk"
          },
          {
             "args_hint" : "accepted",
@@ -1120,6 +1407,17 @@
             "plugin" : "Apps.StartMenu",
             "short_desc" : "Start Menu: Programs\\Scoop Apps",
             "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\MKVToolNix GUI.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 11390006803330432584,
+            "label" : "mpv",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\mpv.lnk"
          },
          {
             "args_hint" : "accepted",
@@ -1409,6 +1707,10 @@
             "search" : "C:/use"
          },
          {
+            "items" : [ 17069137683128336437 ],
+            "search" : "calib"
+         },
+         {
             "items" : [ 11377851740045468617 ],
             "search" : "code"
          },
@@ -1510,6 +1812,10 @@
          },
          {
             "items" : [ 7715148561619026502 ],
+            "search" : "mkvto"
+         },
+         {
+            "items" : [ 7715148561619026502 ],
             "search" : "mkvtool"
          },
          {
@@ -1519,6 +1825,10 @@
          {
             "items" : [ 7715148561619026502 ],
             "search" : "mkvtoolnix"
+         },
+         {
+            "items" : [ 11390006803330432584 ],
+            "search" : "mpv"
          },
          {
             "items" : [ 1062582269474146431 ],
@@ -1595,6 +1905,10 @@
          {
             "items" : [ 17624016876626646827 ],
             "search" : "waveb"
+         },
+         {
+            "items" : [ 17624016876626646827 ],
+            "search" : "wavebox"
          },
          {
             "items" : [ 1447155230486068724 ],

@@ -949,3 +949,530 @@ Traceback (most recent call last):
 2018-12-03 10:39:32.377 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
 2018-12-03 10:40:33.052 [i] Bookmarks.Bookmarks: Referenced 131 bookmarks
 2018-12-03 10:50:38.623 [i] Apps.StartMenu: Cataloged 207 items in 0.1 seconds
+2018-12-03 13:14:30.924 [i] Apps.StartMenu: Cataloged 207 items in 0.1 seconds
+2018-12-03 13:14:46.453 [i] Apps.StartMenu: Cataloged 207 items in 0.0 seconds
+2018-12-03 13:15:55.846 [i] Apps.StartMenu: Cataloged 207 items in 0.1 seconds
+2018-12-03 13:16:38.965 [i] Apps.StartMenu: Cataloged 207 items in 0.1 seconds
+2018-12-03 13:19:34.555 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-12-03 13:46:46.653 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-03 13:46:48.680 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-03 22:06:13.176 [i] Currency.Currency: loading from cache server...
+2018-12-03 22:30:55.864 [i] Received end-of-session message
+
+
+2018-12-04 15:27:58.925 [i] Loaded 136 items from history file.
+2018-12-04 15:27:59.009 [i] Loaded 2127 items from catalog file.
+2018-12-04 15:27:59.462 [i] Init done in 107.1679s, including 69.0716s (64%) for the Python interpreter.
+2018-12-04 15:27:59.462 [i] Plugin loaded: Internal.About
+2018-12-04 15:28:03.358 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-04 15:28:03.358 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-04 15:28:03.358 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-04 15:28:03.358 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-04 15:28:03.358 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-04 15:28:04.042 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-04 15:28:04.102 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-04 15:28:04.114 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-04 15:28:04.138 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-04 15:28:04.150 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-04 15:28:04.162 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-04 15:28:04.174 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-04 15:28:04.686 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-04 15:28:05.242 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-04 15:28:05.258 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-04 15:28:05.946 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-04 15:28:06.243 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-04 15:28:06.267 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-04 15:28:06.267 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-04 15:28:06.283 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-04 15:28:06.298 [i] Plugin loaded: String.String (instance #1)
+2018-12-04 15:28:06.314 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-04 15:28:06.314 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-04 15:28:06.330 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-04 15:28:06.361 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-04 15:28:06.361 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-04 15:28:06.377 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-04 15:28:06.392 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-04 15:28:06.392 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-04 15:28:06.720 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-12-04 15:28:06.767 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-04 15:28:08.833 [i] Apps.EnvPath: Cataloged 1582 items in 2.1 seconds
+2018-12-04 15:28:10.591 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1400, in connect
+  File "lib\ssl.py", line 407, in wrap_socket
+  File "lib\ssl.py", line 817, in __init__
+  File "lib\ssl.py", line 1077, in do_handshake
+  File "lib\ssl.py", line 689, in do_handshake
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 383, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+
+2018-12-04 15:28:10.739 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 69, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 299, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 333, in _get_package
+
+2018-12-04 15:28:15.119 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-04 15:29:10.692 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
+2018-12-04 18:51:20.710 [i] Environment changed.
+2018-12-04 18:51:21.178 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-12-04 18:51:21.599 [i] Environment changed.
+2018-12-04 18:51:22.011 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-12-04 18:51:22.067 [i] Environment changed.
+2018-12-04 18:51:22.329 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-12-04 18:51:23.158 [i] Apps.EnvPath: Cataloged 1581 items in 0.8 seconds
+2018-12-05 11:39:50.438 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-05 11:40:12.860 [i] Apps.StartMenu: Cataloged 205 items in 0.1 seconds
+2018-12-05 11:40:14.913 [i] Apps.StartMenu: Cataloged 205 items in 0.1 seconds
+2018-12-05 11:41:40.696 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-05 11:41:42.726 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-05 11:43:08.435 [i] Apps.StartMenu: Cataloged 205 items in 0.1 seconds
+2018-12-05 11:43:10.451 [i] Apps.StartMenu: Cataloged 205 items in 0.1 seconds
+2018-12-05 11:43:37.120 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-05 11:43:39.120 [i] Apps.StartMenu: Cataloged 206 items in 0.0 seconds
+2018-12-05 11:44:20.803 [i] Apps.StartMenu: Cataloged 205 items in 0.1 seconds
+2018-12-05 11:44:22.878 [i] Apps.StartMenu: Cataloged 205 items in 0.1 seconds
+2018-12-05 11:44:44.882 [i] Apps.StartMenu: Cataloged 206 items in 0.0 seconds
+2018-12-05 11:44:46.900 [i] Apps.StartMenu: Cataloged 206 items in 0.0 seconds
+2018-12-05 11:46:18.630 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-05 17:37:01.602 [i] Received end-of-session message
+
+
+2018-12-05 17:44:02.357 [i] Loaded 140 items from history file.
+2018-12-05 17:44:02.510 [i] Loaded 2126 items from catalog file.
+2018-12-05 17:44:04.098 [i] Init done in 164.1573s, including 149.2182s (91%) for the Python interpreter.
+2018-12-05 17:44:04.151 [i] Plugin loaded: Internal.About
+2018-12-05 17:44:23.101 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-05 17:44:23.101 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-05 17:44:23.101 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-05 17:44:23.101 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-05 17:44:23.101 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-05 17:44:23.788 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-05 17:44:23.819 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-05 17:44:23.819 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-05 17:44:23.857 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-05 17:44:23.857 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-05 17:44:23.888 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-05 17:44:23.888 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-05 17:44:24.019 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-05 17:44:24.606 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-05 17:44:24.621 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-05 17:44:25.076 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-05 17:44:25.288 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-05 17:44:25.318 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-05 17:44:25.326 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-05 17:44:25.336 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-05 17:44:25.349 [i] Plugin loaded: String.String (instance #1)
+2018-12-05 17:44:25.357 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-05 17:44:25.359 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-05 17:44:25.369 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-05 17:44:25.407 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-05 17:44:25.409 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-05 17:44:25.417 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-05 17:44:25.429 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-05 17:44:25.440 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-05 17:44:25.646 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-12-05 17:44:25.693 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-05 17:44:25.778 [i] Currency.Currency: loading from cache server...
+2018-12-05 17:44:29.658 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (31 packages)
+2018-12-05 17:44:54.631 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-05 17:45:24.093 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
+2018-12-05 17:46:32.084 [i] Apps.EnvPath: Cataloged 1581 items in 126.4 seconds
+2018-12-05 19:59:57.080 [i] Environment changed.
+2018-12-07 15:40:25.419 [i] Apps.StartMenu: Cataloged 206 items in 0.4 seconds
+2018-12-07 15:40:39.928 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-08 23:43:23.686 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-09 22:34:15.763 [i] Apps.StartMenu: Cataloged 206 items in 0.4 seconds
+2018-12-09 22:38:03.633 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-10 20:12:17.709 [i] Apps.StartMenu: Cataloged 206 items in 0.4 seconds
+2018-12-10 20:49:24.668 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-10 20:54:40.473 [i] Received end-of-session message
+
+
+2018-12-11 12:52:02.519 [i] Loaded 154 items from history file.
+2018-12-11 12:52:02.753 [i] Loaded 2126 items from catalog file.
+2018-12-11 12:52:03.378 [i] Init done in 43.2714s, including 38.0033s (88%) for the Python interpreter.
+2018-12-11 12:52:03.378 [i] Plugin loaded: Internal.About
+2018-12-11 12:52:08.140 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-11 12:52:08.140 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-11 12:52:08.140 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-11 12:52:08.140 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-11 12:52:08.140 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-11 12:52:09.102 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-11 12:52:09.180 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-11 12:52:09.196 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-11 12:52:09.274 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-11 12:52:09.321 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-11 12:52:09.352 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-11 12:52:09.368 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-11 12:52:09.618 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-11 12:52:11.834 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-11 12:52:11.846 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-11 12:52:12.424 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-11 12:52:12.730 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-11 12:52:12.753 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-11 12:52:12.759 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-11 12:52:12.767 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-11 12:52:12.778 [i] Plugin loaded: String.String (instance #1)
+2018-12-11 12:52:12.784 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-11 12:52:12.790 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-11 12:52:12.797 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-11 12:52:12.905 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-11 12:52:12.910 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-11 12:52:12.923 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-11 12:52:12.932 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-11 12:52:12.938 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-11 12:52:13.130 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-12-11 12:52:13.183 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-11 12:52:15.432 [i] Currency.Currency: loading from cache server...
+2018-12-11 12:52:24.249 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1400, in connect
+  File "lib\ssl.py", line 407, in wrap_socket
+  File "lib\ssl.py", line 817, in __init__
+  File "lib\ssl.py", line 1077, in do_handshake
+  File "lib\ssl.py", line 689, in do_handshake
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 383, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+
+2018-12-11 12:52:24.588 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 69, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 299, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 333, in _get_package
+
+2018-12-11 12:52:24.744 [i] Python: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:847)>
+2018-12-11 12:52:48.722 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-11 12:53:54.500 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
+2018-12-11 12:53:54.625 [i] Apps.EnvPath: Cataloged 1581 items in 101.5 seconds
+2018-12-11 13:06:39.430 [i] Environment changed.
+2018-12-11 13:15:31.180 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-11 13:16:32.547 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+
+
+2018-12-12 19:20:14.101 [i] Loaded 159 items from history file.
+2018-12-12 19:20:14.194 [i] Loaded 2126 items from catalog file.
+2018-12-12 19:20:14.570 [i] Init done in 143.2854s, including 138.2643s (96%) for the Python interpreter.
+2018-12-12 19:20:14.617 [i] Plugin loaded: Internal.About
+2018-12-12 19:20:21.149 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-12 19:20:21.149 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-12 19:20:21.149 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-12 19:20:21.149 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-12 19:20:21.149 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-12 19:20:22.399 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-12 19:20:22.431 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-12 19:20:22.431 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-12 19:20:22.681 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-12 19:20:22.696 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-12 19:20:22.712 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-12 19:20:22.727 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-12 19:20:23.118 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-12 19:20:24.228 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-12 19:20:24.243 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-12 19:20:24.743 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-12 19:20:24.962 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-12 19:20:24.993 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-12 19:20:24.993 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-12 19:20:25.009 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-12 19:20:25.025 [i] Plugin loaded: String.String (instance #1)
+2018-12-12 19:20:25.025 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-12 19:20:25.040 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-12 19:20:25.040 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-12 19:20:25.087 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-12 19:20:25.103 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-12 19:20:25.103 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-12 19:20:25.118 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-12 19:20:25.134 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-12 19:20:25.696 [i] Apps.Desktop: Cataloged 2 items in 0.4 seconds
+2018-12-12 19:20:25.759 [i] Apps.StartMenu: Cataloged 206 items in 0.4 seconds
+2018-12-12 19:20:26.511 [i] Currency.Currency: loading from cache server...
+2018-12-12 19:20:32.247 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-12 19:20:36.611 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (32 packages)
+2018-12-12 19:20:53.162 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
+2018-12-12 19:22:01.212 [i] Apps.EnvPath: Cataloged 1582 items in 95.9 seconds
+2018-12-12 19:48:41.643 [i] Environment changed.
+2018-12-12 20:56:48.689 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-12 20:58:22.428 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-14 14:47:09.458 [i] Environment changed.
+2018-12-14 14:47:10.630 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-12-14 14:47:11.907 [i] Apps.EnvPath: Cataloged 1584 items in 1.3 seconds
+2018-12-14 14:48:17.566 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-14 14:48:19.554 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-14 20:26:54.163 [i] Apps.StartMenu: Cataloged 206 items in 0.2 seconds
+
+
+2018-12-16 14:10:28.904 [i] Loaded 164 items from history file.
+2018-12-16 14:10:29.076 [i] Loaded 2129 items from catalog file.
+2018-12-16 14:10:29.982 [i] Init done in 120.7745s, including -1732.4624s (-1434%) for the Python interpreter.
+2018-12-16 14:10:29.982 [i] Plugin loaded: Internal.About
+2018-12-16 14:10:33.810 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-16 14:10:33.810 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-16 14:10:33.810 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-16 14:10:33.810 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-16 14:10:33.810 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-16 14:10:34.259 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-16 14:10:34.328 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-16 14:10:34.343 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-16 14:10:34.374 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-16 14:10:34.374 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-16 14:10:34.406 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-16 14:10:34.412 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-16 14:10:34.490 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-16 14:10:35.778 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-16 14:10:35.794 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-16 14:10:36.248 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-16 14:10:36.850 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-16 14:10:36.881 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-16 14:10:36.881 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-16 14:10:36.897 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-16 14:10:36.919 [i] Plugin loaded: String.String (instance #1)
+2018-12-16 14:10:36.934 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-16 14:10:36.934 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-16 14:10:36.950 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-16 14:10:37.013 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-16 14:10:37.019 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-16 14:10:37.035 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-16 14:10:37.035 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-16 14:10:37.050 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-16 14:10:37.298 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-12-16 14:10:38.386 [i] Apps.StartMenu: Cataloged 206 items in 1.2 seconds
+2018-12-16 14:10:39.613 [i] Currency.Currency: loading from cache server...
+2018-12-16 14:10:40.260 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-16 14:10:42.614 [i] Python: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:847)>
+2018-12-16 14:10:42.930 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1400, in connect
+  File "lib\ssl.py", line 407, in wrap_socket
+  File "lib\ssl.py", line 817, in __init__
+  File "lib\ssl.py", line 1077, in do_handshake
+  File "lib\ssl.py", line 689, in do_handshake
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 383, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+
+2018-12-16 14:10:43.269 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 69, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 299, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 333, in _get_package
+
+2018-12-16 14:11:12.757 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
+2018-12-16 14:11:13.944 [i] Apps.EnvPath: Cataloged 1584 items in 36.7 seconds
+2018-12-16 18:14:10.022 [i] Environment changed.
+2018-12-16 18:21:58.753 [i] Environment changed.
+2018-12-16 18:21:58.824 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-12-16 18:21:59.007 [i] Environment changed.
+2018-12-16 18:42:35.760 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-16 18:47:41.889 [i] Environment changed.
+2018-12-18 11:41:32.159 [i] Currency.Currency: loading from cache server...
+2018-12-18 11:41:32.586 [i] Currency.Currency: loading from cache server...
+2018-12-18 20:50:59.062 [i] Received end-of-session message
+
+
+2018-12-19 11:46:17.746 [i] Loaded 169 items from history file.
+2018-12-19 11:46:17.839 [i] Loaded 2129 items from catalog file.
+2018-12-19 11:46:18.714 [i] Init done in 151.0651s, including 132.0036s (87%) for the Python interpreter.
+2018-12-19 11:46:18.761 [i] Plugin loaded: Internal.About
+2018-12-19 11:46:24.551 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-19 11:46:24.551 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-19 11:46:24.551 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-19 11:46:24.551 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-19 11:46:24.551 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-19 11:46:25.348 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-19 11:46:25.379 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-19 11:46:25.410 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-19 11:46:25.457 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-19 11:46:25.457 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-19 11:46:25.489 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-19 11:46:25.504 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-19 11:46:25.645 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-19 11:46:26.396 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-19 11:46:26.412 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-19 11:46:26.912 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-19 11:46:27.365 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-19 11:46:27.396 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-19 11:46:27.396 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-19 11:46:27.412 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-19 11:46:27.427 [i] Plugin loaded: String.String (instance #1)
+2018-12-19 11:46:27.443 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-19 11:46:27.459 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-19 11:46:27.474 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-19 11:46:27.506 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-19 11:46:27.521 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-19 11:46:27.552 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-19 11:46:27.568 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-19 11:46:27.568 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-19 11:46:27.865 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-12-19 11:46:28.068 [i] Currency.Currency: loading from cache server...
+2018-12-19 11:46:29.456 [i] Apps.StartMenu: Cataloged 206 items in 1.6 seconds
+2018-12-19 11:46:29.847 [i] Python: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:847)>
+2018-12-19 11:46:30.003 [i] Apps.EnvPath: Cataloged 1592 items in 2.2 seconds
+2018-12-19 11:46:30.452 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1400, in connect
+  File "lib\ssl.py", line 407, in wrap_socket
+  File "lib\ssl.py", line 817, in __init__
+  File "lib\ssl.py", line 1077, in do_handshake
+  File "lib\ssl.py", line 689, in do_handshake
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 383, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+
+2018-12-19 11:46:30.499 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 69, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 299, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 333, in _get_package
+
+2018-12-19 11:46:36.340 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-19 11:48:01.182 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
+2018-12-19 11:54:54.593 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-19 11:58:48.176 [i] Apps.StartMenu: Cataloged 206 items in 0.1 seconds
+2018-12-19 16:12:51.685 [i] Environment changed.
+2018-12-19 21:27:25.633 [i] Received end-of-session message
+
+
+2018-12-20 13:41:04.506 [i] Loaded 173 items from history file.
+2018-12-20 13:41:06.044 [i] Loaded 2137 items from catalog file.
+2018-12-20 13:41:06.764 [i] Init done in 124.4350s, including 112.1975s (90%) for the Python interpreter.
+2018-12-20 13:41:06.811 [i] Plugin loaded: Internal.About
+2018-12-20 13:41:09.657 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-20 13:41:09.657 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-20 13:41:09.657 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-20 13:41:09.657 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-20 13:41:09.657 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-20 13:41:12.259 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-20 13:41:12.295 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-20 13:41:12.303 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-20 13:41:12.347 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-20 13:41:12.359 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-20 13:41:12.391 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-20 13:41:12.431 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-20 13:41:12.955 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-20 13:41:14.418 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-20 13:41:14.430 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-20 13:41:14.934 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-20 13:41:15.154 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-20 13:41:15.174 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-20 13:41:15.182 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-20 13:41:15.190 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-20 13:41:15.198 [i] Plugin loaded: String.String (instance #1)
+2018-12-20 13:41:15.206 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-20 13:41:15.214 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-20 13:41:15.222 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-20 13:41:15.350 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-20 13:41:15.358 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-20 13:41:15.366 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-20 13:41:15.374 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-20 13:41:15.382 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-20 13:41:15.542 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2018-12-20 13:41:15.990 [i] Apps.StartMenu: Cataloged 206 items in 0.5 seconds
+2018-12-20 13:41:16.306 [i] Currency.Currency: loading from cache server...
+2018-12-20 13:41:16.510 [i] Apps.EnvPath: Cataloged 1592 items in 0.6 seconds
+2018-12-20 13:41:19.094 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1400, in connect
+  File "lib\ssl.py", line 407, in wrap_socket
+  File "lib\ssl.py", line 817, in __init__
+  File "lib\ssl.py", line 1077, in do_handshake
+  File "lib\ssl.py", line 689, in do_handshake
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 383, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+
+2018-12-20 13:41:19.235 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 69, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 299, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 333, in _get_package
+
+2018-12-20 13:41:19.297 [i] Python: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:847)>
+2018-12-20 13:42:03.948 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-20 13:42:53.369 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
