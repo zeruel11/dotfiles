@@ -31,7 +31,7 @@ function glog {
     git log --oneline --all --graph --decorate $args
 }
 
-function gc {
+function gce {
     git checkout $args[0]
 }
 
