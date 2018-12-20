@@ -36,8 +36,8 @@ function gc {
 }
 
 function gmt {
-    param([string]$msg="placeholder")
-    git commit -am $msg
+    param([string]$CommitMessage="placeholder")
+    git commit -m $CommitMessage
 }
 
 function ikti.sql {
