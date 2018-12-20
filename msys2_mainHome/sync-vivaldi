@@ -1,5 +1,5 @@
 #!/bin/bash
-#calibre sync
+#vivaldi sessions sync
 
 if [ "$1" == 'pull' ]
 then
