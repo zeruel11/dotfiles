@@ -63,3 +63,7 @@ function mag2tor {
 }
 
 Set-Alias -Name "pwsh" -Value "pwsh-preview"
+
+function yp {
+    mpv --no-video --shuffle $args[0]
+}
