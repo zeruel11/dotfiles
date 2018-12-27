@@ -29,3 +29,5 @@ yp=mpv --no-video --shuffle $1
 
 ikti.srv=ssh bambang_ebis@10.126.12.212 -i %home%\.ssh\iktisrv_id
 ikti.sql=mssql-cli -S 10.126.12.212 -U SA -P 0052DSI-ikti
+ikti.tun.kambink=ssh -L 6800:10.107.1.252:6800 bambang_ebis@25.12.48.48
+ikti.tun.omv=ssh -L 8888:10.126.12.75:80 bambang_ebis@25.12.48.48
