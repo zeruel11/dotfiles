@@ -3,7 +3,7 @@
       "creator" : "Keypirinha v2.23 (2ee355d)",
       "creator_url" : "http://keypirinha.com/",
       "format" : 102,
-      "modified" : "2018-12-20T10:51:02+0000",
+      "modified" : "2018-12-27T04:22:56+0000",
       "type" : "history"
    },
    "history" : [
@@ -1074,6 +1074,72 @@
          "item" : 7715148561619026502,
          "label" : "MKVToolNix GUI",
          "time" : "2018-12-20T10:51:02+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-12-20T13:58:44+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3799679699273239444,
+         "label" : "fmd.exe",
+         "time" : "2018-12-21T07:38:11+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-21T07:38:14+0000"
+      },
+      {
+         "action" : null,
+         "item" : 9205308881794205581,
+         "label" : "GATE Developer 8.5.1",
+         "time" : "2018-12-23T07:23:42+0000"
+      },
+      {
+         "action" : null,
+         "item" : 9000506924426403832,
+         "label" : "RapidEE",
+         "time" : "2018-12-23T07:26:15+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-23T10:33:02+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-12-26T05:56:42+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-12-26T05:59:33+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-12-26T14:08:38+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2018-12-26T14:09:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2018-12-27T04:22:56+0000"
       }
    ],
    "sets" : {
@@ -1330,6 +1396,17 @@
             "plugin" : "Apps.StartMenu",
             "short_desc" : "Start Menu: Programs\\Free Download Manager",
             "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Free Download Manager\\Free Download Manager.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 9205308881794205581,
+            "label" : "GATE Developer 8.5.1",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\GATE Developer 8.5.1",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\GATE Developer 8.5.1\\GATE Developer 8.5.1.lnk"
          },
          {
             "args_hint" : "accepted",
@@ -1773,6 +1850,10 @@
          {
             "items" : [ 13406764293697130190 ],
             "search" : "free"
+         },
+         {
+            "items" : [ 9205308881794205581 ],
+            "search" : "gate"
          },
          {
             "items" : [ 1546633669466540342 ],
