@@ -1990,3 +1990,162 @@ Traceback (most recent call last):
 2018-12-27 12:06:33.715 [i] Environment changed.
 2018-12-27 12:06:33.829 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
 2018-12-27 12:06:34.357 [i] Apps.EnvPath: Cataloged 1610 items in 0.5 seconds
+2018-12-27 16:33:24.621 [i] Environment changed.
+2018-12-27 16:33:24.805 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-12-27 16:33:25.244 [i] Apps.EnvPath: Cataloged 1615 items in 0.4 seconds
+2018-12-27 16:36:13.245 [i] Environment changed.
+2018-12-27 16:36:13.356 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2018-12-27 16:36:13.884 [i] Apps.EnvPath: Cataloged 1615 items in 0.5 seconds
+
+
+2018-12-28 16:55:20.007 [i] Loaded 192 items from history file.
+2018-12-28 16:55:20.141 [i] Loaded 2162 items from catalog file.
+2018-12-28 16:55:20.453 [i] Init done in 8.0594s, including 6.8797s (85%) for the Python interpreter.
+2018-12-28 16:55:20.478 [i] Plugin loaded: Internal.About
+2018-12-28 16:55:22.244 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-28 16:55:22.244 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-28 16:55:22.244 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-28 16:55:22.244 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-28 16:55:22.244 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-28 16:55:22.416 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-28 16:55:22.432 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-28 16:55:22.447 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-28 16:55:22.478 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-28 16:55:22.494 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-28 16:55:22.510 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-28 16:55:22.510 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-28 16:55:22.603 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-28 16:55:22.744 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-28 16:55:22.760 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-28 16:55:23.150 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-28 16:55:23.400 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-28 16:55:23.432 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-28 16:55:23.432 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-28 16:55:23.447 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-28 16:55:23.463 [i] Plugin loaded: String.String (instance #1)
+2018-12-28 16:55:23.478 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-28 16:55:23.478 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-28 16:55:23.494 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-28 16:55:23.510 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-28 16:55:23.510 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-28 16:55:23.525 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-28 16:55:23.525 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-28 16:55:23.541 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-28 16:55:23.947 [i] Currency.Currency: loading from cache server...
+2018-12-28 16:55:25.463 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-28 16:55:25.510 [i] Apps.Desktop: Cataloged 2 items in 0.4 seconds
+2018-12-28 16:55:25.635 [i] Apps.StartMenu: Cataloged 208 items in 0.6 seconds
+2018-12-28 16:55:25.916 [i] Apps.EnvPath: Cataloged 1615 items in 0.8 seconds
+2018-12-28 16:55:34.085 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
+2018-12-28 16:55:37.344 [i] Python: <urlopen error [Errno 11001] getaddrinfo failed>
+2018-12-28 16:55:37.344 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1392, in connect
+  File "lib\http\client.py", line 936, in connect
+  File "lib\socket.py", line 704, in create_connection
+  File "lib\socket.py", line 745, in getaddrinfo
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 404, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+2018-12-28 16:55:37.344 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 83, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 331, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 365, in _get_package
+
+2018-12-28 17:09:12.754 [i] Environment changed.
+
+
+2018-12-28 17:48:26.225 [i] Loaded 192 items from history file.
+2018-12-28 17:48:26.256 [i] Loaded 2162 items from catalog file.
+2018-12-28 17:48:26.600 [i] Init done in 13.8211s, including 3.4286s (25%) for the Python interpreter.
+2018-12-28 17:48:26.600 [i] Plugin loaded: Internal.About
+2018-12-28 17:48:27.459 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2018-12-28 17:48:27.459 [i] Plugin loaded: Apps.Desktop (instance #1)
+2018-12-28 17:48:27.459 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2018-12-28 17:48:27.459 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2018-12-28 17:48:27.459 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2018-12-28 17:48:27.772 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2018-12-28 17:48:27.803 [i] Plugin loaded: Calc.Calc (instance #1)
+2018-12-28 17:48:27.803 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2018-12-28 17:48:27.819 [i] Plugin loaded: Currency.Currency (instance #1)
+2018-12-28 17:48:27.834 [i] Plugin loaded: Env.Env (instance #1)
+2018-12-28 17:48:27.834 [i] Plugin loaded: Everything.Everything (instance #1)
+2018-12-28 17:48:27.850 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2018-12-28 17:48:27.959 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2018-12-28 17:48:28.163 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2018-12-28 17:48:28.178 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2018-12-28 17:48:28.834 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2018-12-28 17:48:28.991 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2018-12-28 17:48:29.006 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2018-12-28 17:48:29.006 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2018-12-28 17:48:29.022 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2018-12-28 17:48:29.022 [i] Plugin loaded: String.String (instance #1)
+2018-12-28 17:48:29.038 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2018-12-28 17:48:29.038 [i] Plugin loaded: Units.Units (instance #1)
+2018-12-28 17:48:29.038 [i] Plugin loaded: URL.URL (instance #1)
+2018-12-28 17:48:29.194 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2018-12-28 17:48:29.209 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2018-12-28 17:48:29.209 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2018-12-28 17:48:29.225 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2018-12-28 17:48:29.225 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2018-12-28 17:48:47.148 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2018-12-28 17:48:47.305 [i] Currency.Currency: loading from cache server...
+2018-12-28 17:48:47.351 [i] Apps.StartMenu: Cataloged 208 items in 5.3 seconds
+2018-12-28 17:49:02.847 [i] Python: <urlopen error [Errno 11001] getaddrinfo failed>
+2018-12-28 17:49:02.879 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1392, in connect
+  File "lib\http\client.py", line 936, in connect
+  File "lib\socket.py", line 704, in create_connection
+  File "lib\socket.py", line 745, in getaddrinfo
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 404, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+2018-12-28 17:49:02.941 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 83, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 331, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 365, in _get_package
+
+2018-12-28 17:49:10.005 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2018-12-28 17:49:58.171 [i] Apps.EnvPath: Cataloged 1615 items in 76.1 seconds
+2018-12-28 17:50:21.137 [i] Bookmarks.Bookmarks: Referenced 132 bookmarks
+2018-12-28 19:06:39.737 [i] Environment changed.
+2018-12-30 09:20:31.019 [i] Apps.StartMenu: Cataloged 208 items in 0.2 seconds
