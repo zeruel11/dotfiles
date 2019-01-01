@@ -3,7 +3,7 @@
       "creator" : "Keypirinha v2.23 (2ee355d)",
       "creator_url" : "http://keypirinha.com/",
       "format" : 102,
-      "modified" : "2018-12-28T08:48:26+0000",
+      "modified" : "2019-01-01T05:55:57+0000",
       "type" : "history"
    },
    "history" : [
@@ -1158,6 +1158,36 @@
          "item" : 17366974177897161278,
          "label" : "ShareX",
          "time" : "2018-12-28T08:48:26+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2018-12-30T11:10:04+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17069137683128336437,
+         "label" : "Calibre",
+         "time" : "2018-12-31T12:49:52+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2019-01-01T04:48:48+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2019-01-01T04:50:09+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7715148561619026502,
+         "label" : "MKVToolNix GUI",
+         "time" : "2019-01-01T05:55:57+0000"
       }
    ],
    "sets" : {
