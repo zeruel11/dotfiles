@@ -25,7 +25,8 @@ gl=git log --oneline --all --graph --decorate  $*
 g1=git log -1
 gs=git status -uno
 
-yp=mpv --profile=utube $1
+yp=mpv --profile=utube $*
+ypr=mpv --profile=utube --no-resume-playback $*
 
 ikti.srv=ssh bambang_ebis@10.126.12.212 -i %home%\.ssh\iktisrv_id
 ikti.sql=mssql-cli -S 10.126.12.212 -U SA -P 0052DSI-ikti
