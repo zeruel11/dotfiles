@@ -2151,3 +2151,84 @@ Traceback (most recent call last):
 2018-12-30 09:20:31.019 [i] Apps.StartMenu: Cataloged 208 items in 0.2 seconds
 2018-12-31 19:45:27.891 [i] Currency.Currency: loading from cache server...
 2018-12-31 19:45:30.084 [i] Currency.Currency: loading from cache server...
+2019-01-02 09:58:41.971 [i] Apps.StartMenu: Cataloged 208 items in 4.1 seconds
+2019-01-02 10:17:07.200 [i] Received end-of-session message
+
+
+2019-01-03 01:04:15.575 [i] Loaded 198 items from history file.
+2019-01-03 01:04:15.700 [i] Loaded 2162 items from catalog file.
+2019-01-03 01:04:16.514 [i] Init done in 38.4357s, including 28.4606s (74%) for the Python interpreter.
+2019-01-03 01:04:16.546 [i] Plugin loaded: Internal.About
+2019-01-03 01:04:23.594 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2019-01-03 01:04:23.594 [i] Plugin loaded: Apps.Desktop (instance #1)
+2019-01-03 01:04:23.594 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2019-01-03 01:04:23.594 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2019-01-03 01:04:23.594 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2019-01-03 01:04:25.671 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2019-01-03 01:04:25.702 [i] Plugin loaded: Calc.Calc (instance #1)
+2019-01-03 01:04:25.717 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2019-01-03 01:04:25.749 [i] Plugin loaded: Currency.Currency (instance #1)
+2019-01-03 01:04:25.764 [i] Plugin loaded: Env.Env (instance #1)
+2019-01-03 01:04:25.780 [i] Plugin loaded: Everything.Everything (instance #1)
+2019-01-03 01:04:25.780 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2019-01-03 01:04:27.015 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2019-01-03 01:04:28.671 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2019-01-03 01:04:28.687 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2019-01-03 01:04:29.156 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2019-01-03 01:04:29.328 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2019-01-03 01:04:29.343 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2019-01-03 01:04:29.343 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2019-01-03 01:04:29.359 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2019-01-03 01:04:29.359 [i] Plugin loaded: String.String (instance #1)
+2019-01-03 01:04:29.374 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2019-01-03 01:04:29.374 [i] Plugin loaded: Units.Units (instance #1)
+2019-01-03 01:04:29.390 [i] Plugin loaded: URL.URL (instance #1)
+2019-01-03 01:04:29.437 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2019-01-03 01:04:29.453 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2019-01-03 01:04:29.453 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2019-01-03 01:04:29.468 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2019-01-03 01:04:29.468 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2019-01-03 01:04:29.609 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2019-01-03 01:04:29.683 [i] Apps.StartMenu: Cataloged 208 items in 0.1 seconds
+2019-01-03 01:04:36.022 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2019-01-03 01:04:37.711 [i] Currency.Currency: loading from cache server...
+2019-01-03 01:04:40.456 [i] Python: <urlopen error [Errno 11001] getaddrinfo failed>
+2019-01-03 01:04:40.471 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1392, in connect
+  File "lib\http\client.py", line 936, in connect
+  File "lib\socket.py", line 704, in create_connection
+  File "lib\socket.py", line 745, in getaddrinfo
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 404, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+2019-01-03 01:04:40.799 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 83, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 331, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 365, in _get_package
+
+2019-01-03 01:05:42.792 [i] Apps.EnvPath: Cataloged 1615 items in 73.1 seconds
+2019-01-03 01:05:44.293 [i] Bookmarks.Bookmarks: Referenced 133 bookmarks
+2019-01-03 14:09:12.081 [i] Environment changed.
+2019-01-03 14:38:49.726 [i] Apps.StartMenu: Cataloged 208 items in 1.6 seconds
+2019-01-03 14:54:29.904 [i] Apps.StartMenu: Cataloged 208 items in 0.4 seconds
+2019-01-03 14:55:18.567 [i] Apps.StartMenu: Cataloged 208 items in 0.1 seconds
