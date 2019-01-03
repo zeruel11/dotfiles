@@ -6,7 +6,7 @@ aegisub (v:3.2.2) [dorado]
 alpinewsl (v:18100800) [C:\Users\zeruel11\alpinewsl.json]
 android-sdk (v:4333796) [extras]
 ant (v:1.10.5)
-archwsl (v:18120900) [extras]
+archwsl (v:19010200) [extras]
 aria2 (v:1.34.0-1)
 atomicparsley (v:0.9.0)
 audacity (v:2.3.0) [extras]
@@ -17,7 +17,7 @@ cpu-z (v:1.87) [extras]
 crystaldiskinfo (v:8.0.0) [extras]
 crystaldiskmark (v:6.0.2) [extras]
 cuetools (v:2.1.6) [extras]
-dbeaver (v:5.3.0) [extras]
+dbeaver (v:5.3.1) [extras]
 doxygen (v:1.8.15)
 emacs (v:26.1) [extras]
 etcher (v:1.4.9) [extras]
@@ -48,7 +48,7 @@ mediainfo (v:18.12)
 mediainfo-gui (v:18.12) [extras]
 minio-client (v:2018-12-27T00-37-49Z)
 mkvtoolnix (v:29.0.0) [extras]
-mpv-git (v:20181223) [extras]
+mpv-git (v:20181230) [extras]
 netcat (v:1.12)
 nexusfont (v:2.6.2.1870) [extras]
 nmap (v:7.70)
@@ -71,4 +71,4 @@ windirstat (v:1.1.2) [extras]
 winmerge (v:2.16.0) [extras]
 wkhtmltopdf (v:0.12.5-1)
 wyam (v:1.7.4) [C:\Users\zeruel11\.scoopy\workspace\wyam.json]
-youtube-dl (v:2018.12.17)
+youtube-dl (v:2019.01.02)
