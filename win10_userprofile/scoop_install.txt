@@ -1,4 +1,4 @@
-7zip (v:18.05)
+7zip (v:18.06)
 ack (v:2.24)
 adb (v:28.0.1)
 advancedrenamer (v:3.84) [extras]
@@ -11,21 +11,22 @@ aria2 (v:1.34.0-1)
 atomicparsley (v:0.9.0)
 audacity (v:2.3.0) [extras]
 blender (v:2.79b) [extras]
-calibre-normal (v:3.36.0) [extras]
+calibre-normal (v:3.37.0) [extras]
 CentOSwsl (v:v0.0.1) [C:\Users\zeruel11\CentOSwsl.json]
 cpu-z (v:1.87) [extras]
 crystaldiskinfo (v:8.0.0) [extras]
 crystaldiskmark (v:6.0.2) [extras]
 cuetools (v:2.1.6) [extras]
-dbeaver (v:5.3.1) [extras]
+dbeaver (v:5.3.2) [extras]
 doxygen (v:1.8.15)
 emacs (v:26.1) [extras]
 etcher (v:1.4.9) [extras]
 etcher-cli (v:1.4.9) [extras]
-exiftool (v:11.23)
+exiftool (v:11.24)
 ffmpeg (v:4.1)
 filezilla (v:3.39.0) [extras]
 fzf (v:0.17.5)
+gdrive (v:2.1.0)
 geekuninstaller (v:1.4.5.134) [extras]
 ghostscript (v:9.26)
 gifsicle (v:1.89)
@@ -42,17 +43,17 @@ imgburn (v:2.5.8.0) [extras]
 innounp (v:0.47)
 keypirinha (v:2.23) [extras]
 kitematic (v:0.17.6) [extras]
-latex (v:2.9.6753)
+latex (v:2.9.6942)
 maven (v:3.6.0)
 mediainfo (v:18.12)
 mediainfo-gui (v:18.12) [extras]
-minio-client (v:2018-12-27T00-37-49Z)
-mkvtoolnix (v:29.0.0) [extras]
+minio-client (v:2019-01-10T00-38-22Z)
+mkvtoolnix (v:30.1.0) [extras]
 mpv-git (v:20181230) [extras]
 netcat (v:1.12)
 nexusfont (v:2.6.2.1870) [extras]
 nmap (v:7.70)
-now-cli (v:12.1.14) [extras]
+now-cli (v:13.0.4) [extras]
 openssl (v:1.1.1a_1)
 openvpn (v:2.4.6-I602) [extras]
 oraclejdk8 (v:8u191-b12) [java]
@@ -66,9 +67,9 @@ screenfetch (v:2015-12-23) [maman]
 sharex (v:12.3.1) [extras]
 tesseract (v:4.0.0.20181030)
 vcxsrv (v:1.20.1.4) [extras]
-wavebox (v:4.5.9) [extras]
+wavebox (v:4.5.10) [extras]
 windirstat (v:1.1.2) [extras]
 winmerge (v:2.16.0) [extras]
 wkhtmltopdf (v:0.12.5-1)
 wyam (v:1.7.4) [C:\Users\zeruel11\.scoopy\workspace\wyam.json]
-youtube-dl (v:2019.01.02)
+youtube-dl (v:2019.01.10)
