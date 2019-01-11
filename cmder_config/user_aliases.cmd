@@ -24,6 +24,7 @@ gm=git commit -am $*
 gl=git log --oneline --all --graph --decorate  $*
 g1=git log -1
 gs=git status -uno
+g.=git add .
 
 yp=mpv --profile=utube $*
 ypr=mpv --profile=utube --no-resume-playback $*

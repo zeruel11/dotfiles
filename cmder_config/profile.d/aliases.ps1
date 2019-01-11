@@ -7,6 +7,20 @@ Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
 
 Set-Alias -name "vim" -value "C:\Program Files\Git\usr\bin\vim.exe"
 
+###scoops
+function sst {
+    scoop status
+}
+
+function sup {
+    scoop update
+}
+
+function s8 {
+    scoop update *
+}
+
+###gits
 function gdg {
     git difftool -g --dir-diff $args[0] $args[1]
 }
@@ -23,6 +37,11 @@ function gs {
     git status -uno
 }
 
+function ga {
+    param([string]$AddPath=".")
+    git add $AddPath
+}
+
 function g1 {
     git log -1
 }
@@ -37,9 +56,33 @@ function gce {
 
 function gmt {
     param([string]$CommitMessage="placeholder")
-    git commit -m $CommitMessage
+    git commit -am $CommitMessage
 }
 
+###docker
+function dps {
+    docker container ls -a
+}
+
+function dst {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string[]]$ContainerName = $args
+    )
+    foreach ($i in $ContainerName) {
+        if ((docker container ls -a | grep -w $i) -ne $null) {
+            if ((docker exec $i id) -eq $null) {
+                Write-Host "Container $i not running. Starting..."; docker start $i
+            } else {
+                Write-Host "Container $i already running. Stopping..."; docker stop $i
+            }
+        } else {
+            Write-Warning "Container $i doesn't exist"
+        }
+    }
+}
+
+###server connect
 function ikti.sql {
     mssql-cli.bat -S 10.126.12.212 -U SA -P 0052DSI-ikti
 }
@@ -65,5 +108,9 @@ function mag2tor {
 Set-Alias -Name "pwsh" -Value "pwsh-preview"
 
 function yp {
-    mpv --no-video --shuffle $args[0]
+    mpv --profile=utube $args[0]
+}
+
+function subit {
+    subliminal download -v -l en $args[0]
 }
