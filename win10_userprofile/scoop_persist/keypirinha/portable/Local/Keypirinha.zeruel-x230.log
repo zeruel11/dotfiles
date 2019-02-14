@@ -2321,3 +2321,438 @@ Traceback (most recent call last):
 2019-01-11 15:26:24.603 [i] Environment changed.
 2019-01-11 19:20:10.192 [i] Apps.StartMenu: Cataloged 212 items in 0.3 seconds
 2019-01-11 19:20:12.493 [i] Apps.StartMenu: Cataloged 212 items in 0.3 seconds
+2019-01-12 21:40:17.791 [i] Received end-of-session message
+
+
+2019-01-12 21:46:46.469 [i] Loaded 213 items from history file.
+2019-01-12 21:46:46.969 [i] Loaded 2175 items from catalog file.
+2019-01-12 21:46:47.944 [i] Init done in 73.1062s, including 51.0005s (70%) for the Python interpreter.
+2019-01-12 21:46:47.944 [i] Plugin loaded: Internal.About
+2019-01-12 21:46:54.940 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2019-01-12 21:46:54.940 [i] Plugin loaded: Apps.Desktop (instance #1)
+2019-01-12 21:46:54.940 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2019-01-12 21:46:54.940 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2019-01-12 21:46:54.940 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2019-01-12 21:46:58.170 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2019-01-12 21:46:58.198 [i] Plugin loaded: Calc.Calc (instance #1)
+2019-01-12 21:46:58.214 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2019-01-12 21:46:59.132 [i] Plugin loaded: Currency.Currency (instance #1)
+2019-01-12 21:46:59.140 [i] Plugin loaded: Env.Env (instance #1)
+2019-01-12 21:46:59.156 [i] Plugin loaded: Everything.Everything (instance #1)
+2019-01-12 21:46:59.164 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2019-01-12 21:46:59.484 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2019-01-12 21:47:05.728 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2019-01-12 21:47:05.740 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2019-01-12 21:47:06.180 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2019-01-12 21:47:06.444 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2019-01-12 21:47:06.568 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2019-01-12 21:47:06.584 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2019-01-12 21:47:06.608 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2019-01-12 21:47:06.640 [i] Plugin loaded: String.String (instance #1)
+2019-01-12 21:47:06.652 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2019-01-12 21:47:06.660 [i] Plugin loaded: Units.Units (instance #1)
+2019-01-12 21:47:06.672 [i] Plugin loaded: URL.URL (instance #1)
+2019-01-12 21:47:06.700 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2019-01-12 21:47:06.708 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2019-01-12 21:47:06.720 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2019-01-12 21:47:06.728 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2019-01-12 21:47:06.736 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2019-01-12 21:47:08.848 [i] Currency.Currency: loading from cache server...
+2019-01-12 21:47:08.864 [i] Apps.Desktop: Cataloged 2 items in 0.2 seconds
+2019-01-12 21:47:08.936 [i] Apps.StartMenu: Cataloged 212 items in 0.2 seconds
+2019-01-12 21:47:12.662 [i] Python: <urlopen error [Errno 11001] getaddrinfo failed>
+2019-01-12 21:47:12.666 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1392, in connect
+  File "lib\http\client.py", line 936, in connect
+  File "lib\socket.py", line 704, in create_connection
+  File "lib\socket.py", line 745, in getaddrinfo
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 404, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+2019-01-12 21:47:13.065 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 83, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 331, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 365, in _get_package
+
+2019-01-12 21:47:19.378 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2019-01-13 17:03:17.795 [i] Bookmarks.Bookmarks: Referenced 133 bookmarks
+2019-01-13 17:04:23.597 [i] Apps.EnvPath: Cataloged 1629 items in 69444.0 seconds
+2019-01-13 18:37:24.808 [i] Received TaskbarCreated system message
+2019-01-13 18:43:04.658 [i] Environment changed.
+2019-01-14 20:23:07.718 [i] Currency.Currency: loading from cache server...
+2019-01-15 09:58:38.407 [i] Received TaskbarCreated system message
+2019-01-15 20:48:15.019 [i] Received end-of-session message
+
+
+2019-01-15 23:50:06.630 [i] Loaded 223 items from history file.
+2019-01-15 23:50:07.319 [i] Loaded 2180 items from catalog file.
+2019-01-15 23:50:08.288 [i] Init done in 40.4646s, including 26.9788s (67%) for the Python interpreter.
+2019-01-15 23:50:08.288 [i] Plugin loaded: Internal.About
+2019-01-15 23:50:18.151 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2019-01-15 23:50:18.151 [i] Plugin loaded: Apps.Desktop (instance #1)
+2019-01-15 23:50:18.151 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2019-01-15 23:50:18.151 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2019-01-15 23:50:18.151 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2019-01-15 23:50:25.940 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2019-01-15 23:50:25.956 [i] Plugin loaded: Calc.Calc (instance #1)
+2019-01-15 23:50:25.971 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2019-01-15 23:50:26.128 [i] Plugin loaded: Currency.Currency (instance #1)
+2019-01-15 23:50:26.143 [i] Plugin loaded: Env.Env (instance #1)
+2019-01-15 23:50:26.159 [i] Plugin loaded: Everything.Everything (instance #1)
+2019-01-15 23:50:26.159 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2019-01-15 23:50:26.534 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2019-01-15 23:50:27.953 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2019-01-15 23:50:27.969 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2019-01-15 23:50:28.578 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2019-01-15 23:50:28.844 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2019-01-15 23:50:28.891 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2019-01-15 23:50:28.891 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2019-01-15 23:50:28.906 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2019-01-15 23:50:28.922 [i] Plugin loaded: String.String (instance #1)
+2019-01-15 23:50:28.938 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2019-01-15 23:50:28.938 [i] Plugin loaded: Units.Units (instance #1)
+2019-01-15 23:50:28.953 [i] Plugin loaded: URL.URL (instance #1)
+2019-01-15 23:50:29.016 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2019-01-15 23:50:29.031 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2019-01-15 23:50:29.047 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2019-01-15 23:50:29.047 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2019-01-15 23:50:29.063 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2019-01-15 23:50:30.351 [i] Currency.Currency: loading from cache server...
+2019-01-15 23:50:30.359 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2019-01-15 23:50:30.407 [i] Apps.StartMenu: Cataloged 212 items in 0.2 seconds
+2019-01-15 23:50:33.516 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2019-01-15 23:50:38.207 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (33 packages)
+2019-01-15 23:50:39.317 [i] PackageControl.PackageControl: 1 package(s) are out of date: ['keypirinha-currency']
+2019-01-15 23:50:42.096 [i] PackageControl.PackageControl: Updated package: keypirinha-currency
+2019-01-15 23:50:43.723 [i] Python: Traceback (most recent call last):
+2019-01-15 23:50:43.723 [i] Python:   File "keypirinha_private.py", line 354, in reload_module
+2019-01-15 23:50:43.723 [i] Python:   File "lib\importlib\__init__.py", line 166, in reload
+2019-01-15 23:50:43.723 [i] Python:   File "<frozen importlib._bootstrap>", line 616, in _exec
+2019-01-15 23:50:43.723 [i] Python:   File "keypirinha_private.py", line 246, in load_module
+2019-01-15 23:50:43.723 [i] Python:   File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\Currency.keypirinha-package\currency.py", line 8, in <module>
+2019-01-15 23:50:43.723 [i] Python: ImportError: cannot import name 'CurrencyError'
+2019-01-15 23:51:35.707 [i] Bookmarks.Bookmarks: Referenced 133 bookmarks
+2019-01-15 23:51:40.834 [i] Apps.EnvPath: Cataloged 1629 items in 70.7 seconds
+2019-01-16 01:21:42.180 [i] Environment changed.
+2019-01-16 19:49:18.827 [i] Apps.StartMenu: Cataloged 212 items in 0.1 seconds
+2019-01-16 19:50:08.832 [i] Environment changed.
+2019-01-16 19:52:48.225 [i] Environment changed.
+2019-01-16 19:52:48.404 [i] Apps.EnvPath: PATH changed, rebuilding catalog...
+2019-01-16 19:52:48.678 [i] Environment changed.
+
+
+2019-01-17 22:26:31.503 [i] Loaded 224 items from history file.
+2019-01-17 22:26:31.911 [i] Loaded 2176 items from catalog file.
+2019-01-17 22:26:32.837 [i] Init done in 97.8166s, including 71.9987s (74%) for the Python interpreter.
+2019-01-17 22:26:32.837 [i] Plugin loaded: Internal.About
+2019-01-17 22:26:36.063 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2019-01-17 22:26:36.063 [i] Plugin loaded: Apps.Desktop (instance #1)
+2019-01-17 22:26:36.063 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2019-01-17 22:26:36.063 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2019-01-17 22:26:36.063 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2019-01-17 22:26:36.541 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2019-01-17 22:26:36.610 [i] Plugin loaded: Calc.Calc (instance #1)
+2019-01-17 22:26:36.624 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2019-01-17 22:26:36.675 [i] Plugin loaded: Currency.Currency (instance #1)
+2019-01-17 22:26:36.714 [i] Plugin loaded: Env.Env (instance #1)
+2019-01-17 22:26:36.744 [i] Plugin loaded: Everything.Everything (instance #1)
+2019-01-17 22:26:36.763 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2019-01-17 22:26:36.919 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2019-01-17 22:26:37.091 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2019-01-17 22:26:37.106 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2019-01-17 22:26:37.388 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2019-01-17 22:26:37.606 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2019-01-17 22:26:37.638 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2019-01-17 22:26:37.638 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2019-01-17 22:26:37.653 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2019-01-17 22:26:37.669 [i] Plugin loaded: String.String (instance #1)
+2019-01-17 22:26:37.669 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2019-01-17 22:26:37.685 [i] Plugin loaded: Units.Units (instance #1)
+2019-01-17 22:26:37.700 [i] Plugin loaded: URL.URL (instance #1)
+2019-01-17 22:26:37.731 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2019-01-17 22:26:37.747 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2019-01-17 22:26:37.763 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2019-01-17 22:26:37.763 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2019-01-17 22:26:37.778 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2019-01-17 22:26:38.419 [i] Apps.Desktop: Cataloged 2 items in 0.4 seconds
+2019-01-17 22:26:38.497 [i] Currency.Currency: loading from cache server...
+2019-01-17 22:26:38.606 [i] Apps.StartMenu: Cataloged 212 items in 0.6 seconds
+2019-01-17 22:26:44.362 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2019-01-17 22:26:44.518 [W] Currency.Currency: Invalid output_cur value in config. Falling back to default: ['EUR', 'GBP']
+2019-01-17 22:26:47.519 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (33 packages)
+2019-01-17 22:27:10.841 [i] Bookmarks.Bookmarks: Referenced 133 bookmarks
+2019-01-17 22:27:10.904 [i] Environment changed.
+2019-01-17 22:27:11.264 [i] Apps.EnvPath: Cataloged 1629 items in 33.3 seconds
+2019-01-18 14:39:28.541 [i] Apps.StartMenu: Cataloged 212 items in 0.3 seconds
+2019-01-21 14:24:56.264 [i] Apps.StartMenu: Cataloged 212 items in 0.4 seconds
+2019-01-21 14:26:14.573 [i] Apps.StartMenu: Cataloged 212 items in 0.1 seconds
+2019-01-21 14:28:22.495 [i] Apps.StartMenu: Cataloged 212 items in 0.1 seconds
+2019-01-23 19:53:59.542 [i] Apps.Desktop: Cataloged 3 items in 0.1 seconds
+2019-01-23 20:47:45.572 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+
+
+2019-01-23 21:16:29.279 [i] Loaded 233 items from history file.
+2019-01-23 21:16:29.701 [i] Loaded 2180 items from catalog file.
+2019-01-23 21:16:30.513 [i] Init done in 88.7545s, including 72.6416s (82%) for the Python interpreter.
+2019-01-23 21:16:30.545 [i] Plugin loaded: Internal.About
+2019-01-23 21:16:38.113 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2019-01-23 21:16:38.113 [i] Plugin loaded: Apps.Desktop (instance #1)
+2019-01-23 21:16:38.113 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2019-01-23 21:16:38.113 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2019-01-23 21:16:38.113 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2019-01-23 21:16:38.715 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2019-01-23 21:16:38.779 [i] Plugin loaded: Calc.Calc (instance #1)
+2019-01-23 21:16:38.791 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2019-01-23 21:16:38.815 [i] Plugin loaded: Currency.Currency (instance #1)
+2019-01-23 21:16:38.827 [i] Plugin loaded: Env.Env (instance #1)
+2019-01-23 21:16:38.839 [i] Plugin loaded: Everything.Everything (instance #1)
+2019-01-23 21:16:38.847 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2019-01-23 21:16:39.071 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2019-01-23 21:16:41.043 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2019-01-23 21:16:41.055 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2019-01-23 21:16:41.499 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2019-01-23 21:16:41.715 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2019-01-23 21:16:41.743 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2019-01-23 21:16:41.751 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2019-01-23 21:16:41.763 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2019-01-23 21:16:41.779 [i] Plugin loaded: String.String (instance #1)
+2019-01-23 21:16:41.787 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2019-01-23 21:16:41.795 [i] Plugin loaded: Units.Units (instance #1)
+2019-01-23 21:16:41.803 [i] Plugin loaded: URL.URL (instance #1)
+2019-01-23 21:16:41.895 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2019-01-23 21:16:41.903 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2019-01-23 21:16:41.919 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2019-01-23 21:16:41.927 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2019-01-23 21:16:41.935 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2019-01-23 21:16:42.319 [i] Currency.Currency: loading from cache server...
+2019-01-23 21:16:42.639 [i] Apps.Desktop: Cataloged 2 items in 0.4 seconds
+2019-01-23 21:16:43.796 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2019-01-23 21:16:44.302 [i] Apps.StartMenu: Cataloged 212 items in 2.2 seconds
+2019-01-23 21:16:46.365 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (33 packages)
+2019-01-23 21:16:46.380 [W] Currency.Currency: Invalid output_cur value in config. Falling back to default: ['EUR', 'GBP']
+2019-01-23 21:17:00.233 [i] Bookmarks.Bookmarks: Referenced 133 bookmarks
+2019-01-23 21:17:02.579 [i] Apps.EnvPath: Cataloged 1629 items in 20.4 seconds
+2019-01-24 02:30:57.775 [i] Environment changed.
+2019-01-26 13:09:10.729 [i] Apps.StartMenu: Cataloged 212 items in 0.5 seconds
+2019-01-26 16:40:48.489 [i] Received TaskbarCreated system message
+2019-01-26 19:39:42.593 [i] Apps.StartMenu: Cataloged 212 items in 0.1 seconds
+2019-01-27 02:06:49.186 [i] Apps.StartMenu: Cataloged 213 items in 0.1 seconds
+2019-01-27 02:06:51.184 [i] Apps.StartMenu: Cataloged 213 items in 0.1 seconds
+2019-01-30 17:09:31.458 [i] Apps.StartMenu: Cataloged 213 items in 0.9 seconds
+2019-01-31 12:45:22.670 [i] Apps.StartMenu: Cataloged 214 items in 1.4 seconds
+2019-01-31 12:45:23.838 [i] Apps.StartMenu: Cataloged 214 items in 0.1 seconds
+2019-01-31 14:12:26.533 [i] Apps.StartMenu: Cataloged 215 items in 3.2 seconds
+2019-01-31 14:12:40.520 [i] Apps.StartMenu: Cataloged 219 items in 0.1 seconds
+2019-01-31 14:21:27.368 [i] Apps.StartMenu: Cataloged 222 items in 2.4 seconds
+2019-01-31 14:21:29.119 [i] Apps.StartMenu: Cataloged 222 items in 0.2 seconds
+2019-01-31 14:21:55.166 [i] Apps.StartMenu: Cataloged 223 items in 0.2 seconds
+2019-01-31 14:22:12.230 [i] Apps.StartMenu: Cataloged 227 items in 0.2 seconds
+2019-01-31 14:22:16.211 [i] Apps.StartMenu: Cataloged 230 items in 0.1 seconds
+2019-02-01 18:00:27.491 [i] Apps.StartMenu: Cataloged 230 items in 0.3 seconds
+
+
+2019-02-04 10:50:55.582 [i] Loaded 256 items from history file.
+2019-02-04 10:50:55.645 [i] Loaded 2198 items from catalog file.
+2019-02-04 10:50:56.082 [i] Init done in 49.1023s, including 45.8913s (93%) for the Python interpreter.
+2019-02-04 10:50:56.114 [i] Plugin loaded: Internal.About
+2019-02-04 10:50:58.332 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2019-02-04 10:50:58.332 [i] Plugin loaded: Apps.Desktop (instance #1)
+2019-02-04 10:50:58.332 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2019-02-04 10:50:58.332 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2019-02-04 10:50:58.332 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2019-02-04 10:50:58.864 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2019-02-04 10:50:58.879 [i] Plugin loaded: Calc.Calc (instance #1)
+2019-02-04 10:50:58.879 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2019-02-04 10:50:58.911 [i] Plugin loaded: Currency.Currency (instance #1)
+2019-02-04 10:50:58.926 [i] Plugin loaded: Env.Env (instance #1)
+2019-02-04 10:50:58.942 [i] Plugin loaded: Everything.Everything (instance #1)
+2019-02-04 10:50:58.942 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2019-02-04 10:50:59.098 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2019-02-04 10:50:59.614 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2019-02-04 10:50:59.629 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2019-02-04 10:50:59.895 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2019-02-04 10:51:00.114 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2019-02-04 10:51:00.145 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2019-02-04 10:51:00.161 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2019-02-04 10:51:00.161 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2019-02-04 10:51:00.176 [i] Plugin loaded: String.String (instance #1)
+2019-02-04 10:51:00.192 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2019-02-04 10:51:00.192 [i] Plugin loaded: Units.Units (instance #1)
+2019-02-04 10:51:00.192 [i] Plugin loaded: URL.URL (instance #1)
+2019-02-04 10:51:00.239 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2019-02-04 10:51:00.239 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2019-02-04 10:51:00.254 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2019-02-04 10:51:00.254 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2019-02-04 10:51:00.270 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2019-02-04 10:51:00.489 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2019-02-04 10:51:00.551 [i] Apps.StartMenu: Cataloged 230 items in 0.1 seconds
+2019-02-04 10:51:00.629 [i] Currency.Currency: loading from cache server...
+2019-02-04 10:51:03.567 [i] Currency.Currency: cache server has returned error. Requesting from main API
+2019-02-04 10:51:03.567 [i] Currency.Currency: loading from API...
+2019-02-04 10:51:03.582 [W] Currency.Currency: Invalid output_cur value in config. Falling back to default: ['EUR', 'GBP']
+2019-02-04 10:51:04.536 [E] PackageControl.PackageControl: Available packages could not be obtained:
+ Traceback (most recent call last):
+  File "lib\urllib\request.py", line 1318, in do_open
+  File "lib\http\client.py", line 1239, in request
+  File "lib\http\client.py", line 1285, in _send_request
+  File "lib\http\client.py", line 1234, in endheaders
+  File "lib\http\client.py", line 1026, in _send_output
+  File "lib\http\client.py", line 964, in send
+  File "lib\http\client.py", line 1392, in connect
+  File "lib\http\client.py", line 936, in connect
+  File "lib\socket.py", line 704, in create_connection
+  File "lib\socket.py", line 745, in getaddrinfo
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 404, in _get_available_packages
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\python\site\keypirinha_net.py", line 40, in open
+    fullurl, *args, data=data, timeout=timeout, **kwargs)
+  File "lib\urllib\request.py", line 526, in open
+  File "lib\urllib\request.py", line 544, in _open
+  File "lib\urllib\request.py", line 504, in _call_chain
+  File "lib\urllib\request.py", line 1361, in https_open
+  File "lib\urllib\request.py", line 1320, in do_open
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+2019-02-04 10:51:04.645 [E] Error from PackageControl.PackageControl.on_start: <class 'TypeError'>: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 83, in on_start
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 331, in _check_installed
+  File "C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\PackageControl.keypirinha-package\packagecontrol.py", line 365, in _get_package
+
+2019-02-04 10:51:13.739 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2019-02-04 10:51:25.426 [i] Apps.EnvPath: Cataloged 1633 items in 25.0 seconds
+2019-02-04 10:51:35.567 [i] Bookmarks.Bookmarks: Referenced 136 bookmarks
+2019-02-04 13:49:18.773 [i] Environment changed.
+2019-02-04 13:59:39.390 [i] Apps.StartMenu: Cataloged 230 items in 0.3 seconds
+2019-02-04 14:10:22.260 [i] Apps.StartMenu: Cataloged 230 items in 0.2 seconds
+2019-02-04 14:12:24.125 [i] Apps.StartMenu: Cataloged 230 items in 0.5 seconds
+2019-02-05 17:19:19.053 [i] Apps.StartMenu: Cataloged 230 items in 0.6 seconds
+2019-02-05 23:23:22.748 [i] Received end-of-session message
+
+
+2019-02-05 23:30:07.033 [i] Loaded 257 items from history file.
+2019-02-05 23:30:07.564 [i] Loaded 2205 items from catalog file.
+2019-02-05 23:30:08.466 [i] Init done in 44.6677s, including 33.3625s (75%) for the Python interpreter.
+2019-02-05 23:30:08.529 [i] Plugin loaded: Internal.About
+2019-02-05 23:30:12.826 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2019-02-05 23:30:12.826 [i] Plugin loaded: Apps.Desktop (instance #1)
+2019-02-05 23:30:12.826 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2019-02-05 23:30:12.826 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2019-02-05 23:30:12.826 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2019-02-05 23:30:13.185 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2019-02-05 23:30:13.216 [i] Plugin loaded: Calc.Calc (instance #1)
+2019-02-05 23:30:13.216 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2019-02-05 23:30:13.310 [i] Plugin loaded: Currency.Currency (instance #1)
+2019-02-05 23:30:13.357 [i] Plugin loaded: Env.Env (instance #1)
+2019-02-05 23:30:13.373 [i] Plugin loaded: Everything.Everything (instance #1)
+2019-02-05 23:30:13.373 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2019-02-05 23:30:13.685 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2019-02-05 23:30:17.321 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2019-02-05 23:30:17.336 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2019-02-05 23:30:17.617 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2019-02-05 23:30:17.774 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2019-02-05 23:30:17.789 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2019-02-05 23:30:17.805 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2019-02-05 23:30:17.805 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2019-02-05 23:30:17.821 [i] Plugin loaded: String.String (instance #1)
+2019-02-05 23:30:17.821 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2019-02-05 23:30:17.836 [i] Plugin loaded: Units.Units (instance #1)
+2019-02-05 23:30:17.836 [i] Plugin loaded: URL.URL (instance #1)
+2019-02-05 23:30:17.883 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2019-02-05 23:30:17.883 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2019-02-05 23:30:17.899 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2019-02-05 23:30:17.899 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2019-02-05 23:30:17.899 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2019-02-05 23:30:18.196 [i] Apps.Desktop: Cataloged 2 items in 0.1 seconds
+2019-02-05 23:30:18.711 [i] Currency.Currency: loading from cache server...
+2019-02-05 23:30:19.680 [i] Apps.StartMenu: Cataloged 230 items in 1.6 seconds
+2019-02-05 23:30:23.901 [W] Currency.Currency: Invalid output_cur value in config. Falling back to default: ['EUR', 'GBP']
+2019-02-05 23:30:24.276 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (33 packages)
+2019-02-05 23:31:02.612 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2019-02-05 23:31:29.430 [i] Apps.EnvPath: Cataloged 1633 items in 71.4 seconds
+2019-02-05 23:31:50.692 [i] Bookmarks.Bookmarks: Referenced 136 bookmarks
+2019-02-06 15:08:56.705 [i] Environment changed.
+2019-02-08 18:08:28.174 [i] Apps.StartMenu: Cataloged 230 items in 0.3 seconds
+
+
+2019-02-09 13:51:53.298 [i] Loaded 260 items from history file.
+2019-02-09 13:51:53.641 [i] Loaded 2205 items from catalog file.
+2019-02-09 13:51:54.202 [i] Init done in 66.1677s, including 41.4925s (63%) for the Python interpreter.
+2019-02-09 13:51:54.216 [i] Plugin loaded: Internal.About
+2019-02-09 13:52:22.242 [i] Plugin loaded: Apps.CustomCmds (instance #1)
+2019-02-09 13:52:22.242 [i] Plugin loaded: Apps.Desktop (instance #1)
+2019-02-09 13:52:22.244 [i] Plugin loaded: Apps.EnvPath (instance #1)
+2019-02-09 13:52:22.244 [i] Plugin loaded: Apps.ExtraPaths (instance #1)
+2019-02-09 13:52:22.244 [i] Plugin loaded: Apps.StartMenu (instance #1)
+2019-02-09 13:52:22.715 [i] Plugin loaded: Bookmarks.Bookmarks (instance #1)
+2019-02-09 13:52:22.739 [i] Plugin loaded: Calc.Calc (instance #1)
+2019-02-09 13:52:22.743 [i] Plugin loaded: ControlPanel.ControlPanel (instance #1)
+2019-02-09 13:52:22.762 [i] Plugin loaded: Currency.Currency (instance #1)
+2019-02-09 13:52:22.779 [i] Plugin loaded: Env.Env (instance #1)
+2019-02-09 13:52:22.790 [i] Plugin loaded: Everything.Everything (instance #1)
+2019-02-09 13:52:22.797 [i] Plugin loaded: FileBrowser.FileBrowser (instance #1)
+2019-02-09 13:52:22.924 [i] Plugin loaded: FilesCatalog.FilesCatalog (instance #1)
+2019-02-09 13:52:24.684 [i] Plugin loaded: FileZilla.FileZilla (instance #1)
+2019-02-09 13:52:24.791 [i] Plugin loaded: GoogleTranslate.GoogleTranslate (instance #1)
+2019-02-09 13:52:25.443 [i] Python: C:\Users\zeruel11\.scoopy\apps\keypirinha\current\portable\Profile\InstalledPackages\MovieDB.keypirinha-package\lib\certifi\cacert.pem
+2019-02-09 13:52:25.851 [i] Plugin loaded: MovieDB.Moviedb (instance #1)
+2019-02-09 13:52:25.856 [i] Plugin loaded: PackageControl.PackageControl (instance #1)
+2019-02-09 13:52:25.872 [i] Plugin loaded: PuTTY.PuTTY (instance #1)
+2019-02-09 13:52:25.872 [i] Plugin loaded: RegBrowser.RegBrowser (instance #1)
+2019-02-09 13:52:25.888 [i] Plugin loaded: String.String (instance #1)
+2019-02-09 13:52:25.888 [i] Plugin loaded: TaskSwitcher.TaskSwitcher (instance #1)
+2019-02-09 13:52:25.903 [i] Plugin loaded: Units.Units (instance #1)
+2019-02-09 13:52:25.905 [i] Plugin loaded: URL.URL (instance #1)
+2019-02-09 13:52:25.955 [i] Plugin loaded: URLShortener.URLShortener (instance #1)
+2019-02-09 13:52:25.964 [i] Plugin loaded: WebSearch.WebSearch (instance #1)
+2019-02-09 13:52:25.980 [i] Plugin loaded: WebSuggest.WebSuggest (instance #1)
+2019-02-09 13:52:25.992 [i] Plugin loaded: Winamp.Winamp (instance #1)
+2019-02-09 13:52:26.002 [i] Plugin loaded: WinSCP.WinSCP (instance #1)
+2019-02-09 13:52:26.151 [i] Apps.Desktop: Cataloged 2 items in 0.0 seconds
+2019-02-09 13:52:26.424 [i] Apps.StartMenu: Cataloged 230 items in 0.3 seconds
+2019-02-09 13:52:26.424 [i] Currency.Currency: loading from cache server...
+2019-02-09 13:52:28.112 [W] Bookmarks.Bookmarks: places.sqlite file not found in C:\Users\zeruel11\AppData\Roaming\Mozilla\Firefox\Profiles/qftmslah.default
+2019-02-09 13:52:32.257 [W] Currency.Currency: Invalid output_cur value in config. Falling back to default: ['EUR', 'GBP']
+2019-02-09 13:52:32.366 [i] PackageControl.PackageControl: Package list loaded from 'ueffel's Package Repository' (34 packages)
+2019-02-09 13:53:21.483 [i] Bookmarks.Bookmarks: Referenced 136 bookmarks
+2019-02-09 13:53:59.179 [i] Apps.EnvPath: Cataloged 1633 items in 93.0 seconds
+2019-02-10 18:11:49.144 [i] Apps.StartMenu: Cataloged 230 items in 0.5 seconds
+2019-02-11 20:37:16.380 [i] Environment changed.
+2019-02-11 20:39:41.411 [i] Apps.StartMenu: Cataloged 230 items in 0.2 seconds
+2019-02-11 20:39:53.654 [i] Apps.StartMenu: Cataloged 230 items in 0.1 seconds
+2019-02-11 20:40:08.929 [i] Apps.StartMenu: Cataloged 230 items in 0.2 seconds
+2019-02-11 21:06:13.848 [i] Apps.StartMenu: Cataloged 230 items in 0.1 seconds
+2019-02-11 21:08:30.155 [i] Apps.StartMenu: Cataloged 230 items in 0.1 seconds
+2019-02-11 21:09:18.716 [i] Apps.StartMenu: Cataloged 230 items in 0.3 seconds
+2019-02-12 16:35:15.318 [i] Apps.StartMenu: Cataloged 232 items in 1.6 seconds
+2019-02-12 16:35:16.862 [i] Apps.StartMenu: Cataloged 232 items in 0.3 seconds
+2019-02-12 16:54:33.674 [i] Apps.StartMenu: Cataloged 237 items in 0.1 seconds
+2019-02-12 18:19:58.206 [i] Apps.StartMenu: Cataloged 237 items in 0.1 seconds
+2019-02-13 11:54:28.744 [i] Environment changed.
+2019-02-13 16:36:48.836 [i] Apps.StartMenu: Cataloged 237 items in 0.1 seconds
+2019-02-14 11:57:39.315 [i] Apps.StartMenu: Cataloged 237 items in 0.1 seconds
+2019-02-14 11:57:41.548 [i] Apps.StartMenu: Cataloged 237 items in 0.2 seconds

@@ -3,7 +3,7 @@
       "creator" : "Keypirinha v2.23 (2ee355d)",
       "creator_url" : "http://keypirinha.com/",
       "format" : 102,
-      "modified" : "2019-01-11T12:43:42+0000",
+      "modified" : "2019-02-14T04:47:20+0000",
       "type" : "history"
    },
    "history" : [
@@ -1278,6 +1278,342 @@
          "item" : 10800565414785061761,
          "label" : "Advanced Renamer",
          "time" : "2019-01-11T12:43:42+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-12T14:27:54+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-14T06:14:40+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2019-01-14T06:34:07+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6173395047282144940,
+         "label" : "Kitematic",
+         "time" : "2019-01-14T08:55:55+0000"
+      },
+      {
+         "action" : null,
+         "item" : 156440928632390755,
+         "label" : "AIMP",
+         "time" : "2019-01-14T13:18:32+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17178759220252870632,
+         "label" : "Audacity",
+         "time" : "2019-01-14T13:23:07+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17178759220252870632,
+         "label" : "Audacity",
+         "time" : "2019-01-14T13:35:31+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2019-01-15T03:04:35+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2019-01-15T04:29:22+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6173395047282144940,
+         "label" : "Kitematic",
+         "time" : "2019-01-15T11:30:48+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1283077964835698977,
+         "label" : "DBeaver",
+         "time" : "2019-01-15T11:39:06+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2019-01-15T18:02:47+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2019-01-17T15:28:07+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2019-01-18T02:22:56+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2019-01-18T02:23:33+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11390006803330432584,
+         "label" : "mpv",
+         "time" : "2019-01-18T02:28:35+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11219878961360942088,
+         "label" : "OpenVPN GUI",
+         "time" : "2019-01-18T02:33:15+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2019-01-18T11:57:29+0000"
+      },
+      {
+         "action" : null,
+         "item" : 7715148561619026502,
+         "label" : "MKVToolNix GUI",
+         "time" : "2019-01-21T07:48:40+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2019-01-21T12:16:40+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-23T09:28:56+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2019-01-23T14:19:34+0000"
+      },
+      {
+         "action" : null,
+         "item" : 12653390956405522321,
+         "label" : "untied",
+         "time" : "2019-01-23T18:59:52+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3701249068947718458,
+         "label" : "Tree of Savior Addon Manager.exe",
+         "time" : "2019-01-23T19:00:03+0000"
+      },
+      {
+         "action" : null,
+         "item" : 3701249068947718458,
+         "label" : "Tree of Savior Addon Manager.exe",
+         "time" : "2019-01-23T20:09:47+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2019-01-24T06:03:33+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-24T06:19:25+0000"
+      },
+      {
+         "action" : null,
+         "item" : 15151594305129490480,
+         "label" : "LogMeIn Hamachi",
+         "time" : "2019-01-24T10:17:25+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-24T13:57:09+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-24T14:01:11+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-26T08:08:34+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11728950491370231188,
+         "label" : "Aegisub x64",
+         "time" : "2019-01-26T10:00:32+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2019-01-26T11:24:46+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-29T06:02:53+0000"
+      },
+      {
+         "action" : null,
+         "item" : 1591576190742436889,
+         "label" : "Scrivener.exe",
+         "time" : "2019-01-29T06:06:43+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11390006803330432584,
+         "label" : "mpv",
+         "time" : "2019-01-29T07:07:20+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-30T04:30:09+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-30T05:30:04+0000"
+      },
+      {
+         "action" : null,
+         "item" : 10800565414785061761,
+         "label" : "Advanced Renamer",
+         "time" : "2019-01-31T01:27:48+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-01-31T04:17:38+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2019-01-31T04:38:34+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11377851740045468617,
+         "label" : "Visual Studio Code",
+         "time" : "2019-02-02T15:46:03+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17178759220252870632,
+         "label" : "Audacity",
+         "time" : "2019-02-03T03:30:13+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6887413647962442564,
+         "label" : "AIMP Advanced Tag Editor",
+         "time" : "2019-02-03T06:40:11+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2019-02-04T06:25:37+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2019-02-05T16:34:00+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-02-06T08:00:42+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-02-07T03:42:44+0000"
+      },
+      {
+         "action" : null,
+         "item" : 6851979443633462483,
+         "label" : "SoftEther VPN Client Manager",
+         "time" : "2019-02-09T07:02:32+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2019-02-11T13:39:15+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-02-12T04:45:54+0000"
+      },
+      {
+         "action" : null,
+         "item" : 17624016876626646827,
+         "label" : "Wavebox",
+         "time" : "2019-02-12T04:47:32+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11893220728517307175,
+         "label" : "UniExtract.exe",
+         "time" : "2019-02-12T09:43:25+0000"
+      },
+      {
+         "action" : null,
+         "item" : 11893220728517307175,
+         "label" : "UniExtract.exe",
+         "time" : "2019-02-12T09:54:47+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-02-13T04:53:25+0000"
+      },
+      {
+         "action" : null,
+         "item" : 14979514382530832765,
+         "label" : "AriaNg-0.5.0.exe",
+         "time" : "2019-02-14T04:47:20+0000"
       }
    ],
    "sets" : {
@@ -1356,6 +1692,17 @@
             "plugin" : "Apps.StartMenu",
             "short_desc" : "Start Menu: Programs\\AIMP",
             "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\AIMP\\AIMP.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 6887413647962442564,
+            "label" : "AIMP Advanced Tag Editor",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\AIMP",
+            "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\AIMP\\AIMP Advanced Tag Editor.lnk"
          },
          {
             "args_hint" : "accepted",
@@ -1594,6 +1941,17 @@
             "args_hint" : "accepted",
             "category" : "file",
             "hit_hint" : "keepall",
+            "id" : 6173395047282144940,
+            "label" : "Kitematic",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Kitematic.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
             "id" : 15151594305129490480,
             "label" : "LogMeIn Hamachi",
             "loop_on_suggest" : false,
@@ -1666,6 +2024,17 @@
             "plugin" : "FileBrowser.FileBrowser",
             "short_desc" : "",
             "target" : "C:\\untied\\NirLauncher.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 11219878961360942088,
+            "label" : "OpenVPN GUI",
+            "loop_on_suggest" : false,
+            "plugin" : "Apps.StartMenu",
+            "short_desc" : "Start Menu: Programs\\Scoop Apps",
+            "target" : "C:\\Users\\zeruel11\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\OpenVPN GUI.lnk"
          },
          {
             "args_hint" : "accepted",
@@ -1765,6 +2134,39 @@
             "plugin" : "Apps.StartMenu",
             "short_desc" : "Start Menu: Programs\\System Tools",
             "target" : "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Task Manager.lnk"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 3701249068947718458,
+            "label" : "Tree of Savior Addon Manager.exe",
+            "loop_on_suggest" : true,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\untied\\Tree of Savior Addon Manager-win32-ia32\\Tree of Savior Addon Manager.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 11893220728517307175,
+            "label" : "UniExtract.exe",
+            "loop_on_suggest" : true,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\untied\\UniExtract\\UniExtract.exe"
+         },
+         {
+            "args_hint" : "accepted",
+            "category" : "file",
+            "hit_hint" : "keepall",
+            "id" : 12653390956405522321,
+            "label" : "untied",
+            "loop_on_suggest" : true,
+            "plugin" : "FileBrowser.FileBrowser",
+            "short_desc" : "",
+            "target" : "C:\\untied"
          },
          {
             "args_hint" : "required",
@@ -1930,11 +2332,23 @@
          },
          {
             "items" : [ 17178759220252870632 ],
+            "search" : "aud"
+         },
+         {
+            "items" : [ 17178759220252870632 ],
             "search" : "auda"
          },
          {
             "items" : [ 18023809010260764282 ],
             "search" : "C:/use"
+         },
+         {
+            "items" : [ 12653390956405522321 ],
+            "search" : "c:\\un"
+         },
+         {
+            "items" : [ 12653390956405522321 ],
+            "search" : "c:\\unti"
          },
          {
             "items" : [ 17069137683128336437 ],
@@ -1947,6 +2361,10 @@
          {
             "items" : [ 6509817653817298023 ],
             "search" : "cpuz"
+         },
+         {
+            "items" : [ 1283077964835698977 ],
+            "search" : "dbe"
          },
          {
             "items" : [ 1283077964835698977 ],
@@ -2037,6 +2455,10 @@
             "search" : "keycon"
          },
          {
+            "items" : [ 6173395047282144940 ],
+            "search" : "kite"
+         },
+         {
             "items" : [ 12078476694989161836 ],
             "search" : "mkvc"
          },
@@ -2071,6 +2493,10 @@
          {
             "items" : [ 18268940125398700226 ],
             "search" : "nir"
+         },
+         {
+            "items" : [ 11219878961360942088 ],
+            "search" : "open"
          },
          {
             "items" : [ 12660856405529633258 ],
@@ -2129,12 +2555,24 @@
             "search" : "steam"
          },
          {
+            "items" : [ 6887413647962442564 ],
+            "search" : "tag"
+         },
+         {
             "items" : [ 17267454400072703707 ],
             "search" : "task"
          },
          {
             "items" : [ 7715148561619026502 ],
             "search" : "toolnix"
+         },
+         {
+            "items" : [ 3701249068947718458 ],
+            "search" : "tree"
+         },
+         {
+            "items" : [ 11893220728517307175 ],
+            "search" : "uniex"
          },
          {
             "items" : [ 17652512588618074037 ],
