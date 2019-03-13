@@ -37,7 +37,12 @@ function gs {
     git status -uno
 }
 
-function ga {
+function gr {
+    param([string]$ResetPath=".")
+    git reset HEAD $ResetPath
+}
+
+function g. {
     param([string]$AddPath=".")
     git add $AddPath
 }
@@ -101,16 +106,29 @@ function ikti.srv {
 #     Remove-Variable s
 # }
 
+###video help
+function subit {
+    subliminal download -v -l en -hi $args[0]
+}
+
+function gup {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$FileToUpload = $args[0],
+        [string]$DriveDir
+    )
+    foreach ($f in Get-ChildItem -LiteralPath $FileToUpload -Filter *.mkv) {
+        if (!$DriveDir) {
+            gdrive upload $f
+        } else {
+            gdrive upload -p $DriveDir $f
+        }
+    }
+}
+
+###misc
 function mag2tor {
     aria2c --bt-metadata-only=true --bt-save-metadata=true --listen-port=6881 $args[0]
 }
 
 Set-Alias -Name "pwsh" -Value "pwsh-preview"
-
-function yp {
-    mpv --profile=utube $args[0]
-}
-
-function subit {
-    subliminal download -v -l en $args[0]
-}

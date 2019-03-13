@@ -28,7 +28,7 @@
             "filename": "Steam.keypirinha-package",
             "date": "2018-04-06T03:50:53+0000",
             "description": null,
-            "version": null,
+            "version": "1.0.0+a2fa705",
             "owner": "EhsanKia",
             "homepage": "https://github.com/EhsanKia/keypirinha-plugins/tree/master//keypirinha-steam/build/Steam.keypirinha-package"
         },
@@ -48,17 +48,17 @@
             "filename": "Launchy.keypirinha-package",
             "date": "2017-05-23T07:56:22+0000",
             "description": null,
-            "version": null,
+            "version": "1.0.0+2de7ce7",
             "owner": "EhsanKia",
             "homepage": "https://github.com/EhsanKia/keypirinha-plugins/tree/master//keypirinha-launchy/build/Launchy.keypirinha-package"
         },
         {
-            "download_url": "https://github.com/AvatarHurden/keypirinha-currency/releases/download/v1.4/Currency.keypirinha-package",
+            "download_url": "https://github.com/AvatarHurden/keypirinha-currency/releases/download/v2.0/Currency.keypirinha-package",
             "name": "keypirinha-currency",
             "filename": "Currency.keypirinha-package",
-            "date": "2018-11-01T21:38:55+0000",
+            "date": "2019-01-09T22:59:59+0000",
             "description": "A currency converter plugin for Keypirinha",
-            "version": "v1.4",
+            "version": "v2.0",
             "owner": "AvatarHurden",
             "homepage": "https://github.com/AvatarHurden/keypirinha-currency"
         },
@@ -153,12 +153,12 @@
             "homepage": "https://github.com/Fuhrmann/keypirinha-sharex"
         },
         {
-            "download_url": "https://github.com/ueffel/Keypirinha-WindowsApps/releases/download/0.4/WindowsApps.keypirinha-package",
+            "download_url": "https://github.com/ueffel/Keypirinha-WindowsApps/releases/download/0.5/WindowsApps.keypirinha-package",
             "name": "Keypirinha-WindowsApps",
             "filename": "WindowsApps.keypirinha-package",
-            "date": "2018-12-08T12:34:40+0000",
+            "date": "2019-01-03T17:47:38+0000",
             "description": "Lists Universal Windows Apps (formerly Metro Apps) in Keypirinha for launching",
-            "version": "0.4",
+            "version": "0.5",
             "owner": "ueffel",
             "homepage": "https://github.com/ueffel/Keypirinha-WindowsApps"
         },
@@ -287,7 +287,7 @@
             "name": "keypirinha-recent_items",
             "filename": "RecentItems.keypirinha-package",
             "date": "2018-11-06T02:26:04+0000",
-            "description": "Recent Items is a plugin for Keypirinha. ",
+            "description": "Adds the Windows recent items directory contents to the Keypirinha catalog",
             "version": "v1.0.0",
             "owner": "s-oram",
             "homepage": "https://github.com/s-oram/keypirinha-recent_items"
@@ -303,12 +303,12 @@
             "homepage": "https://github.com/prayzzz/keypirinha-epoch"
         },
         {
-            "download_url": "https://github.com/DrorHarari/keypirinha-ppl/releases/download/v0.4.1/Ppl.keypirinha-package",
+            "download_url": "https://github.com/DrorHarari/keypirinha-ppl/releases/download/v0.5/Ppl.keypirinha-package",
             "name": "keypirinha-ppl",
             "filename": "Ppl.keypirinha-package",
-            "date": "2018-12-02T05:51:35+0000",
+            "date": "2018-12-31T23:08:49+0000",
             "description": "Call and email people easily",
-            "version": "v0.4.1",
+            "version": "v0.5",
             "owner": "DrorHarari",
             "homepage": "https://github.com/DrorHarari/keypirinha-ppl"
         },
@@ -321,6 +321,26 @@
             "version": "1.0",
             "owner": "mawiseman",
             "homepage": "https://github.com/mawiseman/keypirinha-asky"
+        },
+        {
+            "download_url": "https://github.com/bantya/Keypirinha-EasySearch/releases/download/2.0.2/EasySearch.keypirinha-package",
+            "name": "Keypirinha-EasySearch",
+            "filename": "EasySearch.keypirinha-package",
+            "date": "2019-01-31T13:37:21+0000",
+            "description": "Keypirinha plugin for faster web searching",
+            "version": "2.0.2",
+            "owner": "bantya",
+            "homepage": "https://github.com/bantya/Keypirinha-EasySearch"
+        },
+        {
+            "download_url": "https://github.com/bantya/Keypirinha-Zealous/releases/download/v1.0.0/Zealous.keypirinha-package",
+            "name": "Keypirinha-Zealous",
+            "filename": "Zealous.keypirinha-package",
+            "date": "2019-02-06T21:10:07+0000",
+            "description": "Keypirinha plugin for exploring Zeal docs.",
+            "version": "v1.0.0",
+            "owner": "bantya",
+            "homepage": "https://github.com/bantya/Keypirinha-Zealous"
         }
     ]
 }
