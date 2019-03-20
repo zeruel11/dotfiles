@@ -1,0 +1,16 @@
+#!/bin/bash
+#calibre sync
+
+if [ "$1" == 'pull' ]
+then
+	rsync -Cuazvn /d/WorkSpace/\=modding\=/FO4/BodySlide/ "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/Tools/BodySlide/"
+	echo 'due to the complex nature of modding it is A MUST that you copy the resulting files manually'
+elif [ "$1" == 'export' ]
+then
+	cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* /c/Users/zeruel/Desktop/
+elif [ "$1" == 'push' ]
+then
+	rsync -Cuazv --filter="merge filter-esp.txt" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /k/\[modWorks\]/esps/ --delete
+else
+	echo 'you have to specify pull or push, or export to Desktop'
+fi
