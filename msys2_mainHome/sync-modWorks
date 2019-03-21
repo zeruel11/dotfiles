@@ -3,14 +3,22 @@
 
 if [ "$1" == 'pull' ]
 then
-	rsync -Cuazvn /d/WorkSpace/\=modding\=/FO4/BodySlide/ "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/Tools/BodySlide/"
-	echo 'due to the complex nature of modding it is A MUST that you copy the resulting files manually'
+	if [ "$2" == 'confirm' ]
+	then
+		rsync -Cuazv /f/\[modWorks\]/fallout4-vortex/ "/c/Users/zeruel11/AppData/Roaming/Vortex/fallout4" --delete
+		rsync -Cuazv --filter="merge filter-esp.txt" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete
+	else
+		rsync -Cuazvn /f/\[modWorks\]/fallout4-vortex/ "/c/Users/zeruel11/AppData/Roaming/Vortex/fallout4" --delete
+		rsync -Cuazvn --filter="merge filter-esp.txt" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete
+		echo -e '\e[41;97mThis dry run MUST be used as \e[1mREFERENCE\e[0m'
+	fi
 elif [ "$1" == 'export' ]
 then
 	cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* /c/Users/zeruel/Desktop/
 elif [ "$1" == 'push' ]
 then
-	rsync -Cuazv --filter="merge filter-esp.txt" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /k/\[modWorks\]/esps/ --delete
+#	rsync -Cuazv --filter="merge filter-esp.txt" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /k/\[modWorks\]/esps/ --delete
+	rsync -Cuazv /d/FO4/Data/myCompatibilityPatches.esp "/d/_modWorks/=modding=/FO4/"
 else
 	echo 'you have to specify pull or push, or export to Desktop'
 fi
