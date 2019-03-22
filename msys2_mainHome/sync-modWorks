@@ -1,16 +1,37 @@
 #!/bin/bash
 #calibre sync
 
-if [ "$1" == 'pull' ]
-then
+#$FD='/k/[modWorks]/'
+#$PHD='/g/modSource/'
+
+if [ "$1" == 'pull' ]; then
 	rsync -Cuazvn /d/WorkSpace/\=modding\=/FO4/BodySlide/ "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/Tools/BodySlide/"
 	echo 'due to the complex nature of modding it is A MUST that you copy the resulting files manually'
-elif [ "$1" == 'export' ]
-then
-	cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* /c/Users/zeruel/Desktop/
-elif [ "$1" == 'push' ]
-then
-	rsync -Cuazv --filter="merge filter-esp.txt" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /k/\[modWorks\]/esps/ --delete
-else
-	echo 'you have to specify pull or push, or export to Desktop'
+elif [ "$1" == 'export' ]; then
+	if [ -z "$2" ]; then
+		cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* /c/Users/zeruel/Desktop/
+	else
+		cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* $2
+	fi
+elif [ "$1" == 'master' ]; then
+	if [ -d "/k/[modWorks]/" ]; then
+		rsync -Cuazv --filter="merge .filter-espBA2" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /k/\[modWorks\]/esps/ --delete --delete-excluded
+	else
+		echo -e "\e[41mYour portable flashdisk is not present or uses a different drive map\e[0m"
+	fi
+	if [ -d "/g/modSource/" ]; then
+		rsync -Cuazv --filter="merge .filter-MasterSync" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /g/modSource/Data/ --delete --delete-excluded
+	else
+		echo -e "\e[41mYour portable harddisk is not present or uses a different drive map\e[0m"
+	fi
+elif [ "$1" == 'push' ]; then
+	if [ -d "/d/FO4/" ]; then
+		echo "placeholder"
+	elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ]; then
+		rsync -Cuazv --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded
+	else
+		echo -e "You're neither at your pc nor your laptop... \e[31mWho or where the fluff are you?!\e[0m"
+	fi
+	else
+	echo 'you have to specify pull or push (mastersync), or export to Desktop'
 fi
