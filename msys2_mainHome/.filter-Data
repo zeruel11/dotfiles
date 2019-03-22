@@ -1,0 +1,42 @@
+# IMPORTANT!!! Always update this file as needed to minimize git load!!!
+
+# these must ALWAYS be here
+- __folder_managed_by_vortex
+- lang/
+- res/
+- *.exe
+- *.txt
+- Config.xml
+- OutfitStudio.xml
+- BodySlide.xml
++ RefTemplates.xml
+
+# Parent inclusion
++ /Tools/
++ /Tools/**/
++ /Meshes/
+
+# Special cases::MUST be HERE
++ /Tools/BodySlide/ShapeData/References/***
++ /Tools/BodySlide/ConversionSets/***
++ /Tools/BodySlide/SliderCategories/***
++ /Tools/BodySlide/SliderGroups/***
++ /Tools/BodySlide/SliderPresets/***
+
+# Configure rules below!!! Remember to be sub-dir specific!!
+# BodySlide rules: ShapeData section
++ CROSS_ret_outfit_0[1-3,5-6]**
+#+ /ShapeData/Eli Armour Compendium*
++ Fortaleza Paul**
++ Fortaleza Wet**
++ TheKite_HM_UA0[3-6]**
++ CROSSAA_2077_*_f_FUSIONGIRL**
++ TheKite_HM_**
++ ZeX-FusionGirl**
++ CROSSAA_COA_FUSIONGIRL**
+
+# Meshes rules
++ Friffy_Holstered Weapons/***
+
+# these must ALWAYS be here
+- *
