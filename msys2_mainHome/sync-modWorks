@@ -7,20 +7,26 @@
 if [ "$1" == 'pull' ]; then
 	if [ -d "/f/[modWorks]/" ]; then
 		echo -e '\e[34mExternal master source exist, synchronizing...\e[0m'
-		if [ "$2" == 'confirm' ]
-		then
+		if [ "$2" == 'confirm' ]; then
 			rsync -Cuazv /f/\[modWorks\]/fallout4-vortex/ "/c/Users/zeruel11/AppData/Roaming/Vortex/fallout4" --delete
-			rsync -Cuazv --filter="merge filter-esp.txt" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete
+			rsync -Cuazv --filter="merge .filter-ESP" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete | tee ~/sync-modWorks.X230-rebase.MASTER.log
 		else
 			rsync -Cuazvn /f/\[modWorks\]/fallout4-vortex/ "/c/Users/zeruel11/AppData/Roaming/Vortex/fallout4" --delete
-			rsync -Cuazvn --filter="merge filter-esp.txt" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete
+			rsync -Cuazvn --filter="merge .filter-ESP" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete | tee ~/sync-modWorks.DRY_RUN.log
 			echo -e '\e[41;97mThis dry run MUST be used as \e[1mREFERENCE\e[0m'
 		fi
-	elif [ -d "/j/gaming/" ]
-		rsync -Cuazvn /d/WorkSpace/\=modding\=/FO4/Data/ "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/"
+	elif [ -d "/j/gaming/" ]; then
+		rsync -Cuazvn /d/WorkSpace/\=modding\=/FO4/Data/ "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" | tee ~/sync-modWorks.DRY_RUN.log
 		echo 'due to the complex nature of modding it is A MUST that you copy the resulting files manually'
+	elif [ -d "/d/FO4/" ]; then
+		if [ "$2" == 'confirm' ]; then
+			rsync -Cuazv --progress /d/_modWorks/\=modding\=/FO4/Data/ /d/FO4/Data/ | tee ~/sync-modWorks.X230-pull.log
+		else
+			rsync -Cuazvn --progress /d/_modWorks/\=modding\=/FO4/Data/ /d/FO4/Data/ | tee ~/sync-modWorks.DRY_RUN.log
+			echo -e '\e[41;97mThis dry run MUST be used as \e[1mREFERENCE\e[0m'
+		fi
 	else
-		echo -e '\e[41mNowhere to pull :(\e[0m'
+		echo -e '\e[31mNo source and nowhere to pull :(\e[0m'
 	fi
 elif [ "$1" == 'export' ]; then
 	if [ -z "$2" ]; then
@@ -41,7 +47,7 @@ elif [ "$1" == 'master' ]; then
 	fi
 elif [ "$1" == 'push' ]; then
 	if [ -d "/d/FO4/" ]; then
-		rsync -Cuazv /d/FO4/Data/myCompatibilityPatches.esp "/d/_modWorks/=modding=/FO4/"
+		rsync -azv /d/FO4/Data/myCompatibilityPatches.esp "/d/_modWorks/=modding=/FO4/"
 	elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ]; then
 		rsync -Cuazv --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded
 	else
