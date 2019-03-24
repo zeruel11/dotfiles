@@ -48,8 +48,10 @@ elif [ "$1" == 'master' ]; then
 elif [ "$1" == 'push' ]; then
 	if [ -d "/d/FO4/" ]; then
 		rsync -azv /d/FO4/Data/myCompatibilityPatches.esp "/d/_modWorks/=modding=/FO4/"
-	elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ]; then
+	elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ] && [ "$2" == "model" ]; then
 		rsync -Cuazv --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded
+	elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ] && [ -z "$2" ]; then
+		rsync -cazv "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/myCompatibilityPatches.esp" "/d/WorkSpace/=modding=/FO4/Data/"
 	else
 		echo -e "You're neither at your pc nor your laptop... \e[31mWho or where the fluff are you?!\e[0m"
 	fi
