@@ -12,6 +12,9 @@
 + RefTemplates.xml
 + myCompatibilityPatches.esp
 
+# BA2 and ESP rules
++ BR77*
+
 # Parent inclusion
 + /Tools/
 + /Tools/**/
@@ -38,9 +41,6 @@
 
 # Meshes rules
 + Friffy_Holstered Weapons/***
-
-# BA2 rules
-+ BR77*
 
 # these must ALWAYS be here
 - *
