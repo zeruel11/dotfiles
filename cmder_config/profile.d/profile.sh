@@ -8,83 +8,116 @@
 # Section - env setup
 #
 
-export PORTSYS=`uname|cut -d'_' -f1`
+if [ ! -z $MSYS2_PATH_TYPE ]; then
 
-if [ $PORTSYS = 'MSYS' ] || [ $PORTSYS = 'MINGW32' ] || [ $PORTSYS = 'MINGW64' ]; then
-    if [ ! -d /home/$USERNAME ]; then
-        mkdir -p /home/$USERNAME
+    export PORTSYS=`uname|cut -d'_' -f1`
+
+    if [ $PORTSYS = 'MSYS' ] || [ $PORTSYS = 'MINGW32' ] || [ $PORTSYS = 'MINGW64' ]; then
+        if [ ! -d /home/$USERNAME ]; then
+            mkdir -p /home/$USERNAME
+        fi
+        HOME=/home/$USERNAME
+        export USERPROFILE=$HOME
+        export HOMEPATH=$HOME
+    fi 
+
+    cd $HOME
+
+    export PORTFOLDER=`cygpath -ml \`pwd\`|rev|cut -d'/' -f4-|rev|cut -d: -f2-`
+    export HOMEDRIVEL=`cygpath -m \`pwd\` |cut -d: -f1`
+    export HOMEDRIVE=$HOMEDRIVEL:
+
+    export PORTABLEPATH=/$HOMEDRIVEL$PORTFOLDER
+
+    #
+    # Section - portable application setup 
+    #
+    # portable production tool
+
+    # portable netsnmp
+    if [ -d $PORTABLEPATH/netsnmp ]; then
+        export PATH=$PORTABLEPATH/netsnmp/usr/bin:$PATH
     fi
-    HOME=/home/$USERNAME
-    export USERPROFILE=$HOME
-    export HOMEPATH=$HOME
-fi 
 
-cd $HOME
+    # portable Lua
+    if [ -d $PORTABLEPATH/Lua ]; then
+        export LUA_DEV=$PORTABLEPATH/Lua/5.1
+        #export LUA_PATH=$PORTABLEPATH/Lua/5.1/lua/?.luac
+        export PATH=$LUA_DEV:$LUA_DEV/clibs:$PATH
+        alias lua=$LUA_DEV/lua.exe
+    fi
 
-export PORTFOLDER=`cygpath -ml \`pwd\`|rev|cut -d'/' -f4-|rev|cut -d: -f2-`
-export HOMEDRIVEL=`cygpath -m \`pwd\` |cut -d: -f1`
-export HOMEDRIVE=$HOMEDRIVEL:
+    # portable mingw64 on msys2
+    if [ -d $PORTABLEPATH/msys64/mingw64 ];then
+        export PATH=$PORTABLEPATH/msys64/mingw64/bin:$PATH
+    fi
 
-export PORTABLEPATH=/$HOMEDRIVEL$PORTFOLDER
+    # portable nginx 
+    if [ -d $PORTABLEPATH/nginx ]; then
+        export PATH=$PORTABLEPATH/nginx:$PATH
+        alias nginxstart='cd $PORTABLEPATH/nginx; start nginx'
+        alias nginxstop='cd $PORTABLEPATH/nginx; nginx -s stop'
+        alias nmpstart='source $PORTABLEPATH/nginx/nmp_start.sh'
+        alias nmpstop='source $PORTABLEPATH/nginx/nmp_stop.sh'
+    fi
 
-#
-# Section - portable application setup 
-#
-# portable production tool
+    # setup msys ssh-agent
+    if ps -p $SSH_AGENT_PID > /dev/null;then
+        echo "ssh-agent is already running"
+        # Do something knowing the pid exists, i.e. the process with $PID is running
+    else
+        eval `ssh-agent -s`
+    fi
 
-# portable netsnmp
-if [ -d $PORTABLEPATH/netsnmp ]; then
-    export PATH=$PORTABLEPATH/netsnmp/usr/bin:$PATH
-fi
+    # if ssh-add -l | grep "SHA256:MXHtgmmVu2R86ETctjMynhamGFzwk5hJBXD+Px/iht4";then
+    #     echo "private key exist"
+    # else
+    #     ssh-add
+    # fi
+    if ssh-add -l | grep "SHA256:OrziisUbHqke9uXNTKVPQyS9eTSootRp/q0vq9tSwwo";then
+        echo "server key exist"
+    else
+        ssh-add /c/Users/zeruel11/.ssh/iktisrv_id
+    fi
 
-# portable Lua
-if [ -d $PORTABLEPATH/Lua ]; then
-    export LUA_DEV=$PORTABLEPATH/Lua/5.1
-    #export LUA_PATH=$PORTABLEPATH/Lua/5.1/lua/?.luac
-    export PATH=$LUA_DEV:$LUA_DEV/clibs:$PATH
-    alias lua=$LUA_DEV/lua.exe
-fi
-
-# portable mingw64 on msys2
-if [ -d $PORTABLEPATH/msys64/mingw64 ];then
-    export PATH=$PORTABLEPATH/msys64/mingw64/bin:$PATH
-fi
-
-# portable nginx 
-if [ -d $PORTABLEPATH/nginx ]; then
-    export PATH=$PORTABLEPATH/nginx:$PATH
-    alias nginxstart='cd $PORTABLEPATH/nginx; start nginx'
-    alias nginxstop='cd $PORTABLEPATH/nginx; nginx -s stop'
-    alias nmpstart='source $PORTABLEPATH/nginx/nmp_start.sh'
-    alias nmpstop='source $PORTABLEPATH/nginx/nmp_stop.sh'
-fi
-
-# setup msys ssh-agent
-if ps -p $SSH_AGENT_PID > /dev/null;then
-    echo "ssh-agent is already running"
-    # Do something knowing the pid exists, i.e. the process with $PID is running
+    # welcome 
+    echo
+    echo "Welcome to portabledevops"
+    echo "Platform: "$PORTSYS
+    echo "Home: "$HOME
+    echo "Portable path: "$PORTFOLDER
+    echo "Driver: "$HOMEDRIVEL
+    echo "Shortcut: alias|grep "$PORTFOLDER
+    date
+    echo
 else
-    eval `ssh-agent -s`
-fi
+    # Start SSH Agent
+    #----------------------------
 
-# if ssh-add -l | grep "SHA256:MXHtgmmVu2R86ETctjMynhamGFzwk5hJBXD+Px/iht4";then
-#     echo "private key exist"
-# else
-#     ssh-add
-# fi
-if ssh-add -l | grep "SHA256:OrziisUbHqke9uXNTKVPQyS9eTSootRp/q0vq9tSwwo";then
-    echo "server key exist"
-else
-    ssh-add /c/Users/zeruel11/.ssh/iktisrv_id
-fi
+    SSH_ENV="$HOME/.ssh/environment"
 
-# welcome 
-echo
-echo "Welcome to portabledevops"
-echo "Platform: "$PORTSYS
-echo "Home: "$HOME
-echo "Portable path: "$PORTFOLDER
-echo "Driver: "$HOMEDRIVEL
-echo "Shortcut: alias|grep "$PORTFOLDER
-date
-echo
+    function run_ssh_env {
+        . "${SSH_ENV}" > /dev/null
+    }
+
+    function start_ssh_agent {
+        echo "Initializing new SSH agent..."
+        ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+        echo "succeeded"
+        chmod 600 "${SSH_ENV}"
+
+        run_ssh_env;
+
+        ssh-add ~/.ssh/id_rsa;
+    }
+
+    if [ -f "${SSH_ENV}" ]; then
+        run_ssh_env;
+        ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+            start_ssh_agent;
+        }
+    else
+        start_ssh_agent;
+    fi
+    echo -e "\e[34;102mGit Bash initialized\e[0m"
+fi
