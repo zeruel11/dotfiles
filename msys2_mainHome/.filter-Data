@@ -10,6 +10,7 @@
 - OutfitStudio.xml
 - BodySlide.xml
 + RefTemplates.xml
++ myCompatibilityPatches.esp
 
 # Parent inclusion
 + /Tools/
@@ -37,6 +38,9 @@
 
 # Meshes rules
 + Friffy_Holstered Weapons/***
+
+# BA2 rules
++ BR77*
 
 # these must ALWAYS be here
 - *

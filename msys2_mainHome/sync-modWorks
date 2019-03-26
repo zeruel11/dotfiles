@@ -48,10 +48,24 @@ elif [ "$1" == 'master' ]; then
 elif [ "$1" == 'push' ]; then
 	read -p "Do you want to push models or esp? " whattopush
 	if [ -d "/d/FO4/" ]; then
-		echo -e "\e34mDirectory D:\\FO4 found. Copying esp..."
+		echo -e "\e[34mDirectory D:\\FO4 found. Copying esp..."
 		rsync -azv /d/FO4/Data/myCompatibilityPatches.esp "/d/_modWorks/=modding=/FO4/"
-	elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ] && [ "$whattopush" == "model" ]; then
-		rsync -Cuazv --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded
+	elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ] && [ "$whattopush" == "models" ]; then
+		previewFull=$(rsync -Cuazvvn --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded --max-size=300m)
+		preview=$(rsync -Cuazvn --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded --max-size=300m)
+		echo "$preview"
+		echo "$previewFull" | grep --color=always "over max-size"
+		#previewFilter=$(echo "$preview" )
+#		echo "$preview" | egrep "^((?!sender).)*$"
+#		echo "$preview" | grep "over max-size"
+		read -p "Confirm push? [yes/list] " confirmModel
+		if [ "$confirmModel" == "yes" ]; then
+			rsync -Cuazvv --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded --max-size=300m
+		elif [ "$confirmModel" == "list" ]; then
+			rsync -Cuazvvn --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded --max-size=300m > .sync-modWorks_lastDryRun.log
+		else
+			echo -e "\e[34mSynchronization canceled...\e[0m"
+		fi
 	elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ] && [ "$whattopush" == "esp" ]; then
 		rsync -cazv "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/myCompatibilityPatches.esp" "/d/WorkSpace/=modding=/FO4/Data/"
 	else
