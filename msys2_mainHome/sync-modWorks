@@ -1,26 +1,60 @@
 #!/bin/bash
-#calibre sync
+# modWorks sync
 
-#$FD='/k/[modWorks]/'
-#$PHD='/g/modSource/'
+FD='/k/[modWorks]/'
+PHD='/g/modSource/'
+FO4_PCx="/j/gaming/illegal, no-drm, and freebies/Fallout 4"
+FO4_x230="/d/FO4"
 
-if [ -d "/d/FO4/" ]; then
+if [ -d "$FO4_x230" ]; then
 	FO4="portable"
-	echo -e "\e[44mDirectory D:\\FO4 found. Using portable version...\e[0m"
-elif [ -d "/j/gaming/illegal, no-drm, and freebies/Fallout 4/" ]; then
+	echo -e "\e[44mDirectory D:\\FO4 found. On the road mode...\e[0m"
+elif [ -d "$FO4_PCx" ]; then
 	FO4="main"
-	echo -e "\e[44mDirectory J:\\gaming\\Fallout 4 found. Using main version...\e[0m"
+	echo -e "\e[44mDirectory J:\\gaming\\Fallout 4 found. Homebase mode...\e[0m"
 fi
 
-if [ "$1" == 'pull' ]; then
+function userConfirmation {
+	local operation=$1
+	read -p "Confirm push? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == "yes" ]; then
+		case $operation in
+			'PCx_pull')
+				echo "placeholder"
+				;;
+			'PCx_push')
+				rsync -Ccazv "$FO4_PCx/Data/myCompatibilityPatches.esp" "/d/WorkSpace/=modding=/FO4/Data/"
+				;;
+			'PCx_push_model')
+				rsync -Ccazv --filter="merge .filter-Data" --prune-empty-dirs "$FO4_PCx/Data/" "/d/WorkSpace/=modding=/FO4/Data/" --delete-before --delete-excluded --max-size=300m --log-file=~/sync-modWorks.PCX-push.log
+				;;
+			'x230_pull')
+				echo "placeholder"
+				;;
+			'x230-push')
+				rsync -Ccazv "$FO4_x230/Data/myCompatibilityPatches.esp" "/d/_modWorks/=modding=/FO4/Data/"
+				;;
+			'x230_push_full')
+				rsync -Ccazv --filter="merge .filter-Data" --prune-empty-dirs "$FO4_x230/Data/" "/d/_modWorks/=modding=/FO4/Data/" --delete-before --delete-excluded --max-size=300m --log-file=~/sync-modWorks.X230-push.log
+				;;
+		esac
+	else
+		echo -e "\e[31;104mSynchronization canceled...\e[0m"
+	fi
+}
+
+if [ -z "$FO4" ]; then
+	echo -e '\e[31mNo source and nowhere to pull :(\e[0m'
+elif [ "$1" == 'pull' ]; then # copy files to workspace
 	if [ -d "/f/[modWorks]/" ]; then
 		echo -e '\e[34mExternal master source exist, synchronizing...\e[0m'
 		if [ "$2" == 'confirm' ]; then
-			rsync -Cuazv /f/\[modWorks\]/fallout4-vortex/ "/c/Users/zeruel11/AppData/Roaming/Vortex/fallout4" --delete
-			rsync -Cuazv --filter="merge .filter-ESP" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete | tee ~/sync-modWorks.X230-rebase.MASTER.log
+			rsync -Ccazv /f/\[modWorks\]/fallout4-vortex/ "/c/Users/zeruel11/AppData/Roaming/Vortex/fallout4" --delete
+			rsync -Ccazv --filter="merge .filter-ESP" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete | tee ~/sync-modWorks.X230-rebase.MASTER.log
 		else
-			rsync -Cuazvn /f/\[modWorks\]/fallout4-vortex/ "/c/Users/zeruel11/AppData/Roaming/Vortex/fallout4" --delete
-			rsync -Cuazvn --filter="merge .filter-ESP" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete | tee ~/sync-modWorks.DRY_RUN.log
+			rsync -Ccazvn /f/\[modWorks\]/fallout4-vortex/ "/c/Users/zeruel11/AppData/Roaming/Vortex/fallout4" --delete
+			rsync -Ccazvn --filter="merge .filter-ESP" /f/\[modWorks\]/esps/ "/d/FO4/Data/" --delete | tee ~/sync-modWorks.DRY_RUN.log
 			echo -e '\e[41;97mThis dry run MUST be used as \e[1mREFERENCE\e[0m'
 		fi
 	elif [ -d "/j/gaming/" ]; then
@@ -33,60 +67,54 @@ if [ "$1" == 'pull' ]; then
 			rsync -Cuazvn --progress /d/_modWorks/\=modding\=/FO4/Data/ /d/FO4/Data/ | tee ~/sync-modWorks.DRY_RUN.log
 			echo -e '\e[41;97mThis dry run MUST be used as \e[1mREFERENCE\e[0m'
 		fi
-	else
-		echo -e '\e[31mNo source and nowhere to pull :(\e[0m'
 	fi
-elif [ "$1" == 'export' ]; then
+elif [ "$1" == 'export' ]; then # copy temporary files to desktop
 	if [ -z "$2" ]; then
-		cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* /c/Users/zeruel/Desktop/
+		cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* $HOMEPATH/Desktop/
 	else
 		cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* $2
 	fi
-elif [ "$1" == 'master' ]; then
-	if [ -d "/k/[modWorks]/" ]; then
-		rsync -Cuazv --filter="merge .filter-espBA2" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /k/\[modWorks\]/esps/ --delete --delete-excluded
+elif [ "$1" == 'master' ]; then # copy current working copy
+	if [ -d "$FD" ]; then
+		rsync -Ccazv --filter="merge .filter-espBA2" --prune-empty-dirs "$FO4_PCx/Data/" /k/\[modWorks\]/esps/ --delete --delete-excluded --log-file=~/sync-modWorks.PCx_esp.MASTER.log
 	else
 		echo -e "\e[41mYour portable flashdisk is not present or uses a different drive map\e[0m"
 	fi
-	if [ -d "/g/modSource/" ]; then
-		rsync -Cuazv --filter="merge .filter-MasterSync" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /g/modSource/Data/ --delete --delete-excluded
+	if [ -d "$PHD" ]; then
+		rsync -Ccazv --filter="merge .filter-MasterSync" --prune-empty-dirs "$FO4_PCx/Data/" /g/modSource/Data/ --delete --delete-excluded --log-file=~/sync-modWorks.PCx_Data.MASTER.log
 	else
 		echo -e "\e[41mYour portable harddisk is not present or uses a different drive map\e[0m"
 	fi
-elif [ "$1" == 'push' ]; then
+elif [ "$1" == 'push' ]; then # copy edited files
 	if [ -z "$2" ]; then
-		read -p "Do you want to push model or esp? " whattopush
+		read -p "Do you want to push model or esp? [esp] " whattopush
+		whattopush=${whattopush:-esp}
 	else
 		whattopush="$2"
 	fi
 	if [ "$FO4" == "portable" ]; then
 		if [ "$whattopush" == "esp" ]; then
-			rsync -cazv /d/FO4/Data/myCompatibilityPatches.esp "/d/_modWorks/=modding=/FO4/"
+			echo -e "\e[34mCopying myCompatibilityPatches.esp...\e[0m"
+			rsync -Ccazvn "$FO4_x230/Data/myCompatibilityPatches.esp" "/d/_modWorks/=modding=/FO4/Data/"
+			userConfirmation x230_push
 		elif [ "$whattopush" == "model" ]; then
-			previewFull=$(rsync -Ccazvvn --filter="merge .filter-Data" --prune-empty-dirs "/d/FO4/Data/" /d/_modWorks/\=modding\=/FO4/Data/ --delete-before --delete-excluded --max-size=300m)
-			echo "$previewFull" | grep -v 'sender' | GREP_COLORS='mt=1;31' egrep --color=always '.*(over max-size)|$' | GREP_COLORS='mt=1;34' egrep --color=always '.*\.esp|$' | less -R
-			read -p "Confirm push? [yes] " userConfirm
-			if [ "$userConfirm" == "yes" ]; then
-				rsync -Ccazvv --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded --max-size=300m | tee sync-modWorks.X230-push.log
-			fi
+			preview=$(rsync -Ccazvvn --filter="merge .filter-Data" --prune-empty-dirs "$FO4_x230/Data/" "/d/_modWorks/=modding=/FO4/Data/" --delete-before --delete-excluded --max-size=300m)
+			echo "$preview" | grep -v 'sender' | GREP_COLORS='mt=1;31' egrep --color=always '.*(over max-size)|$' | GREP_COLORS='mt=1;34' egrep --color=always '.*\.esp|$' | less -R
+			userConfirmation x230_push_full
 		fi
 	elif [ "$FO4" == "main" ]; then
 		if [ "$whattopush" == "esp" ]; then
 			echo -e "\e[34mCopying myCompatibilityPatches.esp...\e[0m"
-			rsync -cazv "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/myCompatibilityPatches.esp" "/d/WorkSpace/=modding=/FO4/Data/"
+			rsync -Ccazvn "$FO4_PCx/Data/myCompatibilityPatches.esp" "/d/WorkSpace/=modding=/FO4/Data/"
+			userConfirmation PCx_push
 		elif [ "$whattopush" == "model" ]; then
-			previewFull=$(rsync -Ccazvvn --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded --max-size=300m)
-			echo "$previewFull" | grep -v 'sender' | GREP_COLORS='mt=1;31' egrep --color=always '.*(over max-size)|$' | GREP_COLORS='mt=1;34' egrep --color=always '.*\.esp|$' | less -R
-			read -p "Confirm push? [yes] " userConfirm
-			if [ "$userConfirm" == "yes" ]; then
-				rsync -Ccazvv --filter="merge .filter-Data" --prune-empty-dirs "/j/gaming/illegal, no-drm, and freebies/Fallout 4/Data/" /d/WorkSpace/\=modding\=/FO4/Data/ --delete-before --delete-excluded --max-size=300m | tee sync-modWorks.X230-push.log
-			# else
-			# 	echo -e "\e[34mSynchronization canceled...\e[0m"
-			fi
+			preview=$(rsync -Ccazvvn --filter="merge .filter-Data" --prune-empty-dirs "$FO4_PCx/Data/" "/d/WorkSpace/=modding=/FO4/Data/" --delete-before --delete-excluded --max-size=300m)
+			echo "$preview" | grep -v 'sender' | GREP_COLORS='mt=1;31' egrep --color=always '.*(over max-size)|$' | GREP_COLORS='mt=1;34' egrep --color=always '.*\.esp|$' | less -R
+			userConfirmation PCx_push_model
 		else
-			echo -e "You're neither at your pc nor your laptop... \e[31mWho or where the fluff are you?!\e[0m"
+			echo -e "Youre neither at your pc nor your laptop... \e[31mWho or where the fluff are you?!\e[0m"
 		fi
 	fi
 else
-	echo 'you have to specify pull or push (mastersync), or export to Desktop'
+	echo "you have to specify pull or push (mastersync), or export to Desktop"
 fi

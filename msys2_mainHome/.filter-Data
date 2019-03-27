@@ -2,6 +2,7 @@
 
 # these must ALWAYS be here
 - __folder_managed_by_vortex
+- *.vortex_backup
 - lang/
 - res/
 - *.exe
