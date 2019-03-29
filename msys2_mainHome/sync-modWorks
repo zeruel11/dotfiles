@@ -38,8 +38,9 @@ function userConfirmation {
 			'x230_pull')
 				rsync -Ccazv "$moddingDir/FO4/Data/" "$FO4_x230/Data/" --log-file=~/sync-modWorks.X230-pull.log
 				;;
-			'x230-push')
+			'x230_push')
 				rsync -Ccazv "$FO4_x230/Data/myCompatibilityPatches.esp" "$moddingDir/FO4/Data/"
+				echo "done"
 				;;
 			'x230_push_full')
 				rsync -Ccazv --filter="merge .filter-Data" --prune-empty-dirs "$FO4_x230/Data/" "$moddingDir/FO4/Data/" --delete-before --delete-excluded --max-size=300m --log-file=~/sync-modWorks.X230-push.log
@@ -54,6 +55,25 @@ function masterSync {
 	rsync -Ccazvv --filter="merge .filter-ESP" "$FDgo/esps/" "$FO4_x230/Data/" --log-file=~/sync-modWorks.X230-rebase.MASTER.log
 	echo -e "\e[34mDone overwriting files from master"
 	exit 1
+}
+function copyChanged {
+	local destination=$1
+	read -p "Please enter the last git commit you want files to compare: " lastCommit
+		# cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* $HOMEPATH/Desktop/
+		currentCommit=$(git rev-parse HEAD)
+		if [ -z "$lastCommit" ]; then
+			echo -e "\e[31mYou have to specify a commit hash\e[0m"
+			exit 1
+		else
+			echo "Copying changed files since commit $lastCommit"
+			for i in $(git diff --name-only $lastCommit $currentCommit)
+    			do
+        			# First create the target directory, if it doesn't exist.
+        			mkdir -p "$destination/$(dirname $i)"
+        			# Then copy over the file.
+        			cp "$i" "$destination/$i"
+    			done
+		fi
 }
 
 if [ -z "$FO4" ]; then
@@ -79,19 +99,9 @@ elif [ "$1" == 'pull' ]; then # copy files to workspace
 	fi
 elif [ "$1" == 'export' ]; then # copy temporary files to desktop
 	if [ -z "$2" ]; then
-		read -p "Please enter the last git commit you checked out: " lastCommit
-		# cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* $HOMEPATH/Desktop/
-		currentCommit=$(git rev-parse HEAD)
-		echo "Copying changed files since commit $lastCommit"
-		for i in $(git diff --name-only $lastCommit $currentCommit)
-    		do
-        	# First create the target directory, if it doesn't exist.
-        	mkdir -p "$HOMEPATH/Desktop/$(dirname $i)"
-        	# Then copy over the file.
-        	cp "$i" "$HOMEPATH/Desktop/$i"
-    		done
+		copyChanged "$HOMEPATH/Desktop"
 	else
-		# cp -v /d/WorkSpace/\=modding\=/FO4/BodySlideResult/* $2
+		copyChanged "$2"
 	fi
 elif [ "$1" == 'master' ]; then # copy current working copy
 	if [ -d "$FD" ]; then
