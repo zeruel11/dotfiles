@@ -62,23 +62,23 @@ if [ ! -z $MSYS2_PATH_TYPE ]; then
     fi
 
     # setup msys ssh-agent
-    if ps -p $SSH_AGENT_PID > /dev/null;then
-        echo "ssh-agent is already running"
+    # if ps -p $SSH_AGENT_PID > /dev/null;then
+    #     echo "ssh-agent is already running"
         # Do something knowing the pid exists, i.e. the process with $PID is running
-    else
-        eval `ssh-agent -s`
-    fi
+    # else
+    #     eval `ssh-agent -s`
+    # fi
 
     # if ssh-add -l | grep "SHA256:MXHtgmmVu2R86ETctjMynhamGFzwk5hJBXD+Px/iht4";then
     #     echo "private key exist"
     # else
     #     ssh-add
     # fi
-    if ssh-add -l | grep "SHA256:OrziisUbHqke9uXNTKVPQyS9eTSootRp/q0vq9tSwwo";then
-        echo "server key exist"
-    else
-        ssh-add /c/Users/zeruel11/.ssh/iktisrv_id
-    fi
+    # if ssh-add -l | grep "SHA256:OrziisUbHqke9uXNTKVPQyS9eTSootRp/q0vq9tSwwo";then
+    #     echo "server key exist"
+    # else
+    #     ssh-add /c/Users/zeruel11/.ssh/iktisrv_id
+    # fi
 
     # welcome 
     echo
@@ -91,33 +91,50 @@ if [ ! -z $MSYS2_PATH_TYPE ]; then
     date
     echo
 else
-    # Start SSH Agent
-    #----------------------------
+    echo -e "\e[34;102mGit Bash\e[0m"
+fi
 
-    SSH_ENV="$HOME/.ssh/environment"
+# Start SSH Agent
+#----------------------------
 
-    function run_ssh_env {
-        . "${SSH_ENV}" > /dev/null
-    }
+SSH_ENV="$HOME/.ssh/environment"
 
-    function start_ssh_agent {
-        echo "Initializing new SSH agent..."
-        ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-        echo "succeeded"
-        chmod 600 "${SSH_ENV}"
+function run_ssh_env {
+    . "${SSH_ENV}" > /dev/null
+}
 
-        run_ssh_env;
+function start_ssh_agent {
+    echo "Initializing new SSH agent..."
+    ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    echo -e "\e[32msucceeded\e[0m"
+    chmod 600 "${SSH_ENV}"
 
-        ssh-add ~/.ssh/id_rsa;
-    }
+    run_ssh_env;
 
-    if [ -f "${SSH_ENV}" ]; then
-        run_ssh_env;
-        ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-            start_ssh_agent;
-        }
-    else
-        start_ssh_agent;
+    ssh-add
+    if [[ $(ssh-add -L) != *"$USERPROFILE/.ssh/git_rsa"* ]]; then
+        if [ -f ~/.ssh/git_rsa ]; then
+            echo -e "\e[33m"
+            ssh-add ~/.ssh/git_rsa;
+            echo -e "\e[0m"
+        elif [ ! -f ~/.ssh/git_rsa ] && [ -f $USERPROFILE/.ssh/git_rsa ]; then
+            echo -e "\e[33m"
+            ssh-add $USERPROFILE/.ssh/git_rsa;
+            echo -e "\e[0m"
+        fi
     fi
-    echo -e "\e[34;102mGit Bash initialized\e[0m"
+    if [[ $(ssh-add -L) != *"$USERPROFILE/.ssh/iktisrv_rsa"* ]] && [ ! -z $MSYS2_PATH_TYPE ]; then
+        echo -e "\e[33m"
+        ssh-add ~/.ssh/iktisrv_rsa;
+        echo -e "\e[0m"
+    fi
+}
+
+if [ -f "${SSH_ENV}" ]; then
+    run_ssh_env;
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_ssh_agent;
+    }
+else
+    start_ssh_agent;
 fi
