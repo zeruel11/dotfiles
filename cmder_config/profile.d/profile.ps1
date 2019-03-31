@@ -61,7 +61,7 @@ if ($env:SSH_AUTH_SOCK){
 }
 
 # Import-Module DockerCompletion
-Import-Module posh-docker
+# Import-Module posh-docker
 
 # setup win10 OpenSSH
 if (Get-Service -Name ssh-agent -ErrorAction SilentlyContinue | Where-Object {$_.Status -match 'Stopped'}) {
@@ -70,15 +70,15 @@ if (Get-Service -Name ssh-agent -ErrorAction SilentlyContinue | Where-Object {$_
     } else {
         Write-Host "SSH-agent service already started"
     }
-$TestSSHmykey = C:\WINDOWS\System32\OpenSSH\ssh-add.exe -L
+$TestSSHmykey = C:\Windows\System32\OpenSSH\ssh-add.exe -L
 switch -Wildcard ($TestSSHmykey) {
-    ({-Not ( $TestSSHmykey -like '*zeruel11/.ssh/id_rsa*')})
+    ({-Not ( $TestSSHmykey -like '*zeruel/.ssh/id_rsa*')})
     {
         Write-Host "Adding zeruel's identity..."
         ssh-add
     }
 
-    ({-Not ($TestSSHmykey -like '*zeruel11\.ssh\iktisrv_id*')})
+    ({-Not ($TestSSHmykey -like '*zeruel\.ssh\iktisrv_id*')})
     {
         Write-Host "Adding server keys..."
         ssh-add C:\Users\zeruel11\.ssh\iktisrv_id

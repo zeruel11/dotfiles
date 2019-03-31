@@ -5,6 +5,7 @@
 ;= goto:eof
 ;= Add aliases below here
 e.=explorer .
+ls=ls --show-control-chars -F --color $*
 ll=ls --show-control-chars -F --color $* -l
 la=ls --show-control-chars -F --color $* -la
 pwd=cd
@@ -24,12 +25,11 @@ gm=git commit -am $*
 gl=git log --oneline --all --graph --decorate  $*
 g1=git log -1
 gs=git status -uno
-g.=git add .
 
 yp=mpv --profile=utube $*
 ypr=mpv --profile=utube --no-resume-playback $*
 
-srv_ikti=ssh bambang_ebis@10.126.12.212 -i %home%\.ssh\iktisrv_id
-sql_ikti=mssql-cli -S 10.126.12.212 -U SA -P 0052DSI-ikti
-tun_ikti_kambink=ssh -L 6800:10.107.1.252:6800 bambang_ebis@25.12.48.48
-tun_ikti_omv=ssh -L 8888:10.126.12.75:80 bambang_ebis@25.12.48.48
+ikti.srv=ssh bambang_ebis@10.126.12.212 -i %home%\.ssh\iktisrv_id
+ikti.sql=mssql-cli -S 10.126.12.212 -U SA -P 0052DSI-ikti
+ikti.tun.kambink=ssh -L 6800:10.107.1.252:6800 bambang_ebis@25.12.48.48
+ikti.tun.omv=ssh -L 8888:10.126.12.75:80 bambang_ebis@25.12.48.48
