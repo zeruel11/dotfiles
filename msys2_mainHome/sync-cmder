@@ -1,12 +1,12 @@
 #!/bin/bash
 #cmder config sync
 
-if [ "$1" == 'push' ]
-then
-	rsync -Cuazv --rsh=ssh --exclude-from exclude-cmder.txt /c/cmder/config/ /c/Users/zeruel11/dotfiles/cmder_config/
-elif [ "$1" == 'pull' ]
-then
-	rsync -Cuazv /c/Users/zeruel11/dotfiles/cmder_config/ /c/cmder/config/
+if [ "$1" == 'push' ]; then
+	rsync -Ccazv --rsh=ssh --exclude-from .exclude-cmder "$CMDER_ROOT/config/" "$HOMEPATH/dotfiles/cmder_config/" --delete --log-file="$HOSTNAME.cmder_push.log"
+	cp "$HOSTNAME.cmder_push.log" "$HOMEPATH/dotfiles/.logs/"
+elif [ "$1" == 'pull' ]; then
+	rsync -Ccazv "$HOMEPATH/dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file=$HOSTNAME.cmder_pull.log
+	cp "$HOSTNAME.cmder_pull.log" "$HOMEPATH/dotfiles/.logs/"
 else
-	echo 'you have to specify up or down'
+	echo 'you have to specify pull or push'
 fi

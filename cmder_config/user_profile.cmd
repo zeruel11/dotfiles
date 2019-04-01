@@ -26,6 +26,10 @@ If /I "%MYKEY%"=="identities." (
         ECHO Adding Git key...
         ssh-add.exe %userprofile%\.ssh\git_rsa
     )
+    IF EXIST "%userprofile%\.ssh\iktisrv_rsa" (
+        ECHO Adding IKTI server key...
+        ssh-add.exe %userprofile%\.ssh\iktisrv_rsa
+    )
 ) 
 set "MYKEY="
 

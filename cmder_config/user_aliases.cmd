@@ -17,7 +17,7 @@ cmderr=cd /d "%CMDER_ROOT%"
 ...=cd ../../
 .3=cd ../../../
 .4=cd ../../../../
-~=cd /d "C:\Users\zeruel11"
+~=cd /d "%home%"
 
 gf=git fetch
 gc=git checkout $1
@@ -29,7 +29,7 @@ gs=git status -uno
 yp=mpv --profile=utube $*
 ypr=mpv --profile=utube --no-resume-playback $*
 
-ikti.srv=ssh bambang_ebis@10.126.12.212 -i %home%\.ssh\iktisrv_id
+ikti.srv=ssh bambang_ebis@10.126.12.212 -i %home%\.ssh\iktisrv_rsa
 ikti.sql=mssql-cli -S 10.126.12.212 -U SA -P 0052DSI-ikti
 ikti.tun.kambink=ssh -L 6800:10.107.1.252:6800 bambang_ebis@25.12.48.48
 ikti.tun.omv=ssh -L 8888:10.126.12.75:80 bambang_ebis@25.12.48.48

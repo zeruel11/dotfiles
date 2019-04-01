@@ -20,13 +20,15 @@
     Write-Host "$env:USERNAME@" -NoNewline -ForegroundColor DarkYellow
     Write-Host "$env:COMPUTERNAME" -NoNewline -ForegroundColor Magenta
 
-    if ($s -ne $null) {  # color for PSSessions
+    if ($s -ne $null) {
+        # color for PSSessions
         Write-Host " (`$s: " -NoNewline -ForegroundColor DarkGray
         Write-Host "$($s.Name)" -NoNewline -ForegroundColor Yellow
         Write-Host ") " -NoNewline -ForegroundColor DarkGray
     }
 
-    if ($j -ne $null) {  # job notify
+    if ($j -ne $null) {
+        # job notify
         Write-Host " (`$j::" -NoNewline -ForegroundColor DarkGray
         Write-Host "$($j.Name): " -NoNewline -ForegroundColor Yellow
         Write-Host "$($j.State)" -NoNewline -ForegroundColor Blue
@@ -87,21 +89,21 @@ Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
 Set-PSReadLineOption -MaximumHistoryCount 100
 
-Set-PSReadlineKeyHandler -Key Ctrl+Delete       -Function KillWord
-Set-PSReadlineKeyHandler -Key Ctrl+Backspace    -Function BackwardKillWord
-Set-PSReadlineKeyHandler -Key Shift+Backspace   -Function BackwardKillWord
+Set-PSReadLineKeyHandler -Key Ctrl+Delete       -Function KillWord
+Set-PSReadLineKeyHandler -Key Ctrl+Backspace    -Function BackwardKillWord
+Set-PSReadLineKeyHandler -Key Shift+Backspace   -Function BackwardKillWord
 
 # history substring search
-Set-PSReadlineKeyHandler -Key UpArrow   -Function HistorySearchBackward
-Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadLineKeyHandler -Key UpArrow   -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 # Tab completion
-Set-PSReadlineKeyHandler -Key   Tab         -Function MenuComplete
-Set-PSReadlineKeyHandler -Chord 'Shift+Tab' -Function Complete
+Set-PSReadLineKeyHandler -Key   Tab         -Function MenuComplete
+Set-PSReadLineKeyHandler -Chord 'Shift+Tab' -Function Complete
 
-$Host.PrivateData.ErrorBackgroundColor      = $Host.UI.RawUI.BackgroundColor
-$Host.PrivateData.WarningBackgroundColor    = $Host.UI.RawUI.BackgroundColor
-$Host.PrivateData.VerboseBackgroundColor    = $Host.UI.RawUI.BackgroundColor
+$Host.PrivateData.ErrorBackgroundColor = $Host.UI.RawUI.BackgroundColor
+$Host.PrivateData.WarningBackgroundColor = $Host.UI.RawUI.BackgroundColor
+$Host.PrivateData.VerboseBackgroundColor = $Host.UI.RawUI.BackgroundColor
 
 Import-Module Get-ChildItemColor
 Import-Module posh-git
@@ -133,20 +135,25 @@ $global:GitPromptSettings.AfterText = '] '
 Start-SshAgent
 $TestSSHmykey = ssh-add.exe -L
 switch -Wildcard ($TestSSHmykey) {
-    ({-Not ( $TestSSHmykey -like "*$env:USERNAME\.ssh\git_rsa*")})
-    {
-        Write-Host "Adding zeruel Git identity..."
-        Add-SshKey (Resolve-Path ~\.ssh\git_rsa)
+    ( { -Not ( $TestSSHmykey -Like "*$env:USERPROFILE\.ssh\git_rsa*") }) {
+        if (Test-Path -Path "$env:USERPROFILE\.ssh\git_rsa") {
+            Write-Host "Adding zeruel Git identity..."
+            Add-SshKey (Resolve-Path ~\.ssh\git_rsa)
+        } else {
+            Write-Host "Git ssh key not found"
+        }
     }
 
-    ({-Not ($TestSSHmykey -like "*$env:USERNAME\.ssh\iktisrv_id*")})
-    {
-        Write-Host "Adding server keys..."
-        ssh-add C:\Users\zeruel11\.ssh\iktisrv_id
+    ( { -Not ($TestSSHmykey -like "*$env:USERNAME\.ssh\iktisrv_rsa*") }) {
+        if (Test-Path -Path "$env:USERPROFILE\.ssh\git_rsa") {
+            Write-Host "Adding IKTI server keys..."
+            Add-SshKey (Resolve-Path ~\.ssh\iktisrv_rsa)
+        } else {
+            Write-Host "IKTI server keys not found"
+        }
     }
 
-    default
-    {
+    default {
         Write-Host 'identities loaded'
     }
 }
