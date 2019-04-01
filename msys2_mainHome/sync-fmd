@@ -19,7 +19,7 @@ fi
 
 # MAIN logic
 if [ "$1" == 'pull' ]; then
-	rsync -Ccazv --exclude='*.db-journal' "$encoderGit/manDB/works/" "$pathFMD/works/" --log-file="sync-fmd.$HOSTNAME.${1^^}.log"
+	rsync -Ccazv --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" --log-file="sync-fmd.$HOSTNAME.${1^^}.log"
 	cp "sync-fmd.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 elif [ "$1" == 'push' ]; then
 	# rsync -Ccazv "$pathFMD/data/" "$encoderGit/manDB/data/"
