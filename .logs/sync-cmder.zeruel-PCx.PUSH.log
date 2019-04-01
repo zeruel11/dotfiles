@@ -21,3 +21,11 @@
 2019/04/01 23:08:36 [25252] >fcst...... profile.d/aliases.sh
 2019/04/01 23:08:36 [25252] sent 909 bytes  received 39 bytes  1,896.00 bytes/sec
 2019/04/01 23:08:36 [25252] total size is 85,837  speedup is 90.55
+2019/04/01 23:10:01 [24128] building file list
+2019/04/01 23:10:01 [24128] sent 471 bytes  received 13 bytes  968.00 bytes/sec
+2019/04/01 23:10:01 [24128] total size is 85,837  speedup is 177.35
+2019/04/02 00:35:59 [23544] building file list
+2019/04/02 00:35:59 [23544] .d..t...... profile.d/
+2019/04/02 00:35:59 [23544] >fcst...... profile.d/aliases.sh
+2019/04/02 00:35:59 [23544] sent 912 bytes  received 39 bytes  1,902.00 bytes/sec
+2019/04/02 00:35:59 [23544] total size is 85,861  speedup is 90.28

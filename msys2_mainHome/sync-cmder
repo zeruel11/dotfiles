@@ -6,11 +6,23 @@ baksize=1000000
 
 # MAIN logic
 if [ "$1" == 'pull' ]; then
-	rsync -Ccazv "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file="sync-cmder.$HOSTNAME.${1^^}.log"
-	cp "sync-cmder.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+	rsync -Ccazvvn "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" "$CMDER_ROOT/config/" | tee "sync-cmder.$HOSTNAME.${1^^}.DRY_RUN" | GREP_COLORS='mt=1;93' egrep --color=always '(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$' | GREP_COLORS='mt=1;34' egrep --color=always '^(\[sender\]).*|$' | GREP_COLORS='mt=1;31' egrep --color=always '(deleting).*|$' | GREP_COLORS='mt=1;32' egrep --color=always '.*(uptodate)$|$' | less -R
+	read -p "Confirm $1? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ]; then
+		rsync -Ccazv "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file="sync-cmder.$HOSTNAME.${1^^}.log"
+		cp "sync-cmder.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+		rm "sync-cmder.$HOSTNAME.${1^^}.DRY_RUN"
+	fi
 elif [ "$1" == 'push' ]; then
-	rsync -Ccazv --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" --delete --log-file="sync-cmder.$HOSTNAME.${1^^}.log"
-	cp "sync-cmder.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+	rsync -Ccazvvn --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" --delete | tee "sync-cmder.$HOSTNAME.${1^^}.DRY_RUN" | GREP_COLORS='mt=1;93' egrep --color=always '(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$' | GREP_COLORS='mt=1;34' egrep --color=always '^(\[sender\]).*|$' | GREP_COLORS='mt=1;31' egrep --color=always '(deleting).*|$' | GREP_COLORS='mt=1;32' egrep --color=always '.*(uptodate)$|$' | less -R
+	read -p "Confirm $1? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ]; then
+		rsync -Ccazv --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" --delete --log-file="sync-cmder.$HOSTNAME.${1^^}.log"
+		cp "sync-cmder.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+		rm "sync-cmder.$HOSTNAME.${1^^}.DRY_RUN"
+	fi
 else
 	echo 'you have to specify pull or push'
 fi
