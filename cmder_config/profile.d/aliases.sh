@@ -15,6 +15,7 @@ alias g1='git log -1'
 alias gt='git tag -a'
 alias gcp='git cherry-pick -e'
 alias gcx='git cherry-pick -e --strategy=recursive -X theirs'
+alias gd1='git diff HEAD^ HEAD'
 
 # ikti server
 alias ikti.srv='ssh bambang_ebis@10.126.12.212 -i $(cygpath $USERPROFILE)/.ssh/iktisrv_rsa'

@@ -1,0 +1,8 @@
+2019/04/01 22:11:54 [17716] building file list
+2019/04/01 22:11:54 [17716] .d..t...... profile.d/
+2019/04/01 22:11:54 [17716] >fcst...... profile.d/aliases.sh
+2019/04/01 22:11:54 [17716] sent 838 bytes  received 39 bytes  1,754.00 bytes/sec
+2019/04/01 22:11:54 [17716] total size is 85,569  speedup is 97.57
+2019/04/01 22:47:31 [25076] building file list
+2019/04/01 22:47:31 [25076] sent 472 bytes  received 13 bytes  970.00 bytes/sec
+2019/04/01 22:47:31 [25076] total size is 85,569  speedup is 176.43
