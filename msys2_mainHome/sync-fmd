@@ -3,28 +3,43 @@
 
 maxsize=900000
 baksize=1000000
+# paths - change these as needed
 FMD_PCx="/e/untied/FMD"
 FMD_x230="/c/untied/FMD"
+encoder_PCx="/d/WorkSpace/=encoder="
+encoder_x230="/d/_gitClone/[encoder]"
 
 # get where we are
 if [ -d "$FMD_x230" ]; then
-	encoderGit="/d/_gitClone/[encoder]"
+	encoderGit="$encoder_x230"
 	pathFMD="$FMD_x230"
-	echo -e "\e[44mDirectory $FMD_x230 found. On the road mode...\e[0m"
+	echo -e "\e[44mDirectory \e[33m$FMD_x230\e[37m found. Using \e[33m$encoder_x230\e[37m as Git versioning. \e[35mOn the road mode...\e[0m"
 elif [ -d "$FMD_PCx" ]; then
-	encoderGit="/d/WorkSpace/=encoder="
+	encoderGit="$encoder_PCx"
 	pathFMD="$FMD_PCx"
-	echo -e "\e[44mDirectory $FMD_PCx found. Homebase mode...\e[0m"
+	echo -e "\e[44mDirectory \e[33m$FMD_PCx\e[37m found. Using \e[33m$encoder_PCx\e[37m as Git versioning. \e[35mHomebase mode...\e[0m"
 fi
 
 # MAIN logic
 if [ "$1" == 'pull' ]; then
-	rsync -Ccazv --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" --log-file="sync-fmd.$HOSTNAME.${1^^}.log"
-	cp "sync-fmd.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+	rsync -Ccazvvn --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" | tee "sync-fmd.$HOSTNAME.${1^^}.DRY_RUN" | GREP_COLORS='mt=1;93' egrep --color=always '(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$' | GREP_COLORS='mt=1;34' egrep --color=always '^(\[sender\]).*|$' | GREP_COLORS='mt=1;31' egrep --color=always '(deleting).*|$' | GREP_COLORS='mt=1;32' egrep --color=always '.*(uptodate)$|$' | less -R
+	read -p "Confirm $1? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ]; then
+		rsync -Ccazv --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" --log-file="sync-fmd.$HOSTNAME.${1^^}.log"
+		cp "sync-fmd.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+		rm "sync-fmd.$HOSTNAME.${1^^}.DRY_RUN"
+	fi
 elif [ "$1" == 'push' ]; then
 	# rsync -Ccazv "$pathFMD/data/" "$encoderGit/manDB/data/"
-	rsync -Ccazv --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" --log-file="sync-fmd.$HOSTNAME.${1^^}.log"
-	cp "sync-fmd.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+	rsync -Ccazvvn --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" | tee "sync-fmd.$HOSTNAME.${1^^}.DRY_RUN" | GREP_COLORS='mt=1;93' egrep --color=always '(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$' | GREP_COLORS='mt=1;34' egrep --color=always '^(\[sender\]).*|$' | GREP_COLORS='mt=1;31' egrep --color=always '(deleting).*|$' | GREP_COLORS='mt=1;32' egrep --color=always '.*(uptodate)$|$' | less -R
+	read -p "Confirm $1? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ]; then
+		rsync -Ccazv --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" --log-file="sync-fmd.$HOSTNAME.${1^^}.log"
+		cp "sync-fmd.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+		rm "sync-fmd.$HOSTNAME.${1^^}.DRY_RUN"
+	fi
 else
 	echo 'you have to specify pull or push'
 fi
