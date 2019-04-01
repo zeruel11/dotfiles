@@ -3,33 +3,35 @@
 
 maxsize=900000
 baksize=1000000
-FMD_PCx=""
+FMD_PCx="/e/untied/FMD"
 FMD_x230=""
 
 # get where we are
 if [ -d "$FMD_x230" ]; then
-	FMD="portable"
+	# FMD="portable"
 	encoderGit="/d/WorkSpace/=encoder="
 	pathFMD="$FMD_x230"
 	echo -e "\e[44mDirectory $FMD_x230 found. On the road mode...\e[0m"
 elif [ -d "$FMD_PCx" ]; then
-	FMD="main"
+	# FMD="main"
 	encoderGit="/d/_gitClone/[encoder]"
 	pathFMD="$FMD_PCx"
 	echo -e "\e[44mDirectory $FMD_PCx found. Homebase mode...\e[0m"
 fi
 
+# MAIN logic
 if [ "$1" == 'pull' ]; then
 	rsync -Ccazv --exclude='*.db-journal' "$encoderGit/manDB/works/" "$pathFMD/works/" --log-file="sync-fmd.$HOSTNAME:$1.log"
 	cp "sync-fmd.$HOSTNAME:$1.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 elif [ "$1" == 'push' ]; then
-	rsync -Ccazv "$pathFMD/data/" "$encoderGit/manDB/data/"
+	# rsync -Ccazv "$pathFMD/data/" "$encoderGit/manDB/data/"
 	rsync -Ccazv --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" --log-file="sync-fmd.$HOSTNAME:$1.log"
 	cp "sync-fmd.$HOSTNAME:$1.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 else
 	echo 'you have to specify pull or push'
 fi
 
+# log sizing & archiving
 if [ -f "sync-fmd.$HOSTNAME:$1.log" ]; then
 	filesize=$(stat -c%s "sync-fmd.$HOSTNAME:$1.log")
 	if ((filesize > maxsize)) && ((filesize < baksize)); then
