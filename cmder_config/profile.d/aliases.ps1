@@ -85,7 +85,7 @@ function ikti.sql {
     mssql-cli.bat -S 10.126.12.212 -U SA -P 0052DSI-ikti
 }
 function ikti.srv {
-    ssh.exe bambang_ebis@10.126.12.212 -i ~\.ssh\iktisrv_id
+    ssh.exe bambang_ebis@10.126.12.212 -i (Resolve-Path ~\.ssh\iktisrv_rsa)
 }
 
 # function ikti.con {

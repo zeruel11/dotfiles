@@ -17,4 +17,4 @@ alias gcp='git cherry-pick -e'
 alias gcx='git cherry-pick -e --strategy=recursive -X theirs'
 
 # ikti server
-alias ikti.srv='ssh bambang_ebis@10.126.12.212 -i /c/Users/zeruel11/.ssh/iktisrv_id'
+alias ikti.srv='ssh bambang_ebis@10.126.12.212 -i $(cygpath $USERPROFILE)/.ssh/iktisrv_rsa'
