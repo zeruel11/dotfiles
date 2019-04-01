@@ -1,3 +1,7 @@
 2019/04/01 14:08:40 [21580] building file list
 2019/04/01 14:08:40 [21580] sent 476 bytes  received 23 bytes  998.00 bytes/sec
 2019/04/01 14:08:40 [21580] total size is 83,488  speedup is 167.31 (DRY RUN)
+2019/04/01 16:24:54 [16096] building file list
+2019/04/01 16:24:54 [16096] >fcst...... profile.d/aliases.sh
+2019/04/01 16:24:54 [16096] sent 803 bytes  received 36 bytes  1,678.00 bytes/sec
+2019/04/01 16:24:54 [16096] total size is 85,487  speedup is 101.89

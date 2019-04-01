@@ -1,83 +1,17 @@
-2019/04/01 14:05:08 [1784] building file list
-2019/04/01 14:05:08 [1784] rsync: change_dir "/home/zeruel//\Users\zeruel/dotfiles/cmder_config" failed: No such file or directory (2)
-2019/04/01 14:05:08 [1784] sent 20 bytes  received 12 bytes  64.00 bytes/sec
-2019/04/01 14:05:08 [1784] total size is 0  speedup is 0.00
-2019/04/01 14:05:08 [1784] rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1207) [sender=3.1.3]
-2019/04/01 14:07:13 [22256] rsync: connection unexpectedly closed (0 bytes received so far) [Receiver]
-2019/04/01 14:07:13 [22256] rsync error: error in rsync protocol data stream (code 12) at io.c(226) [Receiver=3.1.3]
-2019/04/01 14:08:32 [16444] building file list
-2019/04/01 14:08:32 [16444] sent 480 bytes  received 23 bytes  1,006.00 bytes/sec
-2019/04/01 14:08:32 [16444] total size is 85,008  speedup is 169.00 (DRY RUN)
-2019/04/01 14:09:13 [16732] building file list
-2019/04/01 14:09:13 [16732] .d..t...... ./
-2019/04/01 14:09:13 [16732] sent 483 bytes  received 26 bytes  1,018.00 bytes/sec
-2019/04/01 14:09:13 [16732] total size is 85,008  speedup is 167.01 (DRY RUN)
-2019/04/01 14:09:16 [14416] building file list
-2019/04/01 14:09:16 [14416] .d..t...... ./
-2019/04/01 14:09:16 [14416] sent 483 bytes  received 26 bytes  1,018.00 bytes/sec
-2019/04/01 14:09:16 [14416] total size is 85,008  speedup is 167.01 (DRY RUN)
-2019/04/01 14:09:24 [22492] building file list
-2019/04/01 14:09:24 [22492] .d..t...... ./
-2019/04/01 14:09:24 [22492] >f+++++++++ user-ConEmu.xml
-2019/04/01 14:09:24 [22492] >fcst...... user_profile.ps1
-2019/04/01 14:09:24 [22492] sent 11,278 bytes  received 58 bytes  22,672.00 bytes/sec
-2019/04/01 14:09:24 [22492] total size is 85,008  speedup is 7.50
-2019/04/01 14:22:43 [19624] building file list
-2019/04/01 14:22:44 [19624] .d..t...... ./
-2019/04/01 14:22:44 [19624] >fcst...... user-ConEmu.xml
-2019/04/01 14:22:44 [19624] >fcst...... user_profile.ps1
-2019/04/01 14:22:44 [19624] sent 11,305 bytes  received 58 bytes  7,575.33 bytes/sec
-2019/04/01 14:22:44 [19624] total size is 85,061  speedup is 7.49
-2019/04/01 14:23:43 [14864] building file list
-2019/04/01 14:23:43 [14864] >fcst...... user_profile.ps1
-2019/04/01 14:23:43 [14864] sent 2,536 bytes  received 36 bytes  5,144.00 bytes/sec
-2019/04/01 14:23:43 [14864] total size is 85,007  speedup is 33.05
-2019/04/01 14:24:17 [22688] building file list
-2019/04/01 14:24:17 [22688] >fcst...... user_profile.ps1
-2019/04/01 14:24:17 [22688] sent 2,537 bytes  received 36 bytes  5,146.00 bytes/sec
-2019/04/01 14:24:17 [22688] total size is 85,012  speedup is 33.04
-2019/04/01 14:24:55 [21972] building file list
-2019/04/01 14:24:55 [21972] >fcst...... user_profile.ps1
-2019/04/01 14:24:55 [21972] sent 2,539 bytes  received 36 bytes  5,150.00 bytes/sec
-2019/04/01 14:24:55 [21972] total size is 85,016  speedup is 33.02
-2019/04/01 14:25:11 [17220] building file list
-2019/04/01 14:25:11 [17220] >fcst...... user_profile.ps1
-2019/04/01 14:25:11 [17220] sent 2,538 bytes  received 36 bytes  5,148.00 bytes/sec
-2019/04/01 14:25:11 [17220] total size is 85,013  speedup is 33.03
-2019/04/01 14:25:47 [22700] building file list
-2019/04/01 14:25:47 [22700] >fcst...... user_profile.ps1
-2019/04/01 14:25:47 [22700] sent 2,558 bytes  received 36 bytes  5,188.00 bytes/sec
-2019/04/01 14:25:47 [22700] total size is 85,067  speedup is 32.79
-2019/04/01 14:26:26 [23116] building file list
-2019/04/01 14:26:26 [23116] >fcst...... user_profile.ps1
-2019/04/01 14:26:26 [23116] sent 2,561 bytes  received 36 bytes  5,194.00 bytes/sec
-2019/04/01 14:26:26 [23116] total size is 85,071  speedup is 32.76
-2019/04/01 14:27:50 [22856] building file list
-2019/04/01 14:27:50 [22856] >fc.t...... user_profile.ps1
-2019/04/01 14:27:50 [22856] sent 2,561 bytes  received 36 bytes  5,194.00 bytes/sec
-2019/04/01 14:27:50 [22856] total size is 85,071  speedup is 32.76
-2019/04/01 14:35:40 [22412] building file list
-2019/04/01 14:35:40 [22412] >fcst...... user_profile.ps1
-2019/04/01 14:35:40 [22412] sent 2,565 bytes  received 36 bytes  5,202.00 bytes/sec
-2019/04/01 14:35:40 [22412] total size is 85,074  speedup is 32.71
-2019/04/01 14:44:04 [23328] building file list
-2019/04/01 14:44:04 [23328] >fcst...... user_profile.ps1
-2019/04/01 14:44:04 [23328] sent 2,560 bytes  received 36 bytes  5,192.00 bytes/sec
-2019/04/01 14:44:04 [23328] total size is 85,083  speedup is 32.77
-2019/04/01 14:44:24 [21976] building file list
-2019/04/01 14:44:24 [21976] >fcst...... user_profile.ps1
-2019/04/01 14:44:24 [21976] sent 2,557 bytes  received 36 bytes  5,186.00 bytes/sec
-2019/04/01 14:44:24 [21976] total size is 85,084  speedup is 32.81
-2019/04/01 14:46:47 [14268] building file list
-2019/04/01 14:46:47 [14268] >fcst...... user_profile.ps1
-2019/04/01 14:46:47 [14268] sent 2,588 bytes  received 36 bytes  5,248.00 bytes/sec
-2019/04/01 14:46:47 [14268] total size is 85,314  speedup is 32.51
-2019/04/01 14:56:04 [22876] building file list
-2019/04/01 14:56:04 [22876] >fcst...... user_aliases.cmd
-2019/04/01 14:56:04 [22876] >fcst...... profile.d/aliases.ps1
-2019/04/01 14:56:04 [22876] sent 2,230 bytes  received 59 bytes  4,578.00 bytes/sec
-2019/04/01 14:56:04 [22876] total size is 85,495  speedup is 37.35
-2019/04/01 14:58:04 [22720] building file list
-2019/04/01 14:58:04 [22720] >fcst...... profile.d/aliases.ps1
-2019/04/01 14:58:04 [22720] sent 1,599 bytes  received 36 bytes  3,270.00 bytes/sec
-2019/04/01 14:58:04 [22720] total size is 85,487  speedup is 52.29
+2019/04/01 16:25:48 [20228] building file list
+2019/04/01 16:25:48 [20228] .d..t...... profile.d/
+2019/04/01 16:25:48 [20228] >fcst...... profile.d/aliases.sh
+2019/04/01 16:25:48 [20228] sent 814 bytes  received 39 bytes  1,706.00 bytes/sec
+2019/04/01 16:25:48 [20228] total size is 85,513  speedup is 100.25
+2019/04/01 16:58:36 [23964] building file list
+2019/04/01 16:58:36 [23964] >fcst...... profile.d/aliases.sh
+2019/04/01 16:58:36 [23964] sent 818 bytes  received 36 bytes  1,708.00 bytes/sec
+2019/04/01 16:58:36 [23964] total size is 85,519  speedup is 100.14
+2019/04/01 16:59:38 [22152] building file list
+2019/04/01 16:59:38 [22152] >fcst...... profile.d/aliases.sh
+2019/04/01 16:59:38 [22152] sent 819 bytes  received 36 bytes  1,710.00 bytes/sec
+2019/04/01 16:59:38 [22152] total size is 85,520  speedup is 100.02
+2019/04/01 17:02:01 [22740] building file list
+2019/04/01 17:02:01 [22740] >fcst...... profile.d/aliases.ps1
+2019/04/01 17:02:01 [22740] sent 1,612 bytes  received 36 bytes  3,296.00 bytes/sec
+2019/04/01 17:02:01 [22740] total size is 85,536  speedup is 51.90
