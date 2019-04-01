@@ -9,79 +9,72 @@ Set-Alias -name "vim" -value "C:\Program Files\Git\usr\bin\vim.exe"
 
 ###scoops
 function sst {
-    scoop status
+    scoop.ps1 status
 }
-
 function sup {
-    scoop update
+    scoop.ps1 update
 }
-
 function s8 {
-    scoop update *
+    scoop.ps1 update *
+}
+function ss {
+    scoop.ps1 search $args[0]
 }
 
 ###gits
 function gdg {
-    git difftool -g --dir-diff $args[0] $args[1]
+    git.exe difftool -g --dir-diff $args[0] $args[1]
 }
-
 function gd {
-    git difftool $args[0] $args[1]
+    git.exe difftool $args[0] $args[1]
 }
-
 function gf {
-    git fetch
+    git.exe fetch
 }
-
 function gs {
-    git status -uno
+    git.exe status -uno
 }
-
 function gr {
-    param([string]$ResetPath=".")
-    git reset HEAD $ResetPath
+    param([string]$ResetPath = ".")
+    git.exe reset HEAD $ResetPath
 }
-
 function g. {
-    param([string]$AddPath=".")
-    git add $AddPath
+    param([string]$AddPath = ".")
+    git.exe add $AddPath
 }
-
 function g1 {
-    git log -1
+    git.exe log -1
 }
-
 function glog {
-    git log --oneline --all --graph --decorate $args
+    git.exe log --oneline --all --graph --decorate $args
 }
-
 function gce {
-    git checkout $args[0]
+    git.exe checkout $args[0]
 }
-
 function gmt {
-    param([string]$CommitMessage="placeholder")
-    git commit -am $CommitMessage
+    param([string]$CommitMessage = "placeholder")
+    git.exe commit -am $CommitMessage
 }
 
 ###docker
 function dps {
     docker container ls -a
 }
-
 function dst {
     param(
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [string[]]$ContainerName = $args
     )
     foreach ($i in $ContainerName) {
         if ((docker container ls -a | grep -w $i) -ne $null) {
             if ((docker exec $i id) -eq $null) {
                 Write-Host "Container $i not running. Starting..."; docker start $i
-            } else {
+            }
+            else {
                 Write-Host "Container $i already running. Stopping..."; docker stop $i
             }
-        } else {
+        }
+        else {
             Write-Warning "Container $i doesn't exist"
         }
     }
@@ -91,9 +84,8 @@ function dst {
 function ikti.sql {
     mssql-cli.bat -S 10.126.12.212 -U SA -P 0052DSI-ikti
 }
-
 function ikti.srv {
-    ssh bambang_ebis@10.126.12.212 -i ~\.ssh\iktisrv_id
+    ssh.exe bambang_ebis@10.126.12.212 -i ~\.ssh\iktisrv_id
 }
 
 # function ikti.con {
@@ -110,17 +102,17 @@ function ikti.srv {
 function subit {
     subliminal download -v -l en -hi $args[0]
 }
-
 function gup {
     param(
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [string]$FileToUpload = $args[0],
         [string]$DriveDir
     )
     foreach ($f in Get-ChildItem -LiteralPath $FileToUpload -Filter *.mkv) {
         if (!$DriveDir) {
             gdrive upload $f
-        } else {
+        }
+        else {
             gdrive upload -p $DriveDir $f
         }
     }
@@ -128,7 +120,7 @@ function gup {
 
 ###misc
 function mag2tor {
-    aria2c --bt-metadata-only=true --bt-save-metadata=true --listen-port=6881 $args[0]
+    aria2c.ps1 --bt-metadata-only=true --bt-save-metadata=true --listen-port=6881 $args[0]
 }
 
 Set-Alias -Name "pwsh" -Value "pwsh-preview"
