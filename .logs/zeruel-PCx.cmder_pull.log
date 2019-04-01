@@ -72,3 +72,12 @@
 2019/04/01 14:46:47 [14268] >fcst...... user_profile.ps1
 2019/04/01 14:46:47 [14268] sent 2,588 bytes  received 36 bytes  5,248.00 bytes/sec
 2019/04/01 14:46:47 [14268] total size is 85,314  speedup is 32.51
+2019/04/01 14:56:04 [22876] building file list
+2019/04/01 14:56:04 [22876] >fcst...... user_aliases.cmd
+2019/04/01 14:56:04 [22876] >fcst...... profile.d/aliases.ps1
+2019/04/01 14:56:04 [22876] sent 2,230 bytes  received 59 bytes  4,578.00 bytes/sec
+2019/04/01 14:56:04 [22876] total size is 85,495  speedup is 37.35
+2019/04/01 14:58:04 [22720] building file list
+2019/04/01 14:58:04 [22720] >fcst...... profile.d/aliases.ps1
+2019/04/01 14:58:04 [22720] sent 1,599 bytes  received 36 bytes  3,270.00 bytes/sec
+2019/04/01 14:58:04 [22720] total size is 85,487  speedup is 52.29

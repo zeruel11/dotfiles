@@ -1,12 +1,32 @@
 #!/bin/bash
 #cmder config sync
 
+maxsize=900000
+baksize=1000000
+filesize=$(stat -c%s "$HOSTNAME.cmder_$1.log")
+
 if [ "$1" == 'push' ]; then
-	rsync -Ccazv --rsh=ssh --exclude-from .exclude-cmder "$CMDER_ROOT/config/" "$HOMEPATH/dotfiles/cmder_config/" --delete --log-file="$HOSTNAME.cmder_push.log"
-	cp "$HOSTNAME.cmder_push.log" "$HOMEPATH/dotfiles/.logs/"
+	rsync -Ccazv --rsh=ssh --exclude-from .exclude-cmder "$CMDER_ROOT/config/" "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" --delete --log-file="$HOSTNAME.cmder_$1.log"
+	cp "$HOSTNAME.cmder_$1.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 elif [ "$1" == 'pull' ]; then
-	rsync -Ccazv "$HOMEPATH/dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file=$HOSTNAME.cmder_pull.log
-	cp "$HOSTNAME.cmder_pull.log" "$HOMEPATH/dotfiles/.logs/"
+	rsync -Ccazv "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file="$HOSTNAME.cmder_$1.log"
+	cp "$HOSTNAME.cmder_$1.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 else
 	echo 'you have to specify pull or push'
+fi
+
+if ((filesize > maxsize)) && ((filesize < baksize)); then
+    echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
+elif ((filesize > baksize)); then
+	echo -e "\e[34;43mAttention: Log file is 1mb large. Archiving...\e[0m"
+	for i in {1..3}
+	do
+		if [ ! -f "$HOSTNAME.cmder_$1.log.bak$i" ]; then
+			tar -czvf "$HOSTNAME.cmder_$1.log.bak$i" "$HOSTNAME.cmder_$1.log" --remove-files
+			echo -e "\e[34mLog file archived to $HOSTNAME.cmder_$1.log.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
+			break
+		elif [ -f "$HOSTNAME.cmder_$1.log.bak1" ] && [ -f "$HOSTNAME.cmder_$1.log.bak2" ] && [ -f "$HOSTNAME.cmder_$1.log.bak3" ]; then
+			echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $HOSTNAME.cmder_$1.log.bak$i exists.\e[0m"
+		fi
+	done
 fi
