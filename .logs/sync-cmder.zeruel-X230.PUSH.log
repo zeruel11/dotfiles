@@ -12,3 +12,17 @@
 2019/04/02 16:25:49 [3192] .f          profile.d/paths.ps1
 2019/04/02 16:25:49 [3192] sent 1,881 bytes  received 70 bytes  3,902.00 bytes/sec
 2019/04/02 16:25:49 [3192] total size is 86,209  speedup is 44.19
+2019/04/02 20:54:50 [10584] building file list
+2019/04/02 20:54:50 [10584] .d          ./
+2019/04/02 20:54:50 [10584] .f          settings
+2019/04/02 20:54:50 [10584] .f          user-ConEmu.xml
+2019/04/02 20:54:50 [10584] .f          user_aliases.cmd
+2019/04/02 20:54:50 [10584] .f          user_profile.cmd
+2019/04/02 20:54:50 [10584] .f          user_profile.ps1
+2019/04/02 20:54:50 [10584] .f          user_profile.sh
+2019/04/02 20:54:50 [10584] .d..t...... profile.d/
+2019/04/02 20:54:50 [10584] .f          profile.d/aliases.ps1
+2019/04/02 20:54:50 [10584] >fcst...... profile.d/aliases.sh
+2019/04/02 20:54:50 [10584] .f          profile.d/paths.ps1
+2019/04/02 20:54:50 [10584] sent 967 bytes  received 70 bytes  2,074.00 bytes/sec
+2019/04/02 20:54:50 [10584] total size is 86,271  speedup is 83.19
