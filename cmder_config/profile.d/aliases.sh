@@ -1,6 +1,7 @@
 # common alias
-alias ll='ls -ltra'
-alias la='ls -la'
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias l.='ls -d .* --color=auto'
 alias pwdw='cygpath -ml `pwd`'
 alias docs='cd $HOMEDRIVE/Documents'
 
@@ -8,6 +9,7 @@ alias docs='cd $HOMEDRIVE/Documents'
 alias gf='git fetch --all'
 alias gs='git status'
 alias ga='git add'
+alias g.='git add .'
 alias gb='git branch -vv'
 alias gba='git branch -a'
 alias gbc='git checkout -b'

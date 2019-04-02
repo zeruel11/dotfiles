@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #fmd db sync
 
 maxsize=900000
@@ -8,6 +8,19 @@ FMD_PCx="/e/untied/FMD"
 FMD_x230="/c/untied/FMD"
 encoder_PCx="/d/WorkSpace/=encoder="
 encoder_x230="/d/_gitClone/[encoder]"
+
+runLog="sync-fmd.$HOSTNAME.${1^^}.log"
+dryLog="sync-fmd.$HOSTNAME.${1^^}.DRY_RUN"
+
+# preview coloring
+grepSysCol="mt=1;93"
+grepSendCol="mt=1;34"
+grepDelCol="mt=1;31"
+grepUnchCol="mt=1;32"
+grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$'
+grepSendMsg='^(\[sender\]).*|$'
+grepDelMsg='(deleting).*|$'
+grepUnchMsg='.*(uptodate)$|$'
 
 # get where we are
 if [ -d "$FMD_x230" ]; then
@@ -22,44 +35,43 @@ fi
 
 # MAIN logic
 if [ "$1" == 'pull' ]; then
-	rsync -Ccazvvn --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" | tee "sync-fmd.$HOSTNAME.${1^^}.DRY_RUN" | GREP_COLORS='mt=1;93' egrep --color=always '(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$' | GREP_COLORS='mt=1;34' egrep --color=always '^(\[sender\]).*|$' | GREP_COLORS='mt=1;31' egrep --color=always '(deleting).*|$' | GREP_COLORS='mt=1;32' egrep --color=always '.*(uptodate)$|$' | less -R
+	rsync -Ccazvvn --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always $grepDelMsg | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $1? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' ]; then
-		rsync -Ccazv --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" --log-file="sync-fmd.$HOSTNAME.${1^^}.log"
-		cp "sync-fmd.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
-		rm "sync-fmd.$HOSTNAME.${1^^}.DRY_RUN"
+		rsync -Ccaziiv --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" --log-file="$runLog"
+		cp "$runLog" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+		rm "$dryLog"
 	fi
 elif [ "$1" == 'push' ]; then
 	# rsync -Ccazv "$pathFMD/data/" "$encoderGit/manDB/data/"
-	rsync -Ccazvvn --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" | tee "sync-fmd.$HOSTNAME.${1^^}.DRY_RUN" | GREP_COLORS='mt=1;93' egrep --color=always '(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$' | GREP_COLORS='mt=1;34' egrep --color=always '^(\[sender\]).*|$' | GREP_COLORS='mt=1;31' egrep --color=always '(deleting).*|$' | GREP_COLORS='mt=1;32' egrep --color=always '.*(uptodate)$|$' | less -R
+	rsync -Ccazvvn --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always $grepDelMsg | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $1? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' ]; then
-		rsync -Ccazv --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" --log-file="sync-fmd.$HOSTNAME.${1^^}.log"
-		cp "sync-fmd.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
-		rm "sync-fmd.$HOSTNAME.${1^^}.DRY_RUN"
+		rsync -Ccaziiv --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" --log-file="$runLog"
+		cp "$runLog" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+		rm "$dryLog"
 	fi
 else
 	echo 'you have to specify pull or push'
 fi
 
 # log sizing & archiving
-if [ -f "sync-fmd.$HOSTNAME.${1^^}.log" ]; then
-	filesize=$(stat -c%s "sync-fmd.$HOSTNAME.${1^^}.log")
-	if ((filesize > maxsize)) && ((filesize < baksize)); then
-	    echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
-	elif ((filesize > baksize)); then
-		echo -e "\e[34;43mAttention: Log file is 1mb large. Archiving...\e[0m"
-		for i in {1..3}
-		do
-			if [ ! -f "sync-fmd.$HOSTNAME.${1^^}.log.bak$i" ]; then
-				tar -czvf "sync-fmd.$HOSTNAME.${1^^}.log.bak$i" "sync-fmd.$HOSTNAME.${1^^}.log" --remove-files
-				echo -e "\e[34mLog file archived to sync-fmd.$HOSTNAME.${1^^}.log.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
-				break
-			elif [ -f "sync-fmd.$HOSTNAME.${1^^}.log.bak1" ] && [ -f "sync-fmd.$HOSTNAME.${1^^}.log.bak2" ] && [ -f "sync-fmd.$HOSTNAME.${1^^}.log.bak3" ]; then
-				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File sync-fmd.$HOSTNAME.${1^^}.log.bak$i exists.\e[0m"
-			fi
-		done
-	fi
+filesize=$(stat -c%s "$runLog")
+if ((filesize > maxsize)) && ((filesize < baksize)); then
+    echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
+elif ((filesize > baksize)); then
+	echo -e "\e[34;43mAttention: Log file is 1mb large. Archiving...\e[0m"
+	for i in {1..3}
+	do
+		if [ ! -f "$runLog.bak$i" ]; then
+			tar -czvf "$runLog.bak$i" "$runLog"
+			: > "$runLog"
+			echo -e "\e[34mLog file archived to $runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
+			break
+		elif [ -f "$runLog.bak1" ] && [ -f "$runLog.bak2" ] && [ -f "$runLog.bak3" ]; then
+			echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $runLog.bak$i exists.\e[0m"
+		fi
+	done
 fi
