@@ -7,7 +7,7 @@ alias docs='cd $HOMEDRIVE/Documents'
 # git
 alias gf='git fetch --all'
 alias gs='git status'
-alias ga='git add .'
+alias ga='git add'
 alias gb='git branch -vv'
 alias gba='git branch -a'
 alias gbc='git checkout -b'

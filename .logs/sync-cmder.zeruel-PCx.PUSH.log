@@ -29,3 +29,41 @@
 2019/04/02 00:35:59 [23544] >fcst...... profile.d/aliases.sh
 2019/04/02 00:35:59 [23544] sent 912 bytes  received 39 bytes  1,902.00 bytes/sec
 2019/04/02 00:35:59 [23544] total size is 85,861  speedup is 90.28
+2019/04/02 08:30:46 [23600] building file list
+2019/04/02 08:30:46 [23600] sent 471 bytes  received 13 bytes  968.00 bytes/sec
+2019/04/02 08:30:46 [23600] total size is 85,861  speedup is 177.40
+2019/04/02 08:31:49 [22576] building file list
+2019/04/02 08:31:49 [22576] sent 471 bytes  received 13 bytes  968.00 bytes/sec
+2019/04/02 08:31:49 [22576] total size is 85,861  speedup is 177.40
+2019/04/02 08:33:12 [25532] building file list
+2019/04/02 08:33:12 [25532] .d          ./
+2019/04/02 08:33:12 [25532] .f          settings
+2019/04/02 08:33:12 [25532] .f          user-ConEmu.xml
+2019/04/02 08:33:12 [25532] .f          user_aliases.cmd
+2019/04/02 08:33:12 [25532] .f          user_profile.cmd
+2019/04/02 08:33:12 [25532] .f          user_profile.ps1
+2019/04/02 08:33:12 [25532] .f          user_profile.sh
+2019/04/02 08:33:12 [25532] .d          profile.d/
+2019/04/02 08:33:12 [25532] .f          profile.d/aliases.ps1
+2019/04/02 08:33:12 [25532] .f          profile.d/aliases.sh
+2019/04/02 08:33:12 [25532] .f          profile.d/paths.ps1
+2019/04/02 08:33:12 [25532] sent 508 bytes  received 50 bytes  1,116.00 bytes/sec
+2019/04/02 08:33:12 [25532] total size is 85,861  speedup is 153.87
+2019/04/02 08:38:53 [23744] building file list
+2019/04/02 08:38:53 [23744] >fcst...... profile.d/aliases.sh
+2019/04/02 08:38:53 [23744] sent 908 bytes  received 36 bytes  1,888.00 bytes/sec
+2019/04/02 08:38:53 [23744] total size is 85,859  speedup is 90.95
+2019/04/02 08:39:30 [3700] building file list
+2019/04/02 08:39:30 [3700] .d          ./
+2019/04/02 08:39:30 [3700] .f          settings
+2019/04/02 08:39:30 [3700] .f          user-ConEmu.xml
+2019/04/02 08:39:30 [3700] .f          user_aliases.cmd
+2019/04/02 08:39:30 [3700] .f          user_profile.cmd
+2019/04/02 08:39:30 [3700] .f          user_profile.ps1
+2019/04/02 08:39:30 [3700] .f          user_profile.sh
+2019/04/02 08:39:30 [3700] .d          profile.d/
+2019/04/02 08:39:30 [3700] .f          profile.d/aliases.ps1
+2019/04/02 08:39:30 [3700] >fc.t...... profile.d/aliases.sh
+2019/04/02 08:39:30 [3700] .f          profile.d/paths.ps1
+2019/04/02 08:39:31 [3700] sent 941 bytes  received 70 bytes  2,022.00 bytes/sec
+2019/04/02 08:39:31 [3700] total size is 85,859  speedup is 84.92

@@ -10,7 +10,7 @@ if [ "$1" == 'pull' ]; then
 	read -p "Confirm $1? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' ]; then
-		rsync -Ccazv "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file="sync-cmder.$HOSTNAME.${1^^}.log"
+		rsync -Ccaziiv "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file="sync-cmder.$HOSTNAME.${1^^}.log"
 		cp "sync-cmder.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 		rm "sync-cmder.$HOSTNAME.${1^^}.DRY_RUN"
 	fi
@@ -19,7 +19,7 @@ elif [ "$1" == 'push' ]; then
 	read -p "Confirm $1? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' ]; then
-		rsync -Ccazv --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" --delete --log-file="sync-cmder.$HOSTNAME.${1^^}.log"
+		rsync -Ccaziiv --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" --delete --log-file="sync-cmder.$HOSTNAME.${1^^}.log"
 		cp "sync-cmder.$HOSTNAME.${1^^}.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 		rm "sync-cmder.$HOSTNAME.${1^^}.DRY_RUN"
 	fi
