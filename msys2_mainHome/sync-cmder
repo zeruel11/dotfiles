@@ -3,7 +3,8 @@
 
 maxsize=900000
 baksize=1000000
-
+# paths
+dotfiles="$(cygpath $USERPROFILE)/dotfiles"
 # preview coloring
 grepSysCol="mt=1;93"
 grepSendCol="mt=1;34"
@@ -13,27 +14,27 @@ grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*
 grepSendMsg='^(\[sender\]).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
-
+#logfiles
 runLog="sync-cmder.$HOSTNAME.${1^^}.log"
 dryLog="sync-cmder.$HOSTNAME.${1^^}.DRY_RUN"
 
 # MAIN logic
 if [ "$1" == 'pull' ]; then
-	rsync -Ccazvvn "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" "$CMDER_ROOT/config/" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	rsync -Ccazvvn "$dotfiles/cmder_config/" "$CMDER_ROOT/config/" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $1? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' ]; then
-		rsync -Ccaziiv "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file="$runLog"
-		cp "$runLog" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+		rsync -Ccaziiv "$dotfiles/cmder_config/" "$CMDER_ROOT/config/" --log-file="$runLog"
+		cp "$runLog" "$dotfiles/.logs/"
 		rm "$dryLog"
 	fi
 elif [ "$1" == 'push' ]; then
-	rsync -Ccazvvn --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" --delete | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	rsync -Ccazvvn --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$dotfiles/cmder_config/" --delete | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $1? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' ]; then
-		rsync -Ccaziiv --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$(cygpath $USERPROFILE)/dotfiles/cmder_config/" --delete --log-file="$runLog"
-		cp "$runLog" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+		rsync -Ccaziiv --exclude-from=".exclude-cmder" "$CMDER_ROOT/config/" "$dotfiles/cmder_config/" --delete --log-file="$runLog"
+		cp "$runLog" "$dotfiles/.logs/"
 		rm "$dryLog"
 	fi
 else

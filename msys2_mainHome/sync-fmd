@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 #fmd db sync
 
+# test arguments
+if [ $# -eq 0 ]; then
+	echo -e '\e[31mYou have to specify pull or push'
+	exit 2
+fi
+
 maxsize=900000
 baksize=1000000
 # paths - change these as needed
@@ -8,10 +14,9 @@ FMD_PCx="/e/untied/FMD"
 FMD_x230="/c/untied/FMD"
 encoder_PCx="/d/WorkSpace/=encoder="
 encoder_x230="/d/_gitClone/[encoder]"
-
+# logfiles
 runLog="sync-fmd.$HOSTNAME.${1^^}.log"
 dryLog="sync-fmd.$HOSTNAME.${1^^}.DRY_RUN"
-
 # preview coloring
 grepSysCol="mt=1;93"
 grepSendCol="mt=1;34"
@@ -35,7 +40,7 @@ fi
 
 # MAIN logic
 if [ "$1" == 'pull' ]; then
-	rsync -Ccazvvn --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always $grepDelMsg | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	# rsync -Ccazvvn --exclude-from='.exclude-fmd' "$encoderGit/manDB/works/" "$pathFMD/works/" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always $grepDelMsg | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $1? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' ]; then
@@ -45,7 +50,7 @@ if [ "$1" == 'pull' ]; then
 	fi
 elif [ "$1" == 'push' ]; then
 	# rsync -Ccazv "$pathFMD/data/" "$encoderGit/manDB/data/"
-	rsync -Ccazvvn --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always $grepDelMsg | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	# rsync -Ccazvvn --exclude-from='.exclude-fmd' "$pathFMD/works/" "$encoderGit/manDB/works/" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always $grepDelMsg | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $1? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' ]; then
@@ -53,8 +58,6 @@ elif [ "$1" == 'push' ]; then
 		cp "$runLog" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 		rm "$dryLog"
 	fi
-else
-	echo 'you have to specify pull or push'
 fi
 
 # log sizing & archiving
