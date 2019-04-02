@@ -111,22 +111,28 @@ function start_ssh_agent {
 
     run_ssh_env;
 
-    ssh-add
+    # ssh-add
     if [[ $(ssh-add -L) != *"$USERPROFILE/.ssh/git_rsa"* ]]; then
         if [ -f ~/.ssh/git_rsa ]; then
             echo -e "\e[33m"
-            ssh-add ~/.ssh/git_rsa;
+            ssh-add ~/.ssh/git_rsa || echo "Key ignored"
             echo -e "\e[0m"
-        elif [ ! -f ~/.ssh/git_rsa ] && [ -f $USERPROFILE/.ssh/git_rsa ]; then
+        elif [ -f $USERPROFILE/.ssh/git_rsa ]; then
             echo -e "\e[33m"
-            ssh-add $USERPROFILE/.ssh/git_rsa;
+            ssh-add $USERPROFILE/.ssh/git_rsa || echo "Key ignored"
             echo -e "\e[0m"
         fi
     fi
     if [[ $(ssh-add -L) != *"$USERPROFILE/.ssh/iktisrv_rsa"* ]] && [ ! -z $MSYS2_PATH_TYPE ]; then
-        echo -e "\e[33m"
-        ssh-add ~/.ssh/iktisrv_rsa;
-        echo -e "\e[0m"
+        if [ -f ~/.ssh/iktisrv_rsa ]; then
+            echo -e "\e[33m"
+            ssh-add ~/.ssh/iktisrv_rsa || echo "Key ignored"
+            echo -e "\e[0m"
+        elif [ -f $USERPROFILE/.ssh/iktisrv_rsa ]; then
+            echo -e "\e[33m"
+            ssh-add $USERPROFILE/.ssh/iktisrv_rsa || echo "Key ignored"
+            echo -e "\e[0m"
+        fi
     fi
 }
 
