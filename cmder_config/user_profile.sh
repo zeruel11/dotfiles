@@ -131,6 +131,22 @@ if [ ! -z $MSYS2_PATH_TYPE ]; then # check if MSYS2 or Git bash
         echo -e "\e[31mSSH config missing\e[0m"
     fi
 
+    # check vimrc
+    if [ -f "$(cygpath $USERPROFILE)/.vimrc" ] && [ -f "$HOME/.vimrc" ]; then
+        cmp -s "$HOME/.vimrc" "$(cygpath $USERPROFILE)/.vimrc" >/dev/null
+        if [ $? -eq 1 ]; then
+            echo -e "\e[34m.vimrc differ, copying from main profile...\e[0m"
+            cp -v "$(cygpath $USERPROFILE)/.vimrc" "$HOME/"
+        fi
+    elif [ -f "$(cygpath $USERPROFILE)/.vimrc" ] && [ ! -f "$HOME/.vimrc" ]; then
+        echo -e "\e[34m.vimrc found on $(cygpath $USERPROFILE), copying...\e[0m"
+        cp -v "$(cygpath $USERPROFILE)/.vimrc" "$HOME/.ssh/"
+    elif [ ! -f "$(cygpath $USERPROFILE)/.vimrc" ] && [ -f "$HOME/.vimrc" ]; then
+        echo -e "\e[34m.vimrc found on local filesystem. Not this may be out-of-date, consider checking main profile.\e[0m"
+    else
+        echo -e "\e[31m.vimrc not found\e[0m"
+    fi
+
     ssh_check # run ssh
 
     #
