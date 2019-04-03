@@ -1,12 +1,17 @@
-if &diff
-    set cursorline
-    map ] ]c
-    map [ [c
-    set diffopt=filler,context:0
-    hi DiffAdd    ctermfg=233 ctermbg=LightGreen guifg=#003300 guibg=#DDFFDD gui=none cterm=none
-    hi DiffChange ctermbg=white  guibg=#ececec gui=none   cterm=none
-    hi DiffText   ctermfg=233  ctermbg=yellow  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+call plug#begin('~/.vim/plugged')
+"Plug 'junegunn/vim-easy-align'
+Plug 'will133/vim-dirdiff'
+"Plug 'tpope/vim-sensible'
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+call plug#end()
+
 set number
 syntax enable
 set background=dark
