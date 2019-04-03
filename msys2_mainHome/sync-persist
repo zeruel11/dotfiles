@@ -1,46 +1,92 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #sync scoop persistence
 
-#TODO:Test portable
+# test arguments
+if [ $# -eq 0 ]; then
+	echo -e '\e[31mYou have to specify pull or push (or logs)'
+	exit 2
+fi
 
 maxsize=900000
 baksize=1000000
+# paths - change these as needed
+scoopScoopy="$(cygpath $USERPROFILE)/.scoopy"
+scoopDefault="$(cygpath $USERPROFILE)/scoop"
+dotfiles="$(cygpath $USERPROFILE)/dotfiles"
+# logfiles
+runLog="sync-persist.$HOSTNAME.${1^^}.log"
+dryLog="sync-persist.$HOSTNAME.${1^^}.DRY_RUN"
+# preview coloring
+grepSysCol="mt=1;93"
+grepSendCol="mt=1;34"
+grepDelCol="mt=1;31"
+grepUnchCol="mt=1;32"
+grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$'
+grepSendMsg='^(\[sender\]).*|$'
+grepDelMsg='(deleting).*|$'
+grepUnchMsg='.*(uptodate)$|$'
 
-# get where we are
-if [ -d "$scoop_x230" ]; then
-	scoop="portable"
-	echo -e "\e[44mDirectory $scoop_x230 found. On the road mode...\e[0m"
-elif [ -d "$scoop_PCx" ]; then
-	scoop="main"
-	echo -e "\e[44mDirectory $scoop_PCx found. Homebase mode...\e[0m"
+logLess() {
+	if [ $1 == 'logs' ]; then
+		cat "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R && exit 0
+	else
+		echo -e "\e[31mSecond argument only accept 'logs'"
+		exit 2
+	fi
+}
+
+# get scoop path
+if [ -d "$scoopScoopy" ]; then
+	echo -e "\e[44mScoop directory $scoopScoopy found. \e[35mzeruel mode...\e[0m"
+	scoopDir="$scoopScoopy"
+elif [ -d "$scoopDefault" ]; then
+	echo -e "\e[44mScoop default install directory $scoopDefault found. \e[35mDefault mode...\e[0m"
+	scoopDir="$scoopDefault"
 fi
 
 # MAIN logic
 if [ "$1" == 'pull' ]; then
-	rsync -Ccazv "$(cygpath $USERPROFILE)/dotfiles/win10_userprofile/scoop_persist/" "$(cygpath $USERPROFILE)/.scoopy/persist/" --log-file="sync-persist.$HOSTNAME:$1.log"
-	cp "sync-persist.$HOSTNAME:$1.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+	if [ ! -z "$2" ]; then
+		logLess $2
+	fi
+	read -p "Confirm $1? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ]; then
+		rsync -Ccaziiv "$dotfiles/win10_userprofile/scoop_persist/" "$scoopDir/persist/" --log-file="$runLog"
+		cp "$runLog" "$dotfiles/.logs/"
+	else
+		echo -e "\e[35mGenerating DRY_RUN...\e[0m"
+		rsync -Ccazvvn "$dotfiles/win10_userprofile/scoop_persist/" "$scoopDir/persist/" > "$dryLog"
+	fi
 elif [ "$1" == 'push' ]; then
-	rsync -Ccazv --exclude-from=".exclude-persist" "$(cygpath $USERPROFILE)/.scoopy/persist/" "$(cygpath $USERPROFILE)/dotfiles/win10_userprofile/scoop_persist/" --log-file="sync-persist.$HOSTNAME:$1.log"
-	cp "sync-persist.$HOSTNAME:$1.log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
-else
-	echo 'you have to specify pull or push'
+	if [ ! -z "$2" ]; then
+		logLess $2
+	fi
+	read -p "Confirm $1? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ]; then
+		rsync -Ccaziiv --exclude-from=".exclude-persist" "$scoopDir/persist/" "$dotfiles/win10_userprofile/scoop_persist/" --log-file="$runLog"
+		cp "$runLog" "$dotfiles/.logs/"
+	else
+		echo -e "\e[35mGenerating DRY_RUN...\e[0m"
+		rsync -Ccazvvn --exclude-from=".exclude-persist" "$scoopDir/persist/" "$dotfiles/win10_userprofile/scoop_persist/" > "$dryLog"
+	fi
 fi
 
 # log sizing & archiving
-if [ -f "sync-persist.$HOSTNAME:$1.log" ]; then
-	filesize=$(stat -c%s "sync-persist.$HOSTNAME:$1.log")
+if [ -f "$runLog" ]; then
+	filesize=$(stat -c%s "$runLog")
 	if ((filesize > maxsize)) && ((filesize < baksize)); then
-	    echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
+		echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
 	elif ((filesize > baksize)); then
 		echo -e "\e[34;43mAttention: Log file is 1mb large. Archiving...\e[0m"
-		for i in {1..3}
-		do
-			if [ ! -f "sync-persist.$HOSTNAME:$1.log.bak$i" ]; then
-				tar -czvf "sync-persist.$HOSTNAME:$1.log.bak$i" "sync-persist.$HOSTNAME:$1.log" --remove-files
-				echo -e "\e[34mLog file archived to sync-persist.$HOSTNAME:$1.log.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
+		for i in {1..3}; do
+			if [ ! -f "$runLog.bak$i" ]; then
+				tar -czvf "$runLog.bak$i" "$runLog" --remove-files
+				echo -e "\e[34mLog file archived to $runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
 				break
-			elif [ -f "sync-persist.$HOSTNAME:$1.log.bak1" ] && [ -f "sync-persist.$HOSTNAME:$1.log.bak2" ] && [ -f "sync-persist.$HOSTNAME:$1.log.bak3" ]; then
-				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File sync-persist.$HOSTNAME:$1.log.bak$i exists.\e[0m"
+			elif [ -f "$runLog.bak1" ] && [ -f "$runLog.bak2" ] && [ -f "$runLog.bak3" ]; then
+				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $runLog.bak$i exists.\e[0m"
 			fi
 		done
 	fi
