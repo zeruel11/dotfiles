@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 #cmder config sync
 
+# test arguments
+if [ $# -eq 0 ]; then
+	echo -e '\e[31mYou have to specify pull or push'
+	exit 2
+fi
+
 maxsize=900000
 baksize=1000000
 # paths
@@ -37,8 +43,6 @@ elif [ "$1" == 'push' ]; then
 		cp "$runLog" "$dotfiles/.logs/"
 		rm "$dryLog"
 	fi
-else
-	echo 'you have to specify pull or push'
 fi
 
 if [ -f "$runLog" ]; then

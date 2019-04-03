@@ -42,6 +42,10 @@ if [ -d "$scoopScoopy" ]; then
 elif [ -d "$scoopDefault" ]; then
 	echo -e "\e[44mScoop default install directory $scoopDefault found. \e[35mDefault mode...\e[0m"
 	scoopDir="$scoopDefault"
+else
+	echo -e "\e[44mScoop install directory not found...\e[0m"
+	read -p "Please enter where you install scoop: " scoopCustom
+	scoopDir=$scoopCustom
 fi
 
 # MAIN logic
@@ -56,7 +60,7 @@ if [ "$1" == 'pull' ]; then
 		cp "$runLog" "$dotfiles/.logs/"
 	else
 		echo -e "\e[35mGenerating DRY_RUN...\e[0m"
-		rsync -Ccazvvn "$dotfiles/win10_userprofile/scoop_persist/" "$scoopDir/persist/" > "$dryLog"
+		rsync -Ccazvvn "$dotfiles/win10_userprofile/scoop_persist/" "$scoopDir/persist/" >"$dryLog"
 	fi
 elif [ "$1" == 'push' ]; then
 	if [ ! -z "$2" ]; then
@@ -69,7 +73,7 @@ elif [ "$1" == 'push' ]; then
 		cp "$runLog" "$dotfiles/.logs/"
 	else
 		echo -e "\e[35mGenerating DRY_RUN...\e[0m"
-		rsync -Ccazvvn --exclude-from=".exclude-persist" "$scoopDir/persist/" "$dotfiles/win10_userprofile/scoop_persist/" > "$dryLog"
+		rsync -Ccazvvn --exclude-from=".exclude-persist" "$scoopDir/persist/" "$dotfiles/win10_userprofile/scoop_persist/" >"$dryLog"
 	fi
 fi
 

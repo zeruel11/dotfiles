@@ -19,3 +19,14 @@ if &term =~ '256color'
 	" see also http://snk.tuxfamily.org/log/vim-256color-bce.html
 	set t_ut=
 endif
+
+if &diff
+    set cursorline
+    set background=light
+    let g:solarized_diffmode="high"
+    let g:solarized_termcolors=256
+    colorscheme solarized
+    map ] ]c
+    map [ [c
+    set diffopt=filler,context:0
+endif
