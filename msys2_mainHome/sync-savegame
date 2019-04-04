@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#vivaldi sessions sync
+#savegame sync/backup
 
 # test arguments
 if [ $# -eq 0 ]; then
@@ -10,10 +10,11 @@ fi
 maxsize=900000
 baksize=1000000
 # paths - change these as needed
-encoder_PCx="/d/WorkSpace/=encoder="
-encoder_x230="/d/_gitClone/[encoder]"
-vivaldiSession="$(cygpath $USERPROFILE)/AppData/Local/Vivaldi/User Data"
-dotfiles="$(cygpath $USERPROFILE)/dotfiles"
+# encoder_PCx="/d/WorkSpace/=encoder="
+# encoder_x230="/d/_gitClone/[encoder]"
+
+saveGit_PCx="$(cygpath $USERPROFILE)/dotfiles"
+saveGit_x230="$(cygpath $USERPROFILE)/dotfiles"
 # logfiles
 runLog="sync-vivaldi.$HOSTNAME.${1^^}.log"
 dryLog="sync-vivaldi.$HOSTNAME.${1^^}.DRY_RUN"
@@ -28,12 +29,12 @@ grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
 
 # get where we are
-if [ -d "$encoder_x230" ]; then
-	encoderGit="$encoder_x230"
-	read -p $'\e[44mDirectory \e[33m$encoder_x230\e[37m found. Using \e[33m$encoder_x230\e[37m as Git versioning. \e[35mOn the road mode...\e[0m\n' -t 5
-elif [ -d "$encoder_PCx" ]; then
-	encoderGit="$encoder_PCx"
-	read -p $'\e[44mDirectory \e[33m$encoder_PCx\e[37m found. Using \e[33m$encoder_PCx\e[37m as Git versioning. \e[35mHomebase mode...\e[0m\n' -t 5
+if [ "$USERPROFILE" == "C:\Users\zeruel11" ]; then
+	encoderGit="$saveGit_x230"
+	echo -e "\e[44mDirectory \e[33mC:\Users\zeruel11\e[37m found. Using \e[33m$saveGit_x230\e[37m as Git versioning. \e[35mOn the road mode...\e[0m"
+elif [ "$USERPROFILE" == "C:\Users\zeruel" ]; then
+	encoderGit="$saveGit_PCx"
+	echo -e "\e[44mDirectory \e[33mC:\Users\zeruel\e[37m found. Using \e[33m$saveGit_PCx\e[37m as Git versioning. \e[35mHomebase mode...\e[0m"
 fi
 
 # MAIN logic
