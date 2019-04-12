@@ -1,2 +1,4 @@
 2019/04/12 21:15:44 [9272] rsync: failed to connect to 10.126.12.212 (10.126.12.212): Connection timed out (116)
 2019/04/12 21:15:44 [9272] rsync error: error in socket IO (code 10) at clientserver.c(127) [sender=3.1.3]
+2019/04/12 21:53:13 [16808] @ERROR: access denied to calibre from UNKNOWN (10.30.2.2)
+2019/04/12 21:53:13 [16808] rsync error: error starting client-server protocol (code 5) at main.c(1675) [sender=3.1.3]
