@@ -1,0 +1,17 @@
++ /res/mods/
+
+- .git
+- .gitignore
+- .settings
+- .classpath
+- .project
+
+- src
+- res/*
+- target
+- *.jar
+- *.bak
+- *.md
+- *.txt
+
++ #SharedObjects

@@ -4,10 +4,10 @@
 maxsize=900000
 baksize=1000000
 # paths
-calibre_x230="/d/KataLoGue/"
-calibre_IKTI="/home/bambang_ebis/caltest"
-FD="/f/[calibre]/KataLoGue/"
-rsyncDest="bambang_ebis@10.126.12.212::calibre"
+calibre_x230="/d/KataLoGue"
+calibre_IKTI="bambang_ebis@10.126.12.212::calibre"
+FD="/f/[calibre]/KataLoGue"
+rsyncTest="/home/bambang_ebis/caltest"
 
 runLog="sync-calibre.$HOSTNAME.${1^^}.log"
 dryLog="sync-calibre.$HOSTNAME.${1^^}.DRY_RUN"
@@ -31,11 +31,11 @@ fi
 # check IKTI online
 IKTIonline() {
 	local operation=$1
-	if ssh IKTI "[ -d $calibre_IKTI ]"; then
+	if ssh IKTI "[ -d $rsyncTest ]"; then
 		if [ "$operation" == 'pull' ]; then
-			rsync -Cuazv --exclude-from=".exclude-calibre" "$rsyncDest" "$calibre_x230"/ --log-file="$runLog"
+			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_IKTI" "$calibre_x230/" --log-file="$runLog"
 		elif [ "$operation" == 'push' ]; then
-			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230" "$rsyncDest" --delete-before --delete-excluded --log-file="$runLog"
+			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230/" "$calibre_IKTI" --delete-before --delete-excluded --log-file="$runLog"
 		fi
 	else
 		echo -e "\e[41mServer is unreachable\e[0m"
@@ -52,15 +52,15 @@ elif [ "$1" == 'push' ]; then
 elif [ "$1" == 'export' ]; then
 	if [ -z "$2" ]; then
 		if [ -d "$FD" ]; then
-			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230"/ "$FD" --delete-before --log-file="$runLog"
+			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230/" "$FD/" --delete-before --log-file="$runLog"
 			cp "$HOSTNAME.calibre_$1(FD).log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 		else
 			echo -e "\e[41mFlashdisk not found!!!\e[0m"
 		fi
 	else
 		if [ -d "$2" ]; then
-			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230"/ "$2" --delete-before --log-file="$runLog"
-			echo "Exported to $2" >> "$runLog"
+			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230/" "$2" --delete-before --log-file="$runLog"
+			echo "Exported to $2" >>"$runLog"
 			cp "$HOSTNAME.calibre_$1($(basename $2)).log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
 		else
 			echo -e "\e[31mPath doesn't exist!\e[0m"
