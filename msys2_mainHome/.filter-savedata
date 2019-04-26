@@ -1,4 +1,5 @@
 + /res/mods/
++ GameVersion.txt
 
 - .git
 - .gitignore
@@ -13,5 +14,6 @@
 - *.bak
 - *.md
 - *.txt
+- Thumbs.db
 
 + #SharedObjects

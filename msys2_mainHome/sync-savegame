@@ -29,6 +29,20 @@ grepSendMsg='^(\[sender\]).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
 
+dbxUpload() {
+	echo -e "\e[44mUploading to dropbox...\e[0m"
+	archivesize=$(stat -c%s "$saveTemp_PCx/$1-$(date +%d%b%Y).tar.gz")
+	if ((archivesize > arcsize)); then
+		read -p "Archive is over 99mb. Are you sure you want to continue uploading? [no] " yesOrYes
+		yesOrYes=${yesOrYes:-no}
+		if [ "$yesOrYes" == 'yes' ]; then
+			dbxcli put "$saveTemp_PCx/$1-$(date +%d%b%Y).tar.gz" "SaveData/$1-$(date +%d%b%Y).tar.gz"
+		fi
+	else
+		dbxcli put "$saveTemp_PCx/$1-$(date +%d%b%Y).tar.gz" "SaveData/$1-$(date +%d%b%Y).tar.gz"
+	fi
+}
+
 # get where we are
 if [ "$USERPROFILE" == "C:\Users\zeruel11" ]; then
 	echo -e "\e[44mDirectory \e[33m$saveGit_x230\e[37m found. \e[35mOn the road mode...\e[0m"
@@ -48,25 +62,17 @@ case $1 in
 
 	while IFS=: read -r f1 f2 f3; do
 		printf "\nSaveData: %s\nSource: %s, Destination: %s\n" "$f1" "$f2" "$f3" >>$runLog
-		rsync -Cuazvv --filter="merge .filter-savedata" --prune-empty-dirs $f2 $f3 --log-file="$runLog" --delete-before --delete-excluded
+		rsync -Cuazvv --filter="merge .filter-savedata" --prune-empty-dirs "$f2" "$f3" --log-file="$runLog" --delete-before --delete-excluded
 		cp "$runLog" "$dotfiles/.logs/"
 
 		printf "\nSaveData: %s\n" "$f1" >>$tarLog
 		tar -czvf "$saveTemp_PCx/$f1-$(date +%d%b%Y).tar.gz" -C "$saveTemp_PCx" $(basename "$f3") >>~/$tarLog
 		cp "$tarLog" "$dotfiles/.logs/"
 
-		echo -e "\e[44mUploading to dropbox...\e[0m"
-		archivesize=$(stat -c%s "$saveTemp_PCx/$f1-$(date +%d%b%Y).tar.gz")
-		# if ((archivesize > arcsize)); then
-		# 	read -p "Archive is over 99mb. Are you sure you want to continue uploading? [no] " yesOrYes
-		# 	yesOrYes=${yesOrYes:-no}
-		# 	if [ "$yesOrYes" == 'yes' ]; then
-		# 		dbxcli put "$saveTemp_PCx/$f1-$(date +%d%b%Y).tar.gz" "SaveData/$f1-$(date +%d%b%Y).tar.gz"
-		# 	fi
-		# else
-		# 	dbxcli put "$saveTemp_PCx/$f1-$(date +%d%b%Y).tar.gz" "SaveData/$f1-$(date +%d%b%Y).tar.gz"
-		# fi
-	done <"$input"
+		read -u 3 user
+		echo "$user"
+
+	done 3<&0 <"$input"
 
 	read -p "Do you want to auto-git? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
