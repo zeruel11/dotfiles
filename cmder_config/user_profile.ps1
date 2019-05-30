@@ -106,13 +106,21 @@ $Host.PrivateData.WarningBackgroundColor = $Host.UI.RawUI.BackgroundColor
 $Host.PrivateData.VerboseBackgroundColor = $Host.UI.RawUI.BackgroundColor
 
 Import-Module Get-ChildItemColor
-Import-Module posh-git
 
-$global:GitPromptSettings.BeforeText = '['
-$global:GitPromptSettings.AfterText = '] '
+if ((Get-Module -ListAvailable posh-git) -ne $null) {
+    Import-Module posh-git
 
-# Import-Module DockerCompletion
-# Import-Module posh-docker
+    $global:GitPromptSettings.BeforeText = '['
+    $global:GitPromptSettings.AfterText = '] '
+} else {
+    Write-Warning "posh-git module not found"
+}
+
+if ((Get-Module -ListAvailable DockerCompletion) -ne $null) {
+    Import-Module DockerCompletion
+} else {
+    Write-Warning "DockerCompletion module not found"
+}
 
 # setup win10 OpenSSH
 # workaround for posh-git with win10 OpenSSH
@@ -157,6 +165,7 @@ switch -Wildcard ($TestSSHmykey) {
         Write-Host 'identities loaded'
     }
 }
+
 # if( -Not ($TestSSHmykey -like '*zeruel11/.ssh/id_rsa*') ) {
 #     # Write-Host found
 #     C:\WINDOWS\System32\OpenSSH\ssh-add.exe
