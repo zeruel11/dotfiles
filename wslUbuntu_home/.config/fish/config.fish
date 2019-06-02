@@ -9,9 +9,5 @@ alias gl="git log -1"
 alias cpg="cpg -g"
 alias mvg="mvg -g"
 
-#setup n
-set -x N_PREFIX "$HOME/n"    # equivalent of export N_PREFIX="$HOME/n";
+fnm env --multi | source
 
-if not contains -- $N_PREFIX/bin $PATH
-  set PATH $PATH $N_PREFIX/bin
-end
