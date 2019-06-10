@@ -116,17 +116,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# fnm
+export PATH=$HOME/.fnm:$PATH
+eval "`fnm env --multi`"
+
+# yarn
+export PATH=$HOME/.yarn/bin:$PATH
+
+# linuxbrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
+# thefuck
+eval "$(thefuck --alias)"
+
+# fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export PATH="/home/zeruel/.pyenv/bin:$PATH"
+# pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+# rbenv
 eval "$(rbenv init -)"
-
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-
-
-export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"

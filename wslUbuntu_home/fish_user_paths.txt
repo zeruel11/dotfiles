@@ -1,1 +1,1 @@
-/home/zeruel/.yarn/bin /home/zeruel/.composer/vendor/bin /home/zeruel/.local/bin /home/zeruel/.rbenv/bin /home/zeruel/.nodenv/bin /home/zeruel/.pyenv/bin /home/zeruel/.fzf/bin
+/home/linuxbrew/.linuxbrew/bin /home/zeruel/.local/bin /home/zeruel/.fnm /home/zeruel/.yarn/bin /home/linuxbrew/.linuxbrew/opt/fzf/bin

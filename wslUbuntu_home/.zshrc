@@ -4,8 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/zeruel/.oh-my-zsh"
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
@@ -79,25 +80,30 @@ POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=11
 POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_VCS_SHORTEN_DELIMITER=".."
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -127,25 +133,17 @@ POWERLEVEL9K_VCS_SHORTEN_DELIMITER=".."
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  sudo
-  pj
   extract
-  cp
   zsh-syntax-highlighting
   zsh-autosuggestions
-  grails
-  pyenv
-  redis-cli
-  rails
-  npm
-  ng
-  ssh-agent
+  thefuck
   z
 )
 
@@ -181,74 +179,56 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias wslinit="sudo sh ~/init"
 alias emacs="emacs -nw"
-alias docker="docker.exe"
-alias jupyter-notebook="~/.pyenv/shims/jupyter-notebook --no-browser"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias jupyter-notebook="~/.pyenv/shims/jupyter-notebook --no-browser"
 
 # launch Windows side browser
 export BROWSER=$(wslpath -w '/c/Program Files/Firefox Developer Edition/firefox.exe')
 
-#set default user for agnostic theme
+#set default user
 DEFAULT_USER=zeruel
-PROJECT_PATHS=(~/"[iseng]" ~/Git)
 
 # set PATH so it includes user's private exec and global composer
-# export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 # export PATH="$HOME/.composer/vendor/bin:$PATH"
-# PROJECT_PATHS=(/mnt/d/Datum /mnt/d/Datum/\[iseng\])
 
 #set zsh color path
-eval `dircolors /home/zeruel/dircolors.256dark`
-
-# Change ls colours
-#LS_COLORS="ow=01;36;40" && export LS_COLORS
+eval `dircolors $HOME/.dircolors/dircolors.256dark`
 
 # make cd use the ls colors
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 autoload -Uz compinit
 compinit
 
-
 unsetopt BG_NICE
 
-# setup linuxbrew
-export PATH="/home/zeruel/.linuxbrew/bin:$PATH"
-export MANPATH="/home/zeruel/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/zeruel/.linuxbrew/share/info:$INFOPATH"
+# paths
+export PATH="$HOME/.local/bin:$PATH"
 
-# setup nodenv
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-# setup yarn global
-export PATH="$HOME/.yarn/bin:$PATH"
+# fnm
+export PATH="$HOME/.fnm:$PATH"
+eval "`fnm env --multi`"
 
-# setup rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+# linuxbrew
+umask 002
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 
-# setup pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-eval "$(pyenv virtualenv-init -)"
-
-# added by pipsi (https://github.com/mitsuhiko/pipsi)
-export PATH="/home/zeruel/.local/bin:$PATH"
-
-eval $(thefuck --alias)
-
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# setup linuxbrew
-umask 022
-export PATH="/home/zeruel/.linuxbrew/bin:$PATH"
-export MANPATH="/home/zeruel/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/zeruel/.linuxbrew/share/info:$INFOPATH"
+# thefuck
+eval $(thefuck --alias)
+
+# rbenv
+eval "$(rbenv init -)"
+
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# yarn
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # setup display
 export DISPLAY=:0.0
 export LIBGL_ALWAYS_INDIRECT=1
-
