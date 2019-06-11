@@ -8,6 +8,10 @@ alias cpg="cpg -g"
 alias mvg="mvg -g"
 
 alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias my='mycli -u root -p zeruel13'
 
 # launch Windows side browser
 set -x BROWSER (wslpath -w '/c/Program Files (x86)/Vivaldi/Application/vivaldi.exe')
@@ -19,7 +23,11 @@ eval (dircolors -c ~/.dircolors/dircolors.256dark)
 fnm env --multi | source
 
 # pyenv
-set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH $PYENV_ROOT/bin $PATH
-status --is-interactive; and . (pyenv init -|psub)
-status --is-interactive; and . (pyenv virtualenv-init -|psub)
+status --is-interactive; and source (pyenv init -|psub)
+status --is-interactive; and source (pyenv virtualenv-init -|psub)
+
+# rbenv
+status --is-interactive; and source (rbenv init -|psub)
+
+# goenv
+status --is-interactive; and source (goenv init -|psub)

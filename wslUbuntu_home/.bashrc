@@ -139,3 +139,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # rbenv
 eval "$(rbenv init -)"
+
+# fnm
+export PATH=$HOME/.fnm:$PATH
+eval "`fnm env --multi`"

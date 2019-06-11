@@ -181,14 +181,8 @@ alias wslinit="sudo sh ~/init"
 alias emacs="emacs -nw"
 # alias jupyter-notebook="~/.pyenv/shims/jupyter-notebook --no-browser"
 
-# launch Windows side browser
-export BROWSER=$(wslpath -w '/c/Program Files/Firefox Developer Edition/firefox.exe')
-
 #set default user
 DEFAULT_USER=zeruel
-
-# set PATH so it includes user's private exec and global composer
-# export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 #set zsh color path
 eval `dircolors $HOME/.dircolors/dircolors.256dark`
