@@ -1,0 +1,51 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+        echo -e '\e[31mYou have to specify start or stop, or status'
+        exit 2
+fi
+
+#delugeStack1=$(pidof deluged)
+#delugeStack2=$(pidof deluge-web)
+#jackettStack=$(pidof jackett)
+#sonarrStack=$(pidof SonarrMono)
+#radarrStack=$(pidof RadarrMono)
+#lidarrStack=$(pidof LidarrMono)
+
+serviceStatus() {
+	local stackStat=$(pgrep $1)
+	if [[ $stackStat ]]; then
+		echo "Stack $1 running at PID $stackStat"
+	else
+		echo "$1 is not running"
+	fi
+}
+
+if [ "$1" == 'status' ]; then
+	if [ -z "$2" ]; then
+		serviceStatus "deluged"
+		serviceStatus "deluge-web"
+	else
+		case "$2" in
+			deluged)
+				serviceStatus "$2"
+				;;
+			deluge-web)
+				serviceStatus "$2"
+				;;
+			*)
+				echo $"Usage: $0 $1 {deluged|deluge-web}"
+		esac
+	fi
+elif [ "$1" == 'start' ]; then
+	echo "placeholder"
+fi
+
+#exec -a SonarrMono mono --debug /opt/Lidarr/Lidarr.exe >> ~/logs/lidarr.log &
+#PIDdaemon="$HOME/.config/deluge/deluged.pid"
+#	if [ -f "$PIDdaemon" ]; then
+#		echo "Deluge daemon is running at $(cat $PIDdaemon | awk '{sub(/;.*/,x)}1')"
+#	else
+#		echo "Deluge daemon is not running"
+#	fi
+

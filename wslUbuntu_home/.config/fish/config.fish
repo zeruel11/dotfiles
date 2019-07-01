@@ -1,4 +1,3 @@
-
 alias gf="git fetch"
 alias gc="git checkout"
 alias gm="git commit -am"
