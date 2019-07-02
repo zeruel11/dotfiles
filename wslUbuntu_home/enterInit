@@ -1,47 +1,149 @@
 #!/bin/bash
 
 if [ $# -eq 0 ]; then
-        echo -e '\e[31mYou have to specify start or stop, or status'
+        echo -e "\e[31mUsage: $0 [status|start|stop]"
         exit 2
+elif [ "$1" != "status" ] && [ "$1" != "start" ] && [ "$1" != "stop" ]; then
+	echo -e "\e[31mUsage: $0 [status|start|stop]"
+	exit 2
 fi
 
-#delugeStack1=$(pidof deluged)
-#delugeStack2=$(pidof deluge-web)
-#jackettStack=$(pidof jackett)
-#sonarrStack=$(pidof SonarrMono)
-#radarrStack=$(pidof RadarrMono)
-#lidarrStack=$(pidof LidarrMono)
+logDir="$HOME/logs"
+jackettDir="/opt/Jackett"
+arrDir="/opt"
+declare -a ServiceArray=("deluged" "deluge-web" "jackett" "Sonarr" "Radarr" "Lidarr")
 
 serviceStatus() {
-	local stackStat=$(pgrep $1)
-	if [[ $stackStat ]]; then
-		echo "Stack $1 running at PID $stackStat"
+	if [ "$1" == 'Sonarr' ] || [ "$1" == 'Radarr' ] || [ "$1" == 'Lidarr' ]; then
+		local servStat=$(pidof $1)
 	else
-		echo "$1 is not running"
+		local servStat=$(pgrep $1)
+	fi
+	echo "$servStat"
+}
+
+serviceStart() {
+	local servStat=$(serviceStatus $1)
+	if [[ $servStat ]]; then
+		echo "Stack $1 is already running at PID $servStat"	
+	else
+		case $1 in
+			Sonarr)
+				exec -a $1 mono --debug $arrDir/NzbDrone/NzbDrone.exe >> $logDir/$1.log & echo "$1 started at PID $!" &
+				;;
+			Radarr)
+				exec -a $1 mono --debug $arrDir/$1/$1.exe >> $logDir/$1.log & echo "$1 started at PID $!" &
+				;;
+			Lidarr)
+				exec -a $1 mono --debug $arrDir/$1/$1.exe >> $logDir/$1.log & echo "$1 started at PID $!" &
+				;;
+			jackett)
+				$jackettDir/$1 >> $logDir/$1.log & echo "$1 started at PID $!" &
+				;;
+			deluged)
+				deluged & echo "$1 started at PID $!"
+				;;
+			deluge-web)
+				deluge-web --fork & echo "$1 started at PID $!"
+				;;
+		esac
 	fi
 }
 
-if [ "$1" == 'status' ]; then
-	if [ -z "$2" ]; then
-		serviceStatus "deluged"
-		serviceStatus "deluge-web"
-	else
-		case "$2" in
+serviceStop() {
+	local servStat=$(serviceStatus $1)
+	if [[ $servStat ]]; then
+		case $1 in
+			Sonarr)
+				kill $servStat && echo "Stack $1 stopped"
+				;;
+			Radarr)
+				kill $servStat && echo "Stack $1 stopped"
+				;;
+			Lidarr)
+				kill $servStat && echo "Stack $1 stopped"
+				;;
+			jackett)
+				kill $servStat && echo "Stack $1 stopped"
+				;;
 			deluged)
-				serviceStatus "$2"
+				kill $servStat && echo "Stack $1 stopped"
 				;;
 			deluge-web)
-				serviceStatus "$2"
+				kill $servStat && echo "Stack $1 stopped"
 				;;
-			*)
-				echo $"Usage: $0 $1 {deluged|deluge-web}"
+		esac
+	else
+		echo "Stack $1 is not running"
+	fi
+}
+
+serviceChoice() {
+	case "$1" in
+		[Dd]eluged)
+			echo "deluged"
+			;;
+		[Dd]eluge-web)
+			echo "deluge-web"
+			;;
+		[Jj]ackett)
+			echo "jackett"
+			;;
+		[Ss]onarr)
+			echo "Sonarr"
+			;;
+		[Rr]adarr)
+			echo "Radarr"
+			;;
+		[Ll]idarr)
+			echo "Lidarr"
+			;;	
+	esac
+}
+
+if [ -z "$2" ]; then
+	for servList in "${ServiceArray[@]}"; do
+		case $1 in
+			'status')
+				statusResult=$(serviceStatus "$servList")
+				if [[ $statusResult ]]; then
+					echo "Stack $servList running at PID $statusResult"
+				else
+					echo "$servList is not running"
+				fi
+				;;
+			'start')
+				serviceStart "$servList"
+				;;
+			'stop')
+				serviceStop "$servList"
+				;;
+		esac
+	done
+else
+	serviceName=$(serviceChoice "$2")
+	if [ -z "$serviceName" ]; then
+		echo "Usage: $0 $1 [deluged|deluge-web|jackett|sonarr|radarr|lidarr]"
+	else
+		case $1 in
+			'status')
+				statusResult=$(serviceStatus "$serviceName")
+				if [[ $statusResult ]]; then
+					echo "Stack $serviceName running at PID $statusResult"
+				else
+					echo "$serviceName is not running"
+				fi
+				;;
+			'start')
+				serviceStart "$serviceName"
+				;;
+			'stop')
+				serviceStop "$serviceName"
+				;;
 		esac
 	fi
-elif [ "$1" == 'start' ]; then
-	echo "placeholder"
 fi
 
-#exec -a SonarrMono mono --debug /opt/Lidarr/Lidarr.exe >> ~/logs/lidarr.log &
 #PIDdaemon="$HOME/.config/deluge/deluged.pid"
 #	if [ -f "$PIDdaemon" ]; then
 #		echo "Deluge daemon is running at $(cat $PIDdaemon | awk '{sub(/;.*/,x)}1')"
