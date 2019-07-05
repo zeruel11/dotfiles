@@ -41,10 +41,10 @@ serviceStart() {
 				$jackettDir/$1 >> $logDir/$1.log & echo "$1 started at PID $!" &
 				;;
 			deluged)
-				deluged & echo "$1 started at PID $!"
+				deluged & echo "$1 started"
 				;;
 			deluge-web)
-				deluge-web --fork & echo "$1 started at PID $!"
+				deluge-web --fork & echo "$1 started"
 				;;
 		esac
 	fi
@@ -80,6 +80,9 @@ serviceStop() {
 
 serviceChoice() {
 	case "$1" in
+		[Dd]eluge)
+			echo "deluged deluge-web"
+			;;
 		[Dd]eluged)
 			echo "deluged"
 			;;
@@ -101,11 +104,10 @@ serviceChoice() {
 	esac
 }
 
-if [ -z "$2" ]; then
-	for servList in "${ServiceArray[@]}"; do
-		case $1 in
+serviceCommand() {
+	case $1 in
 			'status')
-				statusResult=$(serviceStatus "$servList")
+				local statusResult=$(serviceStatus "$servList")
 				if [[ $statusResult ]]; then
 					echo "Stack $servList running at PID $statusResult"
 				else
@@ -119,28 +121,20 @@ if [ -z "$2" ]; then
 				serviceStop "$servList"
 				;;
 		esac
+}
+
+if [ -z "$2" ]; then
+	for servList in "${ServiceArray[@]}"; do
+		serviceCommand $1
 	done
 else
 	serviceName=$(serviceChoice "$2")
 	if [ -z "$serviceName" ]; then
-		echo "Usage: $0 $1 [deluged|deluge-web|jackett|sonarr|radarr|lidarr]"
+		echo "Usage: $0 $1 [deluge|jackett|sonarr|radarr|lidarr]"
 	else
-		case $1 in
-			'status')
-				statusResult=$(serviceStatus "$serviceName")
-				if [[ $statusResult ]]; then
-					echo "Stack $serviceName running at PID $statusResult"
-				else
-					echo "$serviceName is not running"
-				fi
-				;;
-			'start')
-				serviceStart "$serviceName"
-				;;
-			'stop')
-				serviceStop "$serviceName"
-				;;
-		esac
+		for servList in $serviceName; do
+			serviceCommand $1
+		done
 	fi
 fi
 
@@ -150,4 +144,3 @@ fi
 #	else
 #		echo "Deluge daemon is not running"
 #	fi
-
