@@ -1,0 +1,155 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+	echo -e "\e[31mUsage: $0 [status|start|stop]"
+	exit 2
+elif [ "$1" != "status" ] && [ "$1" != "start" ] && [ "$1" != "stop" ]; then
+	echo -e "\e[31mUsage: $0 [status|start|stop]"
+	exit 2
+fi
+
+logDir="$HOME/logs"
+jackettDir="/opt/Jackett"
+arrDir="/opt"
+declare -a ServiceArray=("deluged" "deluge-web" "jackett" "Sonarr" "Radarr" "Lidarr")
+
+serviceStatus() {
+	if [ "$1" == 'Sonarr' ] || [ "$1" == 'Radarr' ] || [ "$1" == 'Lidarr' ]; then
+		local servStat=$(pidof $1)
+	else
+		local servStat=$(pgrep $1)
+	fi
+	echo "$servStat"
+}
+
+serviceStart() {
+	local servStat=$(serviceStatus $1)
+	if [[ $servStat ]]; then
+		echo "Stack $1 is already running at PID $servStat"
+	else
+		case $1 in
+		Sonarr)
+			exec -a $1 mono --debug $arrDir/NzbDrone/NzbDrone.exe >>$logDir/$1.log &
+			echo "$1 started at PID $!" &
+			;;
+		Radarr)
+			exec -a $1 mono --debug $arrDir/$1/$1.exe >>$logDir/$1.log &
+			echo "$1 started at PID $!" &
+			;;
+		Lidarr)
+			exec -a $1 mono --debug $arrDir/$1/$1.exe >>$logDir/$1.log &
+			echo "$1 started at PID $!" &
+			;;
+		jackett)
+			$jackettDir/$1 >>$logDir/$1.log &
+			echo "$1 started at PID $!" &
+			;;
+		deluged)
+			deluged &
+			echo "$1 started"
+			;;
+		deluge-web)
+			deluge-web --fork &
+			echo "$1 started"
+			;;
+		esac
+	fi
+}
+
+serviceStop() {
+	local servStat=$(serviceStatus $1)
+	if [[ $servStat ]]; then
+		case $1 in
+		Sonarr)
+			kill $servStat && echo "Stack $1 stopped"
+			;;
+		Radarr)
+			kill $servStat && echo "Stack $1 stopped"
+			;;
+		Lidarr)
+			kill $servStat && echo "Stack $1 stopped"
+			;;
+		jackett)
+			kill $servStat && echo "Stack $1 stopped"
+			;;
+		deluged)
+			kill $servStat && echo "Stack $1 stopped"
+			;;
+		deluge-web)
+			kill $servStat && echo "Stack $1 stopped"
+			;;
+		esac
+	else
+		echo "Stack $1 is not running"
+	fi
+}
+
+serviceChoice() {
+	case "$1" in
+	[Dd]eluge)
+		echo "deluged deluge-web"
+		;;
+	[Dd]eluged)
+		echo "deluged"
+		;;
+	[Dd]eluge-web)
+		echo "deluge-web"
+		;;
+	[Jj]ackett)
+		echo "jackett"
+		;;
+	[Ss]onarr)
+		echo "Sonarr"
+		;;
+	[Rr]adarr)
+		echo "Radarr"
+		;;
+	[Ll]idarr)
+		echo "Lidarr"
+		;;
+	esac
+}
+
+serviceCommand() {
+	case $1 in
+	'status')
+		local statusResult=$(serviceStatus "$servList")
+		if [[ $statusResult ]]; then
+			echo "Stack $servList running at PID $statusResult"
+		else
+			echo "$servList is not running"
+		fi
+		;;
+	'start')
+		serviceStart "$servList"
+		;;
+	'stop')
+		serviceStop "$servList"
+		;;
+	esac
+}
+
+# TODO run per extra arguments
+if [ -z "$2" ]; then
+	for servList in "${ServiceArray[@]}"; do
+		serviceCommand $1
+	done
+else
+	for ((i = 2; i <= $#; i++)); do
+		serviceName=$(serviceChoice "${!i}")
+		if [ -z "$serviceName" ]; then
+			echo "Usage: $0 $1 [deluge|jackett|sonarr|radarr|lidarr]"
+		else
+			for servList in $serviceName; do
+				serviceCommand $1
+			done
+		fi
+	done
+fi
+
+#PIDdaemon="$HOME/.config/deluge/deluged.pid"
+#	if [ -f "$PIDdaemon" ]; then
+#		echo "Deluge daemon is running at $(cat $PIDdaemon | awk '{sub(/;.*/,x)}1')"
+#	else
+#		echo "Deluge daemon is not running"
+#	fi

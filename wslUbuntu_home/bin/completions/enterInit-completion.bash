@@ -9,7 +9,7 @@ _enterInit_completions() {
 
 	if [ $COMP_CWORD -eq 1 ]; then
 		COMPREPLY=($(compgen -W "start stop status" -- $cur))
-	elif [ $COMP_CWORD -eq 2 ]; then
+	elif [ $COMP_CWORD -gt 1 ]; then
 		COMPREPLY=($(compgen -W "deluge jackett sonarr radarr lidarr" -- $cur))
 	fi
 
