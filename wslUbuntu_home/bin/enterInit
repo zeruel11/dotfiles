@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ $# -eq 0 ]; then
 	echo -e "\e[31mUsage: $0 [status|start|stop]"

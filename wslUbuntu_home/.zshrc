@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/zeruel/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -12,63 +12,60 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 POWERLEVEL9K_MODE="nerdfont-complete"
 
-#powerlevel9k functions
-function zsh_package_json () {
-    local pkgjson=$(pwd)/package.json
-
-    if [[ -f $pkgjson ]]; then
-	local nodever npmver
-
-	if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NODEVER != 'false' ]]; then
-	    nodever=$(print_icon NODE_ICON)$(node --version)
-	fi
-
-	if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NPMVER != 'false' ]]; then
-	    npmver=$'\uE71E '$(npm --version)
-	fi
-
-	env echo -n $nodever $npmver $pkgver
+# functions
+# This keeps the number of todos always available the right hand side of my
+# command line. I filter it to only count those tagged as "+next", so it's more
+# of a motivation to clear out the list.
+todo_count(){
+  if $(which todo.sh &> /dev/null)
+  then
+    num=$(echo $(todo.sh ls $1 | wc -l))
+    let todos=num-2
+    if [ $todos != 0 ]
+    then
+      echo "$todos"
+    else
+      echo ""
     fi
+  else
+    echo ""
+  fi
 }
-POWERLEVEL9K_CUSTOM_PACKAGE_JSON="zsh_package_json"
-POWERLEVEL9K_CUSTOM_PACKAGE_JSON_BACKGROUND="purple"
 
-function zsh_composer_json () {
-    local comjson=$(pwd)/composer.json
-    local indexp=$(pwd)/index.php
-    if [[ -f $comjson ]] || [[ -f $indexp ]]; then
-	local phpver
+function todo_prompt() {
+  local COUNT=$(todo_count $1);
+  if [ $COUNT != 0 ]; then
+    echo "$1: $COUNT";
+  fi
+}
+POWERLEVEL9K_CUSTOM_NEXT_PROMPT="todo_prompt +next"
 
-	if [[ $POWERLEVEL9K_CUSTOM_COMPOSER_JSON_PHPVER != 'false' ]]; then
-	    phpver=$(php -v 2>&1 | grep -oe "^PHP\s*[0-9.]*")
-	fi
+function notes_count() {
+  if [[ -z $1 ]]; then
+    local NOTES_PATTERN="TODO|FIXME";
+  else
+    local NOTES_PATTERN=$1;
+  fi
+  grep -ERn "\b($NOTES_PATTERN)\b" {app,config,lib,spec,test} 2>/dev/null | wc -l | sed 's/ //g'
+}
 
-	env echo -n $phpver
-
+function notes_prompt() {
+  if [[ $(pwd) == *"code"* ]]; then
+    local COUNT=$(notes_count $1);
+    if [ $COUNT != 0 ]; then
+      echo "$1: $COUNT";
     fi
+  fi
 }
-POWERLEVEL9K_CUSTOM_COMPOSER_JSON="zsh_composer_json"
-POWERLEVEL9K_CUSTOM_COMPOSER_JSON_BACKGROUND="yellow"
+POWERLEVEL9K_CUSTOM_TODO_PROMPT="notes_prompt TODO"
+POWERLEVEL9K_CUSTOM_TODO_PROMPT_BACKGROUND="blue"
+POWERLEVEL9K_CUSTOM_FIXME_PROMPT="notes_prompt FIXME"
+POWERLEVEL9K_CUSTOM_FIXME_PROMPT_BACKGROUND="yellow"
+# POWERLEVEL9K_CUSTOM_HACK_PROMPT="notes_prompt HACK"
+# POWERLEVEL9K_CUSTOM_HACK_PROMPT_BACKGROUND="red"
 
-function zsh_gem_file () {
-    local gemlok=$(pwd)/Gemfile
-    if [[ -f $gemlok ]]; then
-	local rbver
-
-	if [[ $POWERLEVEL9K_CUSTOM_GEM_FILE_RBVER != 'false' ]]; then
-	    rbver=$(print_icon RUBY_ICON)$(rbenv version-name)
-	fi
-
-	env echo -n $rbver
-
-    fi
-}
-POWERLEVEL9K_CUSTOM_GEM_FILE="zsh_gem_file"
-POWERLEVEL9K_CUSTOM_GEM_FILE_BACKGROUND="red"
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv root_indicator context dir pyenv custom_gem_file custom_package_json custom_composer_json vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs load history)
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv pyenv root_indicator context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status custom_next_prompt custom_todo_prompt custom_fixme_prompt background_jobs load battery history)
 
 POWERLEVEL9K_DIR_SHOW_WRITABLE=true
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
@@ -141,13 +138,11 @@ POWERLEVEL9K_VCS_SHORTEN_DELIMITER=".."
 plugins=(
   git
   extract
-  zsh-syntax-highlighting
-  zsh-autosuggestions
   thefuck
-  z
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
-#zstyle :omz:plugins:ssh-agent agent-forwarding on
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -167,19 +162,16 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias wslinit="sudo sh ~/init"
 alias emacs="emacs -nw"
-# alias jupyter-notebook="~/.pyenv/shims/jupyter-notebook --no-browser"
+alias t="todo.sh -a -t -d ~/.todo.cfg"
 
 #set default user
 DEFAULT_USER=zeruel
@@ -193,13 +185,20 @@ autoload -Uz compinit
 compinit
 
 unsetopt BG_NICE
+setopt complete_aliases
 
 # paths
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
-# fnm
-export PATH="$HOME/.fnm:$PATH"
-eval "`fnm env --multi`"
+# completions
+autoload bashcompinit
+bashcompinit
+for file in ~/bin/completions/*-completion.bash; do
+    source "$file"
+done
+compdef t='todo.sh'
+
+# source /home/linuxbrew/.linuxbrew/etc/bash_completion.d/todo_completion
 
 # linuxbrew
 umask 002
@@ -210,15 +209,8 @@ export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# thefuck
-eval $(thefuck --alias)
-
-# rbenv
-eval "$(rbenv init -)"
-
-# pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# fasd
+eval "$(fasd --init auto)"
 
 # yarn
 export PATH="$HOME/.yarn/bin:$PATH"
