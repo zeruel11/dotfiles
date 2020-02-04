@@ -1,1 +1,6 @@
-/home/zeruel11/bin /home/zeruel11/.local/bin /home/zeruel11/.fnm /home/zeruel11/.yarn/bin /home/linuxbrew/.linuxbrew/opt/fzf/bin
+~/bin
+~/.local/bin
+~/.fnm
+~/.yarn/bin
+/home/linuxbrew/.linuxbrew/opt/fzf/bin
+/home/linuxbrew/.linuxbrew/bin

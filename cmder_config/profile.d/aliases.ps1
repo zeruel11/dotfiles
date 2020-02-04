@@ -7,16 +7,34 @@ Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
 
 Set-Alias -name "vim" -value "C:\Program Files\Git\usr\bin\vim.exe"
 
+# function ste {
+#     param(
+#         [parameter(Mandatory=$false)]
+#         [string[]]$TestWrite = $args.split(' ')
+#     )
+#     if ($PSBoundParameters.ContainsKey('TestWrite')) {
+#         $PSBoundParameters
+#     }
+# }
+
 ###scoops
 function sst {
     scoop.ps1 status
 }
 function sup {
-    scoop.ps1 update
+    param(
+        [parameter(Mandatory=$false)]
+        [string[]]$AppName = $args
+    )
+    if ($PSBoundParameters.ContainsKey('AppName')) {
+        foreach ($i in $AppName){
+            scoop.ps1 update $i
+        }
+    } else {
+        scoop.ps1 update
+    }
 }
-function s8 {
-    scoop.ps1 update *
-}
+
 function ss {
     scoop.ps1 search $args[0]
 }

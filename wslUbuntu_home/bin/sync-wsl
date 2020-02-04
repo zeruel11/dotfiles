@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+#wslHome -- Ubuntu sync
+
+maxsize=900000
+baksize=1000000
+# paths
+dotfiles="/c/Users/$USER/dotfiles"
+dirSource="$dotfiles/wslUbuntu_home/"
+dirTarget="$HOME/"
+# preview coloring
+grepSysCol="mt=1;93"
+grepSendCol="mt=1;34"
+grepDelCol="mt=1;31"
+grepUnchCol="mt=1;32"
+grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$'
+grepSendMsg='^(\[sender\]).*|^(\[Receiver\]).*|^(\[generator\]).*|$'
+grepDelMsg='(deleting).*|$'
+grepUnchMsg='.*(uptodate)$|$'
+#logfiles
+runLog="$HOME/logs/sync-wsl.$HOSTNAME.${1^^}.log"
+dryLog="$HOME/logs/sync-wsl.$HOSTNAME.${1^^}.DRY_RUN"
+
+# MAIN logic
+if [ "$1" == 'pull' ]; then
+	rsync -Ccazvvn "$dirSource" "$dirTarget" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	read -p "Confirm $1? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ]; then
+		rsync -Ccaziiv "$dirSource" "$dirTarget" --log-file="$runLog"
+		cp "$runLog" "$dotfiles/.logs/"
+		rm "$dryLog"
+	fi
+elif [ "$1" == 'push' ]; then
+	rsync -Ccazvvn --filter="merge .filter-wsl" --prune-empty-dirs "$dirTarget" "$dirSource" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	read -p "Confirm $1? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ]; then
+		rsync -Ccaziiv --filter="merge .filter-wsl" --prune-empty-dirs "$dirTarget" "$dirSource" --delete --log-file="$runLog"
+		cp "$runLog" "$dotfiles/.logs/"
+		rm "$dryLog"
+	fi
+else
+	echo 'you have to specify pull or push'
+fi
+
+if [ -f "$runLog" ]; then
+	filesize=$(stat -c%s "$runLog")
+	if ((filesize > maxsize)) && ((filesize < baksize)); then
+		echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
+	elif ((filesize > baksize)); then
+		echo -e "\e[34;43mAttention: Log file is 1mb large. Archiving...\e[0m"
+		for i in {1..3}; do
+			if [ ! -f "$runLog.bak$i" ]; then
+				tar -czvf "$runLog.bak$i" "$runLog" --remove-files
+				echo -e "\e[34mLog file archived to $runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
+				break
+			elif [ -f "$runLog.bak1" ] && [ -f "$runLog.bak2" ] && [ -f "$runLog.bak3" ]; then
+				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $runLog.bak$i exists.\e[0m"
+			fi
+		done
+	fi
+fi

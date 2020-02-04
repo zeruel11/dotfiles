@@ -88,7 +88,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -130,6 +130,9 @@ eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 #export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/isl@0.18/lib"
 #export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/isl@0.18/include"
 #export PKG_CONFIG_PATH="/home/linuxbrew/.linuxbrew/opt/isl@0.18/lib/pkgconfig"
+
+# windows OpenSSH
+[ -n ${WSL_AUTH_SOCK} ] && export SSH_AUTH_SOCK=${WSL_AUTH_SOCK}
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

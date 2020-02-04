@@ -122,26 +122,41 @@ if ((Get-Module -ListAvailable DockerCompletion) -ne $null) {
     Write-Warning "DockerCompletion module not found"
 }
 
+#Scoop Completion - check scoop installation
+if (!(Test-Path -Path "$env:SCOOP")) { $env:SCOOP = "$env:USERPROFILE\scoop" }
+#enable scoop completion
+Import-Module "$env:USERPROFILE\.scoopy\modules\scoop-completion"
+
+# PowerShell parameter completion shim for the dotnet CLI 
+Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
+      param($commandName, $wordToComplete, $cursorPosition)
+               dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
+                           [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+               }
+}
+
 # setup win10 OpenSSH
 # workaround for posh-git with win10 OpenSSH
-# if ($env:SSH_AGENT_PID){
-#     Remove-Item env:\SSH_AGENT_PID
-# }
-# if ($env:SSH_AUTH_SOCK){
-#     Remove-Item env:\SSH_AUTH_SOCK
-# }
+if ($env:SSH_AGENT_PID){
+    Remove-Item env:\SSH_AGENT_PID
+}
+if ($env:SSH_AUTH_SOCK){
+    Remove-Item env:\SSH_AUTH_SOCK
+}
 
 # start win10 OpenSSH
-# if (Get-Service -Name ssh-agent -ErrorAction SilentlyContinue | Where-Object {$_.Status -match 'Stopped'}) {
-#     Write-Host Starting ssh-agent...
-#     Start-Service ssh-agent
-#     } else {
-#         Write-Host "SSH-agent service already started"
-#     }
+if ((Get-Service -Name ssh-agent -ErrorAction SilentlyContinue).Status -eq [System.ServiceProcess.ServiceControllerStatus]::Stopped) {
+    Write-Host "Starting ssh-agent..."
+    Start-Service ssh-agent
+    } elseif ((Get-Service -Name ssh-agent -ErrorAction SilentlyContinue).Status -eq [System.ServiceProcess.ServiceControllerStatus]::Running) {
+        Write-Host "SSH-agent service already started"
+    } else {
+        Write-Warning "SSH-agent service is not found or cannot be started. Please check if you have already installed windows OpenSSH or if it is capable of running"
+    }
 
 # start Git for Windows OpenSSH
-Start-SshAgent
-$TestSSHmykey = ssh-add.exe -L
+# Start-SshAgent
+$TestSSHmykey = ssh-add -L
 switch -Wildcard ($TestSSHmykey) {
     ( { -Not ( $TestSSHmykey -Like "*$env:USERPROFILE\.ssh\git_rsa*") }) {
         if (Test-Path -Path "$env:USERPROFILE\.ssh\git_rsa") {
@@ -153,7 +168,7 @@ switch -Wildcard ($TestSSHmykey) {
     }
 
     ( { -Not ($TestSSHmykey -like "*$env:USERNAME\.ssh\iktisrv_rsa*") }) {
-        if (Test-Path -Path "$env:USERPROFILE\.ssh\git_rsa") {
+        if (Test-Path -Path "$env:USERPROFILE\.ssh\iktisrv_rsa") {
             Write-Host "Adding IKTI server keys..."
             Add-SshKey (Resolve-Path ~\.ssh\iktisrv_rsa)
         } else {

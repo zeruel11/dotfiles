@@ -2,7 +2,7 @@
 :: use  in front of the command to prevent printing the command
 
 :: uncomment this to have the ssh agent load when cmder starts
-call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd"
+REM call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd"
 
 :: uncomment this next two lines to use pageant as the ssh authentication agent
 :: SET SSH_AUTH_SOCK=/tmp/.ssh-pageant-auth-sock
@@ -12,6 +12,9 @@ call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd"
 :: set "PATH=%CMDER_ROOT%\vendor\whatever;%PATH%"
 
 @echo off
+
+:: win10 ssh-agent WSL interface
+REM wsl-ssh-agent-gui.exe -setenv -envname=WSL_AUTH_SOCK -lemonade=2489;127.0.0.1/24
 
 :: Setup Git for Windows OpenSSH
 REM ssh-agent.exe

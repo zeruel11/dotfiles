@@ -82,3 +82,428 @@
 2019/07/23 17:46:49 [22296] >f+++++++++ bin/completions/servInit-completion.bash
 2019/07/23 17:46:50 [22296] sent 32,547 bytes  received 568 bytes  22,076.67 bytes/sec
 2019/07/23 17:46:50 [22296] total size is 34,496  speedup is 1.04
+2019/07/23 17:57:44 [24487] building file list
+2019/07/23 17:57:45 [24487] *deleting   .vimrc
+2019/07/23 17:57:45 [24487] .d..t...... ./
+2019/07/23 17:57:45 [24487] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 17:57:45 [24487] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 17:57:45 [24487] cannot delete non-empty directory: .config/yarn
+2019/07/23 17:57:45 [24487] >fcstp..... .bashrc
+2019/07/23 17:57:45 [24487] >fcstp..... .gitconfig
+2019/07/23 17:57:45 [24487] >f+++++++++ .myclirc
+2019/07/23 17:57:45 [24487] .f          .netrc
+2019/07/23 17:57:45 [24487] .f          .vuerc
+2019/07/23 17:57:45 [24487] >fcstp..... .yarnrc
+2019/07/23 17:57:45 [24487] >fcstp..... .zshrc
+2019/07/23 17:57:45 [24487] .f          brew_install.txt
+2019/07/23 17:57:45 [24487] .f          drvins_chrome.sh
+2019/07/23 17:57:45 [24487] >fcstp..... fish_user_paths.txt
+2019/07/23 17:57:45 [24487] .d          .aria2/
+2019/07/23 17:57:45 [24487] .f          .aria2/aria2.conf
+2019/07/23 17:57:45 [24487] .d          .aws/
+2019/07/23 17:57:45 [24487] .f          .aws/config
+2019/07/23 17:57:45 [24487] .f          .aws/credentials
+2019/07/23 17:57:45 [24487] .d..t...... .config/
+2019/07/23 17:57:45 [24487] .d..t...... .config/fish/
+2019/07/23 17:57:45 [24487] cd+++++++++ .config/fish/completions/
+2019/07/23 17:57:45 [24487] >f+++++++++ .config/fish/completions/enterInit.fish
+2019/07/23 17:57:45 [24487] cd+++++++++ .config/rsync/
+2019/07/23 17:57:45 [24487] >f+++++++++ .config/rsync/rsyncd.conf
+2019/07/23 17:57:45 [24487] >f+++++++++ .config/rsync/secrets
+2019/07/23 17:57:45 [24487] cd+++++++++ .dircolors/
+2019/07/23 17:57:45 [24487] >f+++++++++ .dircolors/dircolors.256dark
+2019/07/23 17:57:45 [24487] cd+++++++++ .todo/
+2019/07/23 17:57:45 [24487] >f+++++++++ .todo/done.txt
+2019/07/23 17:57:45 [24487] >f+++++++++ .todo/report.txt
+2019/07/23 17:57:45 [24487] >f+++++++++ .todo/todo.txt
+2019/07/23 17:57:45 [24487] >f+++++++++ .todo/todo.txt.bak
+2019/07/23 17:57:45 [24487] cd+++++++++ bin/
+2019/07/23 17:57:45 [24487] >f+++++++++ bin/enterInit
+2019/07/23 17:57:45 [24487] >f+++++++++ bin/servInit
+2019/07/23 17:57:45 [24487] cd+++++++++ bin/completions/
+2019/07/23 17:57:45 [24487] >f+++++++++ bin/completions/enterInit-completion.bash
+2019/07/23 17:57:45 [24487] >f+++++++++ bin/completions/servInit-completion.bash
+2019/07/23 17:57:45 [24487] sent 35,071 bytes  received 610 bytes  23,787.33 bytes/sec
+2019/07/23 17:57:45 [24487] total size is 34,496  speedup is 0.97
+2019/07/23 17:58:41 [25063] building file list
+2019/07/23 17:58:41 [25063] .d..t...... ./
+2019/07/23 17:58:41 [25063] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 17:58:41 [25063] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 17:58:41 [25063] cannot delete non-empty directory: .config/yarn
+2019/07/23 17:58:41 [25063] >fcstp..... .bashrc
+2019/07/23 17:58:41 [25063] >fcstp..... .gitconfig
+2019/07/23 17:58:41 [25063] >f+++++++++ .myclirc
+2019/07/23 17:58:41 [25063] .f          .netrc
+2019/07/23 17:58:41 [25063] .f..t...... .vimrc
+2019/07/23 17:58:41 [25063] .f          .vuerc
+2019/07/23 17:58:41 [25063] >fcstp..... .yarnrc
+2019/07/23 17:58:41 [25063] >fcstp..... .zshrc
+2019/07/23 17:58:41 [25063] .f          brew_install.txt
+2019/07/23 17:58:41 [25063] .f          drvins_chrome.sh
+2019/07/23 17:58:41 [25063] >fcstp..... fish_user_paths.txt
+2019/07/23 17:58:41 [25063] .d          .aria2/
+2019/07/23 17:58:41 [25063] .f          .aria2/aria2.conf
+2019/07/23 17:58:41 [25063] .d          .aws/
+2019/07/23 17:58:41 [25063] .f          .aws/config
+2019/07/23 17:58:41 [25063] .f          .aws/credentials
+2019/07/23 17:58:41 [25063] .d..t...... .config/
+2019/07/23 17:58:41 [25063] .d..t...... .config/fish/
+2019/07/23 17:58:41 [25063] cd+++++++++ .config/fish/completions/
+2019/07/23 17:58:41 [25063] >f+++++++++ .config/fish/completions/enterInit.fish
+2019/07/23 17:58:41 [25063] cd+++++++++ .config/rsync/
+2019/07/23 17:58:41 [25063] >f+++++++++ .config/rsync/rsyncd.conf
+2019/07/23 17:58:41 [25063] >f+++++++++ .config/rsync/secrets
+2019/07/23 17:58:41 [25063] cd+++++++++ .dircolors/
+2019/07/23 17:58:41 [25063] >f+++++++++ .dircolors/dircolors.256dark
+2019/07/23 17:58:41 [25063] cd+++++++++ .todo/
+2019/07/23 17:58:41 [25063] >f+++++++++ .todo/done.txt
+2019/07/23 17:58:41 [25063] >f+++++++++ .todo/report.txt
+2019/07/23 17:58:41 [25063] >f+++++++++ .todo/todo.txt
+2019/07/23 17:58:41 [25063] >f+++++++++ .todo/todo.txt.bak
+2019/07/23 17:58:41 [25063] cd+++++++++ bin/
+2019/07/23 17:58:41 [25063] >f+++++++++ bin/enterInit
+2019/07/23 17:58:41 [25063] >f+++++++++ bin/servInit
+2019/07/23 17:58:41 [25063] cd+++++++++ bin/completions/
+2019/07/23 17:58:41 [25063] >f+++++++++ bin/completions/enterInit-completion.bash
+2019/07/23 17:58:41 [25063] >f+++++++++ bin/completions/servInit-completion.bash
+2019/07/23 17:58:41 [25063] sent 35,115 bytes  received 603 bytes  71,436.00 bytes/sec
+2019/07/23 17:58:41 [25063] total size is 35,911  speedup is 1.01
+2019/07/23 17:59:32 [25353] building file list
+2019/07/23 17:59:32 [25353] .d..t...... ./
+2019/07/23 17:59:32 [25353] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 17:59:32 [25353] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 17:59:32 [25353] cannot delete non-empty directory: .config/yarn
+2019/07/23 17:59:32 [25353] >fcstp..... .bashrc
+2019/07/23 17:59:32 [25353] >fcstp..... .gitconfig
+2019/07/23 17:59:32 [25353] >f+++++++++ .myclirc
+2019/07/23 17:59:32 [25353] .f          .netrc
+2019/07/23 17:59:32 [25353] .f          .vimrc
+2019/07/23 17:59:32 [25353] .f          .vuerc
+2019/07/23 17:59:32 [25353] >fcstp..... .yarnrc
+2019/07/23 17:59:32 [25353] >fcstp..... .zshrc
+2019/07/23 17:59:32 [25353] .f          brew_install.txt
+2019/07/23 17:59:32 [25353] .f          drvins_chrome.sh
+2019/07/23 17:59:32 [25353] >fcstp..... fish_user_paths.txt
+2019/07/23 17:59:32 [25353] .d          .aria2/
+2019/07/23 17:59:32 [25353] .f          .aria2/aria2.conf
+2019/07/23 17:59:32 [25353] .d          .aws/
+2019/07/23 17:59:32 [25353] .f          .aws/config
+2019/07/23 17:59:32 [25353] .f          .aws/credentials
+2019/07/23 17:59:32 [25353] .d..t...... .config/
+2019/07/23 17:59:32 [25353] .d..t...... .config/fish/
+2019/07/23 17:59:32 [25353] cd+++++++++ .config/fish/completions/
+2019/07/23 17:59:32 [25353] >f+++++++++ .config/fish/completions/enterInit.fish
+2019/07/23 17:59:32 [25353] cd+++++++++ .config/rsync/
+2019/07/23 17:59:32 [25353] >f+++++++++ .config/rsync/rsyncd.conf
+2019/07/23 17:59:32 [25353] >f+++++++++ .config/rsync/secrets
+2019/07/23 17:59:32 [25353] cd+++++++++ .dircolors/
+2019/07/23 17:59:32 [25353] >f+++++++++ .dircolors/dircolors.256dark
+2019/07/23 17:59:32 [25353] cd+++++++++ .todo/
+2019/07/23 17:59:32 [25353] >f+++++++++ .todo/done.txt
+2019/07/23 17:59:32 [25353] >f+++++++++ .todo/report.txt
+2019/07/23 17:59:32 [25353] >f+++++++++ .todo/todo.txt
+2019/07/23 17:59:32 [25353] >f+++++++++ .todo/todo.txt.bak
+2019/07/23 17:59:32 [25353] cd+++++++++ bin/
+2019/07/23 17:59:32 [25353] >f+++++++++ bin/enterInit
+2019/07/23 17:59:32 [25353] >f+++++++++ bin/servInit
+2019/07/23 17:59:32 [25353] cd+++++++++ bin/completions/
+2019/07/23 17:59:32 [25353] >f+++++++++ bin/completions/enterInit-completion.bash
+2019/07/23 17:59:33 [25353] >f+++++++++ bin/completions/servInit-completion.bash
+2019/07/23 17:59:33 [25353] sent 35,115 bytes  received 603 bytes  23,812.00 bytes/sec
+2019/07/23 17:59:33 [25353] total size is 35,911  speedup is 1.01
+2019/07/23 18:04:15 [25786] building file list
+2019/07/23 18:04:15 [25786] .d..t...... ./
+2019/07/23 18:04:15 [25786] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 18:04:15 [25786] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 18:04:15 [25786] cannot delete non-empty directory: .config/yarn
+2019/07/23 18:04:15 [25786] .f          .bashrc
+2019/07/23 18:04:15 [25786] .f          .gitconfig
+2019/07/23 18:04:15 [25786] .f          .myclirc
+2019/07/23 18:04:15 [25786] .f          .netrc
+2019/07/23 18:04:15 [25786] .f          .vimrc
+2019/07/23 18:04:15 [25786] .f          .vuerc
+2019/07/23 18:04:15 [25786] .f          .yarnrc
+2019/07/23 18:04:15 [25786] .f          .zshrc
+2019/07/23 18:04:15 [25786] .f          brew_install.txt
+2019/07/23 18:04:15 [25786] .f          drvins_chrome.sh
+2019/07/23 18:04:15 [25786] .f          fish_user_paths.txt
+2019/07/23 18:04:15 [25786] .d          .aria2/
+2019/07/23 18:04:15 [25786] .f          .aria2/aria2.conf
+2019/07/23 18:04:15 [25786] .d          .aws/
+2019/07/23 18:04:15 [25786] .f          .aws/config
+2019/07/23 18:04:15 [25786] .f          .aws/credentials
+2019/07/23 18:04:15 [25786] .d          .config/
+2019/07/23 18:04:15 [25786] .d          .config/fish/
+2019/07/23 18:04:15 [25786] .d          .config/fish/completions/
+2019/07/23 18:04:15 [25786] .f          .config/fish/completions/enterInit.fish
+2019/07/23 18:04:15 [25786] .d          .config/rsync/
+2019/07/23 18:04:15 [25786] .f          .config/rsync/rsyncd.conf
+2019/07/23 18:04:15 [25786] .f          .config/rsync/secrets
+2019/07/23 18:04:15 [25786] .d          .dircolors/
+2019/07/23 18:04:15 [25786] .f          .dircolors/dircolors.256dark
+2019/07/23 18:04:15 [25786] .d..t...... .todo/
+2019/07/23 18:04:15 [25786] .f          .todo/done.txt
+2019/07/23 18:04:15 [25786] .f          .todo/report.txt
+2019/07/23 18:04:15 [25786] .f          .todo/todo.txt
+2019/07/23 18:04:15 [25786] >f+++++++++ .todo/todo.txt.bak
+2019/07/23 18:04:15 [25786] .d          bin/
+2019/07/23 18:04:15 [25786] .f          bin/enterInit
+2019/07/23 18:04:15 [25786] .f          bin/servInit
+2019/07/23 18:04:15 [25786] .d          bin/completions/
+2019/07/23 18:04:15 [25786] .f          bin/completions/enterInit-completion.bash
+2019/07/23 18:04:15 [25786] .f          bin/completions/servInit-completion.bash
+2019/07/23 18:04:15 [25786] sent 21,734 bytes  received 331 bytes  44,130.00 bytes/sec
+2019/07/23 18:04:15 [25786] total size is 35,911  speedup is 1.63
+2019/07/23 18:05:14 [26074] building file list
+2019/07/23 18:05:14 [26074] .d..t...... ./
+2019/07/23 18:05:14 [26074] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 18:05:14 [26074] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 18:05:14 [26074] cannot delete non-empty directory: .config/yarn
+2019/07/23 18:05:14 [26074] .f          .bashrc
+2019/07/23 18:05:14 [26074] .f          .gitconfig
+2019/07/23 18:05:14 [26074] .f          .myclirc
+2019/07/23 18:05:14 [26074] .f          .netrc
+2019/07/23 18:05:14 [26074] .f          .vimrc
+2019/07/23 18:05:14 [26074] .f          .vuerc
+2019/07/23 18:05:14 [26074] .f          .yarnrc
+2019/07/23 18:05:14 [26074] .f          .zshrc
+2019/07/23 18:05:14 [26074] .f          brew_install.txt
+2019/07/23 18:05:14 [26074] .f          drvins_chrome.sh
+2019/07/23 18:05:14 [26074] .f          fish_user_paths.txt
+2019/07/23 18:05:14 [26074] .d          .aria2/
+2019/07/23 18:05:14 [26074] .f          .aria2/aria2.conf
+2019/07/23 18:05:14 [26074] .d          .aws/
+2019/07/23 18:05:14 [26074] .f          .aws/config
+2019/07/23 18:05:14 [26074] .f          .aws/credentials
+2019/07/23 18:05:14 [26074] .d          .config/
+2019/07/23 18:05:14 [26074] .d          .config/fish/
+2019/07/23 18:05:14 [26074] .d          .config/fish/completions/
+2019/07/23 18:05:14 [26074] .f          .config/fish/completions/enterInit.fish
+2019/07/23 18:05:14 [26074] .d          .config/rsync/
+2019/07/23 18:05:14 [26074] .f          .config/rsync/rsyncd.conf
+2019/07/23 18:05:14 [26074] .f          .config/rsync/secrets
+2019/07/23 18:05:14 [26074] .d          .dircolors/
+2019/07/23 18:05:14 [26074] .f          .dircolors/dircolors.256dark
+2019/07/23 18:05:14 [26074] .d..t...... .todo/
+2019/07/23 18:05:14 [26074] .f          .todo/done.txt
+2019/07/23 18:05:14 [26074] .f          .todo/report.txt
+2019/07/23 18:05:14 [26074] .f          .todo/todo.txt
+2019/07/23 18:05:14 [26074] .d          bin/
+2019/07/23 18:05:14 [26074] .f          bin/enterInit
+2019/07/23 18:05:14 [26074] .f          bin/servInit
+2019/07/23 18:05:14 [26074] .d          bin/completions/
+2019/07/23 18:05:14 [26074] .f          bin/completions/enterInit-completion.bash
+2019/07/23 18:05:14 [26074] .f          bin/completions/servInit-completion.bash
+2019/07/23 18:05:14 [26074] sent 21,585 bytes  received 312 bytes  43,794.00 bytes/sec
+2019/07/23 18:05:14 [26074] total size is 35,812  speedup is 1.64
+2019/07/23 18:12:10 [29430] building file list
+2019/07/23 18:12:10 [29430] .d..t...... ./
+2019/07/23 18:12:10 [29430] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 18:12:10 [29430] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 18:12:10 [29430] cannot delete non-empty directory: .config/yarn
+2019/07/23 18:12:10 [29430] .f          .bashrc
+2019/07/23 18:12:10 [29430] .f          .gitconfig
+2019/07/23 18:12:10 [29430] .f          .myclirc
+2019/07/23 18:12:10 [29430] .f          .netrc
+2019/07/23 18:12:10 [29430] >f+++++++++ .vimrc
+2019/07/23 18:12:10 [29430] .f          .vuerc
+2019/07/23 18:12:10 [29430] .f          .yarnrc
+2019/07/23 18:12:10 [29430] .f          .zshrc
+2019/07/23 18:12:10 [29430] .f          brew_install.txt
+2019/07/23 18:12:10 [29430] .f          drvins_chrome.sh
+2019/07/23 18:12:10 [29430] .f          fish_user_paths.txt
+2019/07/23 18:12:10 [29430] .d          .aria2/
+2019/07/23 18:12:10 [29430] .f          .aria2/aria2.conf
+2019/07/23 18:12:10 [29430] .d          .aws/
+2019/07/23 18:12:10 [29430] .f          .aws/config
+2019/07/23 18:12:10 [29430] .f          .aws/credentials
+2019/07/23 18:12:10 [29430] .d          .config/
+2019/07/23 18:12:10 [29430] .d..t...... .config/fish/
+2019/07/23 18:12:10 [29430] .d          .config/fish/completions/
+2019/07/23 18:12:10 [29430] .f          .config/fish/completions/enterInit.fish
+2019/07/23 18:12:10 [29430] .d          .config/rsync/
+2019/07/23 18:12:10 [29430] .f          .config/rsync/rsyncd.conf
+2019/07/23 18:12:10 [29430] .f          .config/rsync/secrets
+2019/07/23 18:12:10 [29430] .d          .dircolors/
+2019/07/23 18:12:10 [29430] .f          .dircolors/dircolors.256dark
+2019/07/23 18:12:10 [29430] .d..t...... .todo/
+2019/07/23 18:12:10 [29430] .f          .todo/done.txt
+2019/07/23 18:12:10 [29430] .f          .todo/report.txt
+2019/07/23 18:12:10 [29430] .f          .todo/todo.txt
+2019/07/23 18:12:10 [29430] .d..t...... bin/
+2019/07/23 18:12:10 [29430] .f          bin/enterInit
+2019/07/23 18:12:10 [29430] .f          bin/servInit
+2019/07/23 18:12:10 [29430] >f+++++++++ bin/sync-wsl
+2019/07/23 18:12:10 [29430] .d          bin/completions/
+2019/07/23 18:12:10 [29430] .f          bin/completions/enterInit-completion.bash
+2019/07/23 18:12:10 [29430] .f          bin/completions/servInit-completion.bash
+2019/07/23 18:12:10 [29430] sent 23,362 bytes  received 347 bytes  47,418.00 bytes/sec
+2019/07/23 18:12:10 [29430] total size is 38,232  speedup is 1.61
+2019/07/23 18:22:44 [32687] building file list
+2019/07/23 18:22:44 [32687] .d..t...... ./
+2019/07/23 18:22:44 [32687] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 18:22:44 [32687] cannot delete non-empty directory: .config/yarn/global
+2019/07/23 18:22:44 [32687] cannot delete non-empty directory: .config/yarn
+2019/07/23 18:22:44 [32687] .f          .bashrc
+2019/07/23 18:22:44 [32687] >f+++++++++ .filter-wsl
+2019/07/23 18:22:44 [32687] .f          .gitconfig
+2019/07/23 18:22:44 [32687] .f          .myclirc
+2019/07/23 18:22:44 [32687] .f          .netrc
+2019/07/23 18:22:44 [32687] >fcst...... .vimrc
+2019/07/23 18:22:44 [32687] .f          .vuerc
+2019/07/23 18:22:44 [32687] .f          .yarnrc
+2019/07/23 18:22:44 [32687] .f          .zshrc
+2019/07/23 18:22:44 [32687] .f          brew_install.txt
+2019/07/23 18:22:44 [32687] .f          drvins_chrome.sh
+2019/07/23 18:22:44 [32687] .f          fish_user_paths.txt
+2019/07/23 18:22:44 [32687] .d          .aria2/
+2019/07/23 18:22:44 [32687] .f          .aria2/aria2.conf
+2019/07/23 18:22:44 [32687] .d          .aws/
+2019/07/23 18:22:44 [32687] .f          .aws/config
+2019/07/23 18:22:44 [32687] .f          .aws/credentials
+2019/07/23 18:22:44 [32687] .d          .config/
+2019/07/23 18:22:44 [32687] .d..t...... .config/fish/
+2019/07/23 18:22:44 [32687] .d          .config/fish/completions/
+2019/07/23 18:22:44 [32687] .f          .config/fish/completions/enterInit.fish
+2019/07/23 18:22:44 [32687] .d          .config/rsync/
+2019/07/23 18:22:44 [32687] .f          .config/rsync/rsyncd.conf
+2019/07/23 18:22:44 [32687] .f          .config/rsync/secrets
+2019/07/23 18:22:45 [32687] .d          .dircolors/
+2019/07/23 18:22:45 [32687] .f          .dircolors/dircolors.256dark
+2019/07/23 18:22:45 [32687] .d..t...... .todo/
+2019/07/23 18:22:45 [32687] .f          .todo/done.txt
+2019/07/23 18:22:45 [32687] .f          .todo/report.txt
+2019/07/23 18:22:45 [32687] .f          .todo/todo.txt
+2019/07/23 18:22:45 [32687] .d..t...... bin/
+2019/07/23 18:22:45 [32687] .f          bin/enterInit
+2019/07/23 18:22:45 [32687] .f          bin/servInit
+2019/07/23 18:22:45 [32687] >f+++++++++ bin/sync-wsl
+2019/07/23 18:22:45 [32687] .d          bin/completions/
+2019/07/23 18:22:45 [32687] .f          bin/completions/enterInit-completion.bash
+2019/07/23 18:22:45 [32687] .f          bin/completions/servInit-completion.bash
+2019/07/23 18:22:45 [32687] sent 23,634 bytes  received 366 bytes  16,000.00 bytes/sec
+2019/07/23 18:22:45 [32687] total size is 38,568  speedup is 1.61
+2019/07/23 18:28:54 [1205] building file list
+2019/07/23 18:28:54 [1205] .d..t...... ./
+2019/07/23 18:28:54 [1205] .f          .bashrc
+2019/07/23 18:28:54 [1205] >fcst...... .filter-wsl
+2019/07/23 18:28:54 [1205] .f          .gitconfig
+2019/07/23 18:28:54 [1205] .f          .myclirc
+2019/07/23 18:28:54 [1205] .f          .netrc
+2019/07/23 18:28:54 [1205] .f          .vimrc
+2019/07/23 18:28:54 [1205] .f          .vuerc
+2019/07/23 18:28:54 [1205] .f          .yarnrc
+2019/07/23 18:28:54 [1205] .f          .zshrc
+2019/07/23 18:28:54 [1205] .f          brew_install.txt
+2019/07/23 18:28:54 [1205] .f          drvins_chrome.sh
+2019/07/23 18:28:54 [1205] .f          fish_user_paths.txt
+2019/07/23 18:28:54 [1205] .d          .aria2/
+2019/07/23 18:28:54 [1205] .f          .aria2/aria2.conf
+2019/07/23 18:28:54 [1205] .d          .aws/
+2019/07/23 18:28:54 [1205] .f          .aws/config
+2019/07/23 18:28:54 [1205] .f          .aws/credentials
+2019/07/23 18:28:54 [1205] .d          .config/
+2019/07/23 18:28:54 [1205] .d          .config/fish/
+2019/07/23 18:28:54 [1205] .d          .config/fish/completions/
+2019/07/23 18:28:54 [1205] .f          .config/fish/completions/enterInit.fish
+2019/07/23 18:28:54 [1205] .d          .config/rsync/
+2019/07/23 18:28:54 [1205] .f          .config/rsync/rsyncd.conf
+2019/07/23 18:28:54 [1205] .f          .config/rsync/secrets
+2019/07/23 18:28:54 [1205] .d          .dircolors/
+2019/07/23 18:28:54 [1205] .f          .dircolors/dircolors.256dark
+2019/07/23 18:28:54 [1205] .d          .todo/
+2019/07/23 18:28:54 [1205] .f          .todo/done.txt
+2019/07/23 18:28:54 [1205] .f          .todo/report.txt
+2019/07/23 18:28:54 [1205] .f          .todo/todo.txt
+2019/07/23 18:28:54 [1205] .d          bin/
+2019/07/23 18:28:54 [1205] .f          bin/enterInit
+2019/07/23 18:28:54 [1205] .f          bin/servInit
+2019/07/23 18:28:54 [1205] .f          bin/sync-wsl
+2019/07/23 18:28:54 [1205] .d          bin/completions/
+2019/07/23 18:28:54 [1205] .f          bin/completions/enterInit-completion.bash
+2019/07/23 18:28:54 [1205] .f          bin/completions/servInit-completion.bash
+2019/07/23 18:28:54 [1205] sent 1,926 bytes  received 146 bytes  4,144.00 bytes/sec
+2019/07/23 18:28:54 [1205] total size is 38,613  speedup is 18.64
+2020/02/03 19:38:13 [21636] building file list
+2020/02/03 19:38:13 [21636] .d..t...... ./
+2020/02/03 19:38:13 [21636] >fcst...... .bashrc
+2020/02/03 19:38:13 [21636] .f..t...... .filter-wsl
+2020/02/03 19:38:13 [21636] .f          .gitconfig
+2020/02/03 19:38:13 [21636] .f          .myclirc
+2020/02/03 19:38:13 [21636] .f          .netrc
+2020/02/03 19:38:13 [21636] .f..t...... .vimrc
+2020/02/03 19:38:13 [21636] .f          .vuerc
+2020/02/03 19:38:13 [21636] .f          .yarnrc
+2020/02/03 19:38:13 [21636] .f          .zshrc
+2020/02/03 19:38:13 [21636] .f          brew_install.txt
+2020/02/03 19:38:13 [21636] .f          drvins_chrome.sh
+2020/02/03 19:38:13 [21636] .f          fish_user_paths.txt
+2020/02/03 19:38:13 [21636] .d          .aria2/
+2020/02/03 19:38:13 [21636] .f          .aria2/aria2.conf
+2020/02/03 19:38:13 [21636] .d          .aws/
+2020/02/03 19:38:13 [21636] .f          .aws/config
+2020/02/03 19:38:13 [21636] .f          .aws/credentials
+2020/02/03 19:38:13 [21636] .d..t...... .config/
+2020/02/03 19:38:13 [21636] .d..t...... .config/fish/
+2020/02/03 19:38:13 [21636] .d          .config/fish/completions/
+2020/02/03 19:38:13 [21636] .f          .config/fish/completions/enterInit.fish
+2020/02/03 19:38:13 [21636] .d          .config/rsync/
+2020/02/03 19:38:13 [21636] .f          .config/rsync/rsyncd.conf
+2020/02/03 19:38:13 [21636] .f          .config/rsync/secrets
+2020/02/03 19:38:13 [21636] .d          .dircolors/
+2020/02/03 19:38:13 [21636] .f          .dircolors/dircolors.256dark
+2020/02/03 19:38:13 [21636] .d..t...... .todo/
+2020/02/03 19:38:13 [21636] .f          .todo/done.txt
+2020/02/03 19:38:13 [21636] .f          .todo/report.txt
+2020/02/03 19:38:13 [21636] .f          .todo/todo.txt
+2020/02/03 19:38:13 [21636] .d..t...... bin/
+2020/02/03 19:38:13 [21636] .f          bin/enterInit
+2020/02/03 19:38:13 [21636] .f          bin/servInit
+2020/02/03 19:38:13 [21636] .f..t...... bin/sync-wsl
+2020/02/03 19:38:13 [21636] .d          bin/completions/
+2020/02/03 19:38:13 [21636] .f          bin/completions/enterInit-completion.bash
+2020/02/03 19:38:13 [21636] .f          bin/completions/servInit-completion.bash
+2020/02/03 19:38:13 [21636] sent 4,590 bytes  received 146 bytes  9,472.00 bytes/sec
+2020/02/03 19:38:13 [21636] total size is 38,698  speedup is 8.17
+2020/02/03 19:48:23 [22920] building file list
+2020/02/03 19:48:24 [22920] .d..t...... ./
+2020/02/03 19:48:24 [22920] .f          .bashrc
+2020/02/03 19:48:24 [22920] >fcst...... .filter-wsl
+2020/02/03 19:48:24 [22920] .f          .gitconfig
+2020/02/03 19:48:24 [22920] .f          .myclirc
+2020/02/03 19:48:24 [22920] .f          .netrc
+2020/02/03 19:48:24 [22920] .f          .vimrc
+2020/02/03 19:48:24 [22920] .f          .vuerc
+2020/02/03 19:48:24 [22920] .f          .yarnrc
+2020/02/03 19:48:24 [22920] .f          .zshrc
+2020/02/03 19:48:24 [22920] .f          brew_install.txt
+2020/02/03 19:48:24 [22920] .f          drvins_chrome.sh
+2020/02/03 19:48:24 [22920] .f          fish_user_paths.txt
+2020/02/03 19:48:24 [22920] .d          .aria2/
+2020/02/03 19:48:24 [22920] .f          .aria2/aria2.conf
+2020/02/03 19:48:24 [22920] .d          .aws/
+2020/02/03 19:48:24 [22920] .f          .aws/config
+2020/02/03 19:48:24 [22920] .f          .aws/credentials
+2020/02/03 19:48:24 [22920] .d          .config/
+2020/02/03 19:48:24 [22920] .d          .config/fish/
+2020/02/03 19:48:24 [22920] >fcstp..... .config/fish/config.fish
+2020/02/03 19:48:24 [22920] .d          .config/fish/completions/
+2020/02/03 19:48:24 [22920] .f          .config/fish/completions/enterInit.fish
+2020/02/03 19:48:24 [22920] .d          .config/rsync/
+2020/02/03 19:48:24 [22920] .f          .config/rsync/rsyncd.conf
+2020/02/03 19:48:24 [22920] .f          .config/rsync/secrets
+2020/02/03 19:48:24 [22920] .d          .dircolors/
+2020/02/03 19:48:24 [22920] .f          .dircolors/dircolors.256dark
+2020/02/03 19:48:24 [22920] .d          .todo/
+2020/02/03 19:48:24 [22920] .f          .todo/done.txt
+2020/02/03 19:48:24 [22920] .f          .todo/report.txt
+2020/02/03 19:48:24 [22920] .f          .todo/todo.txt
+2020/02/03 19:48:24 [22920] .d          bin/
+2020/02/03 19:48:24 [22920] .f          bin/enterInit
+2020/02/03 19:48:24 [22920] .f          bin/servInit
+2020/02/03 19:48:24 [22920] .f          bin/sync-wsl
+2020/02/03 19:48:24 [22920] .d          bin/completions/
+2020/02/03 19:48:24 [22920] .f          bin/completions/enterInit-completion.bash
+2020/02/03 19:48:24 [22920] .f          bin/completions/servInit-completion.bash
+2020/02/03 19:48:24 [22920] sent 2,474 bytes  received 165 bytes  1,759.33 bytes/sec
+2020/02/03 19:48:24 [22920] total size is 39,607  speedup is 15.01
