@@ -123,3 +123,17 @@
 2019/06/02 13:17:19 [1191] .f          profile.d/paths.ps1
 2019/06/02 13:17:20 [1191] sent 9,018 bytes  received 70 bytes  18,176.00 bytes/sec
 2019/06/02 13:17:20 [1191] total size is 86,181  speedup is 9.48
+2020/02/09 06:28:25 [1183] building file list
+2020/02/09 06:28:25 [1183] .d..t...... ./
+2020/02/09 06:28:25 [1183] .f          settings
+2020/02/09 06:28:25 [1183] >fcst...... user-ConEmu.xml
+2020/02/09 06:28:25 [1183] >fcst...... user_aliases.cmd
+2020/02/09 06:28:25 [1183] >fcst...... user_profile.cmd
+2020/02/09 06:28:25 [1183] >fcst...... user_profile.ps1
+2020/02/09 06:28:25 [1183] >fcst...... user_profile.sh
+2020/02/09 06:28:25 [1183] .d..t...... profile.d/
+2020/02/09 06:28:25 [1183] >fcst...... profile.d/aliases.ps1
+2020/02/09 06:28:25 [1183] .f..t...... profile.d/aliases.sh
+2020/02/09 06:28:25 [1183] .f          profile.d/paths.ps1
+2020/02/09 06:28:25 [1183] sent 15,291 bytes  received 150 bytes  30,882.00 bytes/sec
+2020/02/09 06:28:25 [1183] total size is 87,331  speedup is 5.66
