@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-05-30 19:59:18" build="180626">
-			<value name="ColorTable00" type="dword" data="00303030"/>
-			<value name="ColorTable01" type="dword" data="00ff5b1f"/>
-			<value name="ColorTable02" type="dword" data="0000ffaf"/>
-			<value name="ColorTable03" type="dword" data="00ffff87"/>
-			<value name="ColorTable04" type="dword" data="002929ef"/>
-			<value name="ColorTable05" type="dword" data="00ff8ad1"/>
-			<value name="ColorTable06" type="dword" data="000087ff"/>
-			<value name="ColorTable07" type="dword" data="00c6c6c6"/>
-			<value name="ColorTable08" type="dword" data="00b2b2b2"/>
-			<value name="ColorTable09" type="dword" data="00d7af5f"/>
-			<value name="ColorTable10" type="dword" data="0000dba1"/>
-			<value name="ColorTable11" type="dword" data="00afd700"/>
-			<value name="ColorTable12" type="dword" data="004b4bff"/>
-			<value name="ColorTable13" type="dword" data="00a34eff"/>
-			<value name="ColorTable14" type="dword" data="004fe9fc"/>
-			<value name="ColorTable15" type="dword" data="00e7fdfd"/>
+		<key name=".Vanilla" modified="2020-02-08 00:34:29" build="180626">
+			<value name="ColorTable00" type="dword" data="003b302b"/>
+			<value name="ColorTable01" type="dword" data="00b3a18f"/>
+			<value name="ColorTable02" type="dword" data="008cbea3"/>
+			<value name="ColorTable03" type="dword" data="008cbea3"/>
+			<value name="ColorTable04" type="dword" data="006a61bf"/>
+			<value name="ColorTable05" type="dword" data="00ad8eb4"/>
+			<value name="ColorTable06" type="dword" data="007087d0"/>
+			<value name="ColorTable07" type="dword" data="00cec5c0"/>
+			<value name="ColorTable08" type="dword" data="007e7365"/>
+			<value name="ColorTable09" type="dword" data="00b3a18f"/>
+			<value name="ColorTable10" type="dword" data="008cbea3"/>
+			<value name="ColorTable11" type="dword" data="00b3a18f"/>
+			<value name="ColorTable12" type="dword" data="006a61bf"/>
+			<value name="ColorTable13" type="dword" data="006a61bf"/>
+			<value name="ColorTable14" type="dword" data="008bcbeb"/>
+			<value name="ColorTable15" type="dword" data="007087d0"/>
 			<value name="ColorTable16" type="dword" data="00222827"/>
 			<value name="ColorTable17" type="dword" data="009e5401"/>
 			<value name="ColorTable18" type="dword" data="0004aa74"/>
@@ -50,7 +50,7 @@
 			<value name="ClipboardBashMargin" type="hex" data="00"/>
 			<value name="ClipboardTrimTrailing" type="hex" data="02"/>
 			<value name="ClipboardEOL" type="hex" data="00"/>
-			<value name="ClipboardArrowStart" type="hex" data="00"/>
+			<value name="ClipboardArrowStart" type="hex" data="01"/>
 			<value name="ClipboardAllLines" type="hex" data="01"/>
 			<value name="ClipboardFirstLine" type="hex" data="01"/>
 			<value name="ClipboardClickPromptPosition" type="hex" data="00"/>
@@ -87,7 +87,7 @@
 			<value name="Multi.CloseEditViewConfirm" type="hex" data="00"/>
 			<value name="Multi.NewConfirm" type="hex" data="01"/>
 			<value name="Multi.UseArrows" type="hex" data="00"/>
-			<value name="Multi.UseNumbers" type="hex" data="01"/>
+			<value name="Multi.UseNumbers" type="hex" data="00"/>
 			<value name="Multi.UseWinTab" type="hex" data="00"/>
 			<value name="Multi.AutoCreate" type="hex" data="00"/>
 			<value name="Multi.LeaveOnClose" type="hex" data="00"/>
@@ -99,11 +99,11 @@
 			<value name="Multi.SplitHeight" type="hex" data="04"/>
 			<value name="KeyboardHooks" type="hex" data="01"/>
 			<value name="FontName" type="string" data="DejaVuSansMono Nerd Font"/>
-			<value name="FontName2" type="string" data="Lucida Console"/>
+			<value name="FontName2" type="string" data="Meslo LG M for Powerline"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
 			<value name="FontSize" type="ulong" data="13"/>
 			<value name="FontSizeX" type="ulong" data="0"/>
-			<value name="FontSizeX2" type="ulong" data="0"/>
+			<value name="FontSizeX2" type="ulong" data="8"/>
 			<value name="FontSizeX3" type="ulong" data="0"/>
 			<value name="FontCharSet" type="hex" data="00"/>
 			<value name="Anti-aliasing" type="ulong" data="6"/>
@@ -125,9 +125,9 @@
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
 			<value name="ConWnd Width" type="dword" data="02000050"/>
-			<value name="ConWnd Height" type="dword" data="02000059"/>
+			<value name="ConWnd Height" type="dword" data="02000051"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="138"/>
+			<value name="ConWnd X" type="long" data="193"/>
 			<value name="ConWnd Y" type="long" data="0"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
@@ -292,7 +292,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data=""/>
+			<value name="FindText" type="string" data="pwsh"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -483,9 +483,9 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2018-11-19 16:09:47" build="180626">
+			<key name="Tasks" modified="2019-07-06 09:56:58" build="180626">
 				<value name="Count" type="long" data="18"/>
-				<key name="Task1" modified="2019-03-22 18:34:09" build="180626">
+				<key name="Task1" modified="2019-03-31 14:00:09" build="180626">
 					<value name="Name" type="string" data="{Shells::Cmder}"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder_blue.ico"'/>
 					<value name="Cmd1" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:%USERPROFILE%'/>
@@ -503,11 +503,11 @@
 					<value name="Hotkey" type="dword" data="00101131"/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-				<key name="Task3" modified="2019-03-25 17:34:48" build="180626">
+				<key name="Task3" modified="2018-10-10 20:18:41" build="180528">
 					<value name="Name" type="string" data="{Shells::Powershell}"/>
 					<value name="Hotkey" type="dword" data="00101232"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="powershell.exe"/>
+					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\powershell.ico"'/>
+					<value name="Cmd1" type="string" data='PowerShell -ExecutionPolicy RemoteSigned -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;. &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;" -new_console:d:"%USERPROFILE%"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000004"/>
@@ -531,35 +531,26 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task6" modified="2018-09-10 19:02:22" build="180528">
-					<value name="Name" type="string" data="{Shells::cmd-32}"/>
-					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data='"%windir%\syswow64\cmd.exe" /k "%ConEmuBaseDir%\CmdInit.cmd"'/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="1"/>
-					<value name="Cmd2" type="string" data='"%CMDER_ROOT%vendor\git-for-windows\usr\bin\mintty.exe" /bin/bash -l'/>
-				</key>
-				<key name="Task7" modified="2018-10-12 14:30:10" build="180528">
+				<key name="Task6" modified="2019-03-31 14:00:09" build="180626">
 					<value name="Name" type="string" data="{WSL::wsl}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\wsl.ico"'/>
+					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl -C ~ -cur_console:pm:""'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl -C ~ -cur_console:pm:""'/>
+					<value name="Cmd2" type="string" data='"%CMDER_ROOT%vendor\git-for-windows\usr\bin\mintty.exe" /bin/bash -l'/>
 				</key>
-				<key name="Task8" modified="2018-10-12 14:44:43" build="180528">
+				<key name="Task7" modified="2019-03-31 14:00:09" build="180626">
 					<value name="Name" type="string" data="{WSL::alpine}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\wsl.ico"'/>
-					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl --distro-guid={2073b908-c21a-4c44-9d88-95dfd0811076} -C ~ -cur_console:pm:""'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl --distro-guid={2073b908-c21a-4c44-9d88-95dfd0811076} -C ~ -cur_console:pm:""'/>
 				</key>
-				<key name="Task9" modified="2018-11-04 12:48:50" build="180528">
+				<key name="Task8" modified="2019-03-31 14:00:09" build="180626">
 					<value name="Name" type="string" data="{WSL::arch}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -568,7 +559,16 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task10" modified="2018-11-19 16:09:47" build="180626">
+				<key name="Task9" modified="2019-07-06 09:56:58" build="180626">
+					<value name="Name" type="string" data="{WSL::kali}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\wsl.ico"'/>
+					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl --distro-guid={cd084d2a-769f-4c9d-a2b3-c1ae3935d863} -C ~ -cur_console:pm:""'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+				</key>
+				<key name="Task10" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{WSL::centos}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -577,7 +577,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl --distro-guid={c3589d0f-a851-447b-ac6f-a4e46ca7f4f2} -C ~ -cur_console:pm:""'/>
 				</key>
-				<key name="Task11" modified="2018-11-19 16:09:47" build="180626">
+				<key name="Task11" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{WSL::fish}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="001012bb"/>
@@ -586,7 +586,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl -C ~ -t fish -l -cur_console:pm:""'/>
 				</key>
-				<key name="Task12" modified="2018-11-19 16:09:47" build="180626">
+				<key name="Task12" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{WSL::zsh}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="001011bb"/>
@@ -595,7 +595,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl -C ~ -t zsh -cur_console:pm:""'/>
 				</key>
-				<key name="Task13" modified="2019-03-25 17:37:37" build="180626">
+				<key name="Task13" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{Bash::Git bash}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00101231"/>
@@ -604,7 +604,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "PATH=%ConEmuDrive%\Program Files\Git\usr\bin;%PATH%" &amp; "%ConEmuDrive%\Program Files\Git\git-cmd.exe" --no-cd --command=%ConEmuBaseDirShort%\conemu-msys2-64.exe /usr/bin/bash.exe -l -i -new_console:p'/>
 				</key>
-				<key name="Task14" modified="2018-11-19 16:09:47" build="180626">
+				<key name="Task14" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{MSYS2::msys64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00101233"/>
@@ -613,7 +613,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set MSYSTEM=MSYS2 &amp; set MSYS2_PATH_TYPE=inherit &amp; set "PATH=C:\msys64\usr\bin;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-msys2-64.exe -new_console:p "C:\msys64\usr\bin\bash.exe" --login -i -new_console:C:"C:\msys64\msys2.ico"'/>
 				</key>
-				<key name="Task15" modified="2018-11-19 16:09:47" build="180626">
+				<key name="Task15" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{MSYS2::mingw32}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -622,7 +622,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set MSYSTEM=MINGW32 &amp; set MSYS2_PATH_TYPE=inherit &amp; "C:\msys64\usr\bin\bash" --login -i -new_console:C:"C:\msys64\mingw32.exe"'/>
 				</key>
-				<key name="Task16" modified="2018-11-19 16:09:47" build="180626">
+				<key name="Task16" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{MSYS2::mingw64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -631,7 +631,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set MSYSTEM=MINGW64 &amp; set MSYS2_PATH_TYPE=inherit &amp; "C:\msys64\usr\bin\bash" --login -i -new_console:C:"C:\msys64\mingw64.exe"'/>
 				</key>
-				<key name="Task17" modified="2018-11-19 16:09:47" build="180626">
+				<key name="Task17" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{Far}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="001012bd"/>
@@ -640,7 +640,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "FARHOME=" &amp; "%ConEmuDir%\..\far_manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins"'/>
 				</key>
-				<key name="Task18" modified="2018-11-19 16:09:47" build="180626">
+				<key name="Task18" modified="2019-07-06 09:56:58" build="180626">
 					<value name="Name" type="string" data="{Helper::Show ANSI colors}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -801,7 +801,7 @@
 			<value name="StatusBar.Hide.Dpi" type="hex" data="01"/>
 			<value name="TabFlashChanged" type="long" data="8"/>
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
-			<key name="HotKeys" modified="2018-09-01 12:13:44" build="180528">
+			<key name="HotKeys" modified="2019-07-23 10:05:32" build="180626">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -810,15 +810,15 @@
 				<value name="GlobalRestore" type="dword" data="00000000"/>
 				<value name="CdExplorerPath" type="dword" data="00000000"/>
 				<value name="ForcedFullScreen" type="dword" data="12115b0d"/>
-				<value name="SwitchGuiFocus" type="dword" data="00000000"/>
+				<value name="SwitchGuiFocus" type="dword" data="00005b5a"/>
 				<value name="SetFocusGui" type="dword" data="00000000"/>
 				<value name="SetFocusChild" type="dword" data="00000000"/>
 				<value name="ChildSystemMenu" type="dword" data="000011ff"/>
 				<value name="Multi.NewConsole" type="dword" data="00000000"/>
-				<value name="Multi.NewConsoleShift" type="dword" data="00115b54"/>
+				<value name="Multi.NewConsoleShift" type="dword" data="00000000"/>
 				<value name="Multi.CmdKey" type="dword" data="00000000"/>
 				<value name="Multi.NewWindow" type="dword" data="00000000"/>
-				<value name="Multi.NewConsolePopup" type="dword" data="00000000"/>
+				<value name="Multi.NewConsolePopup" type="dword" data="00001154"/>
 				<value name="Multi.NewConsolePopup2" type="dword" data="00000000"/>
 				<value name="Multi.NewAttach" type="dword" data="00000000"/>
 				<value name="Multi.NewSplitV" type="dword" data="00000000"/>
@@ -870,7 +870,7 @@
 				<value name="ClipboardVkAllLines" type="dword" data="0000102d"/>
 				<value name="ClipboardVkFirstLine" type="dword" data="00001156"/>
 				<value name="DeleteWordToLeft" type="dword" data="00001108"/>
-				<value name="FindTextKey" type="dword" data="00005d46"/>
+				<value name="FindTextKey" type="dword" data="0000a346"/>
 				<value name="ScreenshotKey" type="dword" data="00000000"/>
 				<value name="ScreenshotFullKey" type="dword" data="00000000"/>
 				<value name="ShowStatusBarKey" type="dword" data="00000000"/>
@@ -1000,14 +1000,16 @@
 			</key>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
 			<value name="DefaultTerminalDebugLog" type="hex" data="00"/>
-			<value name="LastMonitor" type="string" data="0,0,1366,738"/>
+			<value name="LastMonitor" type="string" data="0,0,1920,1040"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
 			<value name="EnvironmentSet" type="multi">
 				<line data="set PATH=%ConEmuBaseDir%\Scripts;%PATH%"/>
-				<line data="set PATH=C:\Program Files\Git\usr\bin;C:\_SDK\php;C:\_SDK\flutter\bin;%PATH%"/>
-				<line data="set JAVA_HOME=C:\Users\zeruel11\.scoopy\apps\oraclejdk12\current\bin"/>
+				<line data="set PATH=C:\_SDK\php;C:\_SDK\flutter\bin;%PATH%"/>
+				<line data="set JAVA_HOME=E:\_SDK\jdk1.8.0_181"/>
 				<line data="set PATH_TO_FX=E:\_SDK\javafx-sdk-12.0.1\lib"/>
+				<line data="set WSLENV=USERPROFILE/p:OneDrive/p"/>
+				<line data="chcp utf8"/>
 			</value>
 			<value name="Update.InetTool" type="hex" data="00"/>
 			<value name="Update.InetToolCmd" type="string" data=""/>
