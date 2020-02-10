@@ -1,18 +1,23 @@
 {
-  "homepage": "https://github.com/yuk7/AlpineWSL",
+  "homepage": "https://github.com/DDoSolitary/LxRunOffline/wiki",
   "description": "Install AlpineLinux as a WSL Instance",
-  "hash": "6462E3B8BAA095B896F4D647FFEAFFA88F5C7F4D5F5DB79CF53B761122758709",
-  "version": "18100800",
-  "bin": "Alpine.exe",
+  "version": "3.11",
   "license": "MIT",
-  "url": "https://github.com/yuk7/AlpineWSL/releases/download/18100800/Alpine.zip",
-  "checkver": {
-    "url": "https://api.github.com/repos/yuk7/AlpineWSL/releases/latest",
-    "jp": "$.tag_name"
+  "url": "https://lxrunoffline.apphb.com/download/Alpine/v3.11#/dl.tar.gz",
+  "extract_to": "del_this",
+  "installer": {
+    "script": [
+      "Remove-Item -Path $original_dir\\del_this -Recurse",
+      "$lxpath = $manifest.url -replace '://','_' -replace '#/','_' -replace '/','_'",
+      "lxrunoffline.exe i -n $app -d $original_dir -r . -f $scoopdir\\cache\\$app#$version#$lxpath"
+    ]
   },
-  "autoupdate": {
-    "url": "https://github.com/yuk7/AlpineWSL/releases/download/$version/Alpine.zip"
+  "post_install": [
+    "$shortpath = $env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk'",
+    "LxRunOffline.exe s -n $app -f $shortpath"
+  ],
+  "uninstaller": {
+    "script": ["wsl -t $app", "lxrunoffline.exe ui -n $app"]
   },
-  "shortcuts": [["Alpine.exe", "Alpine Linux"]],
   "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)"
 }
