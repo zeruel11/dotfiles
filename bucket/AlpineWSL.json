@@ -6,7 +6,7 @@
   "url": "https://lxrunoffline.apphb.com/download/Alpine/v3.11#/dl.tar.gz",
   "checkver": {
     "url": "https://alpinelinux.org/downloads/",
-    "regex": "Current Alpine Version ([\\d.]+\\.[\\d.]+)\\.[\\d.]+"
+    "regex": "Current Alpine Version <strong>([\\d.]+\\.[\\d.]+)\\.[\\d.]+"
   },
   "extract_to": "del_this",
   "installer": {
