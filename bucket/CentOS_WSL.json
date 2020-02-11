@@ -1,0 +1,8 @@
+{
+  "homepage": "https://github.com/CentOS/sig-cloud-instance-images",
+  "description": "Install CentOS as a WSL Instance",
+  "version": "8.1.1911",
+  "license": "MIT",
+  "url": "https://github.com/CentOS/sig-cloud-instance-images/blob/CentOS-8.1.1911-x86_64/docker/CentOS-8-Container-8.1.1911-20200113.3-layer.x86_64.tar.xz?raw=true",
+  "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)"
+}
