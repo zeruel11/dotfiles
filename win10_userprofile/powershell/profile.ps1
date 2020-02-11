@@ -102,41 +102,52 @@ function Test-Administrator {
 # Adapted from https://dl.dropboxusercontent.com/u/41823/psh/Profile.txt
 # http://www.reddit.com/r/sysadmin/comments/1rit4l/what_do_you_get_when_you_cross_bash_with_cmdexe/cdo3djk
 ###############################################################################
-Import-Module PSReadline
-
-Set-PSReadLineOption -HistoryNoDuplicates
-Set-PSReadLineOption -HistorySearchCursorMovesToEnd
-Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
-Set-PSReadLineOption -MaximumHistoryCount 100
-
-Set-PSReadLineKeyHandler -Key Ctrl+Delete       -Function KillWord
-Set-PSReadLineKeyHandler -Key Ctrl+Backspace    -Function BackwardKillWord
-Set-PSReadLineKeyHandler -Key Shift+Backspace   -Function BackwardKillWord
-
-# history substring search
-Set-PSReadLineKeyHandler -Key UpArrow   -Function HistorySearchBackward
-Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-
-# Tab completion
-Set-PSReadLineKeyHandler -Key   Tab         -Function MenuComplete
-Set-PSReadLineKeyHandler -Chord 'Shift+Tab' -Function Complete
-
-$Host.PrivateData.ErrorBackgroundColor = $Host.UI.RawUI.BackgroundColor
-$Host.PrivateData.WarningBackgroundColor = $Host.UI.RawUI.BackgroundColor
-$Host.PrivateData.VerboseBackgroundColor = $Host.UI.RawUI.BackgroundColor
-
-Import-Module Get-ChildItemColor
-Import-Module posh-git
-
-$global:GitPromptSettings.BeforeText = '['
-$global:GitPromptSettings.AfterText = '] '
-
-if (Get-Module PSReadline -ErrorAction "SilentlyContinue") {
+Import-Module PSReadline -ErrorAction SilentlyContinue -ErrorVariable +importError
+if (Get-Module PSReadline -ErrorAction SilentlyContinue) {
+    Set-PSReadLineOption -HistoryNoDuplicates
+    Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+    Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
+    Set-PSReadLineOption -MaximumHistoryCount 100
     Set-PSReadlineOption -ExtraPromptLineCount 1
+
+    Set-PSReadLineKeyHandler -Key Ctrl+Delete       -Function KillWord
+    Set-PSReadLineKeyHandler -Key Ctrl+Backspace    -Function BackwardKillWord
+    Set-PSReadLineKeyHandler -Key Shift+Backspace   -Function BackwardKillWord
+
+    # history substring search
+    Set-PSReadLineKeyHandler -Key UpArrow   -Function HistorySearchBackward
+    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+    # Tab completion
+    Set-PSReadLineKeyHandler -Key   Tab         -Function MenuComplete
+    Set-PSReadLineKeyHandler -Chord 'Shift+Tab' -Function Complete
+
+    $Host.PrivateData.ErrorBackgroundColor = $Host.UI.RawUI.BackgroundColor
+    $Host.PrivateData.WarningBackgroundColor = $Host.UI.RawUI.BackgroundColor
+    $Host.PrivateData.VerboseBackgroundColor = $Host.UI.RawUI.BackgroundColor
 }
 
-# Import-Module DockerCompletion
-# Import-Module posh-docker
+Import-Module Get-ChildItemColor -ErrorAction SilentlyContinue -ErrorVariable +importError
+
+Import-Module posh-git -ErrorAction SilentlyContinue -ErrorVariable +importError; 
+if (Get-Module posh-git -ErrorAction SilentlyContinue) {
+    $global:GitPromptSettings.BeforeText = '['
+    $global:GitPromptSettings.AfterText = '] '
+}
+
+Import-Module DockerCompletion -ErrorAction SilentlyContinue -ErrorVariable +importError; 
+
+# Try catch for importing scoop-completion
+# Try {
+#     Import-Module -ErrorAction Stop "$($(Get-Item $(Get-Command -ErrorAction Stop scoop).Path).Directory.Parent.FullName)\modules\scoop-completion"
+# }
+# Catch [System.Management.Automation.ItemNotFoundException] {
+#     if ($_.TargetObject -like "*scoop-IsReadOnly.ps1") {
+#         Write-Verbose "Path $($_.TargetObject) not found!" -Verbose
+#     } Else {
+#   Write-Verbose "Path different" -Verbose
+# }
+# }
 
 # setup win10 OpenSSH
 # workaround for posh-git with win10 OpenSSH
@@ -163,7 +174,8 @@ switch -Wildcard ($TestSSHmykey) {
         if (Test-Path -Path "$env:USERPROFILE\.ssh\git_rsa") {
             Write-Host "Adding zeruel Git identity..."
             Add-SshKey (Resolve-Path ~\.ssh\git_rsa)
-        } else {
+        }
+        else {
             Write-Host "Git ssh key not found"
         }
     }
@@ -172,7 +184,8 @@ switch -Wildcard ($TestSSHmykey) {
         if (Test-Path -Path "$env:USERPROFILE\.ssh\git_rsa") {
             Write-Host "Adding IKTI server keys..."
             Add-SshKey (Resolve-Path ~\.ssh\iktisrv_rsa)
-        } else {
+        }
+        else {
             Write-Host "IKTI server keys not found"
         }
     }
@@ -196,24 +209,21 @@ $b = [ConsoleColor]::Gray
 $h = [ConsoleColor]::DarkGray
 ###############################################################################
 
-function U
-{
+function U {
     param
     (
-	    [int] $Code
-	)
+        [int] $Code
+    )
 
-	if ((0 -le $Code) -and ($Code -le 0xFFFF))
-	{
-		return [char] $Code
-	}
+    if ((0 -le $Code) -and ($Code -le 0xFFFF)) {
+        return [char] $Code
+    }
 
-	if ((0x10000 -le $Code) -and ($Code -le 0x10FFFF))
-	{
-		return [char]::ConvertFromUtf32($Code)
-	}
+    if ((0x10000 -le $Code) -and ($Code -le 0x10FFFF)) {
+        return [char]::ConvertFromUtf32($Code)
+    }
 
-	throw "Invalid character code $Code"
+    throw "Invalid character code $Code"
 }
 
 function cddash {
