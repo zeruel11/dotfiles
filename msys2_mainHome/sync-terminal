@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 #profile config sync
 
-# test arguments
-if [ $# -eq 0 ]; then
-	echo -e '\e[31mYou have to specify pull or push'
-	exit 2
-fi
-
+# log file size`
 maxsize=900000
 baksize=1000000
 # paths
@@ -26,38 +21,63 @@ grepUnchMsg='.*(uptodate)$|$'
 #logfiles
 runLog="sync-profile.$HOSTNAME.${1^^}.log"
 dryLog="sync-profile.$HOSTNAME.${1^^}.DRY_RUN"
+#excludes/filter files
+filterFile=".filter-terminal"
+
+# test arguments and filters (if needed)
+if [ $# -eq 0 ]; then
+	echo -e '\e[31mYou have to specify pull or push'
+	exit 2
+fi
+if [ ! -f ~/$filterFile ]; then
+	echo -e "\e[31mFile $filterFile not found!\e[0m"
+	exit 1
+fi
 
 function main_logic() {
 	if [ "$1" == 'pull' ]; then
-		rsync -Ccazvvn "$dotfiles" "$2" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+		# TODO change rsync compare to use diff since this is a one file
+		# DIFF=$(diff a b)
+		# if [ "$DIFF" != "" ]; then
+		# 	echo "The directory was modified"
+		# fi
+		rsync -Ccazvvn --filter="merge .filter-terminal" "$dotfiles""$3" "$2" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 		read -p "Confirm $1? [no] " yesOrYes
 		yesOrYes=${yesOrYes:-no}
 		if [ "$yesOrYes" == 'yes' ]; then
-			rsync -Ccaziiv "$dotfiles" "$2" --log-file="$runLog"
+			rsync -Ccaziiv --filter="merge .filter-terminal" "$dotfiles""$3" "$2" --log-file="$runLog"
 			cp "$runLog" "$dotfiles/.logs/"
 			rm "$dryLog"
 		fi
 	elif [ "$1" == 'push' ]; then
-		rsync -Ccazvvn "$2" "$dotfiles" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+		rsync -Ccazvvn --filter="merge .filter-terminal" "$2" "$dotfiles""$3" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 		read -p "Confirm $1? [no] " yesOrYes
 		yesOrYes=${yesOrYes:-no}
 		if [ "$yesOrYes" == 'yes' ]; then
-			rsync -Ccaziiv "$2" "$dotfiles" --log-file="$runLog"
+			rsync -Ccaziiv --filter="merge .filter-terminal" "$2" "$dotfiles""$3" --log-file="$runLog"
 			cp "$runLog" "$dotfiles/.logs/"
 			rm "$dryLog"
 		fi
 	fi
 }
 
-case $1 in
+case $2 in
 
-	pwsh | powershell)
-		main_logic $2 $pwshProfile;
-		;;
+pwsh | powershell)
+	echo -e "\e[44m$1ing powershell core profile\e[0m"
+	main_logic $1 $pwshProfile
+	echo -e "\e[44m$1ing powershell profile\e[0m"
+	main_logic $1 $powershellProfile
+	;;
 
-	term)
-		main_logic $2 $terminalProfile;
-		;;
+term | terminal | winterminal)
+	echo -e "\e[44m$1ing terminal profile\e[0m"
+	main_logic $1 $terminalProfile "win_terminal"
+	;;
+
+*)
+	echo -e "\e[31mYou have to specify the profile to sync\e[0m"
+	;;
 esac
 
 if [ -f "$runLog" ]; then
