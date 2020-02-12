@@ -4,21 +4,17 @@
   "version": "3.11",
   "license": "MIT",
   "url": "https://lxrunoffline.apphb.com/download/Alpine/v3.11#/dl.tar.gz",
-  "checkver": {
-    "url": "https://alpinelinux.org/downloads/",
-    "regex": "Current Alpine Version <strong>([\\d.]+\\.[\\d.]+)\\.[\\d.]+"
-  },
-  "extract_to": "temp",
+  "extract_to": "del_this",
   "installer": {
     "script": [
-      "Remove-Item -Path $original_dir\\temp -Recurse",
+      "Remove-Item -Path $original_dir\\del_this -Recurse",
       "$lxpath = $manifest.url -replace '://','_' -replace '#/','_' -replace '/','_'",
-      "LxRunOffline.exe install -n $app -d $original_dir -r . -f $scoopdir\\cache\\$app#$version#$lxpath"
+      "lxrunoffline.exe i -n $app -d $original_dir -r . -f $scoopdir\\cache\\$app#$version#$lxpath"
     ]
   },
   "post_install": [
     "$shortpath = $env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk'",
-    "LxRunOffline.exe shortcut -n $app -f $shortpath"
+    "LxRunOffline.exe s -n $app -f $shortpath"
   ],
   "uninstaller": {
     "script": ["wsl -t $app", "lxrunoffline.exe ui -n $app"]
