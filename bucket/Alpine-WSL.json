@@ -4,6 +4,8 @@
   "version": "3.11",
   "license": "MIT",
   "url": "https://lxrunoffline.apphb.com/download/Alpine/v3.11#/dl.tar.gz",
+  "hash": "8a6c827f137058ac3e3df1125891ff5c3b62955f0b911adec26eae6ea2bbb285",
+  "depends": "lxrunoffline",
   "checkver": {
     "url": "https://alpinelinux.org/downloads/",
     "regex": "Current Alpine Version <strong>([\\d.]+\\.[\\d.]+)\\.[\\d.]+"
