@@ -3,36 +3,54 @@
   "description": "Install AlpineLinux as a WSL Instance",
   "version": "3.11",
   "license": "MIT",
-  "url": "https://lxrunoffline.apphb.com/download/Alpine/v3.11#/dl.tar.gz",
+  "url": "https://lxrunoffline.apphb.com/download/Alpine/v3.11",
   "hash": "8a6c827f137058ac3e3df1125891ff5c3b62955f0b911adec26eae6ea2bbb285",
   "depends": "lxrunoffline",
   "checkver": {
     "url": "https://alpinelinux.org/downloads/",
     "regex": "Current Alpine Version <strong>([\\d.]+\\.[\\d.]+)\\.[\\d.]+"
   },
-  "extract_to": "base",
   "persist": "data",
   "installer": {
     "script": [
+      "$installable = $true",
+      "$user = [Security.Principal.WindowsIdentity]::GetCurrent() -as [Security.Principal.WindowsPrincipal]",
+      "$permission = Get-Acl $dir | select -ExpandProperty Access | where {",
+      "    ($user.IsInRole($_.IdentityReference)) -and `",
+      "    ($_.FileSystemRights.ToString() -eq 'FullControl') -and `",
+      "    # 3 = ([Security.AccessControl.InheritanceFlags]::ContainerInherit -bor ObjectInherit)",
+      "    ($_.InheritanceFlags -band 3) -and `",
+      "    ($_.PropagationFlags.ToString() -ne 'NoPropagateInherit')",
+      "}",
+      "if ($null -eq $permission) {",
+      "   warn \"Full Control access to the scoop directory is necessary to install WSL distribution.\"",
+      "   warn \"Change directory security and reinstall ArchWSL.\"",
+      "   $installable = $false",
+      "}",
+      "if ($null -eq (Get-Command wslconfig -ErrorAction SilentlyContinue)) {",
+      "    warn \"WSL appears not to be enabled!\"",
+      "    warn \"Run 'Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux'\"",
+      "    warn \"from an elevated PowerShell. Restart your computer when prompted and reinstall ArchWSL.\"",
+      "    $installable = $false",
+      "}",
+      "if ($installable) {",
       "$lxpath = $manifest.url -replace '://','_' -replace '#/','_' -replace '/','_'",
-      "LxRunOffline.exe install -n $app -d $dir -r . -f $cachedir\\$app#$version#$lxpath"
+      "LxRunOffline.exe install -n $app -d $dir -r . -f $cachedir\\$app#$version#$lxpath",
+      "}"
     ]
   },
-  "pre_install": [
-    "Remove-Item -Recurse -Path '$dir\\base'",
-    "if (Test-Path ('$persist_dir' + '\\data\\rootfs')) {",
-    "Copy-Item -Recurse -Path '$persist_dir\\data\\rootfs' -Destination '$dir\\temp'",
-    "}"
-  ],
   "post_install": [
-    "if (Test-Path ('$dir' + '\\temp')) {",
-    "Move-Item -Path '$dir\\temp' -Destination '$dir\\rootfs'",
-    "}",
     "$shortpath = $env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk'",
     "LxRunOffline.exe shortcut -n $app -f $shortpath"
   ],
   "uninstaller": {
-    "script": ["wsl -t $app", "LxRunOffline.exe uninstall -n $app"]
+    "script": [
+      "if (Test-Path ($env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk')) {",
+      "Remove-Item -Path $env:APPDATA'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk'",
+      "}",
+      "wsl -t $app",
+      "LxRunOffline.exe uninstall -n $app"
+    ]
   },
   "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)"
 }
