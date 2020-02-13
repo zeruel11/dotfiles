@@ -40,8 +40,13 @@
     ]
   },
   "post_install": [
+    "$icopath = $bucketsdir+'\\dotfiles\\icons\\Alpine-WSL.ico'",
     "$shortpath = $env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk'",
-    "LxRunOffline.exe shortcut -n $app -f $shortpath"
+    "if (Test-Path $icopath) {",
+    "LxRunOffline.exe shortcut -n $app -f $shortpath -i $icopath",
+    "} else {",
+    "LxRunOffline.exe shortcut -n $app -f $shortpath",
+    "}"
   ],
   "uninstaller": {
     "script": [
