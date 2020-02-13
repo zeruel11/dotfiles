@@ -10,20 +10,29 @@
     "url": "https://alpinelinux.org/downloads/",
     "regex": "Current Alpine Version <strong>([\\d.]+\\.[\\d.]+)\\.[\\d.]+"
   },
-  "extract_to": "temp",
+  "extract_to": "base",
+  "persist": "data",
   "installer": {
     "script": [
-      "Remove-Item -Path $original_dir\\temp -Recurse",
       "$lxpath = $manifest.url -replace '://','_' -replace '#/','_' -replace '/','_'",
-      "LxRunOffline.exe install -n $app -d $original_dir -r . -f $scoopdir\\cache\\$app#$version#$lxpath"
+      "LxRunOffline.exe install -n $app -d $dir -r . -f $cachedir\\$app#$version#$lxpath"
     ]
   },
+  "pre_install": [
+    "Remove-Item -Recurse -Path '$dir\\base'",
+    "if (Test-Path ('$persist_dir' + '\\data\\rootfs')) {",
+    "Copy-Item -Recurse -Path '$persist_dir\\data\\rootfs' -Destination '$dir\\temp'",
+    "}"
+  ],
   "post_install": [
+    "if (Test-Path ('$dir' + '\\temp')) {",
+    "Move-Item -Path '$dir\\temp' -Destination '$dir\\rootfs'",
+    "}",
     "$shortpath = $env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk'",
     "LxRunOffline.exe shortcut -n $app -f $shortpath"
   ],
   "uninstaller": {
-    "script": ["wsl -t $app", "lxrunoffline.exe ui -n $app"]
+    "script": ["wsl -t $app", "LxRunOffline.exe uninstall -n $app"]
   },
   "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)"
 }
