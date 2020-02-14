@@ -1,6 +1,6 @@
 {
   "homepage": "https://github.com/DDoSolitary/LxRunOffline/wiki",
-  "description": "Install AlpineLinux as a WSL Instance",
+  "description": "Install AlpineLinux as a WSL Instance (using LxRunOffline)",
   "version": "3.11",
   "license": "MIT",
   "url": "https://lxrunoffline.apphb.com/download/Alpine/v3.11",
