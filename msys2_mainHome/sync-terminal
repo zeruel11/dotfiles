@@ -18,21 +18,38 @@ grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*
 grepSendMsg='^(\[sender\]).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
-#logfiles
-runLog="sync-profile.$HOSTNAME.${1^^}.log"
-dryLog="sync-profile.$HOSTNAME.${1^^}.DRY_RUN"
-#excludes/filter files
+# excludes/filter files
 filterFile=".filter-terminal"
 
-# test arguments and filters (if needed)
-if [ $# -eq 0 ]; then
-	echo -e '\e[31mYou have to specify pull or push'
-	exit 2
-fi
-if [ ! -f ~/$filterFile ]; then
-	echo -e "\e[31mFile $filterFile not found!\e[0m"
-	exit 1
-fi
+function usage() {
+	cat <<HELP_USAGE
+
+    usage: $0 [ps|pl] [pwsh|term]
+
+    ps, push			Sync current directory to git repo
+    pl, pull			Sync git repo to current dir
+
+    pwsh, powershell		Sync Windows Powershell (v5.1) and Powershell Core (v6.4++) profile
+    term, terminal, winterminal	Sync Windows Terminal profile
+HELP_USAGE
+
+	exit 0
+}
+
+function command_expand() {
+	case $1 in
+
+	pl)
+		sync="pull"
+		;;
+	ps)
+		sync="push"
+		;;
+	-h | --help)
+		usage
+		;;
+	esac
+}
 
 function main_logic() {
 	if [ "$1" == 'pull' ]; then
@@ -41,38 +58,65 @@ function main_logic() {
 		# if [ "$DIFF" != "" ]; then
 		# 	echo "The directory was modified"
 		# fi
-		rsync -Ccazvvn --filter="merge .filter-terminal" "$dotfiles""$3" "$2" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+		rsync -Ccazvvn --existing --filter="merge .filter-terminal" "$dotfiles""$3" "$2" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 		read -p "Confirm $1? [no] " yesOrYes
 		yesOrYes=${yesOrYes:-no}
-		if [ "$yesOrYes" == 'yes' ]; then
-			rsync -Ccaziiv --filter="merge .filter-terminal" "$dotfiles""$3" "$2" --log-file="$runLog"
-			cp "$runLog" "$dotfiles/.logs/"
+		if [ "$yesOrYes" == 'yes' ] || [ "$yesOrYes" == 'y' ]; then
+			echo "$dotfiles$3 $1 to $2" >> $runLog
+			rsync -Ccaziiv --existing --filter="merge .filter-terminal" "$dotfiles""$3" "$2" --log-file="$runLog"
+			cp "$runLog" "$dotfiles../.logs/"
 			rm "$dryLog"
 		fi
 	elif [ "$1" == 'push' ]; then
-		rsync -Ccazvvn --filter="merge .filter-terminal" "$2" "$dotfiles""$3" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+		rsync -Ccazvvn --existing --filter="merge .filter-terminal" "$2" "$dotfiles""$3" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 		read -p "Confirm $1? [no] " yesOrYes
 		yesOrYes=${yesOrYes:-no}
-		if [ "$yesOrYes" == 'yes' ]; then
-			rsync -Ccaziiv --filter="merge .filter-terminal" "$2" "$dotfiles""$3" --log-file="$runLog"
-			cp "$runLog" "$dotfiles/.logs/"
+		if [ "$yesOrYes" == 'yes' ] || [ "$yesOrYes" == 'y' ]; then
+			echo "$2 $1 to $dotfiles$3" >> $runLog
+			rsync -Ccaziiv --existing --filter="merge .filter-terminal" "$2" "$dotfiles""$3" --log-file="$runLog"
+			cp "$runLog" "$dotfiles../.logs/"
 			rm "$dryLog"
 		fi
 	fi
 }
 
+# test filters (if needed)
+if [ -z ${filterFile+x} ]; then
+	if [ ! -f ~/$filterFile ]; then
+		echo -e "\e[31mFile $filterFile not found!\e[0m"
+		exit 1
+	fi
+fi
+
+if [ $# -eq 0 ]; then
+	usage
+	exit 2
+elif [ $# -eq 2 ]; then
+	command_expand $1
+	# logfiles
+	runLog="sync-profile.$HOSTNAME.${sync^^}.log"
+	dryLog="sync-profile.$HOSTNAME.${sync^^}.DRY_RUN"
+else
+	usage
+	exit 2
+fi
+
 case $2 in
 
 pwsh | powershell)
-	echo -e "\e[44m$1ing powershell core profile\e[0m"
-	main_logic $1 $pwshProfile
-	echo -e "\e[44m$1ing powershell profile\e[0m"
-	main_logic $1 $powershellProfile
+	echo -e "\e[44m$sync""ing powershell core profile\e[0m"
+	main_logic $sync $pwshProfile "powershell/"
+	if [ "$sync" == "push" ]; then
+		echo -e "\e[43mNot pushing Windows Powershell profile (this should follow pwsh)\e[0m"
+		exit 0
+	fi
+	echo -e "\e[44m$sync""ing powershell profile\e[0m"
+	main_logic $sync $powershellProfile "powershell/"
 	;;
 
 term | terminal | winterminal)
-	echo -e "\e[44m$1ing terminal profile\e[0m"
-	main_logic $1 $terminalProfile "win_terminal"
+	echo -e "\e[44m$sync""ing terminal profile\e[0m"
+	main_logic $sync $terminalProfile "win_terminal"
 	;;
 
 *)

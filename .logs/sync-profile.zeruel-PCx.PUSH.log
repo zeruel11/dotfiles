@@ -1,0 +1,12 @@
+2020/02/12 11:50:22 [813] building file list
+2020/02/12 11:50:22 [813] .d..t...... ./
+2020/02/12 11:50:22 [813] >f+++++++++ profiles.json
+2020/02/12 11:50:22 [813] sent 1,574 bytes  received 38 bytes  3,224.00 bytes/sec
+2020/02/12 11:50:22 [813] total size is 4,563  speedup is 2.83
+/c/Users/zeruel/Documents/PowerShell/ push to /c/Users/zeruel/dotfiles/win10_userprofile/powershell/
+2020/02/14 14:42:48 [3354] building file list
+2020/02/14 14:42:48 [3354] .d          ./
+2020/02/14 14:42:48 [3354] .f          powershell.config.json
+2020/02/14 14:42:48 [3354] .f          profile.ps1
+2020/02/14 14:42:48 [3354] sent 169 bytes  received 25 bytes  388.00 bytes/sec
+2020/02/14 14:42:48 [3354] total size is 11,980  speedup is 61.75

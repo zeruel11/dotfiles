@@ -1,4 +1,8 @@
 + /win_terminal/
 + profiles.json
 
++ /powershell/
++ profile.ps1
++ powershell.config.json
+
 - *
