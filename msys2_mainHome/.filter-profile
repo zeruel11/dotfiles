@@ -1,8 +1,18 @@
+# IMPORTANT!!! Always update this file as needed to minimize git load!!!
+
+- *.bak
+
+# Windows Terminal section
 + /win_terminal/
 + profiles.json
 
+# Powershell (Core) section
 + /powershell/
 + profile.ps1
 + powershell.config.json
+
+# MSYS2 (mingw32/64) section
++ .bash*
++ /bin/
 
 - *

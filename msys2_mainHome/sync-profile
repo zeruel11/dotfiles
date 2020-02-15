@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 #profile config sync
 
-# log file size`
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+# log file size
 maxsize=900000
 baksize=1000000
 # paths
 terminalProfile="$(cygpath $LOCALAPPDATA)/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/"
 pwshProfile="$(cygpath $USERPROFILE)/Documents/PowerShell/"
 powershellProfile="$(cygpath $USERPROFILE)/Documents/WindowsPowerShell/"
-dotfiles="$(cygpath $USERPROFILE)/dotfiles/win10_userprofile/"
+dotfiles="$(cygpath $USERPROFILE)/dotfiles/"
 # preview coloring
 grepSysCol="mt=1;93"
 grepSendCol="mt=1;34"
@@ -19,36 +20,23 @@ grepSendMsg='^(\[sender\]).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
 # excludes/filter files
-filterFile=".filter-terminal"
+filterFile="$DIR/.filter-profile"
 
 function usage() {
 	cat <<HELP_USAGE
 
-    usage: $0 [ps|pl] [pwsh|term]
+    usage: $0 [ps|pl] [pwsh|term|msys]
 
+    -h, --help			Print this message
     ps, push			Sync current directory to git repo
     pl, pull			Sync git repo to current dir
 
     pwsh, powershell		Sync Windows Powershell (v5.1) and Powershell Core (v6.4++) profile
     term, terminal, winterminal	Sync Windows Terminal profile
+    msys, msys2, bash		Sync MSYS2 home profile
 HELP_USAGE
 
 	exit 0
-}
-
-function command_expand() {
-	case $1 in
-
-	pl)
-		sync="pull"
-		;;
-	ps)
-		sync="push"
-		;;
-	-h | --help)
-		usage
-		;;
-	esac
 }
 
 function main_logic() {
@@ -58,23 +46,23 @@ function main_logic() {
 		# if [ "$DIFF" != "" ]; then
 		# 	echo "The directory was modified"
 		# fi
-		rsync -Ccazvvn --existing --filter="merge .filter-terminal" "$dotfiles""$3" "$2" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+		rsync -Ccazvvn --existing --filter="merge $filterFile" "$dotfiles$3" "$2" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 		read -p "Confirm $1? [no] " yesOrYes
 		yesOrYes=${yesOrYes:-no}
 		if [ "$yesOrYes" == 'yes' ] || [ "$yesOrYes" == 'y' ]; then
-			echo "$dotfiles$3 $1 to $2" >> $runLog
-			rsync -Ccaziiv --existing --filter="merge .filter-terminal" "$dotfiles""$3" "$2" --log-file="$runLog"
-			cp "$runLog" "$dotfiles../.logs/"
+			echo "$dotfiles$3 $1 to $2" >>$runLog
+			rsync -Ccaziiv --existing --filter="merge $filterFile" "$dotfiles$3" "$2" --log-file="$runLog"
+			cp "$runLog" "$dotfiles.logs/"
 			rm "$dryLog"
 		fi
 	elif [ "$1" == 'push' ]; then
-		rsync -Ccazvvn --existing --filter="merge .filter-terminal" "$2" "$dotfiles""$3" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+		rsync -Ccazvvn --existing --filter="merge $filterFile" "$2" "$dotfiles$3" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 		read -p "Confirm $1? [no] " yesOrYes
 		yesOrYes=${yesOrYes:-no}
 		if [ "$yesOrYes" == 'yes' ] || [ "$yesOrYes" == 'y' ]; then
-			echo "$2 $1 to $dotfiles$3" >> $runLog
-			rsync -Ccaziiv --existing --filter="merge .filter-terminal" "$2" "$dotfiles""$3" --log-file="$runLog"
-			cp "$runLog" "$dotfiles../.logs/"
+			echo "$2 $1 to $dotfiles$3" >>$runLog
+			rsync -Ccaziiv --existing --filter="merge $filterFile" "$2" "$dotfiles$3" --log-file="$runLog"
+			cp "$runLog" "$dotfiles.logs/"
 			rm "$dryLog"
 		fi
 	fi
@@ -88,41 +76,69 @@ if [ -z ${filterFile+x} ]; then
 	fi
 fi
 
-if [ $# -eq 0 ]; then
-	usage
-	exit 2
-elif [ $# -eq 2 ]; then
-	command_expand $1
+function command_param() {
+	case $1 in
+
+	pl | pull)
+		sync="pull"
+		;;
+	ps | push)
+		sync="push"
+		;;
+	*)
+		echo "Wrong parameter"
+		usage
+		;;
+	esac
+
 	# logfiles
 	runLog="sync-profile.$HOSTNAME.${sync^^}.log"
 	dryLog="sync-profile.$HOSTNAME.${sync^^}.DRY_RUN"
-else
+
+	case $2 in
+
+	pwsh | powershell)
+		echo -e "\e[44m$sync""ing Powershell Core profile\e[0m"
+		main_logic $sync $pwshProfile "win10_userprofile/powershell/"
+		if [ "$sync" == "push" ]; then
+			echo -e "\e[43mNot pushing Windows Powershell profile (this should follow pwsh)\e[0m"
+			exit 0
+		fi
+		echo -e "\e[44m$sync""ing Powershell profile\e[0m"
+		main_logic $sync $powershellProfile "win10_userprofile/powershell/"
+		;;
+
+	term | terminal | winterminal)
+		echo -e "\e[44m$sync""ing terminal profile\e[0m"
+		main_logic $sync $terminalProfile "win10_userprofile/win_terminal/"
+		;;
+
+	msys | msys2 | bash)
+		echo -e "\e[44m$sync""ing MSYS2 profile\e[0m"
+		main_logic $sync ~/ "msys2_mainHome/"
+		;;
+
+	*)
+		echo "Unknown profile $2"
+		usage
+		;;
+	esac
+}
+
+if [ $# -eq 0 ] || [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
 	usage
-	exit 2
+elif [ $# -gt 2 ]; then
+	echo "Over parameter"
+	usage
+elif [ $# -eq 2 ]; then
+	command_param $1 $2
+elif [ "$1" == "ps" ] || [ "$1" == "pl" ]; then
+	echo "Profile not defined"
+	usage
+else
+	echo "Unknown option $1"
+	usage
 fi
-
-case $2 in
-
-pwsh | powershell)
-	echo -e "\e[44m$sync""ing powershell core profile\e[0m"
-	main_logic $sync $pwshProfile "powershell/"
-	if [ "$sync" == "push" ]; then
-		echo -e "\e[43mNot pushing Windows Powershell profile (this should follow pwsh)\e[0m"
-		exit 0
-	fi
-	echo -e "\e[44m$sync""ing powershell profile\e[0m"
-	main_logic $sync $powershellProfile "powershell/"
-	;;
-
-term | terminal | winterminal)
-	echo -e "\e[44m$sync""ing terminal profile\e[0m"
-	main_logic $sync $terminalProfile "win_terminal"
-	;;
-
-*)
-	echo -e "\e[31mYou have to specify the profile to sync\e[0m"
-	;;
-esac
 
 if [ -f "$runLog" ]; then
 	filesize=$(stat -c%s "$runLog")
