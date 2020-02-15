@@ -5,14 +5,14 @@
 # Oct 17, 2017
 
 # source the users bashrc if it exists
-if [ -f "${HOME}/.bashrc" ] ; then
-  source "${HOME}/.bashrc"
+if [ -f "${HOME}/.bashrc" ]; then
+    source "${HOME}/.bashrc"
 fi
 
 # Set PATH so it includes user's private bin if it exists
-# if [ -d "${HOME}/bin" ] ; then
-#   PATH="${HOME}/bin:${PATH}"
-# fi
+if [ -d "${HOME}/.bin" ]; then
+    PATH="${HOME}/.bin:${PATH}"
+fi
 
 # Set MANPATH so it includes users' private man if it exists
 # if [ -d "${HOME}/man" ]; then
@@ -29,11 +29,33 @@ fi
 
 SSH_ENV="$HOME/.ssh/environment"
 
-run_ssh_env() {
+function run_ssh_env() {
     . "${SSH_ENV}" >/dev/null
 }
 
-start_ssh_agent() {
+function ssh_id_source() {
+    if [ -f ~/.ssh/$1 ]; then
+        echo -e "\e[33m"
+        ssh-add ~/.ssh/$1 || echo "Key ignored"
+        echo -e "\e[0m"
+    elif [ -f $(cygpath "$USERPROFILE/.ssh/$1") ]; then
+        echo -e "\e[34m$(cygpath $USERPROFILE/.ssh/$1) found, copying and adding...\e[0m"
+        cp $(cygpath $USERPROFILE/.ssh/$1) ~/.ssh/
+        echo -e "\e[33m"
+        ssh-add ~/.ssh/$1 || echo "Key ignored"
+        echo -e "\e[0m"
+    elif [ -f "$(cygpath $USERPROFILE/dotfiles/universal/.ssh/$1)" ]; then
+        echo -e "\e[34m$(cygpath $USERPROFILE/dotfiles/universal/.ssh/$1) found, copying and adding...\e[0m"
+        cp $(cygpath $USERPROFILE/dotfiles/universal/.ssh/$1) ~/.ssh
+        echo -e "\e[33m"
+        ssh-add ~/.ssh/$1 || echo "Key ignored"
+        echo -e "\e[0m"
+    else
+        echo -e "\e[33m$1 not found anywhere\e[0m"
+    fi
+}
+
+function start_ssh_agent() {
     echo "Initializing new SSH agent..."
     ssh-agent | sed 's/^echo/#echo/' >"${SSH_ENV}"
     echo -e "\e[32msucceeded\e[0m"
@@ -42,31 +64,15 @@ start_ssh_agent() {
     run_ssh_env
 
     ssh-add
-    if [[ $(ssh-add -L) != *"$USERNAME/.ssh/git_rsa"* ]]; then
-        if [ -f ~/.ssh/git_rsa ]; then
-            echo -e "\e[33m"
-            ssh-add ~/.ssh/git_rsa || echo "Key ignored"
-            echo -e "\e[0m"
-        elif [ ! -f ~/.ssh/git_rsa ] && [ -f $USERPROFILE/.ssh/git_rsa ]; then
-            echo -e "\e[33m"
-            ssh-add $USERPROFILE/.ssh/git_rsa || echo "Key ignored"
-            echo -e "\e[0m"
-        fi
+    if [[ $(ssh-add -L) != *"$USERNAME/.ssh/git_rsa"* ]]; then # Master Git ssh
+        ssh_id_source "git_rsa"
     fi
-    if [[ $(ssh-add -L) != *"$USERPROFILE/.ssh/iktisrv_rsa"* ]] && [ ! -z $MSYS2_PATH_TYPE ]; then
-        if [ -f ~/.ssh/iktisrv_rsa ]; then
-            echo -e "\e[33m"
-            ssh-add ~/.ssh/iktisrv_rsa || echo "Key ignored"
-            echo -e "\e[0m"
-        elif [ -f $USERPROFILE/.ssh/iktisrv_rsa ]; then
-            echo -e "\e[33m"
-            ssh-add $USERPROFILE/.ssh/iktisrv_rsa || echo "Key ignored"
-            echo -e "\e[0m"
-        fi
+    if [[ $(ssh-add -L) != *"$USERNAME/.ssh/iktisrv_rsa"* ]] && [ ! -z $MSYS2_PATH_TYPE ]; then # IKTI srv ssh
+        ssh_id_source "iktisrv_rsa"
     fi
 }
 
-ssh_check() {
+function ssh_check() {
     if [ -f "${SSH_ENV}" ]; then
         run_ssh_env
         ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ >/dev/null || {
