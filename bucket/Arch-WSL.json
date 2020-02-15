@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/DDoSolitary/LxRunOffline/wiki",
   "description": "Install ArchLinux as a WSL Instance (using LxRunOffline)",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "url": "https://lxrunoffline.apphb.com/download/ArchLinux",
   "hash": "8a6c827f137058ac3e3df1125891ff5c3b62955f0b911adec26eae6ea2bbb285",
   "depends": "lxrunoffline",
