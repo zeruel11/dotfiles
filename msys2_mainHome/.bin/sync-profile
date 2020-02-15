@@ -1,26 +1,36 @@
 #!/usr/bin/env bash
 #profile config sync
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 # log file size
 maxsize=900000
 baksize=1000000
 # paths
-terminalProfile="$(cygpath $LOCALAPPDATA)/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/"
-pwshProfile="$(cygpath $USERPROFILE)/Documents/PowerShell/"
-powershellProfile="$(cygpath $USERPROFILE)/Documents/WindowsPowerShell/"
-dotfiles="$(cygpath $USERPROFILE)/dotfiles/"
+terminalProfile="$(cygpath $LOCALAPPDATA)/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
+pwshProfile="$(cygpath $USERPROFILE)/Documents/PowerShell"
+powershellProfile="$(cygpath $USERPROFILE)/Documents/WindowsPowerShell"
+dotfiles="$(cygpath $USERPROFILE)/dotfiles"
 # preview coloring
-grepSysCol="mt=1;93"
+grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
+grepSkipCol="mt=1;35"
 grepDelCol="mt=1;31"
 grepUnchCol="mt=1;32"
 grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$'
 grepSendMsg='^(\[sender\]).*|$'
+grepSkipMsg='(not creating new file).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
 # excludes/filter files
 filterFile="$DIR/.filter-profile"
+
+# test filters (if needed)
+if [ ! -z ${filterFile+x} ]; then
+	if [ ! -f $filterFile ]; then
+		echo -e "\e[31mFile $filterFile not found!\e[0m"
+		exit 1
+	fi
+fi
 
 function usage() {
 	cat <<HELP_USAGE
@@ -40,41 +50,26 @@ HELP_USAGE
 }
 
 function main_logic() {
-	if [ "$1" == 'pull' ]; then
-		# TODO change rsync compare to use diff since this is a one file
-		# DIFF=$(diff a b)
-		# if [ "$DIFF" != "" ]; then
-		# 	echo "The directory was modified"
-		# fi
-		rsync -Ccazvvn --existing --filter="merge $filterFile" "$dotfiles$3" "$2" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
-		read -p "Confirm $1? [no] " yesOrYes
-		yesOrYes=${yesOrYes:-no}
-		if [ "$yesOrYes" == 'yes' ] || [ "$yesOrYes" == 'y' ]; then
-			echo "$dotfiles$3 $1 to $2" >>$runLog
-			rsync -Ccaziiv --existing --filter="merge $filterFile" "$dotfiles$3" "$2" --log-file="$runLog"
-			cp "$runLog" "$dotfiles.logs/"
-			rm "$dryLog"
+	# TODO change rsync compare to use diff since this is a one file
+	# DIFF=$(diff a b)
+	# if [ "$DIFF" != "" ]; then
+	# 	echo "The directory was modified"
+	# fi
+	rsync -Ccazvvn --existing --filter="merge $filterFile" "$1" "$2" | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	read -p "Confirm $sync? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' ] || [ "$yesOrYes" == 'y' ]; then
+		echo "$1 $sync to $2" >>$HOME/.logs/$runLog
+		rsync -Ccaziiv --existing --filter="merge $filterFile" "$1" "$2" --log-file="$HOME/.logs/$runLog"
+		if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
+			diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
+			cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
+		else
+			cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
 		fi
-	elif [ "$1" == 'push' ]; then
-		rsync -Ccazvvn --existing --filter="merge $filterFile" "$2" "$dotfiles$3" | tee "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
-		read -p "Confirm $1? [no] " yesOrYes
-		yesOrYes=${yesOrYes:-no}
-		if [ "$yesOrYes" == 'yes' ] || [ "$yesOrYes" == 'y' ]; then
-			echo "$2 $1 to $dotfiles$3" >>$runLog
-			rsync -Ccaziiv --existing --filter="merge $filterFile" "$2" "$dotfiles$3" --log-file="$runLog"
-			cp "$runLog" "$dotfiles.logs/"
-			rm "$dryLog"
-		fi
+		rm "$HOME/.logs/$dryLog"
 	fi
 }
-
-# test filters (if needed)
-if [ -z ${filterFile+x} ]; then
-	if [ ! -f ~/$filterFile ]; then
-		echo -e "\e[31mFile $filterFile not found!\e[0m"
-		exit 1
-	fi
-fi
 
 function command_param() {
 	case $1 in
@@ -98,24 +93,33 @@ function command_param() {
 	case $2 in
 
 	pwsh | powershell)
-		echo -e "\e[44m$sync""ing Powershell Core profile\e[0m"
-		main_logic $sync $pwshProfile "win10_userprofile/powershell/"
-		if [ "$sync" == "push" ]; then
+		echo -e "\e[44m${sync[@]^}ing Powershell Core profile\e[0m"
+		if [ "$sync" == "pull" ]; then
+			main_logic "$dotfiles/win10_userprofile/powershell/" "$pwshProfile/"
+			echo -e "\e[44m${sync[@]^}ing Powershell profile\e[0m"
+			main_logic "$dotfiles/win10_userprofile/powershell/" "$powershellProfile/"
+		elif [ "$sync" == "push" ]; then
+			main_logic "$pwshProfile/" "$dotfiles/win10_userprofile/powershell/"
 			echo -e "\e[43mNot pushing Windows Powershell profile (this should follow pwsh)\e[0m"
-			exit 0
 		fi
-		echo -e "\e[44m$sync""ing Powershell profile\e[0m"
-		main_logic $sync $powershellProfile "win10_userprofile/powershell/"
 		;;
 
 	term | terminal | winterminal)
-		echo -e "\e[44m$sync""ing terminal profile\e[0m"
-		main_logic $sync $terminalProfile "win10_userprofile/win_terminal/"
+		echo -e "\e[44m${sync[@]^}""ing terminal profile\e[0m"
+		if [ "$sync" == "pull" ]; then
+			main_logic "$dotfiles/win10_userprofile/win_terminal/" "$terminalProfile/"
+		elif [ "$sync" == "push" ]; then
+			main_logic "$terminalProfile/" "$dotfiles/win10_userprofile/win_terminal/"
+		fi
 		;;
 
 	msys | msys2 | bash)
-		echo -e "\e[44m$sync""ing MSYS2 profile\e[0m"
-		main_logic $sync ~/ "msys2_mainHome/"
+		echo -e "\e[44m${sync[@]^}""ing MSYS2 profile\e[0m"
+		if [ "$sync" == "pull" ]; then
+			main_logic "$dotfiles/msys2_mainHome/" "$HOME/"
+		elif [ "$sync" == "push" ]; then
+			main_logic "$HOME/" "$dotfiles/msys2_mainHome/"
+		fi
 		;;
 
 	*)
@@ -140,19 +144,20 @@ else
 	usage
 fi
 
-if [ -f "$runLog" ]; then
-	filesize=$(stat -c%s "$runLog")
+# log archiving
+if [ -f "$HOME/.logs/$runLog" ]; then
+	filesize=$(stat -c%s "$HOME/.logs/$runLog")
 	if ((filesize > maxsize)) && ((filesize < baksize)); then
 		echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
 	elif ((filesize > baksize)); then
 		echo -e "\e[34;43mAttention: Log file is 1mb large. Archiving...\e[0m"
 		for i in {1..3}; do
-			if [ ! -f "$runLog.bak$i" ]; then
-				tar -czvf "$runLog.bak$i" "$runLog" --remove-files
-				echo -e "\e[34mLog file archived to $runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
+			if [ ! -f "$HOME/.logs/$runLog.bak$i" ]; then
+				tar -czvf "$HOME/.logs/$runLog.bak$i" "$HOME/.logs/$runLog" --remove-files
+				echo -e "\e[34mLog file archived to $HOME/.logs/$runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
 				break
-			elif [ -f "$runLog.bak1" ] && [ -f "$runLog.bak2" ] && [ -f "$runLog.bak3" ]; then
-				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $runLog.bak$i exists.\e[0m"
+			elif [ -f "$HOME/.logs/$runLog.bak1" ] && [ -f "$HOME/.logs/$runLog.bak2" ] && [ -f "$HOME/.logs/$runLog.bak3" ]; then
+				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $HOME/.logs/$runLog.bak$i exists.\e[0m"
 			fi
 		done
 	fi

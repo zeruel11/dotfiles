@@ -13,6 +13,8 @@
 
 # MSYS2 (mingw32/64) section
 + .bash*
-+ /bin/
++ /.bin/***
++ .inputrc
++ .savegameList
 
 - *
