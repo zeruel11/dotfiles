@@ -123,7 +123,7 @@ elif [ "$1" == 'push' ]; then # copy edited files
 	fi
 	if [ "$FO4" == "portable" ]; then
 		if [ "$whattopush" == "esp" ]; then
-			echo -e "\e[34mCopying myCompatibilityPatches.esp...\e[0m"
+			echo -e "\e[34mChecking myCompatibilityPatches.esp...\e[0m"
 			rsync -Ccazvn "$FO4_x230/Data/myCompatibilityPatches.esp" "$moddingDir/FO4/Data/"
 			userConfirmation x230_push
 		elif [ "$whattopush" == "model" ]; then
@@ -135,7 +135,7 @@ elif [ "$1" == 'push' ]; then # copy edited files
 		fi
 	elif [ "$FO4" == "main" ]; then
 		if [ "$whattopush" == "esp" ]; then
-			echo -e "\e[34mCopying myCompatibilityPatches.esp...\e[0m"
+			echo -e "\e[34mChecking myCompatibilityPatches.esp...\e[0m"
 			rsync -Ccazvn "$FO4_PCx/Data/myCompatibilityPatches.esp" "$moddingDir/FO4/Data/"
 			userConfirmation PCx_push
 		elif [ "$whattopush" == "model" ]; then
