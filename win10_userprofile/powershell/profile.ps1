@@ -209,6 +209,11 @@ $b = [ConsoleColor]::Gray
 $h = [ConsoleColor]::DarkGray
 ###############################################################################
 
+# Enhance with MEGAcmd
+if (Test-Path "$env:LOCALAPPDATA\MEGAcmd") {
+    $env:PATH += ";$env:LOCALAPPDATA\MEGAcmd"
+}
+
 function U {
     param
     (
@@ -245,12 +250,6 @@ function cddash {
 
 Set-Alias -Name cd -value cddash -Option AllScope
 
-# Enhance with MEGAcmd
-if (Test-Path "$env:LOCALAPPDATA\MEGAcmd") {
-    $env:PATH += ";$env:LOCALAPPDATA\MEGAcmd"
-}
-
-
 # Helper function to set location to the User Profile directory
 function cuserprofile { Set-Location ~ }
 Set-Alias ~ cuserprofile -Option AllScope
@@ -265,10 +264,17 @@ function sst {
     scoop.ps1 status
 }
 function sup {
-    scoop.ps1 update
-}
-function s8 {
-    scoop.ps1 update *
+    param(
+        [parameter(Mandatory=$false)]
+        [string[]]$AppName = $args
+    )
+    if ($PSBoundParameters.ContainsKey('AppName')) {
+        foreach ($i in $AppName){
+            scoop.ps1 update $i
+        }
+    } else {
+        scoop.ps1 update
+    }
 }
 function ss {
     scoop.ps1 search $args[0]
