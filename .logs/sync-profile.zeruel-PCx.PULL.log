@@ -316,3 +316,18 @@
 2020/02/15 21:21:51 [4776] .f          .bin/sync-vivaldi
 2020/02/15 21:21:51 [4776] sent 975 bytes  received 83 bytes  705.33 bytes/sec
 2020/02/15 21:21:51 [4776] total size is 67,254  speedup is 63.57
+++ /home/zeruel/.logs/sync-profile.zeruel-PCx.PULL.log	2020-02-17 00:17:23.557868100 +0700
+/c/Users/zeruel/dotfiles/win10_userprofile/powershell/ pull to /c/Users/zeruel/Documents/PowerShell/
+2020/02/17 00:17:23 [991] building file list
+2020/02/17 00:17:23 [991] .d..t...... ./
+2020/02/17 00:17:23 [991] .f..t...... powershell.config.json
+2020/02/17 00:17:23 [991] >fcst...... profile.ps1
+2020/02/17 00:17:23 [991] sent 4,122 bytes  received 41 bytes  8,326.00 bytes/sec
+2020/02/17 00:17:23 [991] total size is 12,188  speedup is 2.93
+++ /home/zeruel/.logs/sync-profile.zeruel-PCx.PULL.log	2020-02-17 00:17:27.040096900 +0700
+/c/Users/zeruel/dotfiles/win10_userprofile/powershell/ pull to /c/Users/zeruel/Documents/WindowsPowerShell/
+2020/02/17 00:17:26 [1009] building file list
+2020/02/17 00:17:27 [1009] .d..t...... ./
+2020/02/17 00:17:27 [1009] >fcst...... profile.ps1
+2020/02/17 00:17:27 [1009] sent 4,119 bytes  received 38 bytes  2,771.33 bytes/sec
+2020/02/17 00:17:27 [1009] total size is 12,188  speedup is 2.93
