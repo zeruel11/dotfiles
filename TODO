@@ -1,0 +1,17 @@
+rewrite:
+    ✔ sync-calibre @done(20-02-17 17:20)
+    ☐ sync-cmder?
+    ☐ sync-fmd
+    ☐ sync-persist
+    ✔ sync-vivaldi @started(20-02-17 17:28) @done(20-02-17 18:38) @lasted(1h10m17s)
+
+refactor:
+    ✔ sync-profile @done(20-02-17 17:20)
+
+review:
+    ☐ sync-modWorks
+    ☐ sync-savegame
+
+☐ cleanup logfiles
+☐ move profiles to non cmder
+remove cmder config
