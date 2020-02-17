@@ -1,0 +1,10 @@
++ *.esp
++ *.esl
++ *.esm
+
+- DLC*.ba2
+- Fallout*.ba2
+- BR77*.ba2
++ *.ba2
+
+- *
