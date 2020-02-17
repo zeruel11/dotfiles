@@ -50,8 +50,8 @@ HELP_USAGE
 }
 
 # check IKTI online
-IKTIonline() {
-	if ssh IKTI "[ -d $rsyncTest ]"; then
+function IKTIonline() {
+	if ssh IKTI "[ -d "$rsyncTest" ]"; then
 		echo -e "\e[44mServer is online\e[0m"
 	else
 		echo -e "\e[41mServer is unreachable\e[0m"
@@ -59,28 +59,11 @@ IKTIonline() {
 	fi
 }
 
-function main_logic() {
-	rsync -Ccazvvn --exclude-from="$filterFile" "$1" "$2" $3 | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
-	read -p "Confirm $sync? [no] " yesOrYes
-	yesOrYes=${yesOrYes:-no}
-	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then
-		echo "$1 $sync to $2" >>$HOME/.logs/$runLog
-		rsync -Cuazv --exclude-from="$filterFile" "$1" "$2" $3 --log-file="$runLog"
-		if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
-			diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
-			cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
-		else
-			cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
-		fi
-		rm "$HOME/.logs/$dryLog"
-	fi
-}
-
 function define_source() {
-	if [ -d $calibre_PCx ]; then
+	if [ -d "$calibre_PCx" ]; then
 		source="$calibre_PCx"
 		read -p $'\e[44mDirectory \e[33m$calibre_PCx\e[37m found. \e[35mHomebase mode...\e[0m\n' -t 5
-	elif [ -d $calibre_x230 ]; then
+	elif [ -d "$calibre_x230" ]; then
 		source="$calibre_x230"
 		read -p $'\e[44mDirectory \e[33m$calibre_x230\e[37m found. \e[35mOn the road mode...\e[0m\n' -t 5
 	else
@@ -96,6 +79,27 @@ function command_exception() {
 	fi
 }
 
+function main_logic() {
+	rsync -Ccazvvn --exclude-from="$filterFile" "$1" "$2" $3 | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	read -p "Confirm $sync? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then
+		echo "$1 $sync to $2" >>$HOME/.logs/$runLog
+		rsync -Cuazv --exclude-from="$filterFile" "$1" "$2" $3 --log-file="$runLog"
+		if [ -d $dotfiles ]; then
+			if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
+				diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
+				cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
+			else
+				cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
+			fi
+		else
+			echo -e "\e[30;43mWARNING: directory $dotfiles not found, logfiles will NOT be synced\e[0m"
+		fi
+		rm "$HOME/.logs/$dryLog"
+	fi
+}
+
 function command_param() {
 	case $1 in
 
@@ -103,19 +107,24 @@ function command_param() {
 		sync="pull"
 		command_exception "$2"
 		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
+		define_source
 		IKTIonline
 		main_logic "$calibre_IKTI" "$source/"
 		;;
+
 	ps | push)
 		sync="push"
 		command_exception "$2"
 		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
+		define_source
 		IKTIonline
 		main_logic "$source/" "$calibre_IKTI" "--delete-before --delete-excluded"
 		;;
+
 	ex | export)
 		sync="export"
 		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
+		define_source
 		if [ $# -lt 2 ]; then
 			echo "Path not specified, using default: $FD"
 			if [ -d "$FD" ]; then
@@ -136,12 +145,15 @@ function command_param() {
 			fi
 		fi
 		;;
+
 	-h | --help)
 		usage
 		;;
+
 	"")
 		usage
 		;;
+		
 	*)
 		echo "Unknown option - $1"
 		usage
@@ -155,11 +167,6 @@ if [ $# -gt 2 ]; then
 	done
 	usage
 else
-	if [ ! -d $dotfiles ]; then
-		echo -e "\e[31mDotfiles dir $dotfiles not found. Misplaced?\e[0m"
-		exit 1
-	fi
-	define_source
 	command_param $1 $2
 fi
 
