@@ -369,3 +369,32 @@
 2020/02/17 15:36:36 [2089] .f..t...... .bin/sync-vivaldi
 2020/02/17 15:36:36 [2089] sent 966 bytes  received 83 bytes  2,098.00 bytes/sec
 2020/02/17 15:36:36 [2089] total size is 69,442  speedup is 66.20
+++ /home/zeruel/.logs/sync-profile.zeruel-PCx.log	2020-02-17 18:19:34.476807700 +0700
+/c/Users/zeruel/dotfiles/msys2_mainHome/ pull to /home/zeruel/
+2020/02/17 18:19:34 [2394] building file list
+2020/02/17 18:19:34 [2394] .d..t...... ./
+2020/02/17 18:19:34 [2394] .f          .bash_aliases
+2020/02/17 18:19:34 [2394] .f          .bash_profile
+2020/02/17 18:19:34 [2394] .f          .bashrc
+2020/02/17 18:19:34 [2394] .f          .inputrc
+2020/02/17 18:19:34 [2394] .f          .savegameList
+2020/02/17 18:19:34 [2394] .d..t...... .bin/
+2020/02/17 18:19:34 [2394] .f          .bin/.exclude-calibre
+2020/02/17 18:19:34 [2394] .f          .bin/.exclude-cmder
+2020/02/17 18:19:34 [2394] .f          .bin/.exclude-fmd
+2020/02/17 18:19:34 [2394] .f          .bin/.exclude-persist
+2020/02/17 18:19:34 [2394] .f          .bin/.filter-Data
+2020/02/17 18:19:34 [2394] .f..t...... .bin/.filter-MasterSync
+2020/02/17 18:19:34 [2394] .f..t...... .bin/.filter-espBA2
+2020/02/17 18:19:34 [2394] .f          .bin/.filter-profile
+2020/02/17 18:19:34 [2394] .f          .bin/.filter-savedata
+2020/02/17 18:19:34 [2394] >fcst...... .bin/sync-calibre
+2020/02/17 18:19:34 [2394] .f          .bin/sync-cmder
+2020/02/17 18:19:34 [2394] .f          .bin/sync-fmd
+2020/02/17 18:19:34 [2394] .f          .bin/sync-modWorks
+2020/02/17 18:19:34 [2394] .f          .bin/sync-persist
+2020/02/17 18:19:34 [2394] >fcst...... .bin/sync-profile
+2020/02/17 18:19:34 [2394] .f          .bin/sync-savegame
+2020/02/17 18:19:34 [2394] >fcst...... .bin/sync-vivaldi
+2020/02/17 18:19:34 [2394] sent 7,048 bytes  received 141 bytes  14,378.00 bytes/sec
+2020/02/17 18:19:34 [2394] total size is 70,991  speedup is 9.87
