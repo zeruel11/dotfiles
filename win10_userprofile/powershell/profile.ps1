@@ -204,7 +204,7 @@ Remove-Variable TestSSHmykey
 
 # set color
 # $l = [ConsoleColor]::DarkCyan
-$c = [ConsoleColor]::Cyan
+# $c = [ConsoleColor]::Cyan
 $b = [ConsoleColor]::Gray
 $h = [ConsoleColor]::DarkGray
 ###############################################################################
@@ -265,14 +265,15 @@ function sst {
 }
 function sup {
     param(
-        [parameter(Mandatory=$false)]
+        [parameter(Mandatory = $false)]
         [string[]]$AppName = $args
     )
     if ($PSBoundParameters.ContainsKey('AppName')) {
-        foreach ($i in $AppName){
+        foreach ($i in $AppName) {
             scoop.ps1 update $i
         }
-    } else {
+    }
+    else {
         scoop.ps1 update
     }
 }
@@ -321,8 +322,7 @@ function dps {
 }
 function dst {
     param(
-        [Parameter(Mandatory = $true)]
-        [string[]]$ContainerName = $args
+        [Parameter(Mandatory = $true)] [string[]]$ContainerName
     )
     foreach ($i in $ContainerName) {
         if ((docker container ls -a | grep -w $i) -ne $null) {
@@ -363,11 +363,10 @@ function subit {
 }
 function gup {
     param(
-        [Parameter(Mandatory = $true)]
-        [string]$FileToUpload = $args[0],
+        [Parameter(Mandatory = $true)] [string]$UploadFile,
         [string]$DriveDir
     )
-    foreach ($f in Get-ChildItem -LiteralPath $FileToUpload -Filter *.mkv) {
+    foreach ($f in Get-ChildItem -LiteralPath $UploadFile -Filter *.mkv) {
         if (!$DriveDir) {
             gdrive upload $f
         }
