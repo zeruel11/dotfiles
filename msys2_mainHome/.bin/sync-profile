@@ -21,6 +21,9 @@ grepSendMsg='^(\[sender\]).*|$'
 grepSkipMsg='(not creating new file).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
+# logfiles
+runLog="$(basename $0).$HOSTNAME.log"
+dryLog="$(basename $0).$HOSTNAME.DRY_RUN"
 # excludes/filter files
 filterFile="$DIR/.filter-profile"
 
@@ -35,7 +38,7 @@ fi
 function usage() {
 	cat <<HELP_USAGE
 
-    usage: $0 [ps|pl] [pwsh|term|msys]
+    usage: $(basename $0) [ps|pl] [pwsh|term|msys]
 
     -h, --help			Print this message
     ps, push			Sync current directory to git repo
@@ -49,12 +52,20 @@ HELP_USAGE
 	exit 0
 }
 
+function check_dir() {
+	if [ ! -d $1 ] ; then
+	echo -e "\e[30;43mWARNING: directory $1 not found, exiting...\e[0m"
+	exit 1
+	fi
+}
+
 function main_logic() {
 	# TODO change rsync compare to use diff since this is a one file
 	# DIFF=$(diff a b)
 	# if [ "$DIFF" != "" ]; then
 	# 	echo "The directory was modified"
 	# fi
+	check_dir $1; check_dir $2
 	rsync -Ccazvvn --existing --filter="merge $filterFile" "$1" "$2" | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $sync? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
@@ -80,15 +91,15 @@ function command_param() {
 	ps | push)
 		sync="push"
 		;;
+	"" | -h | --help)
+		usage
+		;;
+
 	*)
-		echo "Wrong parameter"
+		echo "Unknown option - $1"
 		usage
 		;;
 	esac
-
-	# logfiles
-	runLog="sync-profile.$HOSTNAME.${sync^^}.log"
-	dryLog="sync-profile.$HOSTNAME.${sync^^}.DRY_RUN"
 
 	case $2 in
 
@@ -122,26 +133,25 @@ function command_param() {
 		fi
 		;;
 
+	"")
+		echo "You have to specify profile to sync"
+		usage
+		;;
+
 	*)
-		echo "Unknown profile $2"
+		echo "Unknown profile - $2"
 		usage
 		;;
 	esac
 }
 
-if [ $# -eq 0 ] || [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
-	usage
-elif [ $# -gt 2 ]; then
-	echo "Over parameter"
-	usage
-elif [ $# -eq 2 ]; then
-	command_param $1 $2
-elif [ "$1" == "ps" ] || [ "$1" == "pl" ]; then
-	echo "Profile not defined"
+if [ $# -gt 2 ]; then
+	for ((i = 3; i <= $#; i++)); do
+		echo "No parameter ${!i} found"
+	done
 	usage
 else
-	echo "Unknown option $1"
-	usage
+	command_param $1 $2
 fi
 
 # log archiving
