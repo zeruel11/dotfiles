@@ -53,9 +53,9 @@ HELP_USAGE
 }
 
 function check_dir() {
-	if [ ! -d $1 ] ; then
-	echo -e "\e[30;43mWARNING: directory $1 not found, exiting...\e[0m"
-	exit 1
+	if [ ! -d $1 ]; then
+		echo -e "\e[30;43mWARNING: directory $1 not found, exiting...\e[0m"
+		exit 1
 	fi
 }
 
@@ -65,7 +65,8 @@ function main_logic() {
 	# if [ "$DIFF" != "" ]; then
 	# 	echo "The directory was modified"
 	# fi
-	check_dir $1; check_dir $2
+	check_dir $1
+	check_dir $2
 	rsync -Ccazvvn --existing --filter="merge $filterFile" "$1" "$2" | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $sync? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
@@ -151,6 +152,10 @@ if [ $# -gt 2 ]; then
 	done
 	usage
 else
+	if [ ! -d $dotfiles ]; then
+		echo -e "\e[31mDotfiles dir $dotfiles not found. Misplaced?\e[0m"
+		exit 1
+	fi
 	command_param $1 $2
 fi
 

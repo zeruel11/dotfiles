@@ -77,12 +77,14 @@ function main_logic() {
 }
 
 function define_source() {
-	if [ "$(whoami)" == "zeruel" ]; then
+	if [ -d $calibre_PCx ]; then
 		source="$calibre_PCx"
-	elif [ "$(whoami)" == "zeruel11" ]; then
+		read -p $'\e[44mDirectory \e[33m$calibre_PCx\e[37m found. \e[35mHomebase mode...\e[0m\n' -t 5
+	elif [ -d $calibre_x230 ]; then
 		source="$calibre_x230"
+		read -p $'\e[44mDirectory \e[33m$calibre_x230\e[37m found. \e[35mOn the road mode...\e[0m\n' -t 5
 	else
-		echo "Nowhere"
+		echo -e "Youre neither at your pc nor your laptop... \e[31mWho or where the fluff are you?!\e[0m"
 		exit 0
 	fi
 }
@@ -153,6 +155,10 @@ if [ $# -gt 2 ]; then
 	done
 	usage
 else
+	if [ ! -d $dotfiles ]; then
+		echo -e "\e[31mDotfiles dir $dotfiles not found. Misplaced?\e[0m"
+		exit 1
+	fi
 	define_source
 	command_param $1 $2
 fi
