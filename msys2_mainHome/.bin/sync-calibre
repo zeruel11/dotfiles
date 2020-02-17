@@ -1,19 +1,19 @@
 #!/bin/bash
 #calibre sync
 
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+# log file size
 maxsize=900000
 baksize=1000000
 # paths
+calibre_PCx="/d/E-book"
 calibre_x230="/d/KataLoGue"
 calibre_IKTI="bambang_ebis@10.126.12.212::calibre"
 FD="/f/[calibre]/KataLoGue"
 rsyncTest="/home/bambang_ebis/caltest"
-
-runLog="sync-calibre.$HOSTNAME.${1^^}.log"
-dryLog="sync-calibre.$HOSTNAME.${1^^}.DRY_RUN"
-
+dotfiles="$(cygpath $USERPROFILE)/dotfiles"
 # preview coloring
-grepSysCol="mt=1;93"
+grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
 grepDelCol="mt=1;31"
 grepUnchCol="mt=1;32"
@@ -21,66 +21,156 @@ grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*
 grepSendMsg='^(\[sender\]).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
+# logfiles
+runLog="$(basename $0).$HOSTNAME.log"
+dryLog="$(basename $0).$HOSTNAME.DRY_RUN"
+# excludes/filter files
+filterFile="$DIR/.exclude-calibre"
 
-# test arguments
-if [ $# -eq 0 ]; then
-	echo -e '\e[31mYou have to specify pull or push, or export (FD)'
-	exit 2
+# test filters (if needed)
+if [ ! -z ${filterFile+x} ]; then
+	if [ ! -f $filterFile ]; then
+		echo -e "\e[31mFile $filterFile not found!\e[0m"
+		exit 1
+	fi
 fi
+
+function usage() {
+	cat <<HELP_USAGE
+
+    usage: $(basename $0) [ps|pl|ex] <drivepath>
+
+    -h, --help			Print this message
+    ps, push			Sync current directory to git repo
+    pl, pull			Sync git repo to current dir
+    ex, export			Export current directory to portable drives
+HELP_USAGE
+
+	exit 0
+}
 
 # check IKTI online
 IKTIonline() {
-	local operation=$1
 	if ssh IKTI "[ -d $rsyncTest ]"; then
-		if [ "$operation" == 'pull' ]; then
-			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_IKTI" "$calibre_x230/" --log-file="$runLog"
-		elif [ "$operation" == 'push' ]; then
-			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230/" "$calibre_IKTI" --delete-before --delete-excluded --log-file="$runLog"
-		fi
+		echo -e "\e[44mServer is online\e[0m"
 	else
 		echo -e "\e[41mServer is unreachable\e[0m"
 		exit 1
 	fi
 }
 
-if [ "$1" == 'pull' ]; then
-	IKTIonline "$1"
-	cp "$runLog" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
-elif [ "$1" == 'push' ]; then
-	IKTIonline "$1"
-	cp "$runLog" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
-elif [ "$1" == 'export' ]; then
-	if [ -z "$2" ]; then
-		if [ -d "$FD" ]; then
-			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230/" "$FD/" --delete-before --log-file="$runLog"
-			cp "$HOSTNAME.calibre_$1(FD).log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
+function main_logic() {
+	rsync -Ccazvvn --exclude-from="$filterFile" "$1" "$2" $3 | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	read -p "Confirm $sync? [no] " yesOrYes
+	yesOrYes=${yesOrYes:-no}
+	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then
+		echo "$1 $sync to $2" >>$HOME/.logs/$runLog
+		rsync -Cuazv --exclude-from="$filterFile" "$1" "$2" $3 --log-file="$runLog"
+		if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
+			diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
+			cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
 		else
-			echo -e "\e[41mFlashdisk not found!!!\e[0m"
+			cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
 		fi
-	else
-		if [ -d "$2" ]; then
-			rsync -Cuazv --exclude-from=".exclude-calibre" "$calibre_x230/" "$2" --delete-before --log-file="$runLog"
-			echo "Exported to $2" >>"$runLog"
-			cp "$HOSTNAME.calibre_$1($(basename $2)).log" "$(cygpath $USERPROFILE)/dotfiles/.logs/"
-		else
-			echo -e "\e[31mPath doesn't exist!\e[0m"
-		fi
+		rm "$HOME/.logs/$dryLog"
 	fi
+}
+
+function define_source() {
+	if [ "$(whoami)" == "zeruel" ]; then
+		source="$calibre_PCx"
+	elif [ "$(whoami)" == "zeruel11" ]; then
+		source="$calibre_x230"
+	else
+		echo "Nowhere"
+		exit 0
+	fi
+}
+
+function command_exception() {
+	if [ "$1" != "" ]; then
+		echo "Command $sync does not accept more arguments"
+		usage
+	fi
+}
+
+function command_param() {
+	case $1 in
+
+	pl | pull)
+		sync="pull"
+		command_exception "$2"
+		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
+		IKTIonline
+		main_logic "$calibre_IKTI" "$source/"
+		;;
+	ps | push)
+		sync="push"
+		command_exception "$2"
+		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
+		IKTIonline
+		main_logic "$source/" "$calibre_IKTI" "--delete-before --delete-excluded"
+		;;
+	ex | export)
+		sync="export"
+		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
+		if [ $# -lt 2 ]; then
+			echo "Path not specified, using default: $FD"
+			if [ -d "$FD" ]; then
+				main_logic "$source/" "$FD/"
+			else
+				echo -e "\e[41mFlashdisk not found! Please specify export path.\e[0m"
+				exit 1
+			fi
+		elif [ $# -eq 2 ]; then
+			if [ "${2: -1}" != "/" ]; then
+				echo -e "\e[31mPlease use full FOLDER path (with /) to let rsync use folder and not files!\e[0m"
+				exit 1
+			elif [ -d "$2" ]; then
+				main_logic "$source/" "$2" "--delete-before --delete-excluded"
+			else
+				echo -e "\e[31mPath doesn't exist!\e[0m"
+				exit 1
+			fi
+		fi
+		;;
+	-h | --help)
+		usage
+		;;
+	"")
+		usage
+		;;
+	*)
+		echo "Unknown option - $1"
+		usage
+		;;
+	esac
+}
+
+if [ $# -gt 2 ]; then
+	for ((i = 3; i <= $#; i++)); do
+		echo "No parameter ${!i} found"
+	done
+	usage
+else
+	define_source
+	command_param $1 $2
 fi
 
-if [ -f "$runLog" ]; then
-	filesize=$(stat -c%s "$runLog")
+# log archiving
+if [ -f "$HOME/.logs/$runLog" ]; then
+	filesize=$(stat -c%s "$HOME/.logs/$runLog")
 	if ((filesize > maxsize)) && ((filesize < baksize)); then
 		echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
 	elif ((filesize > baksize)); then
 		echo -e "\e[34;43mAttention: Log file is 1mb large. Archiving...\e[0m"
 		for i in {1..3}; do
-			if [ ! -f "$runLog.bak$i" ]; then
-				tar -czvf "$runLog.bak$i" "$runLog" --remove-files
-				echo -e "\e[34mLog file archived to $runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
+			if [ ! -f "$HOME/.logs/$runLog.bak$i" ]; then
+				tar -czvf "$HOME/.logs/$runLog.bak$i" "$HOME/.logs/$runLog" --remove-files
+				echo -e "\e[34mLog file archived to $HOME/.logs/$runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
 				break
-			elif [ -f "$runLog.bak1" ] && [ -f "$runLog.bak2" ] && [ -f "$runLog.bak3" ]; then
-				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $runLog.bak$i exists.\e[0m"
+			elif [ -f "$HOME/.logs/$runLog.bak1" ] && [ -f "$HOME/.logs/$runLog.bak2" ] && [ -f "$HOME/.logs/$runLog.bak3" ]; then
+				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $HOME/.logs/$runLog.bak$i exists.\e[0m"
 			fi
 		done
 	fi
