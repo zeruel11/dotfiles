@@ -9,6 +9,7 @@ baksize=1000000
 scoopScoopy="$(cygpath $USERPROFILE)/.scoopy"
 scoopDefault="$(cygpath $USERPROFILE)/scoop"
 dotfiles="$(cygpath $USERPROFILE)/dotfiles"
+dotfilesDir="win10_userprofile/scoop_persist"
 # preview coloring
 grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
@@ -53,19 +54,19 @@ function check_dir() {
 }
 
 function path_input() {
-	echo -e "\e[44mScoop install directory not found...\e[0m"
 	read -e -p "Please enter path to scoop: " source
 	check_dir "$source/persist/"
 }
 
 function define_source() {
 	if [ -d "$scoopScoopy" ]; then
-		read -p $'\e[44mScoop directory $scoopScoopy found. \e[35mScoop zeruel mode...\e[0m' -t 5
+		read -p $'\e[44mScoop directory found. \e[35mScoop zeruel mode...\e[0m\n' -t 5
 		source="$scoopScoopy"
 	elif [ -d "$scoopDefault" ]; then
-		read -p $'\e[44mScoop default install directory $scoopDefault found. \e[35mScoop Default mode...\e[0m' -t 5
+		read -p $'\e[44mScoop default install directory found. \e[35mScoop Default mode...\e[0m\n' -t 5
 		source="$scoopDefault"
 	else
+		echo -e "\e[31mScoop install directory not found. Is it installed?\e[0m"
 		path_input
 	fi
 }
@@ -98,14 +99,14 @@ function command_param() {
 		sync="pull"
 		define_source
 		echo -e "\e[44m${sync[@]^}ing Scoop persistence\e[0m"
-		main_logic "$dotfiles/win10_userprofile/scoop_persist/" "$source/persist/"
+		main_logic "$dotfiles/$dotfilesDir/" "$source/persist/"
 		;;
 
 	ps | push)
 		sync="push"
 		define_source
 		echo -e "\e[44m${sync[@]^}ing Scoop persistence\e[0m"
-		main_logic "$source/persist/" "$dotfiles/win10_userprofile/scoop_persist/" "--delete-before --delete-excluded"
+		main_logic "$source/persist/" "$dotfiles/$dotfilesDir/" "--delete-before --delete-excluded"
 		;;
 
 	-h | --help)
