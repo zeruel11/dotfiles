@@ -1,0 +1,15 @@
+# IMPORTANT!!! Always update this file as needed to minimize git load!!!
+
+# WSL section
+- /archwsl/
+- /alpinewsl/
+- /centoswsl/
+- /Arch-WSL/
+- /Alpine-WSL/
+- /CentOS-WSL/
+
+# FMD section
+- /free-manga-downloader/lua/
+
+# hexchat section
++ /hexchat/**/#*

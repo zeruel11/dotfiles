@@ -1,23 +1,16 @@
 #!/usr/bin/env bash
 #sync scoop persistence
 
-# test arguments
-if [ $# -eq 0 ]; then
-	echo -e '\e[31mYou have to specify pull or push (or logs)'
-	exit 2
-fi
-
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+# log file size
 maxsize=900000
 baksize=1000000
 # paths - change these as needed
 scoopScoopy="$(cygpath $USERPROFILE)/.scoopy"
 scoopDefault="$(cygpath $USERPROFILE)/scoop"
 dotfiles="$(cygpath $USERPROFILE)/dotfiles"
-# logfiles
-runLog="sync-persist.$HOSTNAME.${1^^}.log"
-dryLog="sync-persist.$HOSTNAME.${1^^}.DRY_RUN"
 # preview coloring
-grepSysCol="mt=1;93"
+grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
 grepDelCol="mt=1;31"
 grepUnchCol="mt=1;32"
@@ -25,72 +18,134 @@ grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*
 grepSendMsg='^(\[sender\]).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
+# logfiles
+runLog="$(basename $0).$HOSTNAME.log"
+dryLog="$(basename $0).$HOSTNAME.DRY_RUN"
+# excludes/filter files
+filterFile="$DIR/.filter-persist"
 
-logLess() {
-	if [ $1 == 'logs' ]; then
-		cat "$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R && exit 0
-	else
-		echo -e "\e[31mSecond argument only accept 'logs'"
-		exit 2
+# test filters (if needed)
+if [ ! -z ${filterFile+x} ]; then
+	if [ ! -f $filterFile ]; then
+		echo -e "\e[31mFile $filterFile not found! Exiting...\e[0m"
+		exit 1
+	fi
+fi
+
+function usage() {
+	cat <<HELP_USAGE
+
+    usage: $(basename $0) [ps|pl]
+
+    -h, --help			Print this message
+    ps, push			Sync current directory to git repo
+    pl, pull			Sync git repo to current dir
+HELP_USAGE
+
+	exit 0
+}
+
+function check_dir() {
+	if [ ! -d "$1" ]; then
+		echo -e "\e[30;43mWARNING: directory $1 not found (wrong sync dir?), exiting...\e[0m"
+		exit 1
 	fi
 }
 
-# get scoop path
-if [ -d "$scoopScoopy" ]; then
-	echo -e "\e[44mScoop directory $scoopScoopy found. \e[35mzeruel mode...\e[0m"
-	scoopDir="$scoopScoopy"
-elif [ -d "$scoopDefault" ]; then
-	echo -e "\e[44mScoop default install directory $scoopDefault found. \e[35mDefault mode...\e[0m"
-	scoopDir="$scoopDefault"
-else
+function path_input() {
 	echo -e "\e[44mScoop install directory not found...\e[0m"
-	read -p "Please enter where you install scoop: " scoopCustom
-	scoopDir=$scoopCustom
+	read -e -p "Please enter path to scoop: " source
+	check_dir "$source/persist/"
+}
+
+function define_source() {
+	if [ -d "$scoopScoopy" ]; then
+		read -p $'\e[44mScoop directory $scoopScoopy found. \e[35mScoop zeruel mode...\e[0m' -t 5
+		source="$scoopScoopy"
+	elif [ -d "$scoopDefault" ]; then
+		read -p $'\e[44mScoop default install directory $scoopDefault found. \e[35mScoop Default mode...\e[0m' -t 5
+		source="$scoopDefault"
+	else
+		path_input
+	fi
+}
+
+function main_logic() {
+	# if [ "$1" == 'pull' ]; then
+	rsync -Ccazvvn --filter="merge $filterFile" "$1" "$2" | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	read -p "Confirm $sync? [no] " yesOrYes
+	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then
+		echo "$1 $sync to $2" >>$HOME/.logs/$runLog
+		rsync -Cuazv --filter="merge $filterFile" "$1" "$2" --log-file="$runLog"
+		if [ -d $dotfiles ]; then
+			if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
+				diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
+				cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
+			else
+				cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
+			fi
+		else
+			echo -e "\e[30;43mWARNING: directory $dotfiles not found, logfiles will NOT be synced\e[0m"
+		fi
+		rm "$HOME/.logs/$dryLog"
+	fi
+}
+
+function command_param() {
+	case $1 in
+
+	pl | pull)
+		sync="pull"
+		define_source
+		echo -e "\e[44m${sync[@]^}ing Scoop persistence\e[0m"
+		main_logic "$dotfiles/win10_userprofile/scoop_persist/" "$source/persist/"
+		;;
+
+	ps | push)
+		sync="push"
+		define_source
+		echo -e "\e[44m${sync[@]^}ing Scoop persistence\e[0m"
+		main_logic "$source/persist/" "$dotfiles/win10_userprofile/scoop_persist/" "--delete-before --delete-excluded"
+		;;
+
+	-h | --help)
+		usage
+		;;
+
+	"")
+		usage
+		;;
+
+	*)
+		echo "Unknown option - $1"
+		usage
+		;;
+	esac
+}
+
+if [ $# -gt 1 ]; then
+	for ((i = 3; i <= $#; i++)); do
+		echo "No parameter ${!i} found"
+	done
+	usage
+else
+	command_param $1 $2
 fi
 
-# MAIN logic
-if [ "$1" == 'pull' ]; then
-	if [ ! -z "$2" ]; then
-		logLess $2
-	fi
-	read -p "Confirm $1? [no] " yesOrYes
-	yesOrYes=${yesOrYes:-no}
-	if [ "$yesOrYes" == 'yes' ]; then
-		rsync -Ccaziiv "$dotfiles/win10_userprofile/scoop_persist/" "$scoopDir/persist/" --log-file="$runLog"
-		cp "$runLog" "$dotfiles/.logs/"
-	else
-		echo -e "\e[35mGenerating DRY_RUN...\e[0m"
-		rsync -Ccazvvn "$dotfiles/win10_userprofile/scoop_persist/" "$scoopDir/persist/" >"$dryLog"
-	fi
-elif [ "$1" == 'push' ]; then
-	if [ ! -z "$2" ]; then
-		logLess $2
-	fi
-	read -p "Confirm $1? [no] " yesOrYes
-	yesOrYes=${yesOrYes:-no}
-	if [ "$yesOrYes" == 'yes' ]; then
-		rsync -Ccaziiv --exclude-from=".exclude-persist" "$scoopDir/persist/" "$dotfiles/win10_userprofile/scoop_persist/" --log-file="$runLog"
-		cp "$runLog" "$dotfiles/.logs/"
-	else
-		echo -e "\e[35mGenerating DRY_RUN...\e[0m"
-		rsync -Ccazvvn --exclude-from=".exclude-persist" "$scoopDir/persist/" "$dotfiles/win10_userprofile/scoop_persist/" >"$dryLog"
-	fi
-fi
-
-# log sizing & archiving
-if [ -f "$runLog" ]; then
-	filesize=$(stat -c%s "$runLog")
+# log archiving
+if [ -f "$HOME/.logs/$runLog" ]; then
+	filesize=$(stat -c%s "$HOME/.logs/$runLog")
 	if ((filesize > maxsize)) && ((filesize < baksize)); then
 		echo -e "\e[30;43mCaution: Log file is 900kb large. Consider backing up and/or deleting. Log will be automatically archived soon.\e[0m"
 	elif ((filesize > baksize)); then
 		echo -e "\e[34;43mAttention: Log file is 1mb large. Archiving...\e[0m"
 		for i in {1..3}; do
-			if [ ! -f "$runLog.bak$i" ]; then
-				tar -czvf "$runLog.bak$i" "$runLog" --remove-files
-				echo -e "\e[34mLog file archived to $runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
+			if [ ! -f "$HOME/.logs/$runLog.bak$i" ]; then
+				tar -czvf "$HOME/.logs/$runLog.bak$i" "$HOME/.logs/$runLog" --remove-files
+				echo -e "\e[34mLog file archived to $HOME/.logs/$runLog.bak$i (uses tar gzip). Note that log backups are not sent to Git versioning.\e[0m"
 				break
-			elif [ -f "$runLog.bak1" ] && [ -f "$runLog.bak2" ] && [ -f "$runLog.bak3" ]; then
-				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $runLog.bak$i exists.\e[0m"
+			elif [ -f "$HOME/.logs/$runLog.bak1" ] && [ -f "$HOME/.logs/$runLog.bak2" ] && [ -f "$HOME/.logs/$runLog.bak3" ]; then
+				echo -e "\e[31;44mArchive full! Highly advise deleting the log files and/or backups. This message will keep showing otherwise. File $HOME/.logs/$runLog.bak$i exists.\e[0m"
 			fi
 		done
 	fi
