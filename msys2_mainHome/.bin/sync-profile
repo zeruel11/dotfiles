@@ -6,10 +6,13 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 maxsize=900000
 baksize=1000000
 # paths
-terminalProfile="$(cygpath $LOCALAPPDATA)/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
 pwshProfile="$(cygpath $USERPROFILE)/Documents/PowerShell"
 powershellProfile="$(cygpath $USERPROFILE)/Documents/WindowsPowerShell"
+terminalProfile="$(cygpath $LOCALAPPDATA)/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
 dotfiles="$(cygpath $USERPROFILE)/dotfiles"
+dotfilesDirPWSH="win10_userprofile/powershell"
+dotfilesDirTERM="win10_userprofile/win_terminal"
+dotfilesDirMSYS="msys2_mainHome"
 # preview coloring
 grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
@@ -54,8 +57,27 @@ HELP_USAGE
 
 function check_dir() {
 	if [ ! -d "$1" ]; then
-		echo -e "\e[30;43mWARNING: directory $1 not found, exiting...\e[0m"
+		echo -e "\e[30;43mWARNING: directory $1 not found (wrong sync dir?), exiting...\e[0m"
 		exit 1
+	fi
+}
+
+function path_input() {
+	read -e -p "Please enter path to profile: " source
+	check_dir "$source/"
+}
+
+function define_source() {
+	if [ ! -d "$dotfiles" ]; then
+		echo -e "\e[30;43mWARNING: $dotfiles not found, exiting...\e[0m"
+		exit 1
+	fi
+	if [ -d "$1" ]; then
+		source="$1"
+		read -p $'\e[44mProfile found on \e[33m'"$source"$'\e[0m\n' -t 5
+	else
+		echo -e "\e[31mProfile directory not found. Is it installed?\e[0m"
+		path_input
 	fi
 }
 
@@ -65,8 +87,6 @@ function main_logic() {
 	# if [ "$DIFF" != "" ]; then
 	# 	echo "The directory was modified"
 	# fi
-	check_dir "$1"
-	check_dir "$2"
 	rsync -Ccazvvn --existing --filter="merge $filterFile" "$1" "$2" | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $sync? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
@@ -107,32 +127,36 @@ function command_param() {
 	case $2 in
 
 	pwsh | powershell)
+		define_source "$pwshProfile"
 		echo -e "\e[44m${sync[@]^}ing Powershell Core profile\e[0m"
 		if [ "$sync" == "pull" ]; then
-			main_logic "$dotfiles/win10_userprofile/powershell/" "$pwshProfile/"
+			main_logic "$dotfiles/$dotfilesDirPWSH/" "$source/"
+			define_source "$powershellProfile"
 			echo -e "\e[44m${sync[@]^}ing Powershell profile\e[0m"
-			main_logic "$dotfiles/win10_userprofile/powershell/" "$powershellProfile/"
+			main_logic "$dotfiles/$dotfilesDirPWSH/" "$source/"
 		elif [ "$sync" == "push" ]; then
-			main_logic "$pwshProfile/" "$dotfiles/win10_userprofile/powershell/"
+			main_logic "$source/" "$dotfiles/$dotfilesDirPWSH/"
 			echo -e "\e[43mNot pushing Windows Powershell profile (this should follow pwsh)\e[0m"
 		fi
 		;;
 
 	term | terminal | winterminal)
+		define_source "$terminalProfile"
 		echo -e "\e[44m${sync[@]^}""ing terminal profile\e[0m"
 		if [ "$sync" == "pull" ]; then
-			main_logic "$dotfiles/win10_userprofile/win_terminal/" "$terminalProfile/"
+			main_logic "$dotfiles/$dotfilesDirTERM/" "$source/"
 		elif [ "$sync" == "push" ]; then
-			main_logic "$terminalProfile/" "$dotfiles/win10_userprofile/win_terminal/"
+			main_logic "$source/" "$dotfiles/$dotfilesDirTERM/"
 		fi
 		;;
 
 	msys | msys2 | bash)
+		define_source
 		echo -e "\e[44m${sync[@]^}""ing MSYS2 profile\e[0m"
 		if [ "$sync" == "pull" ]; then
-			main_logic "$dotfiles/msys2_mainHome/" "$HOME/"
+			main_logic "$dotfiles/$dotfilesDirMSYS/" "$HOME/"
 		elif [ "$sync" == "push" ]; then
-			main_logic "$HOME/" "$dotfiles/msys2_mainHome/"
+			main_logic "$HOME/" "$dotfiles/$dotfilesDirMSYS/"
 		fi
 		;;
 

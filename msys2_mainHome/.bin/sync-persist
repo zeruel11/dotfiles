@@ -59,12 +59,16 @@ function path_input() {
 }
 
 function define_source() {
+	if [ ! -d "$dotfiles" ]; then
+		echo -e "\e[30;43mWARNING: $dotfiles not found, exiting...\e[0m"
+		exit 1
+	fi
 	if [ -d "$scoopScoopy" ]; then
-		read -p $'\e[44mScoop directory found on '"$scoopScoopy"$'\e[0m\n' -t 5
 		source="$scoopScoopy"
+		read -p $'\e[44mScoop directory found on '"$source"$'\e[0m\n' -t 5
 	elif [ -d "$scoopDefault" ]; then
-		read -p $'\e[44mScoop default install directory found on '"$scoopScoopy"$'\e[0m\n' -t 5
 		source="$scoopDefault"
+		read -p $'\e[44mScoop directory found on '"$source"$'\e[0m\n' -t 5
 	else
 		echo -e "\e[31mScoop install directory not found. Is it installed?\e[0m"
 		path_input
@@ -72,22 +76,21 @@ function define_source() {
 }
 
 function main_logic() {
-	check_dir "$dotfiles/$dotfilesDir"
 	rsync -Ccazvvn --filter="merge $filterFile" "$1" "$2" | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $sync? [no] " yesOrYes
 	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then
 		echo "$1 $sync to $2" >>$HOME/.logs/$runLog
 		rsync -Cuazv --filter="merge $filterFile" "$1" "$2" --log-file="$runLog"
-		if [ -d $dotfiles ]; then
-			if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
-				diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
-				cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
-			else
-				cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
-			fi
+		# if [ -d $dotfiles ]; then
+		if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
+			diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
+			cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
 		else
-			echo -e "\e[30;43mWARNING: directory $dotfiles not found, logfiles will NOT be synced\e[0m"
+			cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
 		fi
+		# else
+		# 	echo -e "\e[30;43mWARNING: directory $dotfiles not found, logfiles will NOT be synced\e[0m"
+		# fi
 		rm "$HOME/.logs/$dryLog"
 	fi
 }

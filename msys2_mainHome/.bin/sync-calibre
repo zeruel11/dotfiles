@@ -49,6 +49,35 @@ HELP_USAGE
 	exit 0
 }
 
+function check_dir() {
+	if [ ! -d "$1" ]; then
+		echo -e "\e[30;43mWARNING: directory $1 not found (wrong sync dir?), exiting...\e[0m"
+		exit 1
+	fi
+}
+
+function path_input() {
+	read -e -p "Please enter path to calibre: " source
+	check_dir "$source/"
+}
+
+function define_source() {
+	if [ ! -d "$dotfiles" ]; then
+		echo -e "\e[30;43mWARNING: $dotfiles not found, exiting...\e[0m"
+		exit 1
+	fi
+	if [ -d "$calibre_PCx" ]; then
+		source="$calibre_PCx"
+		read -p $'\e[44mCalibre catalogue found on \e[33m'"$source"$'\e[0m\n' -t 5
+	elif [ -d "$calibre_x230" ]; then
+		source="$calibre_x230"
+		read -p $'\e[44mCalibre catalogue found on \e[33m'"$source"$'\e[0m\n' -t 5
+	else
+		echo -e "\e[31mCalibre catalogue directory not found. Is it installed?\e[0m"
+		path_input
+	fi
+}
+
 # check IKTI online
 function IKTIonline() {
 	if ssh IKTI "[ -d "$rsyncTest" ]"; then
@@ -56,19 +85,6 @@ function IKTIonline() {
 	else
 		echo -e "\e[41mServer is unreachable\e[0m"
 		exit 1
-	fi
-}
-
-function define_source() {
-	if [ -d "$calibre_PCx" ]; then
-		source="$calibre_PCx"
-		read -p $'\e[44mDirectory \e[33m$calibre_PCx\e[37m found. \e[35mHomebase mode...\e[0m\n' -t 5
-	elif [ -d "$calibre_x230" ]; then
-		source="$calibre_x230"
-		read -p $'\e[44mDirectory \e[33m$calibre_x230\e[37m found. \e[35mOn the road mode...\e[0m\n' -t 5
-	else
-		echo -e "Youre neither at your pc nor your laptop... \e[31mWho or where the fluff are you?!\e[0m"
-		exit 0
 	fi
 }
 
@@ -86,16 +102,16 @@ function main_logic() {
 	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then
 		echo "$1 $sync to $2" >>$HOME/.logs/$runLog
 		rsync -Cuazv --exclude-from="$filterFile" "$1" "$2" $3 --log-file="$runLog"
-		if [ -d $dotfiles ]; then
-			if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
-				diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
-				cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
-			else
-				cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
-			fi
+		# if [ -d $dotfiles ]; then
+		if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
+			diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
+			cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
 		else
-			echo -e "\e[30;43mWARNING: directory $dotfiles not found, logfiles will NOT be synced\e[0m"
+			cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
 		fi
+		# else
+		# 	echo -e "\e[30;43mWARNING: directory $dotfiles not found, logfiles will NOT be synced\e[0m"
+		# fi
 		rm "$HOME/.logs/$dryLog"
 	fi
 }
@@ -106,25 +122,25 @@ function command_param() {
 	pl | pull)
 		sync="pull"
 		command_exception "$2"
-		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
 		define_source
 		IKTIonline
+		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
 		main_logic "$calibre_IKTI" "$source/"
 		;;
 
 	ps | push)
 		sync="push"
 		command_exception "$2"
-		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
 		define_source
 		IKTIonline
+		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
 		main_logic "$source/" "$calibre_IKTI" "--delete-before --delete-excluded"
 		;;
 
 	ex | export)
 		sync="export"
-		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
 		define_source
+		echo -e "\e[44m${sync[@]^}ing Calibre e-book catalogue\e[0m"
 		if [ $# -lt 2 ]; then
 			echo "Path not specified, using default: $FD"
 			if [ -d "$FD" ]; then
@@ -153,7 +169,7 @@ function command_param() {
 	"")
 		usage
 		;;
-		
+
 	*)
 		echo "Unknown option - $1"
 		usage
