@@ -8,6 +8,7 @@ baksize=1000000
 # paths - change these as needed
 vivaldiSession="$(cygpath $USERPROFILE)/AppData/Local/Vivaldi/User Data/Default/Sessions"
 dotfiles="$(cygpath $USERPROFILE)/dotfiles"
+dotfilesDir="vivaldi_sessions"
 # preview coloring
 grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
@@ -36,15 +37,28 @@ HELP_USAGE
 
 function check_dir() {
 	if [ ! -d "$1" ]; then
-		echo -e "\e[30;43mWARNING: directory $1 not found, exiting...\e[0m"
+		echo -e "\e[30;43mWARNING: directory $1 not found (wrong sync dir?), exiting...\e[0m"
 		exit 1
 	fi
 }
 
+function path_input() {
+	read -e -p "Please enter path to vivaldi sessions: " source
+	check_dir "$source/"
+}
+
+function define_source() {
+	if [ -d "$vivaldiSession" ]; then
+		read -p $'\e[44mVivaldi session directory found on '"$vivaldiSession"$'\e[0m\n' -t 5
+		source="$vivaldiSession"
+	else
+		echo -e "\e[31mVivaldi session directory not found. Is it installed?\e[0m"
+		path_input
+	fi
+}
+
 function main_logic() {
-	# if [ "$1" == 'pull' ]; then
-	check_dir "$dotfiles/vivaldi_sessions"
-	check_dir "$vivaldiSession"
+	check_dir "$dotfiles/$dotfilesDir"
 	rsync -Ccazvvn "$1" "$2" | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $sync? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
@@ -58,15 +72,6 @@ function main_logic() {
 		fi
 		rm "$HOME/.logs/$dryLog"
 	fi
-	# elif [ "$1" == 'push' ]; then
-	# 	rsync -Ccazvvn "$vivaldiSession/Default/Sessions/" "$encoderGit/(Vivaldi_Sessions)/" | tee $dryLog | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
-	# 	read -p "Confirm $1? [no] " yesOrYes
-	# 	yesOrYes=${yesOrYes:-no}
-	# 	if [ "$yesOrYes" == 'yes' ]; then
-	# 		rsync -Ccazv "$vivaldiSession/Default/Sessions/" "$encoderGit/(Vivaldi_Sessions)/" --log-file="$runLog"
-	# 		cp "$runLog" "$dotfiles/.logs/"
-	# 	fi
-	# fi
 }
 
 function command_param() {
@@ -74,14 +79,16 @@ function command_param() {
 
 	pl | pull)
 		sync="pull"
+		define_source
 		echo -e "\e[44m${sync[@]^}ing Vivaldi sessions\e[0m"
-		main_logic "$dotfiles/vivaldi_sessions/" "$vivaldiSession/"
+		main_logic "$dotfiles/$dotfilesDir/" "$source/"
 		;;
 
 	ps | push)
 		sync="push"
+		define_source
 		echo -e "\e[44m${sync[@]^}ing Vivaldi sessions\e[0m"
-		main_logic "$vivaldiSession/" "$dotfiles/vivaldi_sessions/"
+		main_logic "$source/" "$dotfiles/$dotfilesDir/"
 		;;
 
 	"" | -h | --help)

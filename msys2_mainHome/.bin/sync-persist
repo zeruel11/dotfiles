@@ -60,10 +60,10 @@ function path_input() {
 
 function define_source() {
 	if [ -d "$scoopScoopy" ]; then
-		read -p $'\e[44mScoop directory found. \e[35mScoop zeruel mode...\e[0m\n' -t 5
+		read -p $'\e[44mScoop directory found on '"$scoopScoopy"$'\e[0m\n' -t 5
 		source="$scoopScoopy"
 	elif [ -d "$scoopDefault" ]; then
-		read -p $'\e[44mScoop default install directory found. \e[35mScoop Default mode...\e[0m\n' -t 5
+		read -p $'\e[44mScoop default install directory found on '"$scoopScoopy"$'\e[0m\n' -t 5
 		source="$scoopDefault"
 	else
 		echo -e "\e[31mScoop install directory not found. Is it installed?\e[0m"
@@ -72,7 +72,7 @@ function define_source() {
 }
 
 function main_logic() {
-	# if [ "$1" == 'pull' ]; then
+	check_dir "$dotfiles/$dotfilesDir"
 	rsync -Ccazvvn --filter="merge $filterFile" "$1" "$2" | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $sync? [no] " yesOrYes
 	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then
