@@ -46,16 +46,12 @@ HELP_USAGE
 	exit 0
 }
 
-function check_dir() {
-	if [ ! -d "$1" ]; then
-		echo -e "\e[30;43mWARNING: directory $1 not found (wrong sync dir?), exiting...\e[0m"
-		exit 1
-	fi
-}
-
 function path_input() {
 	read -e -p "Please enter path to scoop: " source
-	check_dir "$source/persist/"
+	if [ ! -d "$source/persist" ]; then
+		echo -e "\e[30;43mWARNING: directory $source/persist not found (wrong sync dir?), exiting...\e[0m"
+		exit 1
+	fi
 }
 
 function define_source() {

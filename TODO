@@ -1,8 +1,9 @@
 rewrite:
     ✔ sync-calibre @done(20-02-17 17:20)
     ☐ sync-cmder?
-    ☐ sync-fmd
-    ☐ sync-persist
+    ✘ sync-fmd @started(20-02-18 12:08) @cancelled(20-02-18 12:21) @wasted(13m27s)
+    fmd now uses scoop, so sync-persist should be enough
+    ✔ sync-persist @started(20-02-18 13:02) @done(20-02-18 15:38) @lasted(2h36m39s)
     ✔ sync-vivaldi @started(20-02-17 17:28) @done(20-02-17 18:38) @lasted(1h10m17s)
 
 refactor:
@@ -11,6 +12,20 @@ refactor:
 review:
     ☐ sync-modWorks
     ☐ sync-savegame
+
+rework check_dir:
+    ✔ calibre @started(20-02-18 16:40) @done(20-02-18 16:45) @lasted(5m57s)
+    ✔ persist @started(20-02-18 16:40) @done(20-02-18 16:40) @lasted(59s)
+    ✔ profile @started(20-02-18 16:56) @done(20-02-18 17:06) @lasted(10m57s)
+    ☐ vivaldi
+
+mandatory dotfiles:
+    ✔ calibre @started(20-02-18 16:01) @done(20-02-18 16:07) @lasted(6m5s)
+    ✔ persist @started(20-02-18 15:58) @done(20-02-18 16:01) @lasted(3m48s)
+    ✔ profile @started(20-02-18 16:07) @done(20-02-18 16:32) @lasted(25m15s)
+    ✔ vivaldi @done(20-02-18 16:01)
+
+☐ make new logview script
 
 ☐ cleanup logfiles
 ☐ move profiles to non cmder

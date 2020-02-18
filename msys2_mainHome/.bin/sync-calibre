@@ -49,16 +49,12 @@ HELP_USAGE
 	exit 0
 }
 
-function check_dir() {
-	if [ ! -d "$1" ]; then
-		echo -e "\e[30;43mWARNING: directory $1 not found (wrong sync dir?), exiting...\e[0m"
+function path_input() {
+	read -e -p "Please enter path to calibre catalogue: " source
+	if [ ! -f "$source/metadata.db" ]; then
+		echo -e "\e[30;43mWARNING: file $source/metadata.db not found (wrong sync dir?), exiting...\e[0m"
 		exit 1
 	fi
-}
-
-function path_input() {
-	read -e -p "Please enter path to calibre: " source
-	check_dir "$source/"
 }
 
 function define_source() {
@@ -147,16 +143,17 @@ function command_param() {
 				main_logic "$source/" "$FD/"
 			else
 				echo -e "\e[41mFlashdisk not found! Please specify export path.\e[0m"
-				exit 1
+				usage
 			fi
 		elif [ $# -eq 2 ]; then
 			if [ "${2: -1}" != "/" ]; then
 				echo -e "\e[31mPlease use full FOLDER path (with /) to let rsync use folder and not files!\e[0m"
 				exit 1
 			elif [ -d "$2" ]; then
+				echo "Exporting calibre catalogue to $2..."
 				main_logic "$source/" "$2" "--delete-before --delete-excluded"
 			else
-				echo -e "\e[31mPath doesn't exist!\e[0m"
+				echo -e "\e[31mThe specified path doesn't exist!\e[0m"
 				exit 1
 			fi
 		fi
