@@ -17,7 +17,7 @@ rework check_dir:
     ✔ calibre @started(20-02-18 16:40) @done(20-02-18 16:45) @lasted(5m57s)
     ✔ persist @started(20-02-18 16:40) @done(20-02-18 16:40) @lasted(59s)
     ✔ profile @started(20-02-18 16:56) @done(20-02-18 17:06) @lasted(10m57s)
-    ☐ vivaldi
+    ✔ vivaldi @started(20-02-19 13:12) @done(20-02-19 18:19) @lasted(5h7m1s) this might need revision later
 
 mandatory dotfiles:
     ✔ calibre @started(20-02-18 16:01) @done(20-02-18 16:07) @lasted(6m5s)

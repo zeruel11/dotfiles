@@ -65,4 +65,9 @@
 2019/04/03 18:38:56 [23480] total size is 75,114,970  speedup is 2.93
 2020/02/17 18:37:56 [2795] building file list
 2020/02/17 18:37:56 [2795] sent 2,709 bytes  received 12 bytes  1,814.00 bytes/sec
+2020/02/17 18:37:56 [2795] total size is 75,114,970  speedup is 27,605.65++ /home/zeruel/.logs/sync-vivaldi.zeruel-PCx.log	2020-02-19 18:18:46.118666200 +0700
 2020/02/17 18:37:56 [2795] total size is 75,114,970  speedup is 27,605.65
+2020/02/19 18:18:45 [2081] building file list
+2020/02/19 18:18:46 [2081] .d..t...... ./
+2020/02/19 18:18:46 [2081] sent 2,899 bytes  received 202 bytes  2,067.33 bytes/sec
+2020/02/19 18:18:46 [2081] total size is 75,114,970  speedup is 24,222.82
