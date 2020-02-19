@@ -1,3 +1,19 @@
+++/c/Users/zeruel11/dotfiles/cmder_config pull to /c/cmder/config/
+2019/04/02 15:00:34 [4548] building file list
+2019/04/02 15:00:34 [4548] .d..t...... ./
+2019/04/02 15:00:34 [4548] .f          settings
+2019/04/02 15:00:35 [4548] >fcst...... user-ConEmu.xml
+2019/04/02 15:00:35 [4548] >fcst...... user_aliases.cmd
+2019/04/02 15:00:35 [4548] >fcst...... user_profile.cmd
+2019/04/02 15:00:35 [4548] >fcst...... user_profile.ps1
+2019/04/02 15:00:35 [4548] >fcstp..... user_profile.sh
+2019/04/02 15:00:35 [4548] .d..t...... profile.d/
+2019/04/02 15:00:35 [4548] >fcst...... profile.d/aliases.ps1
+2019/04/02 15:00:35 [4548] >fcst...... profile.d/aliases.sh
+2019/04/02 15:00:35 [4548] .f          profile.d/paths.ps1
+2019/04/02 15:00:35 [4548] sent 15,605 bytes  received 170 bytes  10,516.67 bytes/sec
+2019/04/02 15:00:35 [4548] total size is 85,920  speedup is 5.45
+++/c/cmder/config/ push to /c/Users/zeruel11/dotfiles/cmder_config
 2019/04/02 16:25:49 [3192] building file list
 2019/04/02 16:25:49 [3192] .d..t...... ./
 2019/04/02 16:25:49 [3192] .f          settings
