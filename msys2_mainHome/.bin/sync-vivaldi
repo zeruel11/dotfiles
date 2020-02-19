@@ -12,10 +12,12 @@ dotfilesDir="vivaldi_sessions"
 # preview coloring
 grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
+grepSkipCol="mt=1;35"
 grepDelCol="mt=1;31"
 grepUnchCol="mt=1;32"
 grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$'
 grepSendMsg='^(\[sender\]).*|$'
+grepSkipMsg='(not creating new file).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
 # logfiles
@@ -35,16 +37,32 @@ HELP_USAGE
 	exit 0
 }
 
-function check_dir() {
-	if [ ! -d "$1" ]; then
-		echo -e "\e[30;43mWARNING: directory $1 not found (wrong sync dir?), exiting...\e[0m"
-		exit 1
-	fi
-}
+# REVIEW dunno how to make this work with expanded bash path variable
+# function check_dir() {
+# 	local arg="$*"
+# 	echo $arg
+# 	local files=($arg)
+# 	echo ${#files[@]}
+# 	[ ${#files[@]} -gt 1 ] || [ ${#files[@]} -eq 1 ] && [ -e "${files[0]}" ]
+# }
 
 function path_input() {
 	read -e -p "Please enter path to vivaldi sessions: " source
-	check_dir "$source/"
+	# if check_dir "$HOME/.bin/.filter*"; then
+	# 	echo true
+	# fi
+	for f in "$source"*.bin; do
+
+		## Check if the glob gets expanded to existing files.
+		## If not, f here will be exactly the pattern above
+		## and the exists test will evaluate to false.
+		if [ ! -e "$f" ]; then
+			echo -e "\e[30;43mWARNING: directory $source/<vivaldiSessions>.bin not found (wrong sync dir?), exiting...\e[0m"
+			exit 1
+		else
+			break
+		fi
+	done
 }
 
 function define_source() {

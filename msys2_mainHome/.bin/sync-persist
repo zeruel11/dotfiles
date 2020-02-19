@@ -13,10 +13,12 @@ dotfilesDir="win10_userprofile/scoop_persist"
 # preview coloring
 grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
+grepSkipCol="mt=1;35"
 grepDelCol="mt=1;31"
 grepUnchCol="mt=1;32"
 grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$'
 grepSendMsg='^(\[sender\]).*|$'
+grepSkipMsg='(not creating new file).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
 # logfiles
@@ -106,6 +108,16 @@ function command_param() {
 		define_source
 		echo -e "\e[44m${sync[@]^}ing Scoop persistence\e[0m"
 		main_logic "$source/persist/" "$dotfiles/$dotfilesDir/" "--delete-before --delete-excluded"
+		;;
+
+	lg | log | logs)
+		if [ -f "$HOME/.logs/$dryLog" ]; then
+			read -p $'\e[44mFound DRY_RUN log on '"$HOME/.logs/$dryLog"$', opening...\e[0m' -t 5
+			cat "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+		else
+			read -p $'\e[44mFound log on '"$HOME/.logs/$runLog"$', opening...\e[0m' -t 5
+			cat "$HOME/.logs/$runLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+		fi
 		;;
 
 	-h | --help)

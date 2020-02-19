@@ -15,10 +15,12 @@ dotfiles="$(cygpath $USERPROFILE)/dotfiles"
 # preview coloring
 grepSysCol="mt=1;93;44"
 grepSendCol="mt=1;34"
+grepSkipCol="mt=1;35"
 grepDelCol="mt=1;31"
 grepUnchCol="mt=1;32"
 grepSysMsg='(total:).*|(sending incremental file list)|(delta-transmission).*|.*(bytes\/sec)|.*(\(DRY RUN\))|$'
 grepSendMsg='^(\[sender\]).*|$'
+grepSkipMsg='(not creating new file).*|$'
 grepDelMsg='(deleting).*|$'
 grepUnchMsg='.*(uptodate)$|$'
 # logfiles
