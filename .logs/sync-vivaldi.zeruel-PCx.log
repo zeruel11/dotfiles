@@ -71,3 +71,19 @@
 2020/02/19 18:18:46 [2081] .d..t...... ./
 2020/02/19 18:18:46 [2081] sent 2,899 bytes  received 202 bytes  2,067.33 bytes/sec
 2020/02/19 18:18:46 [2081] total size is 75,114,970  speedup is 24,222.82
+++ /home/zeruel/.logs/sync-vivaldi.zeruel-PCx.log	2020-02-22 00:31:54.893894500 +0700
+++ /home/zeruel/.logs/sync-vivaldi.zeruel-PCx.log	2020-02-22 00:25:36.196565800 +0700
+2020/02/22 00:25:35 [695] building file list
+2020/02/22 00:25:36 [695] .d..t...... ./
+2020/02/22 00:25:36 [695] >f+++++++++ test.bin
+2020/02/22 00:25:36 [695] sent 729,482 bytes  received 221 bytes  486,468.67 bytes/sec
+2020/02/22 00:25:36 [695] total size is 76,438,206  speedup is 104.75
+2020/02/22 00:31:54 [721] building file list
+2020/02/22 00:31:54 [721] .d..t...... ./
+2020/02/22 00:31:54 [721] >f+++++++++ [PCX]kosan_1229{0001}.bin
+2020/02/22 00:31:54 [721] >f+++++++++ [PCX]lebaran.bin
+2020/02/22 00:31:54 [721] >f+++++++++ [PCX]ngampus.bin
+2020/02/22 00:31:54 [721] >f+++++++++ [PCX]reboot.bin
+2020/02/22 00:31:54 [721] >f+++++++++ test.bin
+2020/02/22 00:31:54 [721] sent 2,364,383 bytes  received 285 bytes  4,729,336.00 bytes/sec
+2020/02/22 00:31:54 [721] total size is 76,438,206  speedup is 32.33
