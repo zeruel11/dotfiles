@@ -99,18 +99,13 @@ function main_logic() {
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then
 		echo "$1 $sync to $2" >>$HOME/.logs/$runLog
-		rsync -Cuazv --exclude-from="$filterFile" "$1" "$2" $3 --log-file="$runLog"
-		# if [ -d $dotfiles ]; then
+		rsync -Cuazv --exclude-from="$filterFile" "$1" "$2" $3 --log-file="$runLog" && rm "$HOME/.logs/$dryLog"
 		if [ -f "$dotfiles/.logs/$runLog" ] && [ -f "$HOME/.logs/$runLog" ]; then
 			diff -u $dotfiles/.logs/$runLog $HOME/.logs/$runLog | grep -E "^\+" | sed -E 's/^\+//' >>$dotfiles/.logs/$runLog
 			cp "$dotfiles/.logs/$runLog" "$HOME/.logs/"
 		else
 			cp "$HOME/.logs/$runLog" "$dotfiles/.logs/"
 		fi
-		# else
-		# 	echo -e "\e[30;43mWARNING: directory $dotfiles not found, logfiles will NOT be synced\e[0m"
-		# fi
-		rm "$HOME/.logs/$dryLog"
 	fi
 }
 
