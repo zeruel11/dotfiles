@@ -425,3 +425,99 @@
 2020/02/19 18:28:21 [2147] .f..t...... .bin/sync-vivaldi
 2020/02/19 18:28:21 [2147] sent 7,582 bytes  received 135 bytes  5,144.67 bytes/sec
 2020/02/19 18:28:21 [2147] total size is 71,212  speedup is 9.23
+++ /home/zeruel/.logs/sync-profile.zeruel-PCx.log	2020-02-20 14:45:31.855075400 +0700
+/c/Users/zeruel/dotfiles/win10_userprofile/powershell/ pull to /c/Users/zeruel/Documents/PowerShell/
+2020/02/20 14:45:31 [1693] building file list
+2020/02/20 14:45:31 [1693] .d..t...... ./
+2020/02/20 14:45:31 [1693] .f..t...... powershell.config.json
+2020/02/20 14:45:31 [1693] >fcst...... profile.ps1
+2020/02/20 14:45:31 [1693] sent 4,153 bytes  received 41 bytes  8,388.00 bytes/sec
+2020/02/20 14:45:31 [1693] total size is 12,282  speedup is 2.93
+++ /home/zeruel/.logs/sync-profile.zeruel-PCx.log	2020-02-20 14:45:40.675950500 +0700
+/c/Users/zeruel/dotfiles/win10_userprofile/powershell/ pull to /c/Users/zeruel/Documents/WindowsPowerShell/
+2020/02/20 14:45:40 [1711] building file list
+2020/02/20 14:45:40 [1711] .d..t...... ./
+2020/02/20 14:45:40 [1711] >fcst...... profile.ps1
+2020/02/20 14:45:40 [1711] sent 4,150 bytes  received 38 bytes  8,376.00 bytes/sec
+2020/02/20 14:45:40 [1711] total size is 12,282  speedup is 2.93
+++ /home/zeruel/.logs/sync-profile.zeruel-PCx.log	2020-02-20 14:50:00.168145600 +0700
+/c/Users/zeruel/dotfiles/msys2_mainHome/ pull to /home/zeruel/
+2020/02/20 14:50:00 [1740] building file list
+2020/02/20 14:50:00 [1740] .d..t...... ./
+2020/02/20 14:50:00 [1740] .f..t...... .bash_aliases
+2020/02/20 14:50:00 [1740] .f..t...... .bash_profile
+2020/02/20 14:50:00 [1740] .f..t...... .bashrc
+2020/02/20 14:50:00 [1740] .f          .inputrc
+2020/02/20 14:50:00 [1740] .f..t...... .savegameList
+2020/02/20 14:50:00 [1740] .d..t...... .bin/
+2020/02/20 14:50:00 [1740] .f..t...... .bin/.exclude-calibre
+2020/02/20 14:50:00 [1740] .f..t...... .bin/.exclude-cmder
+2020/02/20 14:50:00 [1740] .f..t...... .bin/.filter-Data
+2020/02/20 14:50:00 [1740] .f..t...... .bin/.filter-MasterSync
+2020/02/20 14:50:00 [1740] .f..t...... .bin/.filter-espBA2
+2020/02/20 14:50:00 [1740] >fcst...... .bin/.filter-persist
+2020/02/20 14:50:00 [1740] .f..t...... .bin/.filter-profile
+2020/02/20 14:50:00 [1740] .f..t...... .bin/.filter-savedata
+2020/02/20 14:50:00 [1740] .f..t...... .bin/sync-calibre
+2020/02/20 14:50:00 [1740] .f..t...... .bin/sync-cmder
+2020/02/20 14:50:00 [1740] .f..t...... .bin/sync-modWorks
+2020/02/20 14:50:00 [1740] .f..t...... .bin/sync-persist
+2020/02/20 14:50:00 [1740] .f..t...... .bin/sync-profile
+2020/02/20 14:50:00 [1740] .f..t...... .bin/sync-savegame
+2020/02/20 14:50:00 [1740] .f..t...... .bin/sync-vivaldi
+2020/02/20 14:50:00 [1740] sent 1,170 bytes  received 103 bytes  2,546.00 bytes/sec
+2020/02/20 14:50:00 [1740] total size is 71,245  speedup is 55.97
+++ /home/zeruel/.logs/sync-profile.zeruel-PCx.log	2020-02-20 14:51:41.925872800 +0700
+/c/Users/zeruel/dotfiles/msys2_mainHome/ pull to /home/zeruel/
+2020/02/20 14:51:41 [1772] building file list
+2020/02/20 14:51:41 [1772] .d          ./
+2020/02/20 14:51:41 [1772] .f          .bash_aliases
+2020/02/20 14:51:41 [1772] .f          .bash_profile
+2020/02/20 14:51:41 [1772] .f          .bashrc
+2020/02/20 14:51:41 [1772] .f          .inputrc
+2020/02/20 14:51:41 [1772] .f          .savegameList
+2020/02/20 14:51:41 [1772] .d          .bin/
+2020/02/20 14:51:41 [1772] .f          .bin/.exclude-calibre
+2020/02/20 14:51:41 [1772] .f          .bin/.exclude-cmder
+2020/02/20 14:51:41 [1772] .f          .bin/.filter-Data
+2020/02/20 14:51:41 [1772] .f          .bin/.filter-MasterSync
+2020/02/20 14:51:41 [1772] .f          .bin/.filter-espBA2
+2020/02/20 14:51:41 [1772] .f          .bin/.filter-persist
+2020/02/20 14:51:41 [1772] .f          .bin/.filter-profile
+2020/02/20 14:51:41 [1772] .f          .bin/.filter-savedata
+2020/02/20 14:51:41 [1772] .f          .bin/sync-calibre
+2020/02/20 14:51:41 [1772] .f          .bin/sync-cmder
+2020/02/20 14:51:41 [1772] .f          .bin/sync-modWorks
+2020/02/20 14:51:41 [1772] .f          .bin/sync-persist
+2020/02/20 14:51:41 [1772] .f          .bin/sync-profile
+2020/02/20 14:51:41 [1772] .f          .bin/sync-savegame
+2020/02/20 14:51:41 [1772] .f          .bin/sync-vivaldi
+2020/02/20 14:51:41 [1772] sent 954 bytes  received 83 bytes  2,074.00 bytes/sec
+2020/02/20 14:51:41 [1772] total size is 71,245  speedup is 68.70
+++ /home/zeruel/.logs/sync-profile.zeruel-PCx.log	2020-02-20 14:52:42.411336300 +0700
+/c/Users/zeruel/dotfiles/msys2_mainHome/ pull to /home/zeruel/
+2020/02/20 14:52:42 [1802] building file list
+2020/02/20 14:52:42 [1802] .d          ./
+2020/02/20 14:52:42 [1802] .f          .bash_aliases
+2020/02/20 14:52:42 [1802] .f          .bash_profile
+2020/02/20 14:52:42 [1802] .f          .bashrc
+2020/02/20 14:52:42 [1802] .f          .inputrc
+2020/02/20 14:52:42 [1802] .f          .savegameList
+2020/02/20 14:52:42 [1802] .d          .bin/
+2020/02/20 14:52:42 [1802] .f          .bin/.exclude-calibre
+2020/02/20 14:52:42 [1802] .f          .bin/.exclude-cmder
+2020/02/20 14:52:42 [1802] .f          .bin/.filter-Data
+2020/02/20 14:52:42 [1802] .f          .bin/.filter-MasterSync
+2020/02/20 14:52:42 [1802] .f          .bin/.filter-espBA2
+2020/02/20 14:52:42 [1802] .f          .bin/.filter-persist
+2020/02/20 14:52:42 [1802] .f          .bin/.filter-profile
+2020/02/20 14:52:42 [1802] .f          .bin/.filter-savedata
+2020/02/20 14:52:42 [1802] .f          .bin/sync-calibre
+2020/02/20 14:52:42 [1802] .f          .bin/sync-cmder
+2020/02/20 14:52:42 [1802] .f          .bin/sync-modWorks
+2020/02/20 14:52:42 [1802] .f          .bin/sync-persist
+2020/02/20 14:52:42 [1802] >fcst...... .bin/sync-profile
+2020/02/20 14:52:42 [1802] .f          .bin/sync-savegame
+2020/02/20 14:52:42 [1802] .f          .bin/sync-vivaldi
+2020/02/20 14:52:42 [1802] sent 3,295 bytes  received 103 bytes  6,796.00 bytes/sec
+2020/02/20 14:52:42 [1802] total size is 71,246  speedup is 20.97
