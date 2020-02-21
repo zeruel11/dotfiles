@@ -283,7 +283,10 @@ function ss {
 
 ###gits
 function gdg {
-    git.exe difftool -g --dir-diff $args[0] $args[1]
+    git.exe difftool --gui $args[0] $args[1]
+}
+function gdgd {
+    git.exe difftool --gui --dir-diff $args[0] $args[1]
 }
 function gd {
     git.exe difftool $args[0] $args[1]
@@ -302,8 +305,8 @@ function g. {
     param([string]$AddPath = ".")
     git.exe add $AddPath
 }
-function g1 {
-    git.exe log -1
+function g5 {
+    git.exe log -5
 }
 function glog {
     git.exe log --oneline --all --graph --decorate $args
@@ -313,7 +316,43 @@ function gce {
 }
 function gmt {
     param([string]$CommitMessage = "placeholder")
-    git.exe commit -am $CommitMessage
+    if ($PSBoundParameters.ContainsKey('CommitMessage')) {
+        git.exe commit -am $CommitMessage
+    } else {
+        git.exe commit
+    }
+}
+
+function gsm {
+    param (
+        [string]$StashMessage = "default"
+    )
+    git.exe stash push -m $StashMessagegi
+}
+
+function gsl {
+    git.exe stash list
+}
+
+function gss {
+    param (
+        $StashNum = "0"
+    )
+    git.exe stash show "stash@{$StashNum}"
+}
+
+function gsd {
+    param (
+        $StashNum = "0"
+    )
+    git.exe stash show -p "stash@{$StashNum}"
+}
+
+function gsp {
+    param (
+        $StashNum = "0"
+    )
+    git.exe stash pop "stash@{$StashNum}"
 }
 
 ###docker
