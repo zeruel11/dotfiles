@@ -25,7 +25,7 @@ mandatory dotfiles:
     ✔ profile @started(20-02-18 16:07) @done(20-02-18 16:32) @lasted(25m15s)
     ✔ vivaldi @done(20-02-18 16:01)
 
-☐ make new logview script
+✔ make new logview script @started(20-02-21 19:23) @done(20-02-21 20:01) @lasted(38m59s)
 ☐ make new check function for cmp (test which file differs)
 
 ☐ cleanup logfiles
