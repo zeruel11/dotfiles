@@ -1,6 +1,6 @@
 # IMPORTANT!!! Always update this file as needed to minimize git load!!!
 
-# WSL section
+# Section WSL
 - /archwsl/
 - /alpinewsl/
 - /centoswsl/
@@ -8,8 +8,21 @@
 - /Alpine-WSL/
 - /CentOS-WSL/
 
-# FMD section
+# Section free-manga-downloader
+- /free-manga-downloader/config/
 - /free-manga-downloader/lua/
 
 # hexchat section
 + /hexchat/**/#*
+
+# Section keypirinha
+- /keypirinha/**/filescatalog.ini
+
+# Section loose folders
+- /android-sdk/
+- /crystaldiskinfo/
+- /crystaldiskmark/
+- /mkvtoolnix/
+
+# Section loose files
+- /everything/Everything.db
