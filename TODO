@@ -1,4 +1,4 @@
-rewrite:
+1) rewrite:
     ✔ sync-calibre @done(20-02-17 17:20)
     ✘ sync-cmder? @cancelled(20-02-21 12:30)
     ✘ sync-fmd @started(20-02-18 12:08) @cancelled(20-02-18 12:21) @wasted(13m27s)
@@ -6,28 +6,28 @@ rewrite:
     ✔ sync-persist @started(20-02-18 13:02) @done(20-02-18 15:38) @lasted(2h36m39s)
     ✔ sync-vivaldi @started(20-02-17 17:28) @done(20-02-17 18:38) @lasted(1h10m17s)
 
-refactor:
+2) refactor:
     ✔ sync-profile @done(20-02-17 17:20)
 
-review:
+3) review:
     ☐ sync-modWorks
     ☐ sync-savegame
 
-rework check_dir:
+4) rework check_dir:
     ✔ calibre @started(20-02-18 16:40) @done(20-02-18 16:45) @lasted(5m57s)
     ✔ persist @started(20-02-18 16:40) @done(20-02-18 16:40) @lasted(59s)
     ✔ profile @started(20-02-18 16:56) @done(20-02-18 17:06) @lasted(10m57s)
     ✔ vivaldi @started(20-02-19 13:12) @done(20-02-19 18:19) @lasted(5h7m1s) this might need revision later
 
-mandatory dotfiles:
+5) mandatory dotfiles:
     ✔ calibre @started(20-02-18 16:01) @done(20-02-18 16:07) @lasted(6m5s)
     ✔ persist @started(20-02-18 15:58) @done(20-02-18 16:01) @lasted(3m48s)
     ✔ profile @started(20-02-18 16:07) @done(20-02-18 16:32) @lasted(25m15s)
     ✔ vivaldi @done(20-02-18 16:01)
 
-✔ make new logview script @started(20-02-21 19:23) @done(20-02-21 20:01) @lasted(38m59s)
-☐ make new check function for cmp (test which file differs)
+✔ 6) make new logview script @started(20-02-21 19:23) @done(20-02-21 20:01) @lasted(38m59s)
+✔ 7) make new check function for diff (test which file differs) @started(20-02-25 00:42) @done(20-02-25 00:47) @lasted(5m8s)
 
-☐ cleanup logfiles
-☐ move profiles to non cmder
-remove cmder config
+☐ 8) cleanup logfiles
+☐ 9) move profiles to non cmder
+☐ 10) remove cmder config

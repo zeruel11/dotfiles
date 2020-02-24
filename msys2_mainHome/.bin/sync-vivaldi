@@ -117,6 +117,11 @@ function command_param() {
 		echo -e "\e[44m${sync[@]^}ing Vivaldi sessions\e[0m"
 		main_logic "$source/" "$dotfiles/$dotfilesDir/"
 		;;
+	df | diff)
+		sync="diff"
+		define_source
+		diff "$dotfiles/$dotfilesDir/" "$source/"
+		;;
 
 	lg | log | logs)
 		sync="logs"

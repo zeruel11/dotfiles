@@ -112,6 +112,12 @@ function command_param() {
 		main_logic "$source/persist/" "$dotfiles/$dotfilesDir/" "--delete-before --delete-excluded"
 		;;
 
+	df | diff)
+		sync="diff"
+		define_source
+		diff "$dotfiles/$dotfilesDir/" "$source/"
+		;;
+
 	lg | log | logs)
 		sync="logs"
 		command_exception $2
