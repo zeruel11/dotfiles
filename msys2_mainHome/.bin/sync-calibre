@@ -94,7 +94,7 @@ function command_exception() {
 }
 
 function main_logic() {
-	rsync -Ccazvvn --exclude-from="$filterFile" "$1" "$2" $3 | tee "$HOME/.logs/$dryLog" | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
+	rsync -Ccazvvn --exclude-from="$filterFile" "$1" "$2" $3 | tee "$HOME/.logs/$dryLog" && cat $HOME/.logs/$dryLog | GREP_COLORS="$grepSysCol" egrep --color=always "$grepSysMsg" | GREP_COLORS="$grepSendCol" egrep --color=always "$grepSendMsg" | GREP_COLORS="$grepSkipCol" egrep --color=always "$grepSkipMsg" | GREP_COLORS="$grepDelCol" egrep --color=always "$grepDelMsg" | GREP_COLORS="$grepUnchCol" egrep --color=always "$grepUnchMsg" | less -R
 	read -p "Confirm $sync? [no] " yesOrYes
 	yesOrYes=${yesOrYes:-no}
 	if [ "$yesOrYes" == 'yes' -o "$yesOrYes" == 'y' ]; then

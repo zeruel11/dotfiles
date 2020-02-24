@@ -30,14 +30,6 @@ dryLog="$(basename $0).$HOSTNAME.DRY_RUN"
 # excludes/filter files
 filterFile="$DIR/.filter-profile"
 
-# test filters (if needed)
-if [ ! -z ${filterFile+x} ]; then
-	if [ ! -f $filterFile ]; then
-		echo -e "\e[31mFile $filterFile not found!\e[0m"
-		exit 1
-	fi
-fi
-
 function usage() {
 	cat <<HELP_USAGE
 
@@ -85,6 +77,13 @@ function command_exception() {
 }
 
 function main_logic() {
+	# test filters (if needed)
+	if [ ! -z ${filterFile+x} ]; then
+		if [ ! -f $filterFile ]; then
+			echo -e "\e[31mFile $filterFile not found!\e[0m"
+			exit 1
+		fi
+	fi
 	# TODO change rsync compare to use diff since this is a one file
 	# DIFF=$(diff a b)
 	# if [ "$DIFF" != "" ]; then
