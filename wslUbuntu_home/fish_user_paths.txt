@@ -1,6 +1,0 @@
-~/bin
-~/.local/bin
-~/.fnm
-~/.yarn/bin
-/home/linuxbrew/.linuxbrew/opt/fzf/bin
-/home/linuxbrew/.linuxbrew/bin

@@ -1,8 +1,0 @@
-bash-snippets
-gcc
-gmp
-isl@0.18
-libmpc
-mpfr
-patchelf
-zlib
