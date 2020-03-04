@@ -35,7 +35,7 @@
       "}",
       "if ($installable) {",
       "$lxpath = $manifest.url -replace '://','_' -replace '#/','_' -replace '/','_'",
-      "LxRunOffline.exe install -n $app -d $dir -r . -f $cachedir\\$app#$version#$lxpath",
+      "LxRunOffline.exe install -n AlpineLinux-$version -d $dir -r . -f $cachedir\\$app#$version#$lxpath",
       "}"
     ]
   },
