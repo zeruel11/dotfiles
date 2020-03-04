@@ -43,9 +43,9 @@
     "$icopath = $bucketsdir+'\\dotfiles\\icons\\Alpine-WSL.ico'",
     "$shortpath = $env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk'",
     "if (Test-Path $icopath) {",
-    "LxRunOffline.exe shortcut -n $app -f $shortpath -i $icopath",
+    "LxRunOffline.exe shortcut -n AlpineLinux-$version -f $shortpath -i $icopath",
     "} else {",
-    "LxRunOffline.exe shortcut -n $app -f $shortpath",
+    "LxRunOffline.exe shortcut -n AlpineLinux-$version -f $shortpath",
     "}"
   ],
   "uninstaller": {
@@ -53,8 +53,8 @@
       "if (Test-Path ($env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk')) {",
       "Remove-Item -Path $env:APPDATA'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Alpine Linux.lnk'",
       "}",
-      "wsl -t $app",
-      "LxRunOffline.exe uninstall -n $app"
+      "wsl -t AlpineLinux-$version",
+      "LxRunOffline.exe uninstall -n AlpineLinux-$version"
     ]
   },
   "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)"
