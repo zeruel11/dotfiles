@@ -1,9 +1,10 @@
 {
   "homepage": "https://github.com/DDoSolitary/LxRunOffline/wiki",
   "description": "Install ArchLinux as a WSL Instance (using LxRunOffline)",
+  "version": "rolling",
   "license": "GPL-3.0-or-later",
-  "url": "https://lxrunoffline.apphb.com/download/ArchLinux",
-  "hash": "8a6c827f137058ac3e3df1125891ff5c3b62955f0b911adec26eae6ea2bbb285",
+  "url": "https://lxrunoffline.apphb.com/download/ArchLinux#/.wsl",
+  "hash": "49c7aa8718e48f5a4ec570624520fa50616ed3e044af101ec3aa16c155136f82",
   "depends": "lxrunoffline",
   "persist": "data",
   "installer": {
@@ -19,28 +20,31 @@
       "}",
       "if ($null -eq $permission) {",
       "   warn \"Full Control access to the scoop directory is necessary to install WSL distribution.\"",
-      "   warn \"Change directory security and reinstall ArchWSL.\"",
+      "   warn \"Change directory security and reinstall Arch-WSL.\"",
       "   $installable = $false",
       "}",
       "if ($null -eq (Get-Command wslconfig -ErrorAction SilentlyContinue)) {",
       "    warn \"WSL appears not to be enabled!\"",
       "    warn \"Run 'Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux'\"",
-      "    warn \"from an elevated PowerShell. Restart your computer when prompted and reinstall ArchWSL.\"",
+      "    warn \"from an elevated PowerShell. Restart your computer when prompted and reinstall Arch-WSL.\"",
       "    $installable = $false",
       "}",
       "if ($installable) {",
       "$lxpath = $manifest.url -replace '://','_' -replace '#/','_' -replace '/','_'",
-      "LxRunOffline.exe install -n $app -d $dir -r root.x86_64 -f $cachedir\\$app#$lxpath",
+      "LxRunOffline.exe install -n ArchLinux-$version -d $dir -r root.x86_64 -f $cachedir\\$app#$version#$lxpath",
       "}"
     ]
   },
   "post_install": [
+    "if (Test-Path -Path $original_dir\\.wsl) {",
+    "Remove-Item -Path $original_dir\\.wsl",
+    "}",
     "$icopath = $bucketsdir+'\\dotfiles\\icons\\Arch-WSL.ico'",
     "$shortpath = $env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Arch Linux.lnk'",
     "if (Test-Path $icopath) {",
-    "LxRunOffline.exe shortcut -n $app -f $shortpath -i $icopath",
+    "LxRunOffline.exe shortcut -n ArchLinux-$version -f $shortpath -i $icopath",
     "} else {",
-    "LxRunOffline.exe shortcut -n $app -f $shortpath",
+    "LxRunOffline.exe shortcut -n Archlinux-$version -f $shortpath",
     "}"
   ],
   "uninstaller": {
@@ -48,8 +52,8 @@
       "if (Test-Path ($env:APPDATA+'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Arch Linux.lnk')) {",
       "Remove-Item -Path $env:APPDATA'\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Arch Linux.lnk'",
       "}",
-      "wsl -t $app",
-      "LxRunOffline.exe uninstall -n $app"
+      "wsl -t ArchLinux-$version",
+      "LxRunOffline.exe uninstall -n ArchLinux-$version"
     ]
   },
   "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)"
