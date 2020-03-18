@@ -1,6 +1,6 @@
 {
     "version": "1.4.1",
-    "description": "Use the Windows SSH agent from inside WSL",
+    "description": "Helper to interface with Windows ssh-agent.exe service from WSL, replacement for ssh-agent-wsl",
     "homepage": "https://github.com/rupor-github/wsl-ssh-agent",
     "license": "GPL-3.0-only",
     "url": "https://github.com/rupor-github/wsl-ssh-agent/releases/download/v1.4.1/wsl-ssh-agent.7z",
@@ -16,25 +16,36 @@
         "url": "https://github.com/rupor-github/wsl-ssh-agent/releases/download/v$version/wsl-ssh-agent.7z"
     },
     "post_install": [
-        "Write-Host -ForegroundColor Blue -NoNewline 'Do you want to run wsl-ssh-agent as scheduled task? (needs Administrator privileges)'",
-        "$UserAnswer = Read-Host",
-        "if ($UserAnswer -match '^[Yy](es)?$') {",
-        "$currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())",
-        "if ($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {",
-        "$User = \"$env:USERDOMAIN\\$env:USERNAME\"",
-        "$Trigger = New-ScheduledTaskTrigger -AtLogOn -RandomDelay 00:00:30",
-        "$Action = New-ScheduledTaskAction -Execute \"$env:SCOOP\\apps\\wsl-ssh-agent\\current\\wsl-ssh-agent-gui.exe\" -Argument \"-setenv -envname=WSL_AUTH_SOCK -lemonade=2489;127.0.0.1/24\"",
-        "Register-ScheduledTask -TaskName \"WSL ssh-agent\" -Trigger $Trigger -User $User -Action $Action",
-        "} else {",
-        "Write-Warning \"You do not have Administrator privileges. Please run \"\"scoop reset $app\"\" from elevated console...\"",
+        "if (Get-ScheduledTask -TaskName \"WSL ssh-agent\" -ErrorAction SilentlyContinue) {",
+        "Unregister-ScheduledTask -TaskName \"WSL ssh-agent\" -Confirm:$false",
         "}",
-        "}"
+        "local $User = \"$env:USERDOMAIN\\$env:USERNAME\"",
+        "local $Trigger = New-ScheduledTaskTrigger -AtLogOn -User $User",
+        "$Trigger.Delay = 'PT30S'",
+        "local $Principal = New-ScheduledTaskPrincipal -UserId (Get-CimInstance -ClassName Win32_ComputerSystem | Select-Object -expand UserName)",
+        "local $Action = New-ScheduledTaskAction -Execute \"$env:SCOOP\\apps\\wsl-ssh-agent\\current\\wsl-ssh-agent-gui.exe\" -Argument \"-setenv -envname=WSL_AUTH_SOCK\"",
+        "local $Setting = New-ScheduledTaskSettingsSet -DontStopIfGoingOnBatteries -Hidden:$false -Compatibility:Win8 -MultipleInstances:IgnoreNew -ExecutionTimeLimit:(New-TimeSpan -Seconds 0) -StartWhenAvailable",
+        "Register-ScheduledTask -TaskName \"WSL ssh-agent\" -Trigger $Trigger -Principal $Principal -Action $Action -Settings $Setting",
+        "Start-ScheduledTask -TaskName \"WSL ssh-agent\""
     ],
+    "uninstaller": {
+        "script": [
+            "Stop-Process -Name wsl-ssh-agent-gui -ErrorAction SilentlyContinue",
+            "if (Get-ScheduledTask -TaskName \"WSL ssh-agent\" -ErrorAction SilentlyContinue) {",
+            "Unregister-ScheduledTask -TaskName \"WSL ssh-agent\" -Confirm:$false",
+            "}"
+        ]
+    },
     "notes": [
-        "EXAMPLE USAGE",
-        "On Windows:",
-        "wsl-ssh-agent-gui.exe -setenv -envname=WSL_AUTH_SOCK -lemonade=2489;127.0.0.1/24",
-        "Add to WSL bash .bashrc:",
-        "[ -n ${WSL_AUTH_SOCK} ] && export SSH_AUTH_SOCK=${WSL_AUTH_SOCK}"
+        "Don't forget to add to WSL .bashrc/.zshrc:",
+        "[ -n ${WSL_AUTH_SOCK} ] && export SSH_AUTH_SOCK=${WSL_AUTH_SOCK}",
+        "Or if you use fish, add to config.fish:",
+        "if set -q WSL_AUTH_SOCK; set -U SSH_AUTH_SOCK $WSL_AUTH_SOCK; end",
+        "Then make sure to restart your WSL terminal if it's already running"
+    ],
+    "##": [
+        "Adding ssh socket to WSL needs user intervetion",
+        "Making it automatic is hard due to variations of possible login shells",
+        "Not to mention wsl -- commands are sometimes a bit wonky"
     ]
 }
