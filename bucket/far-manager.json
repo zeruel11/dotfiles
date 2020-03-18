@@ -1,0 +1,47 @@
+{
+    "license": {
+        "identifier": "BSD-3-Clause",
+        "url": "https://farmanager.com/license.php"
+    },
+    "homepage": "https://farmanager.com/",
+    "description": "A text-mode files and archives manager.",
+    "version": "30b5555",
+    "architecture": {
+        "64bit": {
+            "url": "https://farmanager.com/files/Far30b5555.x64.20200208.7z",
+            "hash": "5d77a3afca8b3d5542826704145e6dd0da777c7f6870be880a07a5fa6f9b0d2f"
+        },
+        "32bit": {
+            "url": "https://farmanager.com/files/Far30b5555.x86.20200208.7z",
+            "hash": "05244d70ac1e34d21dda0c37d6a1721f8fe30dd909642d05f452ddc24d1e19e4"
+        }
+    },
+    "checkver": {
+        "url": "https://farmanager.com/download.php",
+        "re": "files/Far(?<version>[b\\d]+).x64.(?<date>\\d+).7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://farmanager.com/files/Far$version.x64.$matchDate.7z"
+            },
+            "32bit": {
+                "url": "https://farmanager.com/files/Far$version.x86.$matchDate.7z"
+            }
+        }
+    },
+    "bin": "far.exe",
+    "persist": [
+        "Plugins"
+    ],
+    "post_install": [
+        "if (Test-Path -Path $persist_dir\\farconfig.cfg) {",
+        "far.exe /import $persist_dir\\farconfig.cfg",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "far.exe /export $persist_dir\\farconfig.cfg"
+        ]
+    }
+}
