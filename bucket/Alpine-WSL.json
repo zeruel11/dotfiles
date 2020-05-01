@@ -4,7 +4,7 @@
   "version": "3.11",
   "license": "MIT",
   "url": "https://lxrunoffline.apphb.com/download/Alpine/v3.11#/.wsl",
-  "hash": "8a6c827f137058ac3e3df1125891ff5c3b62955f0b911adec26eae6ea2bbb285",
+  "hash": "a4abedee4687c6b22241b93d03717602a2e49aa54391328b5cf2a98b0700b42e",
   "depends": "lxrunoffline",
   "checkver": {
     "url": "https://alpinelinux.org/downloads/",
