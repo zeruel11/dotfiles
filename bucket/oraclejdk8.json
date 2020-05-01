@@ -1,7 +1,7 @@
 {
     "description": "Oracle JDK 8",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u241-b07",
+    "version": "8u251-b08",
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
@@ -9,7 +9,8 @@
             "hash": "125157bba0325558d04c836c30ece43bfa3d87b704d350d3f4221df668535f71"
         },
         "32bit": {
-            "url": "https://download.oracle.com/otn-pub/java/jdk/8u251-b08/3d5a2bb8f8d4428bbe94aed7ec7ae784/jdk-8u251-windows-i586.exe#/dl.7z"
+            "url": "https://download.oracle.com/otn-pub/java/jdk/8u251-b08/3d5a2bb8f8d4428bbe94aed7ec7ae784/jdk-8u251-windows-i586.exe#/dl.7z",
+            "hash": "879785542adbe3e9931b44e3774fb7af936cf77c1083b2470f502610344f6a83"
         }
     },
     "cookie": {
