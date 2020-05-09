@@ -1,0 +1,24 @@
+{
+    "license": {
+        "identifier": "BSD-3-Clause",
+        "url": "https://github.com/ooni/probe-cli/blob/master/LICENSE.md"
+    },
+    "homepage": "https://github.com/ooni/probe-cli",
+    "description": "The next generation OONI Probe Command Line Interface.",
+    "version": "3.0.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ooni/probe-cli/releases/download/v3.0.0/ooniprobe_v3.0.0_windows_amd64.tar.gz",
+            "hash": "de1f162c4f1e94f2c055d4304efcadaa32aeca0f09a3d9785c9ec79cfcef9871"
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ooni/probe-cli/releases/download/v$version/ooniprobe_v$version_windows_amd64.tar.gz"
+            }
+        }
+    },
+    "bin": "ooniprobe.exe"
+}
