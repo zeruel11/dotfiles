@@ -1,16 +1,16 @@
 {
     "description": "Oracle JDK 8",
     "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
-    "version": "8u251-b08",
+    "version": "8u281-b09",
     "license": "https://www.oracle.com/technetwork/java/javase/terms/license",
     "architecture": {
         "64bit": {
-            "url": "https://javadl.oracle.com/webapps/download/GetFile/1.8.0_172-b11/a58eab1ec242421181065cdc37240b08/windows-i586/jdk-8u172-windows-x64.exe#/dl.7z",
-            "hash": "125157bba0325558d04c836c30ece43bfa3d87b704d350d3f4221df668535f71"
+            "url": "https://javadl.oracle.com/webapps/download/GetFile/1.8.0_281-b09/89d678f2be164786b292527658ca1605/windows-i586/jdk-8u281-windows-x64.exe#/dl.7z",
+            "hash": "e3ca54cfd36836bee266cdfec73a21e86e38bf5f953492ebdf0ae171569a7254"
         },
         "32bit": {
-            "url": "https://javadl.oracle.com/webapps/download/GetFile/1.8.0_172-b11/a58eab1ec242421181065cdc37240b08/windows-i586/jdk-8u172-windows-i586.exe#/dl.7z",
-            "hash": "879785542adbe3e9931b44e3774fb7af936cf77c1083b2470f502610344f6a83"
+            "url": "https://javadl.oracle.com/webapps/download/GetFile/1.8.0_281-b09/89d678f2be164786b292527658ca1605/windows-i586/jdk-8u281-windows-i586.exe#/dl.7z",
+            "hash": "dae5bd0c7b91aa1ad684e9af06d14c838378c1521d1f258bc1c77ec6e345ff90"
         }
     },
     "cookie": {
@@ -43,7 +43,7 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html",
+        "url": "https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html",
         "re": "(?<version>[ub\\-\\d]+)/(?<random>[a-fA-F0-9]{32})/jdk-(?<short>[u\\d]+)-windows"
     },
     "autoupdate": {
