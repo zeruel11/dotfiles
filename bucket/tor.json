@@ -4,7 +4,7 @@
     "homepage": "https://www.torproject.org",
     "license": "BSD-3-Clause",
     "notes": [
-        "NOTE: You will need to configure tor before using it, as it does not come pre-configured.",
+        "NOTE: You will need to configure tor before using it, as it comes with barebone config.",
         "Please see https://www.torproject.org/docs/tor-manual.html.en for configuration details."
     ],
     "architecture": {
