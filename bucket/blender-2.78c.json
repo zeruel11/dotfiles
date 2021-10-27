@@ -1,0 +1,25 @@
+{
+    "version": "2.78c",
+    "description": "3D creation suite",
+    "homepage": "https://www.blender.org",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.blender.org/release/Blender2.78/blender-2.78c-windows64.zip",
+            "hash": "md5:7fcdb2ab615f5c37c2ad3b62c1935695",
+            "extract_dir": "blender-2.78c-windows-x64"
+        },
+        "32bit": {
+            "url": "https://download.blender.org/release/Blender2.78/blender-2.78c-windows32.zip",
+            "hash": "md5:859aad90f7f568ee1c681dfaeeaa6843",
+            "extract_dir": "blender-2.78c-windows-x32"
+        }
+    },
+    "bin": "blender.exe",
+    "shortcuts": [
+        [
+            "blender.exe",
+            "Blender"
+        ]
+    ]
+}
